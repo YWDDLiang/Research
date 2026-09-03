@@ -1,0 +1,51 @@
+name: Research idea falsification
+description: Evaluate an idea before committing large compute
+title: "[Idea] "
+labels: ["research-idea"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What is the problem?
+      description: Define input, output, state space, objective, oracle, budget, and success.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this problem worth solving?
+      description: Explain the real scientific bottleneck and why existing tasks are insufficient.
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How should the mechanism work?
+      description: Give a causal chain, not a component list.
+    validations:
+      required: true
+  - type: textarea
+    id: assumptions
+    attributes:
+      label: Hidden assumptions
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Strongest alternative explanation and dangerous baselines
+    validations:
+      required: true
+  - type: textarea
+    id: killer
+    attributes:
+      label: Minimal killer experiment and stop condition
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Intended contribution vector
+      description: "Delta P, Delta I, Delta O, Delta C, Delta E, Delta K."
+    validations:
+      required: true

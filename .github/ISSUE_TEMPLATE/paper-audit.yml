@@ -1,0 +1,65 @@
+name: Paper audit
+description: Propose a paper for full twelve-part audit
+title: "[Paper Audit] "
+labels: ["paper-audit"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Paper title
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Primary paper URL
+      description: Formal paper page, arXiv, OpenReview, or publisher.
+    validations:
+      required: true
+  - type: input
+    id: project
+    attributes:
+      label: Official/author project URL
+      description: Leave blank if not yet verified.
+  - type: dropdown
+    id: cluster
+    attributes:
+      label: Problem cluster
+      options:
+        - Generative foundations / conditional CSP
+        - Symmetry / Wyckoff / discrete generation
+        - LLM / sequence / hybrid generation
+        - Physical data / trajectories / energy guidance
+        - RL / post-training
+        - Evaluation / novelty / stability
+        - Cross-domain AI method
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this paper changes our current judgment
+      description: Do not paste the abstract; state the research decision it affects.
+    validations:
+      required: true
+  - type: textarea
+    id: baseline
+    attributes:
+      label: Most dangerous baseline or alternative explanation
+    validations:
+      required: true
+  - type: textarea
+    id: killer
+    attributes:
+      label: Candidate killer experiment
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Source checks
+      options:
+        - label: I verified the primary paper URL.
+          required: true
+        - label: I did not label a community implementation as official code.
+          required: true
