@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-09-09",
+  "target_repo": "YWDDLiang/Research",
+  "allowed_scope": "llm4rec/",
+  "files": {
+    "llm4rec/docs/ideas/11_budget_conditioned_behavioral_selection.md": "b112817b0f84e9e5b878f9952c94fbe565d8bcecbb803881ad6c2bcdbd96e16f",
+    "llm4rec/docs/ideas/README.md": "a0b82f166f41f0f8939c0d310893428f616beaa3dacc9c1ecbfe7e5b67a66fde",
+    "llm4rec/revisions/2026-09-09-data-rich/AUDIT.md": "b3b0f94b94d3fdf6a24e878a57c2e166702fcb970c20d6e3e9f6771df0e6d2c1",
+    "llm4rec/revisions/2026-09-09-data-rich/CODEX_PUSH_PROMPT.md": "ce7173e10d99aa0fbc1ba65b1557c1ce43d8017ca5c7975ce177772f3595bbfc",
+    "llm4rec/revisions/2026-09-09-data-rich/EXPERIMENT_PROTOCOL.md": "1394143c7e747df9f0e1cae2ba6337e079dc09392e0ebda989d880816ee0ce7c",
+    "llm4rec/revisions/2026-09-09-data-rich/IDEA.md": "232cea76c870972e80003775982a01a2ad590958d00ac6e19cf020f7b4ccb753",
+    "llm4rec/revisions/2026-09-09-data-rich/IMPLEMENTATION.md": "c0e5e09afe7d0ee15854186672dc34270241dcf7930ef9e02e761f18e073f82f",
+    "llm4rec/revisions/2026-09-09-data-rich/MANIFEST.json": "6fb49856e97c350865f26a069e2077bef0366d6336fa506b6a304a442c23b04d",
+    "llm4rec/revisions/2026-09-09-data-rich/MATHEMATICS.md": "d0913ca4b763253a81a913b12da02b8ae2e41f46c713015827bf28c6a577871e",
+    "llm4rec/revisions/2026-09-09-data-rich/PDF_METHOD_MAP.md": "6b55842494fec3ab4c7238aa9f67b039727bb8d9bb89de0e1c3e4e7dc137a30f",
+    "llm4rec/revisions/2026-09-09-data-rich/README.md": "69e65320229e40aa93eae7db9782d407c6cadaf8336095345708f0e64ad1510d",
+    "llm4rec/revisions/2026-09-09-data-rich/README_UPDATE_SNIPPET.md": "ba7551e752a4fc0dccc8c46498f604625a9f9866234092a56b1aa310936b04d1",
+    "llm4rec/revisions/2026-09-09-data-rich/REPORT_ZH.md": "79ec145f30248bdf98d8d0eb87548240def00a8726756553b4aa73dabde5a399",
+    "llm4rec/revisions/2026-09-09-data-rich/SOURCES.md": "2856529dadfbca50f69ed15ae3ba354dbfb23bfebe79426575a0b8952fd1e2f2",
+    "llm4rec/revisions/2026-09-09-data-rich/TASKS_AND_BASELINES.md": "ff418c1bdd60b73be2ef59590399986cbbb5a48e68501e421baeb89b2ae79dd5",
+    "llm4rec/revisions/2026-09-09-data-rich/VALIDATION.md": "e53176ded7d6854de9021aa3c2d666e23b9af0faa645e78c0585fbc9bfc61e86",
+    "llm4rec/revisions/2026-09-09-data-rich/evidence/environment.json": "e18d9b28b6bb832317b8e515889b9491915403ce661397d780eec6781122b8a5",
+    "llm4rec/revisions/2026-09-09-data-rich/evidence/evidence_summary.json": "139295034c857d69cc3c94838a391c5f9c52e09e9eff7c1669e3e6b341e77ba8",
+    "llm4rec/revisions/2026-09-09-data-rich/evidence/pytest_final.log": "e333e5d335f3a2147d0b3df11776f8c85877dca5879dd796c6decd612422ca70",
+    "llm4rec/revisions/2026-09-09-data-rich/evidence/static_checks.json": "218e47c975af25d1301ccb5eea89507c49e9ab552815b9747114b4c3af49cf39",
+    "llm4rec/revisions/2026-09-09-data-rich/references/external_baselines.json": "65833f6a2a8dab39c4f0993d421add2a4930c6115764f7f008ed13942e84eb74",
+    "llm4rec/revisions/2026-09-09-data-rich/references/sources.json": "509d0995eead32d6d47e3a6ed55e4f3b4b14087b838be4831db8d4b417c953d2"
+  }
+}

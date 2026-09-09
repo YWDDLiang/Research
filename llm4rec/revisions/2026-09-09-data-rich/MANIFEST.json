@@ -1,0 +1,71 @@
+{
+  "target_repository": "YWDDLiang/Research",
+  "additive": true,
+  "remote_pushed": false,
+  "files": [
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/AUDIT.md",
+      "sha256": "b3b0f94b94d3fdf6a24e878a57c2e166702fcb970c20d6e3e9f6771df0e6d2c1"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/EXPERIMENT_PROTOCOL.md",
+      "sha256": "1394143c7e747df9f0e1cae2ba6337e079dc09392e0ebda989d880816ee0ce7c"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/IMPLEMENTATION.md",
+      "sha256": "c0e5e09afe7d0ee15854186672dc34270241dcf7930ef9e02e761f18e073f82f"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/MATHEMATICS.md",
+      "sha256": "d0913ca4b763253a81a913b12da02b8ae2e41f46c713015827bf28c6a577871e"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/PDF_METHOD_MAP.md",
+      "sha256": "6b55842494fec3ab4c7238aa9f67b039727bb8d9bb89de0e1c3e4e7dc137a30f"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/README.md",
+      "sha256": "69e65320229e40aa93eae7db9782d407c6cadaf8336095345708f0e64ad1510d"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/REPORT_ZH.md",
+      "sha256": "79ec145f30248bdf98d8d0eb87548240def00a8726756553b4aa73dabde5a399"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/SOURCES.md",
+      "sha256": "2856529dadfbca50f69ed15ae3ba354dbfb23bfebe79426575a0b8952fd1e2f2"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/TASKS_AND_BASELINES.md",
+      "sha256": "ff418c1bdd60b73be2ef59590399986cbbb5a48e68501e421baeb89b2ae79dd5"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/VALIDATION.md",
+      "sha256": "e53176ded7d6854de9021aa3c2d666e23b9af0faa645e78c0585fbc9bfc61e86"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/evidence/environment.json",
+      "sha256": "e18d9b28b6bb832317b8e515889b9491915403ce661397d780eec6781122b8a5"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/evidence/evidence_summary.json",
+      "sha256": "139295034c857d69cc3c94838a391c5f9c52e09e9eff7c1669e3e6b341e77ba8"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/evidence/pytest_final.log",
+      "sha256": "e333e5d335f3a2147d0b3df11776f8c85877dca5879dd796c6decd612422ca70"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/evidence/static_checks.json",
+      "sha256": "218e47c975af25d1301ccb5eea89507c49e9ab552815b9747114b4c3af49cf39"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/references/external_baselines.json",
+      "sha256": "65833f6a2a8dab39c4f0993d421add2a4930c6115764f7f008ed13942e84eb74"
+    },
+    {
+      "path": "llm4rec/revisions/2026-09-09-data-rich/references/sources.json",
+      "sha256": "509d0995eead32d6d47e3a6ed55e4f3b4b14087b838be4831db8d4b417c953d2"
+    }
+  ]
+}
