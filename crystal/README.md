@@ -12,18 +12,18 @@
 
 | 研究组 | 中心问题 | 对应原始挑战 |
 |---|---|---|
-| [A 共同形成](./programs/README.md#a) | 化学选择与几何实现能否共同形成 | 1、2 |
-| [B 组合可行](./programs/README.md#b) | 局部化学知识怎样形成未见但整体可行的晶体 | 3，联系1 |
-| [C 反馈与知识](./programs/README.md#c) | 物理反馈怎样成为有效决定与可积累知识 | 4、6 |
-| [D 开放多解](./programs/README.md#d) | 物理优化怎样扩大有效解空间并保持多种成功 | 5，联系6 |
+| [A 共同形成](./programs/a-coformation.md) | 化学选择与几何实现能否共同形成 | 1、2 |
+| [B 组合可行](./programs/b-compositional-feasibility.md) | 局部化学知识怎样形成未见但整体可行的晶体 | 3，联系1 |
+| [C 反馈与知识](./programs/c-physics-to-knowledge.md) | 物理反馈怎样成为有效决定与可积累知识 | 4、6 |
+| [D 开放多解](./programs/d-open-successful-discovery.md) | 物理优化怎样扩大有效解空间并保持多种成功 | 5，联系6 |
 
-[技术备选 R1/R2/R3](./ideas/README.md) · [已有交叉讨论](./evidence/reviews/README.md) · [共同评价](./evidence/common-protocol.md)
+[技术备选 R1/R2/R3](./ideas/README.md) · [本轮科学意义攻防](./programs/reviews/README.md) · [论文中心论题](./programs/research-agenda.md) · [共同评价](./evidence/common-protocol.md)
 
 ## 当前问题地图
 
 | 文档 | 内容 |
 |---|---|
-| [学习对象与成功定义](./landscape/00-field-mathematical-abstraction.md) | DNG、科学动作、执行接口和原生动作 |
+| [学习对象与成功定义](./landscape/00-field-mathematical-abstraction.md) | 联合分布、周期兼容、物理干预与合格结果分布 |
 | [已有能力与研究增量](./landscape/01-de-story-audit.md) | 近期晶体原文如何约束方法的新意 |
 | [开放能力问题](./landscape/02-open-problems.md) | 六个开放challenge |
 | [CV到晶体的对应](./landscape/03-cross-domain-transfer-map.md) | 从动机、任务和学习对象迁移 |
@@ -37,7 +37,7 @@
 
 [CV前沿目录](./literature/README.md)保存69条记录、68项不同工作，覆盖基础生成、条件／推理、反馈／搜索与评价。真正文生图、类别条件基础生成和相邻任务分别记录。
 
-[晶体原始论文支撑](./evidence/crystal-problem-support.md)与[R1/R2/R3来源](./evidence/README.md)保存最近近邻、读取段落及具体基座发布入口。[项目历史摘要](./evidence/historical-evidence.md)同时保留精修成功、指定动作零增量、未知标签和旧评价阶段，作为新假设的依据。
+[晶体原始论文支撑](./evidence/crystal-problem-support.md)与[四组与技术备选来源](./evidence/README.md)保存最近近邻、读取段落及具体基座发布入口。[项目历史摘要](./evidence/historical-evidence.md)同时保留精修成功、指定动作零增量、未知标签和旧评价阶段，作为新假设的依据。
 
 ## 43篇历史首轮记录
 

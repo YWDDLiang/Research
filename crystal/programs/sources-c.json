@@ -1,0 +1,131 @@
+{
+  "created_on": "2026-10-10",
+  "language": "zh-CN",
+  "programme": "C: 物理反馈到可复用生成决策与知识",
+  "status": "研究纲领；未冻结checkpoint/损失/预算；没有新实验/训练/SSH/Git",
+  "source_policy": "原始论文与真实保存历史；事实、边界和本纲领推断区分",
+  "records": [
+    {
+      "id": "C-S01",
+      "title": "Generative structure search for efficient and diverse discovery of molecular and crystal structures",
+      "date": "2026-04-30v1",
+      "status": "预印本",
+      "object": "给定组成周期结构搜索及分子构象",
+      "primary_url": "https://arxiv.org/html/2604.27636v1",
+      "read_depth": "原文§1–4；本轮重读固定schedule/未来方向",
+      "evidence": "score+physical force提高作者参考结构覆盖；guidance sigmoid为固定预设",
+      "scope": "参考局部极小值/亚稳结构，不能直接转换成无机自由DNG strictSUN",
+      "programme_role": "物理介入能改变搜索；时机尚待状态化研究"
+    },
+    {
+      "id": "C-S02",
+      "title": "Open Materials Generation with Inference-Time Reinforcement Learning",
+      "date": "2026-01-31原v1；2026-07ICML正式",
+      "status": "ICML2026主会",
+      "object": "主要CSP能量/退火策略；正式版补DNG",
+      "primary_url": "https://proceedings.mlr.press/v306/hollmer26a.html",
+      "method_url": "https://arxiv.org/html/2602.00424v1",
+      "read_depth": "§3–4；本轮重点§4.2探索噪声/annealing/discretization",
+      "evidence": "物理能量可以强化速度场；noise/annealing/integration相互影响",
+      "scope": "CSP匹配/能量与DNG成功定义分别保留；自由发现能力不由CSP加速代替",
+      "programme_role": "可行动性依赖采样机制，科学时钟不宜等同一个固定t"
+    },
+    {
+      "id": "C-S03",
+      "title": "Let CSP Be Your ANCHOR: Adaptive Crystal Search over Frozen Structure Priors",
+      "date": "2026-09-27v1",
+      "status": "预印本",
+      "object": "组成策略+冻结CSP、发现结构回流",
+      "primary_url": "https://arxiv.org/html/2609.33407v1",
+      "read_depth": "方法/分解；本轮重读Table2 likelihood-tuned CSP与§4–5",
+      "evidence": "不同位置的reward/结构反馈作用不同；Crystalite回流收益与KLDM相近对照有区别",
+      "scope": "收益在作者potential/gate/reference条件下；不形成所有CSP优于DNG的定理",
+      "programme_role": "跨请求知识可来自search，但信息进入生成模型的接口与基座影响收益"
+    },
+    {
+      "id": "C-S04",
+      "title": "Where Should Physics Enter a Molecular Crystal Generator?",
+      "date": "2026-09-28v1",
+      "status": "预印本",
+      "object": "分子晶体packing、validity、recovery",
+      "primary_url": "https://arxiv.org/html/2609.36398v1",
+      "read_depth": "§3–4，Table1；本轮重读三条物理路线比较",
+      "evidence": "相同UMA下后训练、relax和relaxed-target regression改变的能力与成本不同",
+      "scope": "packing/clash不是无机strictSUN；特定RD有限收益不否定所有物理学习",
+      "programme_role": "反馈修复单样本与摊销知识是不同对象"
+    },
+    {
+      "id": "C-S05",
+      "title": "PackFlow: Generative Molecular Crystal Structure Prediction via Reinforcement Learning Alignment",
+      "date": "2026-02-23v1",
+      "status": "预印本",
+      "object": "分子晶体CSP",
+      "primary_url": "https://arxiv.org/html/2602.20140v1",
+      "read_depth": "§2.4后训练及本轮§2.5/图5两个blindtest案例",
+      "evidence": "proposal几何/密度与raw能量排序可导致不同relaxed minima；联合energy/force后训练",
+      "scope": "图5best candidates与family内对照，不是全分布DNG stable/unique/novel结论",
+      "programme_role": "即时物理指标、可实现结构与最后后果需要分开"
+    },
+    {
+      "id": "C-S06",
+      "title": "Optimizing cross-domain transfer for universal machine learning interatomic potentials",
+      "date": "2026-03-03出版；2026-04-13版本记录",
+      "status": "Nature Communications正式原始论文",
+      "object": "SevenNet-Omni跨chemical domains/DFT settings PES迁移",
+      "primary_url": "https://www.nature.com/articles/s41467-026-70195-8",
+      "read_depth": "Introduction、Results共享/特定参数regularization与domain-bridging-set",
+      "evidence": "不同functional产生非线性PES差异，energyshift不足；少量跨domain bridging标签助迁移",
+      "scope": "多task/保真PES，不是新crystal generator；fidelity不是统一高低数值排序",
+      "programme_role": "信息校准和可迁移响应，不能只拼接不同计算的energy标签"
+    },
+    {
+      "id": "C-S07",
+      "title": "OpenCSP: A Deep Learning Framework for Crystal Structure Prediction from Ambient to High Pressure",
+      "date": "2025-09-12v1",
+      "status": "预印本",
+      "object": "压力相关数据/MLIP与高压CSP",
+      "primary_url": "https://arxiv.org/html/2509.10293v1",
+      "read_depth": "Intro及Methods concurrent-learning/6路径节点/DFT选样",
+      "evidence": "采路径与极小值；依据force/enthalpy uncertainty选择DFT，改善压力相关物理决策",
+      "scope": "高压enthalpy不是零压strictSUN；具体PBE/noU条件保持原样；不采信原文泛称物理保证",
+      "programme_role": "真实物理观测可改变以后search能力；当前programme进一步问决策相关观测价值"
+    },
+    {
+      "id": "C-S08",
+      "title": "Reinforcement Learning on the Discrete Composition Channel of a Crystal Generator: Validated Gains and Reward Hacking",
+      "date": "2026-10-02v1",
+      "status": "预印本",
+      "object": "无机DNG、反馈×解码器及稀疏参考",
+      "primary_url": "https://arxiv.org/html/2610.03880v1",
+      "read_depth": "前轮§3/AppendixD/F原文已读，本轮作为相关支持",
+      "evidence": "相同reward通过不同generator pipeline可产生不同SUN；物理reference与反馈执行影响结果",
+      "scope": "作者报告transplant不是完整因果分解，不能据小strict计数否定composition/geometry路线",
+      "programme_role": "可竞争解释的实际证据，而非提前锁定新架构"
+    },
+    {
+      "id": "C-H01",
+      "title": "JTF/PDE真实历史",
+      "date": "2026-09至10历史；2026-10-09汇编",
+      "status": "完成、负结果及中断状态分别保存",
+      "object": "固定成分连续refiner、有限干预、terminal/value学习",
+      "primary_url": "../evidence/historical-evidence.md",
+      "read_depth": "本轮PDE15/16/18/19/22/23/25/27/28/29记录",
+      "evidence": "76/85/86knownstable同512源；24unknown/臂；有限局部动作和H自分改善未可靠增加事件",
+      "scope": "固定成分不是固定prototype；512pairedoutcomes来自128DEV parents；PDE29两臂中断不当失败",
+      "programme_role": "区分动作无效、续程抹除、feedback误差与接口限制"
+    },
+    {
+      "id": "C-H02",
+      "title": "DLM/F800与反馈学习真实历史",
+      "date": "2026-09历史；2026-10-09汇编",
+      "status": "保存评价，pending保留",
+      "object": "LLM/diffusion原生与F800对照、teacher与free-student诊断",
+      "primary_url": "../evidence/historical-evidence.md",
+      "read_depth": "本轮DLM16/17/32/33；评价stage先前已核",
+      "evidence": "B0/Crys confirmedSUN45→118/1500与77→95/1022；novelty下降；teacher/free静态物理质量差距",
+      "scope": "历史N/U在CHGNet前而能量在后；DLM33是staticcross不是新conditionalgeneration；pending非unstable",
+      "programme_role": "成功转化、知识摊销与覆盖变化需要分别研究"
+    }
+  ],
+  "public_history_reference": "../evidence/historical-evidence.md"
+}

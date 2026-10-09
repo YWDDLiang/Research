@@ -1,6 +1,6 @@
 # 从CV研究问题到晶体学习对象
 
-[返回研究入口](../README.md) · 2026-10-09 · 研究设计，无新实验结果。
+[返回研究入口](../README.md) · 2026-10-10 · 研究设计，无新实验结果。
 
 本轮CV目录包含68项不同工作、69条视角记录，范围含真正文生图、编辑、类别条件基础生成和评价。迁移先识别challenge，再选择技术原语。[完整方法目录](../literature/METHOD_CATALOG_ZH.md)
 
@@ -18,4 +18,6 @@
 
 [Multi-Axis Max@K](https://arxiv.org/html/2607.14962v1)已经包含模式占据公式及边际收益。晶体的新增困难是结果类别由物理弛豫产生、开放区域的资格未知；公式本身不作为新算法。
 
-[当前三篇方案](../ideas/README.md) · [CV分类和记录](../literature/README.md)
+[四组研究纲领](../programs/README.md) · [技术备选](../ideas/README.md) · [CV分类和记录](../literature/README.md)
+
+对应关系：表示、混合状态与条件兼容主要进入A；组合机制与共享条件进入B；过程反馈及知识迁移进入C；开放合格结果覆盖进入D。具体迁移以各组中心问题为依据。[研究议程](../programs/research-agenda.md)

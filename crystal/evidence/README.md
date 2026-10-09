@@ -1,15 +1,17 @@
 # 来源、共同协议与历史证据
 
-[返回研究入口](../README.md) · 2026-10-09。
+[研究入口](../README.md) · 2026-10-10
 
-| 资料 | 使用方式 |
+当前以[四组研究纲领](../programs/README.md)组织问题。来源记录保留公开URL、论文状态、读取段落与本轮解释。
+
+| 当前资料 | 内容 |
 |---|---|
-| [共同评价协议](common-protocol.md) | 三篇提案的SUN、终态和费用口径 |
-| [晶体原始论文支撑](crystal-problem-support.md) | 具体研究问题与原文能力对应 |
-| [项目历史摘要](historical-evidence.md) | 已记录的正、负与未知结果，形成假设 |
-| [R1来源](sources-r1.json) | joint generation、CSP、编辑及具体发布配置 |
-| [R2来源](sources-r2.json) | 表示、轨道关系、物理执行与具体发布配置 |
-| [R3来源](sources-r3.json) | 原生动作、物理后果、后训练与具体发布配置 |
-| [同行讨论](reviews/README.md) | 三篇方案核心质疑与建设性修订 |
+| [A来源](../programs/sources-a.json) | 联合生成、多模态条件、belief与表示 |
+| [B来源](../programs/sources-b.json) | 局部化学、周期兼容、组合理论与真实晶体例子 |
+| [C来源](../programs/sources-c.json) | 物理反馈、干预知识、信息采集与历史正负结果 |
+| [D来源](../programs/sources-d.json) | 结果分布、组成适应、QD、GFlowNet与集合奖励 |
+| [本轮攻防](../programs/reviews/README.md) | 四组中心问题的科学意义与修订 |
+| [共同评价](common-protocol.md) | SUN、终态及费用口径 |
+| [历史证据](historical-evidence.md) | 已完成的成功、失败和未知状态 |
 
-来源记录保存论文标题、公开URL、读取段落和发布元数据。历史摘要是已有研究观测，新方案的实验尚未开始。继承checkpoint、训练曝光和原始论文结果与拟实施效果分开记录。
+前轮[R1来源](sources-r1.json)、[R2来源](sources-r2.json)、[R3来源](sources-r3.json)、[晶体原文支撑](crystal-problem-support.md)和[技术交叉讨论](reviews/README.md)保留，供具体方法选择参考。

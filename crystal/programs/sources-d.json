@@ -1,0 +1,73 @@
+{
+  "programme": "D: Open successful discovery",
+  "updated": "2026-10-10",
+  "evidence_scope": "Primary-source reading and interpretation; no new scientific experiments",
+  "sources": [
+    {
+      "id": "D01",
+      "title": "Let CSP Be Your ANCHOR: Adaptive Crystal Search over Frozen Structure Priors",
+      "url": "https://arxiv.org/html/2609.33407v1",
+      "status": "September 2026 preprint",
+      "read_depth": "Methods, main experiments, Appendix C reward tilting, selected backbone-update results",
+      "supports": "Composition allocation and adaptive novelty can change discovery outcomes under the tested CSP backbones.",
+      "interpretation": "Use composition/conditional decomposition to study adaptation; do not generalize freezing into a universal optimum."
+    },
+    {
+      "id": "D02",
+      "title": "PLaID++: A Preference Aligned Language Model for Targeted Inorganic Materials Design",
+      "url": "https://arxiv.org/html/2509.07150",
+      "status": "ICML 2026 main conference; initial submission September 2025",
+      "venue_url": "https://proceedings.mlr.press/v306/xu26l.html",
+      "read_depth": "Sections 4.2–4.3, 5.3, Table 1 and temperature ablations",
+      "supports": "Representation and iterative sampling/learning affect stability and SUN differently.",
+      "interpretation": "Motivates separating physical qualification from concentration of successful outcomes."
+    },
+    {
+      "id": "D03",
+      "title": "Multi-Axis Max@K Reinforcement Learning for Representative Diversity in Text-to-Image Generation",
+      "url": "https://arxiv.org/html/2607.14962v1",
+      "status": "July 2026 preprint",
+      "read_depth": "Sections 3–4, discussion, finite-batch coverage appendix",
+      "supports": "Known finite-set coverage objective and occupancy interpretation; category axes specified in advance.",
+      "interpretation": "The coverage identity is prior art. Crystal qualification and output classes are open and evaluated after physical processing."
+    },
+    {
+      "id": "D04",
+      "title": "Efficient Symmetry-Aware Materials Generation via Hierarchical Generative Flow Networks",
+      "url": "https://arxiv.org/html/2411.04323",
+      "publisher_url": "https://doi.org/10.1039/D4DD00392F",
+      "status": "Read November 2024 arXiv v1; publisher record is separate",
+      "read_depth": "Hierarchical-policy description, Section 5 mode exploration and Section 10.7 mode definition",
+      "supports": "Symmetry hierarchy and reward-proportional generation are established crystal techniques.",
+      "interpretation": "Its cited mode-count definition includes negative formation energy and distinct compositions; this is not the project's strict post-relaxation SUN definition."
+    },
+    {
+      "id": "D05",
+      "title": "Illuminating the property space in crystal structure prediction using Quality-Diversity algorithms",
+      "url": "https://arxiv.org/html/2403.03511",
+      "publisher_url": "https://doi.org/10.1039/D4DD00054D",
+      "status": "Digital Discovery 2024; conceptual method precedent",
+      "read_depth": "Abstract, method overview and property-space/results sections available in primary HTML/search extracts",
+      "supports": "MAP-Elites already seeks multiple low-energy property-diverse crystals in fixed-composition systems.",
+      "interpretation": "A diverse archive alone is established capability; the open-set generative learning question requires additional knowledge."
+    },
+    {
+      "id": "D06",
+      "title": "Multi-Objective Quality-Diversity for Crystal Structure Prediction",
+      "url": "https://arxiv.org/abs/2403.17164",
+      "status": "March 2024 manuscript",
+      "read_depth": "Primary abstract only",
+      "supports": "Multi-objective property/quality archives are prior work in crystal structure prediction.",
+      "interpretation": "Used as background, not as detailed evidence for optimization or generalization claims."
+    },
+    {
+      "id": "D07",
+      "title": "Project historical evidence: JTF and F800",
+      "source_type": "local experiment records summarized in the repository historical-evidence document",
+      "read_depth": "Previously reconciled experiment summaries and their evaluation timing",
+      "supports": "JTF increases known stable endpoints in one matched-source comparison; F800 increases confirmed SUN with recorded N/U changes.",
+      "interpretation": "Historical pre-relaxation N/U and post-relaxation energy do not identify the amount of endpoint merging."
+    }
+  ],
+  "public_history_reference": "../evidence/historical-evidence.md"
+}

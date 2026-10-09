@@ -1,0 +1,235 @@
+{
+  "programme": "B",
+  "title": "复用局部化学知识，形成未见但整体可行的晶体",
+  "date": "2026-10-10",
+  "language": "zh-CN",
+  "status": "科学纲领；无新实验",
+  "final_revision": "2026-10-10 A/root peer后定稿：复用由跨连接/晶胞/共享场的条件完成或干预响应辨识；φ+Ψ函数分解不定位知识来源；已有坐标的闭合是恒等式，研究独立局部要求的联合可实现；CN注明平均/统一配位；集中保留训练曝光/UFO阈值/简谐例子范围。",
+  "peer_review": "reviews/a-reviews-b.md",
+  "core_goal": "同一终态协议strictSUN（Ehull≤0）、保留U/N；熟悉框架新化学继续成功",
+  "fixed_checkpoint": null,
+  "fixed_budget": null,
+  "records": [
+    {
+      "id": "B01",
+      "title": "Composable Crystals: Controllable Materials Discovery via Concept Learning",
+      "status": "2026-05-14 v1，2026-05-25 v2；预印本",
+      "primary_url": "https://arxiv.org/html/2605.14769v2",
+      "additional_primary_urls": [],
+      "reading": {
+        "as_of": "2026-10-10",
+        "depth": "方法、interpretability与评价附录选定深读",
+        "sections": "§2.1、§3.1–3.3、§4、Appendix C.1–C.4",
+        "execution": "无训练、采样或复现"
+      },
+      "published_content": "局部atom-neighbor组VQ-VAE、concept集合generator、下游条件DDPM；atom vector含3坐标+100元素+6lattice，concept-set可预测spacegroup/family",
+      "programme_role": "concept复用已是晶体直接先例；B研究知识组成的局部化学/全胞信息层级及未见整体的兼容",
+      "scope": "作者VSUN采用其参考/阈值；不把相对收益当共同strictSUN。输入lattice意味着不能由family probe单独归因纯局部化学"
+    },
+    {
+      "id": "B02",
+      "title": "Topology-Stratified Materials Discovery with A Flow-Based Generative Model（UFO-MGen）",
+      "status": "2026-09-22预印本",
+      "primary_url": "https://arxiv.org/html/2609.26547v1",
+      "additional_primary_urls": [],
+      "reading": {
+        "as_of": "2026-10-10",
+        "depth": "表示、完整主要Results与机制段选读",
+        "sections": "§2.1–2.6，S3.3/S5定义选段",
+        "execution": "无训练、采样或复现"
+      },
+      "published_content": "scaffold/fiber与三阶段topology→occupancy→continuous Wyckoff；未见scaffold试验绕过StageI；MSE热力学条件为formation energy<0",
+      "programme_role": "离散关系与连续实现分工、条件结构转移是实质先例",
+      "scope": "条件迁移与完整自主组合不同；formation-energy/MSE及论文SUN不能直接替代共同Ehull≤0；不给其通用最高排名"
+    },
+    {
+      "id": "B03",
+      "title": "Text-guided flow matching enables sample-efficient crystal structure generation（TFMat）",
+      "status": "2026-09-01预印本，v2已读",
+      "primary_url": "https://arxiv.org/html/2609.01076v2",
+      "additional_primary_urls": [],
+      "reading": {
+        "as_of": "2026-10-10",
+        "depth": "Methods与结果/Discussion选读",
+        "sections": "Methods: Datasets and text conditions、CSP/DNG flow formulation；CSP/DNG结果",
+        "execution": "无训练、采样或复现"
+      },
+      "published_content": "MatSciBERT mean-pooled结构化组成/对称/性质信息条件化CrystalFlow；CSP与DNG分布结果",
+      "programme_role": "科学元数据能指导生成，但未见局部组合的整体稳定需独立建立",
+      "scope": "已知性质metadata条件和retrieval不能当无条件新稳定材料发现证明"
+    },
+    {
+      "id": "B04",
+      "title": "SymmCD: Symmetry-Preserving Crystal Generation with Diffusion Models",
+      "status": "ICLR 2025主会",
+      "primary_url": "https://arxiv.org/html/2502.03638v2",
+      "additional_primary_urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2025/file/3a14ae9951e8153a8fc814b5f506b5b7-Paper-Conference.pdf",
+        "https://github.com/sibasmarak/SymmCD"
+      ],
+      "reading": {
+        "as_of": "2026-10-10",
+        "depth": "表示/算法选定阅读",
+        "sections": "asymmetric-unit/site-symmetry定义，Algorithm1/2；正式主会PDF此前核实",
+        "execution": "无训练、采样或复现"
+      },
+      "published_content": "asymmetric unit与site symmetry联合扩散、有效Wyckoff投影/完整晶体展开",
+      "programme_role": "周期/对称构造能力为组合的结构条件基础",
+      "scope": "对称成立不是全部局部关系兼容，也不是严格相稳定证明"
+    },
+    {
+      "id": "B05",
+      "title": "Multimodal Crystal Flow: Any-to-Any Modality Generation for Unified Crystal Modeling",
+      "status": "ICML 2026主会；首稿2026-02-23",
+      "primary_url": "https://proceedings.mlr.press/v306/seong26a.html",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2602.20210v1"
+      ],
+      "reading": {
+        "as_of": "2026-10-10",
+        "depth": "§3方法与任务定义深读",
+        "sections": "arXiv v1 §1–3.2，模式时间路径、ordering/permutation augmentation；PMLR条目",
+        "execution": "无训练、采样或复现"
+      },
+      "published_content": "独立A/X时间轴，一个模型支持CSP/DNG/structure-conditioned atom type；化学+Wyckoff排序及分层排列增强",
+      "programme_role": "互条件完成的直接能力基础，B可用它研究局部条件族兼容而非重新宣称多模态",
+      "scope": "任务统一本身没有建立未见局部/全局连接组合的泛化"
+    },
+    {
+      "id": "B06",
+      "title": "Substitution-Based Analysis of Structural Novelty for Generative Models of Materials",
+      "status": "2026-06预印本；原repo卡为历史首轮记录",
+      "primary_url": "https://arxiv.org/html/2606.23166v1",
+      "additional_primary_urls": [],
+      "reading": {
+        "as_of": "2026-10-10",
+        "depth": "workflow/results深读",
+        "sections": "§2.1–2.2，Table2；有限候选选择与relaxation",
+        "execution": "无训练、采样或复现"
+      },
+      "published_content": "Duplicate/Substituted/Unmatched；top-k替换+一次松弛；MP20 test Substituted88.4%；模型筛选集合按Ehull≤0.1",
+      "programme_role": "原型迁移既是竞争解释也是合法化学发现；比较局部知识与有能力替换的实质增量",
+      "scope": "有限搜索Unmatched不是不可替换定理；比例属于化学有效/亚稳筛选人口，不是strictSUN全体"
+    },
+    {
+      "id": "B07",
+      "title": "Crystal Generation using the Fully Differentiable Pipeline and Latent Space Optimization",
+      "status": "2026预印本，v2已读",
+      "primary_url": "https://arxiv.org/html/2601.04606v2",
+      "additional_primary_urls": [],
+      "reading": {
+        "as_of": "2026-10-10",
+        "depth": "方法/具体物理例子阅读",
+        "sections": "III.1–III.4、Fig2；CVAE与SO3/direct-latent优化",
+        "execution": "无训练、采样或复现"
+      },
+      "published_content": "对称CVAE与SO3目标；C6能量松弛得到sp3，环境优化指向sp2；C288不同目标的实现差",
+      "programme_role": "局部要求、几何实现和物理优化目标可以分离，不能只看energy下降",
+      "scope": "主要碳局部环境任务；没有把结果直接转成一般无机strictSUN规律"
+    },
+    {
+      "id": "B08",
+      "title": "An invertible, invariant crystal representation for inverse design of solid-state materials using generative deep learning（SLICES）",
+      "status": "Nature Communications 2023；结构对象谱系来源",
+      "primary_url": "https://www.nature.com/articles/s41467-023-42870-7",
+      "additional_primary_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10622439/"
+      ],
+      "reading": {
+        "as_of": "2026-10-10",
+        "depth": "Results表示与Methods几何重构选段",
+        "sections": "Results: SLICES representation、labelled quotient graph与edge translations",
+        "execution": "无训练、采样或复现"
+      },
+      "published_content": "周期结构用带平移边标签的有限quotient graph表示；图提供几何实现初猜",
+      "programme_role": "B的数学对象采用共享节点/边与周期绕行，不采用独立图像patch",
+      "scope": "B显式保留f/L；不因graph编码就认为所有几何/能量完全由topology决定"
+    },
+    {
+      "id": "B09",
+      "title": "From polyhedra to crystals: a graph-theoretic framework for crystal structure generation",
+      "status": "CrystEngComm 2026，DOI10.1039/D5CE01176K；Highlight/框架文章",
+      "primary_url": "https://pubs.rsc.org/en/content/articlehtml/2026/ce/d5ce01176k",
+      "additional_primary_urls": [],
+      "reading": {
+        "as_of": "2026-10-10",
+        "depth": "标准实现与框架正文阅读",
+        "sections": "§3–5，periodic/dual graph、standard realization、CVT和FCC/HCP/BCC例子",
+        "execution": "无训练、采样或复现"
+      },
+      "published_content": "多面体连接的dual periodic graph、标准实现及CVT连接geometry",
+      "programme_role": "为构造式组合的周期/几何要求提供真实晶体理论支撑",
+      "scope": "几何net/tiling实现不是化学兼容或相稳定；不用几何demo声称材料发现"
+    },
+    {
+      "id": "B10",
+      "title": "Local Mechanisms of Compositional Generalization in Conditional Diffusion",
+      "status": "ICML 2026主会；arXiv v3 2026-03-13",
+      "primary_url": "https://proceedings.mlr.press/v306/bradley26a.html",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2509.16447v3"
+      ],
+      "reading": {
+        "as_of": "2026-10-10",
+        "depth": "理论§3与受控CLEVR/干预深读",
+        "sections": "arXiv v3 §2–4，Definition1/2、Lemma1、feature-space与approximation范围",
+        "execution": "无训练、采样或复现"
+      },
+      "published_content": "特定CPC的分离独立条件边际与特定LCS等价；general LCS也可有重叠/多条件，精确CPC等价需要指定子集结构；CLEVR中强制locality可恢复length泛化",
+      "programme_role": "提供可检验的机制理论，而非“分组件自然泛化”的经验口号",
+      "scope": "晶体邻域重叠/共享L与物理变量；B不直接套独立CPC，研究条件化后的有效依赖结构"
+    },
+    {
+      "id": "B11",
+      "title": "Establishing baselines for generative discovery of inorganic crystals",
+      "status": "2025研究；本轮primary abstract/metadata阅读",
+      "primary_url": "https://arxiv.org/abs/2501.02144",
+      "additional_primary_urls": [],
+      "reading": {
+        "as_of": "2026-10-10",
+        "depth": "原始摘要，复用repo具体首轮卡",
+        "sections": "primary abstract；repo establishing-baselines card",
+        "execution": "无训练、采样或复现"
+      },
+      "published_content": "枚举与离子交换为有竞争力的材料发现基线",
+      "programme_role": "为prototype/chemistry prior解释提供直接baseline，熟悉框架化学合法",
+      "scope": "未把摘要级证据外推到任意领域或与不同物理协议混排名"
+    }
+  ],
+  "own_mathematical_example": {
+    "status": "文档内自给推导，非实验或文献作者新结果",
+    "assumptions": "固定平移零模后的简谐Gaussian，K稀疏正定；Gaussian加噪",
+    "formula": "score_t(x)=-(alpha_t^2 K^{-1}+sigma_t^2 I)^{-1}x",
+    "implication": "中间噪声score一般可稠密；finite-range interactions不推出所有噪声下严格局部score",
+    "research_hypothesis": "共享全局/边界变量是否恢复可复用局部条件与随状态变化的依赖范围，须真实晶体验证"
+  },
+  "hypotheses": [
+    "局部规律已学到但整体兼容不足",
+    "局部concept主要携带整胞/模板统计",
+    "组成分配或松弛重新组织解释收益"
+  ],
+  "routes": [
+    "显式约束关系组合+周期几何实现",
+    "噪声/状态相关的局部—全局联合生成",
+    "互相兼容的重叠局部条件完成"
+  ],
+  "historical_sources": [
+    {
+      "id": "DLM16",
+      "observation": "历史F800 confirmedSUN上升且N/U改变；阶段口径保留",
+      "scope": "不作为本组数据或同协议新结果"
+    },
+    {
+      "id": "DLM19/20/21/22",
+      "observation": "typed/volumePlan响应与strictSUN之间存在差距",
+      "scope": "不泛化成所有conditional无用"
+    },
+    {
+      "id": "DLM33",
+      "observation": "40TRAIN matched静态teacher/student forcegap",
+      "scope": "几何cross诊断，不能唯一定位planner或executor"
+    }
+  ],
+  "actions": "只读原文/本地记录、数学推导、新B文档与sources保存；未改repo/AGENTS，未SSH/Git/训练/实验",
+  "public_history_reference": "../evidence/historical-evidence.md"
+}

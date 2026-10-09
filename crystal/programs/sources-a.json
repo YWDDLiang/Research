@@ -1,0 +1,203 @@
+{
+  "programme": "A",
+  "created_on": "2026-10-10",
+  "language": "zh-CN",
+  "research_question": "化学选择与几何实现能否在生成过程中共同形成",
+  "state": "研究纲领；已完成一次同行科学讨论修订；无新实验结果",
+  "peer_revision": {
+    "review": "reviews/c-reviews-a.md",
+    "response": "将中心转为有限数据下正确配对信息用于新组合；区分内生联合推断与新增外部观测；以共同可实现的独立条件族及物理配对锚定兼容性；配对内容、条件信息与行动敏感性共同描述形成。"
+  },
+  "sources": [
+    {
+      "id": "A-C01",
+      "title": "Open Materials Generation with Stochastic Interpolants",
+      "url": "https://proceedings.mlr.press/v267/hollmer25a.html",
+      "text_url": "https://arxiv.org/html/2502.02582v1",
+      "status": "ICML2025主会",
+      "read_sections": [
+        "§3.2–3.4（首稿III.2–III.4）",
+        "原文joint生成与CFP→CSP",
+        "已有官方DFM/SI源码阅读"
+      ],
+      "fact": "原生离散元素与周期连续变量联合；同时讨论组成模型接CSP，data-dependent coupling随任务有不同收益。",
+      "scope": "CFP含SMACT/组成统计目标，不能当严格hull稳定证明。",
+      "role": "为联合与分阶段竞争解释提供同一框架来源。",
+      "reading": "方法/结果选读，2026-10-09与10-10",
+      "code": "https://github.com/FERMat-ML/OMatG"
+    },
+    {
+      "id": "A-C02",
+      "title": "Multimodal Crystal Flow: Any-to-Any Modality Generation for Unified Crystal Modeling",
+      "url": "https://proceedings.mlr.press/v306/seong26a.html",
+      "text_url": "https://arxiv.org/html/2602.20210v1",
+      "status": "ICML2026主会",
+      "read_sections": [
+        "§3.1 Eq1–6联合路径/条件posterior",
+        "§3.1clean prediction与CTMC/ODE",
+        "§4与原final缓存多任务比较"
+      ],
+      "fact": "两模态时间对应同一联合路径；条件速率/速度通过posterior期望学习。",
+      "role": "条件兼容与多信息状态生成的数学参照。",
+      "scope": "不同任务性能不直接建立早commit有害；代码release未核实。",
+      "reading": "方法/结果选读，2026-10-09与10-10"
+    },
+    {
+      "id": "A-C03",
+      "title": "A Periodic Bayesian Flow for Material Generation",
+      "url": "https://arxiv.org/html/2502.02016v1",
+      "venue_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/1f09e1ee5035a4c3fe38a5681cae5815-Abstract-Conference.html",
+      "status": "ICLR2025主会",
+      "read_sections": [
+        "§4.1 Non-additive accuracy/Entropy Conditioning",
+        "§4.2元素与几何belief",
+        "§5.3及Appendix Table7"
+      ],
+      "fact": "周期累积精度不是时间的单值函数，原文用实际精度/entropy参数条件化并报告恢复任务改善。",
+      "role": "反对用跨模型clock定义决定形成；为joint belief路线提供原生晶体起点。",
+      "scope": "已有entropy conditioning不等于物理合格终态belief。",
+      "reading": "新增关键原文方法/结果选读，2026-10-10",
+      "code": "https://github.com/wu-han-lin/CrysBFN"
+    },
+    {
+      "id": "A-C04",
+      "title": "Let CSP Be Your ANCHOR: Adaptive Crystal Search over Frozen Structure Priors",
+      "url": "https://arxiv.org/html/2609.33407v1",
+      "status": "2026-09预印本",
+      "read_sections": [
+        "§2 p(c)p(x|c)",
+        "§4组成/结构替换对照",
+        "Appendix C Eq29–30",
+        "Appendix E评价/unique定义"
+      ],
+      "fact": "其匹配组成对照中DNG→CSP结构替换较小，组成策略改变发现分配。",
+      "role": "组成分配优先的实质竞争解释，而非共同形成路线的弱基线。",
+      "scope": "作者protocol、基座与组成级Unique定义保留；不作为所有联合生成的因果结论。",
+      "reading": "方法/结果选读，2026-10-09与10-10"
+    },
+    {
+      "id": "A-C05",
+      "title": "A generative model for inorganic materials design",
+      "url": "https://www.nature.com/articles/s41586-025-08628-5",
+      "status": "Nature2025",
+      "read_sections": [
+        "主文joint diffusion及条件设计",
+        "此前L08文献记录与官方实现"
+      ],
+      "fact": "联合细化元素、坐标、晶格，成熟的联合生成参照。",
+      "role": "不能将joint generation本身宣称新能力。",
+      "reading": "继承已核原文和release阅读；2026-10-10未重新通读",
+      "code": "https://github.com/microsoft/mattergen"
+    },
+    {
+      "id": "A-V01",
+      "title": "Semantics Lead the Way: Harmonizing Semantic and Texture Modeling with Asynchronous Latent Diffusion",
+      "url": "https://arxiv.org/html/2512.04926v1",
+      "status": "CVPR2026主会",
+      "task": "ImageNet类别条件",
+      "read_sections": [
+        "§3异步联合语义/纹理",
+        "§4.2/4.3时间偏移消融"
+      ],
+      "fact": "中等偏移优于同步及完全顺序，作者将硬顺序问题联系到teacher-forcing mismatch。",
+      "role": "先行与协作可以有不同适用范围，顺序需要机制解释。",
+      "scope": "该证据不是真正T2I主结果，更不是化学—几何因果证明。",
+      "reading": "方法/结果选读，2026-10-09与10-10",
+      "code": "https://github.com/yuemingPAN/SFD"
+    },
+    {
+      "id": "A-V02",
+      "title": "NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale",
+      "url": "https://arxiv.org/html/2508.10711v1",
+      "status": "ICLR2026主会",
+      "task": "真正T2I/编辑",
+      "read_sections": [
+        "§2离散文本/连续patch条件分布",
+        "§6.1 Tables6–7 head消融",
+        "§6.2 tokenizer/CFG漂移"
+      ],
+      "fact": "轻量FM head在不同容量下表现相近；AR上下文和latent稳定性承担关键建模角色。",
+      "role": "技术责任所在不能从连续/离散模块名称判断。",
+      "scope": "作者关于AR承担主要建模的结论来自其有限head消融。",
+      "reading": "方法/结果选读，2026-10-09与10-10",
+      "code": "https://github.com/stepfun-ai/NextStep-1"
+    },
+    {
+      "id": "A-V03",
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "url": "https://arxiv.org/html/2510.11690v1",
+      "status": "ICLR2026主会",
+      "task": "ImageNet类别条件",
+      "read_sections": [
+        "§3重建/表示",
+        "§4生成适配与encoder比较",
+        "§4.1宽度与噪声目标"
+      ],
+      "fact": "最强重建encoder不一定是最强生成encoder；表示需要与生成参数化一起适配。",
+      "role": "表示双重充分性的原始反例。",
+      "reading": "方法/结果选读，2026-10-09与10-10",
+      "code": "https://github.com/bytetriper/RAE"
+    },
+    {
+      "id": "A-V04",
+      "title": "Scaling Text-to-Image Diffusion Transformers with Representation Autoencoders",
+      "url": "https://arxiv.org/html/2601.16208v1",
+      "status": "2026-01预印本",
+      "task": "真正T2I",
+      "read_sections": [
+        "§2decoder数据组成",
+        "§3.2–3.3噪声/head/decoder增强",
+        "§4微调"
+      ],
+      "fact": "维度噪声仍重要，部分ImageNet架构/增强设计的收益随规模消退。",
+      "role": "共同形成机制应联系数据与容量条件，避免把一个迁移配方当普遍规律。",
+      "reading": "方法/结果选读，2026-10-09与10-10"
+    },
+    {
+      "id": "A-V05",
+      "title": "Diffuse Everything: Multimodal Diffusion Models on Arbitrary State Spaces",
+      "url": "https://proceedings.mlr.press/v267/rojas25a.html",
+      "text_url": "https://arxiv.org/html/2506.07903v2",
+      "status": "ICML2025主会",
+      "task": "text-image联合生成、混合tabular",
+      "read_sections": [
+        "正式页/abstract",
+        "原文多模态生成与独立noise schedule框架"
+      ],
+      "fact": "任意原生状态空间的多模态联合/条件生成已有统一框架。",
+      "role": "多模态时钟与条件视图是谱系基础，不写作新技术。",
+      "reading": "框架段落与正式身份选读，未审计全部理论证明",
+      "code": "https://github.com/KevinRojas1499/Diffuse-Everything"
+    },
+    {
+      "id": "A-H01",
+      "title": "项目既有JTF、配对动作与SUN分解",
+      "fact": "几何精修有稳定终点正增量，另一个指定干预无strict增量；稳定、新颖和重复损失共同存在。",
+      "role": "提出实际可行动性问题，不将小动作结果外推成整个生成过程的规律。",
+      "reading": "历史记录，非A新实验",
+      "history_record_ids": [
+        "PDE15",
+        "PDE18",
+        "PDE22"
+      ],
+      "public_history_summary": "../evidence/historical-evidence.md"
+    },
+    {
+      "id": "A-D01",
+      "title": "本纲领的数学分析起点",
+      "kind": "analysis_not_claimed_new_theorem",
+      "assumptions": [
+        "条件score与化学odds比较限定在共同正密度、光滑、相容维度的几何chart",
+        "近固定结构谐例子去除零模后K正定",
+        "生成不确定性不等于物理时间"
+      ],
+      "derivations": [
+        "共同联合law下，化学a/b的条件几何score差等于化学条件odds的几何梯度；作为已有概率关系的分析对象，不宣称新定理或全局充分条件",
+        "独立学得条件族的共同可实现性与其物理配对正确性分别研究；兼容需连接未见组合的决策收益",
+        "Gaussian加噪的precision一般稠密；不把单谐近似当完整多模态晶体score规律"
+      ],
+      "role": "用于提出条件兼容和通信范围问题，未运行数值验证"
+    }
+  ],
+  "public_history_reference": "../evidence/historical-evidence.md"
+}
