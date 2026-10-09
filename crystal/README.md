@@ -1,20 +1,23 @@
 # 晶体发现研究：严格SUN与低能新结构
 
-更新：2026-10-09。[返回仓库首页](../README.md)
+更新：2026-10-10。[返回仓库首页](../README.md)
 
 当前目标是无条件生成更多不同的低能量新晶体，提高严格SUN，并保留独特性。熟悉框架上的新稳定化学组合继续计入发现；CSP、条件控制和框架分类用于理解能力。
 
-本次形成三篇独立论文研究提案，扩展了晶体原始论文支撑和近一年CV研究地图。当前交付为文献论证、技术设计与图表计划，没有新方法实验结果。
+研究以六条能力挑战和四组科学问题为主线，持续追问：即使一种方法实现成功，它回答了什么值得顶会讨论的重要问题？前轮 R1/R2/R3 保留为技术备选。
 
-## 三篇论文提案
+## 六条挑战与四组研究主线
 
-| 方案 | 中心问题 | 主基座／部署 |
+[六条原始挑战](./landscape/02-open-problems.md) · [四组研究纲领](./programs/README.md)
+
+| 研究组 | 中心问题 | 对应原始挑战 |
 |---|---|---|
-| [R1 化学替换与几何补偿联合提议](./ideas/01-revisable-joint-generation.md) | 具体源结构上的科学编辑，如何带着匹配补偿被实现 | OMatG；DNG＋一次学习修订 |
-| [R2 科学对象关系与物理执行](./ideas/02-scientific-representation-execution.md) | 相同科学关系怎样绑定到实际周期对象并生成精确几何 | CrystalFormer；对象条件完成 |
-| [R3 物理后果到生成动作知识](./ideas/03-physical-outcome-learning.md) | 已付费计算怎样改善下一次普通独立生成 | OMatG；训练期教师、部署普通学生 |
+| [A 共同形成](./programs/README.md#a) | 化学选择与几何实现能否共同形成 | 1、2 |
+| [B 组合可行](./programs/README.md#b) | 局部化学知识怎样形成未见但整体可行的晶体 | 3，联系1 |
+| [C 反馈与知识](./programs/README.md#c) | 物理反馈怎样成为有效决定与可积累知识 | 4、6 |
+| [D 开放多解](./programs/README.md#d) | 物理优化怎样扩大有效解空间并保持多种成功 | 5，联系6 |
 
-[提案目录和来源](./ideas/README.md) · [交叉讨论](./evidence/reviews/README.md) · [共同评价](./evidence/common-protocol.md)
+[技术备选 R1/R2/R3](./ideas/README.md) · [已有交叉讨论](./evidence/reviews/README.md) · [共同评价](./evidence/common-protocol.md)
 
 ## 当前问题地图
 
@@ -25,7 +28,7 @@
 | [开放能力问题](./landscape/02-open-problems.md) | 六个开放challenge |
 | [CV到晶体的对应](./landscape/03-cross-domain-transfer-map.md) | 从动机、任务和学习对象迁移 |
 | [共同SUN评价](./landscape/04-evaluation-protocol.md) | 最终物理状态、请求分母和费用 |
-| [三种学习对象](./landscape/05-current-research-thesis.md) | 三篇提案的独立定位 |
+| [当前研究主线](./landscape/05-current-research-thesis.md) | 六条挑战、四组问题与技术备选的关系 |
 | [贡献矩阵](./matrices/contribution-matrix.md) | 当前学习对象与近邻 |
 | [任务—数据—输出](./matrices/task-data-output-matrix.md) | 给定信息、训练单位和输出 |
 | [证据矩阵](./matrices/claim-evidence-matrix.md) | 文献事实、历史观测和新假设 |
