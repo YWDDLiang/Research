@@ -1,0 +1,452 @@
+{
+  "created_on": "2026-10-09",
+  "language": "zh-CN",
+  "window": [
+    "2025-10-09",
+    "2026-10-09"
+  ],
+  "scope": "文生图后训练、反馈学习与推理计算/搜索；窗口按初稿或正式主会日期；只使用primary papers/repos",
+  "scientific_execution": "没有训练、生成、物理实验、SSH",
+  "records": [
+    {
+      "id": "P01",
+      "title": "Flow-GRPO: Training Flow Matching Models via Online RL",
+      "date": "2025-05初稿；2025-12主会",
+      "status": "NeurIPS 2025主会",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/3a10c46572628d58cb44fb705f25cbbf-Abstract-Conference.html",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/yifan123/flow_grpo",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "原文摘要、正式会议页、官方README",
+      "task": "文生图组合性、OCR、偏好",
+      "challenge": "确定性flow缺少逐步探索和可用转移似然",
+      "motivation": "让flow模型接受在线可验证反馈",
+      "mechanism": "ODE转SDE保留边缘分布；缩短训练去噪而保留部署步数",
+      "main_finding": "SD3.5-M作者报告GenEval63%→95%、OCR59%→92%",
+      "boundary": "原作者设置；后续FLUX/OCR工作发现过优化，不能推广为天然无reward hacking",
+      "deep_read": false
+    },
+    {
+      "id": "P02",
+      "title": "DiffusionNFT: Online Diffusion Reinforcement with Forward Process",
+      "date": "2025-09-19初稿；2026主会",
+      "status": "ICLR 2026主会Oral；原稿在窗口前，按正式主会纳入",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d8e68ddfe22520b45b8fb8d5cbde5a21-Abstract-Conference.html",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/NVlabs/DiffusionNFT",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "正式会议摘要、官方算法README",
+      "task": "文生图后训练",
+      "challenge": "逐步似然与采样器限制使flow强化学习昂贵",
+      "motivation": "把奖励放回熟悉的前向训练接口",
+      "mechanism": "正负输出对比、重新加噪、flow matching更新；只需终点图像",
+      "main_finding": "作者报告相对Flow-GRPO更快，并支持黑箱solver",
+      "boundary": "效率倍数依赖任务/CFG/更新步；终点更新不自动解决过程credit",
+      "deep_read": false
+    },
+    {
+      "id": "P03",
+      "title": "GDRO: Group-level Reward Post-training Suitable for Diffusion Models",
+      "date": "2026-01-05初稿；2026-06主会",
+      "status": "CVPR 2026主会",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_GDRO_Group-level_Reward_Post-training_Suitable_for_Diffusion_Models_CVPR_2026_paper.html",
+      "code_verified": {
+        "verified": false,
+        "url": null,
+        "note": "本轮未确认可用官方代码；不等于代码不存在"
+      },
+      "read_depth": "深读：§3、§4.1–4.5、表1–3、附录DPO关系",
+      "task": "FLUX.1-dev OCR/GenEval",
+      "challenge": "在线rollout占训练成本；排名变好不保证优样本似然变高",
+      "motivation": "尽量重用已生成组数据，保留高质量支持",
+      "mechanism": "离线组soft排名交叉熵；噪声预测隐式reward；top-1去噪稳定项",
+      "main_finding": "表3 OCR0.8721、29.60GPUh；Flow-GRPO相近OCR0.8714、59.73GPUh；GenEval0.8517/68.4GPUh",
+      "boundary": "表中训练GPUh不是完整开发成本；预生成每prompt16图像另需成本；corrected score也是模型指标",
+      "deep_read": true
+    },
+    {
+      "id": "P04",
+      "title": "Compositional Text-to-Image Generation Via Region-aware Bimodal Direct Preference Optimization",
+      "date": "2026-06正式主会",
+      "status": "CVPR 2026主会",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Liu_Compositional_Text-to-Image_Generation_Via_Region-aware_Bimodal_Direct_Preference_Optimization_CVPR_2026_paper.html",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/anzeameol/BiDPO",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "正式摘要、官方README",
+      "task": "属性绑定/关系/计数",
+      "challenge": "全图偏好被无关像素和文本错误混淆",
+      "motivation": "把偏好对准决定组合能力的语义和区域",
+      "mechanism": "BICOMP偏好构建；联合图文偏好；区域guidance",
+      "main_finding": "原文报告跨组合benchmark改善",
+      "boundary": "没有把摘要SOTA换成跨对象定量结论；区域标签/偏好构造本身有成本",
+      "deep_read": false
+    },
+    {
+      "id": "P05",
+      "title": "TDM-R1: Reinforcing Few-Step Diffusion Models with Non-Differentiable Reward",
+      "date": "2026-03-08初稿；2026-07主会",
+      "status": "ICML 2026主会",
+      "primary_url": "https://proceedings.mlr.press/v306/luo26j.html",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/Luo-Yihong/TDM-R1",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "深读：arXivv1 §3–4、算法1、表1–3；正式页；代码README",
+      "task": "1/4步文生图、OCR、偏好",
+      "challenge": "少步直接奖励加权去噪容易模糊；非微分reward无法直接反传",
+      "motivation": "低部署成本下仍吸收通用反馈",
+      "mechanism": "确定性TDM轨迹；噪声态组偏好surrogate；生成器与surrogate分开更新，分布KL约束",
+      "main_finding": "v1表1同SD3.5-M 4NFE TDM GenEval0.61→0.92；原多步base0.63",
+      "boundary": "属于few-step生成器；确定性续程标签不等于多随机未来的成功概率；公开代码将EMAreference改为frozen",
+      "deep_read": true
+    },
+    {
+      "id": "P06",
+      "title": "Reinforce Adjoint Matching",
+      "date": "2026-05-11 v1",
+      "status": "预印本；未确认正式会议",
+      "primary_url": "https://arxiv.org/html/2605.10759v1",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/AndreasBergmeister/ram",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "深读：§3–6、表1–2、§C估计器；官方README",
+      "task": "SD3.5-M组合/OCR/偏好后训练",
+      "challenge": "精确控制目标会引入高方差/长轨迹VJP",
+      "motivation": "以可承受的目标偏差换稳定高效训练",
+      "mechanism": "终点采样+解析加噪；Bayes bridge score奖励修正；丢弃path-cost项",
+      "main_finding": "表2 RAM270步GenEval0.97；重训NFT900步0.95；RAM OCR0.97时质量损失小于其重训NFT",
+      "boundary": "RAM明确有偏；步数不是GPUh；Flow-GRPO部分数值来自原论文，NFT/AWM为作者重训",
+      "deep_read": true
+    },
+    {
+      "id": "P07",
+      "title": "DRM: Diffusion-based Reward Model With Step-wise Guidance",
+      "date": "2026-05-25初稿；2026-06主会",
+      "status": "CVPR 2026主会（CVF论文记录和官方仓库）",
+      "primary_url": "https://arxiv.org/html/2605.25661v1",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/jjaxonx/DRM",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "深读：§3.2–3.4、§4、表1–4；CVF PDF索引；官方README",
+      "task": "噪声态偏好评分、Step-GRPO、逐步采样",
+      "challenge": "VLM语义表示遗漏感知品质；终点奖励credit粗",
+      "motivation": "让反馈在生成所处状态直接可用",
+      "mechanism": "SD3.5 DiT奖励骨干；胜负图像对加噪BT学习；逐步候选组评分",
+      "main_finding": "报告Step-GRPO约3.5倍GPUh收敛改善；表4 k1→k6推理2.88→9.83秒，ImageReward1.01→1.15",
+      "boundary": "再加噪偏好标签并非真实干预后续结果标签；步级评分仍有代理误差，计算显著增加",
+      "deep_read": true
+    },
+    {
+      "id": "P08",
+      "title": "Beyond VLM-Based Rewards: Diffusion-Native Latent Reward Modeling",
+      "date": "2026-02-11 v1",
+      "status": "预印本；未确认正式会议",
+      "primary_url": "https://arxiv.org/html/2602.11146v1",
+      "code_verified": {
+        "verified": false,
+        "url": null,
+        "note": "本轮未确认可用官方代码；不等于代码不存在"
+      },
+      "read_depth": "摘要、§3–4机制和讨论标题核查",
+      "task": "潜空间偏好模型/对齐",
+      "challenge": "像素VLM评分昂贵且latent-domain不匹配",
+      "motivation": "训练与评分都在diffusion原生域完成",
+      "mechanism": "timestep奖励头；noise-calibrated Thurstone偏好likelihood；多噪声ensemble",
+      "main_finding": "原文报告偏好预测接近强VLM而成本较低",
+      "boundary": "未核算跨backbone统一倍数；本轮未确认官方仓库",
+      "deep_read": false
+    },
+    {
+      "id": "P09",
+      "title": "Sample-Adaptive Latent Rewards for Uncertainty-Guided Diffusion Post-Training",
+      "date": "2026-08-06 v1",
+      "status": "预印本；未确认正式会议",
+      "primary_url": "https://arxiv.org/html/2608.06125v1",
+      "code_verified": {
+        "verified": false,
+        "url": null,
+        "note": "本轮未确认可用官方代码；不等于代码不存在"
+      },
+      "read_depth": "摘要、§3奖励分布/异方差likelihood",
+      "task": "SURE-LRM潜奖励和置信度",
+      "challenge": "同一噪声级样本可有不同评分可靠性",
+      "motivation": "让生成器知道该相信哪些反馈",
+      "mechanism": "样本条件均值/方差；异方差偏好likelihood；uncertainty-guided更新",
+      "main_finding": "作者报告更可靠潜奖励与后训练表现",
+      "boundary": "预测方差须区分模型误差、偏好歧义；没有把估计置信度视为真实终点可达概率",
+      "deep_read": false
+    },
+    {
+      "id": "P10",
+      "title": "Understanding Reward Hacking in Text-to-Image Reinforcement Learning",
+      "date": "2026-01-06初稿；2026-06程序列出主会",
+      "status": "CVPR 2026主会（官方program佐证）；深读arXivv1",
+      "primary_url": "https://arxiv.org/html/2601.03468v1",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/yq-hong/ArtifactReward",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "原文§3–4、共有盲区、表/样例；官方README；CVPR程序",
+      "task": "T2I奖励盲区与ArtifactReward",
+      "challenge": "偏好/检测/VQA高分可能奖励不真实结构",
+      "motivation": "用实际优化后失败样本补上共有盲区",
+      "mechanism": "约200有/无artifact图；MLLM自动prompt优化；辅助结构reward",
+      "main_finding": "不同reward偏置不同，集成仅部分缓解；artifact信号改善现实感",
+      "boundary": "原文范围内的共有盲区；不代表所有reward/模型必然失败，结构reward也不能包办其它能力",
+      "deep_read": false
+    },
+    {
+      "id": "P11",
+      "title": "Beyond the Dirac Delta: Mitigating Diversity Collapse in Reinforcement Fine-Tuning for Versatile Image Generation",
+      "date": "2026-01-18 v1",
+      "status": "预印本；未确认正式会议",
+      "primary_url": "https://arxiv.org/html/2601.12401v1",
+      "code_verified": {
+        "verified": false,
+        "url": null,
+        "note": "本轮未确认可用官方代码；不等于代码不存在"
+      },
+      "read_depth": "深读：§4–6、表1、reward shaping公式8–12",
+      "task": "DRIFT质量/多样性Pareto",
+      "challenge": "单目标强化会集中到少数高分输出",
+      "motivation": "同prompt仍提供多样候选",
+      "mechanism": "reward集中子组过滤outlier；prompt embedding扰动；DreamSim组差异shaping",
+      "main_finding": "作者表1跨指标报告9.08–43.46% diversity gain等；保留为其特征度量内结果",
+      "boundary": "有多组件混合；终端potential非恒定，公式保留γ^T d(x0)，本memo推断不能仅凭potential形式认定目标不变",
+      "deep_read": true
+    },
+    {
+      "id": "P12",
+      "title": "Multi-Axis Max@K Reinforcement Learning for Representative Diversity in Text-to-Image Generation",
+      "date": "2026-07-16 v1",
+      "status": "预印本；未确认正式会议",
+      "primary_url": "https://arxiv.org/html/2607.14962v1",
+      "code_verified": {
+        "verified": false,
+        "url": null,
+        "note": "本轮未确认可用官方代码；不等于代码不存在"
+      },
+      "read_depth": "深读：§3–4、§6、表1、有限batch覆盖与pooled分布",
+      "task": "预定义模式覆盖、race5及race5×gender2外观分类",
+      "challenge": "单样本高分和feature差异不能保证特定稀有模式出现",
+      "motivation": "让一组不同输出各自承担代表性贡献",
+      "mechanism": "对每类别取组内最大score，再汇总；category代表获得credit",
+      "main_finding": "相同backbone/prompt/rollout下race5相对count-GRPO F增加0.18/0.26/0.22（三judge）",
+      "boundary": "模式事先指定且可评分；不是开放集合晶体发现；原文已有occupancy公式与边际导数",
+      "deep_read": true
+    },
+    {
+      "id": "P13",
+      "title": "PromptRL: Prompt Matters in RL for Flow-Based Image Generation",
+      "date": "2026-02-01初稿；2026-07主会",
+      "status": "ICML 2026主会",
+      "primary_url": "https://proceedings.mlr.press/v306/wang26kl.html",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/G-U-N/UniRL",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "§3–4、摘要/正式页；官方README",
+      "task": "语言改写器+图像flow共同RL",
+      "challenge": "prompt phrasing过拟合和组内多样性减少",
+      "motivation": "在条件空间主动生成等语义变体",
+      "mechanism": "可训练LM改写器和FM两套策略，共享视觉reward，reward tags",
+      "main_finding": "作者报告约50% fewer rollouts达到更高性能",
+      "boundary": "改写增加可控探索但可能改变任务语义；晶体参数条件不能任意改写",
+      "deep_read": false
+    },
+    {
+      "id": "P14",
+      "title": "Diffusion Tree Sampling: Scalable inference-time alignment of diffusion models",
+      "date": "2025-06-25初稿；2025-12主会",
+      "status": "NeurIPS 2025主会",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/d6484394c4cb5e1f4ecad8d90b912025-Paper-Conference.pdf",
+      "code_verified": {
+        "verified": false,
+        "url": null,
+        "note": "本轮未确认可用官方代码；不等于代码不存在"
+      },
+      "read_depth": "深读：arXivv1 §3–5、soft-value、backup、§F成本；正式NeurIPS PDF/作者主页",
+      "task": "DTS分布采样与DTS*高reward搜索",
+      "challenge": "噪声态clean估计reward有偏；旧轨迹计算丢失",
+      "motivation": "额外算力改善值估计，而不仅多跑样本",
+      "mechanism": "树节点缓存rollout，终点reward软Bellman回传；sample/search两变体",
+      "main_finding": "SD1.5+ImageReward下报告DTS*匹配BoN最多5倍少compute；MNIST/CIFAR为另一结果",
+      "boundary": "无限rollout一致性不是有限budget保证；优化最高reward与抽样正确分布目标不同",
+      "deep_read": true
+    },
+    {
+      "id": "P15",
+      "title": "Test-Time Scaling of Diffusion Models via Noise Trajectory Search",
+      "date": "2025-05/06初稿；2025-12主会",
+      "status": "NeurIPS 2025主会",
+      "primary_url": "https://openreview.net/pdf?id=fnkkY7UGRl",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/rvignav/diffusion-tts",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "正式PDF摘要/方法；官方README",
+      "task": "EDM/Stable Diffusion噪声轨迹搜索",
+      "challenge": "增加去噪步收益饱和；MCTS全搜索昂贵",
+      "motivation": "搜索随机性实现更多有效探索",
+      "mechanism": "将MDP近似为contextual bandits；ε-greedy不同时间全局/局部探索",
+      "main_finding": "报告比基线更佳reward/搜索效率",
+      "boundary": "bandit忽略长程动作相互作用；未把摘要up-to百分比移植其它backbone",
+      "deep_read": false
+    },
+    {
+      "id": "P16",
+      "title": "Inference-Time Scaling of Discrete Diffusion Models via Importance Weighting and Optimal Proposal Design",
+      "date": "2025-05-28初稿；2026主会",
+      "status": "ICLR 2026主会",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/3df1eca840e82b11bbc33f68c773c38e-Abstract-Conference.html",
+      "code_verified": {
+        "verified": false,
+        "url": null,
+        "note": "本轮未确认可用官方代码；不等于代码不存在"
+      },
+      "read_depth": "正式会议摘要；原稿摘要/元数据",
+      "task": "离散扩散SMC，包含T2I/语言/生物设计",
+      "challenge": "粒子weights退化且proposal不合目标",
+      "motivation": "结合合法权重与更好的proposal",
+      "mechanism": "SMC中间targets；first-order proposal；amortized log-variance最小化proposal",
+      "main_finding": "报告跨对象可控性/质量提升",
+      "boundary": "与连续geometry动力学不同；未深读完整T2I预算表，不报告量化倍数",
+      "deep_read": false
+    },
+    {
+      "id": "P17",
+      "title": "Inference-Time Scaling of Diffusion Models via Progressive Seed Pruning",
+      "date": "2026-07 v1；2026 ECCV",
+      "status": "ECCV 2026（官方repo声明，未另核会议程序）",
+      "primary_url": "https://arxiv.org/html/2607.21591v1",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/rogerioagjr/psp",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "深读：§3–4、表1–2、solver/预算设定；官方repo",
+      "task": "SD1.5/SDXL/SD3.5 seed选择",
+      "challenge": "固定粒子数浪费大量低潜力终程",
+      "motivation": "先广探索，再保留有希望seed",
+      "mechanism": "评分denoised估计，逐步减少存活pool；预算Σk_t",
+      "main_finding": "SDXL Nbar4 GenEval BoN0.629→PSP0.645；human0.682→0.713",
+      "boundary": "主要匹配generatorupdates；scorer另收费；早期误排不可逆；作者调整baseline stochastic solver",
+      "deep_read": true
+    },
+    {
+      "id": "P18",
+      "title": "Flash-BoN: Instant Drafts for Inference-Time Scaling in Diffusion Models",
+      "date": "2026-07-05初稿；2026 ECCV",
+      "status": "ECCV 2026（官方repo声明）",
+      "primary_url": "https://arxiv.org/html/2607.04461v1",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/flash-bon/flash-bon",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "摘要、§4、wall-clock动机；官方README",
+      "task": "廉价draft、多阶段验证、完整refinement",
+      "challenge": "只算NFE隐藏verifier开销",
+      "motivation": "把同时间预算分配给更多不同候选",
+      "mechanism": "timestep截短+层跳过+activation proxy；draft筛选后恢复full质量",
+      "main_finding": "作者wall-clock比较中简单BoN能胜部分搜索；廉价draft扩探索",
+      "boundary": "draft-final排名必须有效；offline配置调优有成本；不将NFE相同视为总成本相同",
+      "deep_read": false
+    },
+    {
+      "id": "P19",
+      "title": "Enhanced Text-to-Image Generation by Fine-grained Multimodal Reasoning",
+      "date": "2026-04-15 v1",
+      "status": "预印本；未确认正式会议",
+      "primary_url": "https://arxiv.org/html/2604.13491v1",
+      "code_verified": {
+        "verified": false,
+        "url": null,
+        "note": "本轮未确认可用官方代码；不等于代码不存在"
+      },
+      "read_depth": "§3局限、§4方法、§6消融标题/机制",
+      "task": "FiMR显式反馈与局部自修正",
+      "challenge": "整图judge遗漏细小约束，语言rationale可能被decoder绕过",
+      "motivation": "把失败解释变成可执行局部纠正",
+      "mechanism": "prompt拆VQA最小语义单位，逐项验证，局部修改，训练理解-修正接口",
+      "main_finding": "报告组合benchmark改善；显式反馈/细粒度judging有消融",
+      "boundary": "需要能实际编辑对应区域的模型；一段解释不等于行动因果",
+      "deep_read": false
+    },
+    {
+      "id": "P20",
+      "title": "RewardFlow: Generate Images by Optimizing What You Reward",
+      "date": "2026-04-09初稿；2026-06主会",
+      "status": "CVPR 2026主会",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Susladkar_RewardFlow_Generate_Images_by_Optimizing_What_You_Reward_CVPR_2026_paper.html",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/PLAN-Lab/RewardFlow",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "正式摘要、作者repo README",
+      "task": "训练无关文生图/局部编辑",
+      "challenge": "局部要求与整体品质多目标耦合",
+      "motivation": "动态调整多反馈影响方向/范围",
+      "mechanism": "multi-reward Langevin；prompt语义解析调权/步长；VQA+SAM局部reward",
+      "main_finding": "正式原文报告零样本编辑保真和组合对齐改善",
+      "boundary": "require differentiable scorer，优化每次收费；SAM区域可见而晶体稳定常是全局量",
+      "deep_read": false
+    },
+    {
+      "id": "P21",
+      "title": "Uniworld-V2: Reinforce Image Editing with Diffusion Negative-aware Finetuning and MLLM Implicit Feedback",
+      "date": "2025-10-19 v1",
+      "status": "技术预印本；仓库现名Edit-R1",
+      "primary_url": "https://arxiv.org/html/2510.16888v1",
+      "code_verified": {
+        "verified": true,
+        "url": "https://github.com/PKU-YuanGroup/Edit-R1",
+        "note": "官方README或仓库页面已读；未执行/复现"
+      },
+      "read_depth": "摘要、feedback/logit/组filter机制；官方README",
+      "task": "通用指令编辑",
+      "challenge": "多任务无统一reward，MLLM分数噪声影响更新",
+      "motivation": "利用理解模型的隐式判断，降低annotation依赖",
+      "mechanism": "NFT更新+MLLM输出logits反馈+低variance组过滤",
+      "main_finding": "作者报告ImgEdit/GEdit-Bench提升，适配多编辑backbone",
+      "boundary": "减少评分噪声不代表校准为真实成功概率；没有推断多轮自修正稳定性",
+      "deep_read": false
+    },
+    {
+      "id": "P22",
+      "title": "GRPO-Guard: Mitigating Implicit Over-Optimization in Flow Matching via Regulated Clipping",
+      "date": "2025-10-25初稿；2026-06主会",
+      "status": "CVPR 2026主会",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_GRPO-Guard_Mitigating_Implicit_Over-Optimization_in_Flow_Matching_via_Regulated_Clipping_CVPR_2026_paper.html",
+      "code_verified": {
+        "verified": false,
+        "url": null,
+        "note": "本轮未确认可用官方代码；不等于代码不存在"
+      },
+      "read_depth": "arXivv1 §3、公式7–8、局限；正式CVF摘要",
+      "task": "flow在线RL更新稳定性",
+      "challenge": "时间相关ratio/clipping失衡，代理reward涨而其它质量降",
+      "motivation": "区分优化器过更新与reward自身缺陷",
+      "mechanism": "ratio normalization和timestep gradient reweighting",
+      "main_finding": "作者报告多个flowbackbone缓解隐性过优化",
+      "boundary": "本memo推断E log r<0不推出E r<1；确切似然比在旧分布下E r=1；经验剪切失衡与理论需分开",
+      "deep_read": false
+    }
+  ]
+}

@@ -1,0 +1,1407 @@
+{
+  "summary": {
+    "as_of": "2026-10-09",
+    "records": 69,
+    "distinct_works": 68,
+    "lane_counts": {
+      "基础生成与表示": 20,
+      "条件控制与推理": 20,
+      "反馈与推理计算": 22,
+      "评价与泛化": 7
+    },
+    "selected_methods_results_in_three_method_lanes": 37,
+    "duplicate_views": [
+      [
+        "C18",
+        "P21"
+      ]
+    ],
+    "diagnostic_sources_not_counted": [
+      "The Plan, Not the Decoder: https://arxiv.org/html/2608.21713v1"
+    ],
+    "scope_note": "包含真实文生图、编辑、类别条件基础生成和相关评价，非68篇均为文生图方法。会议、任务与选读范围按原记录。",
+    "scientific_experiments": 0
+  },
+  "records": [
+    {
+      "id": "F01",
+      "work_key": "arxiv:2510.11690",
+      "lane": "基础生成与表示",
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "date": "2025-10-13",
+      "status": "ICLR 2026；published_main_conference",
+      "task": "ImageNet类别条件；无T2I主实验",
+      "primary_url": "https://arxiv.org/html/2510.11690v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2510.11690v1"
+      ],
+      "challenge": "重建训练的窄VAE latent缺少语义结构；高维表示又难去噪。",
+      "motivation": "直接在强表示空间生成，消除压缩瓶颈并承接预训练。",
+      "mechanism": "冻结DINO/SigLIP/MAE编码器配训练decoder；按token维度调噪声、增宽head并增强decoder噪声鲁棒性。",
+      "finding": "v1显示重建最好的MAE并非生成最好的DINO；普通DiT直接换RAE失败，调整后生成改善。",
+      "reading": "selected_methods_results；v1 §3–6，Tables1–3，宽度/噪声消融；final venue摘要",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F02",
+      "work_key": "arxiv:2601.16208",
+      "lane": "基础生成与表示",
+      "title": "Scaling Text-to-Image Diffusion Transformers with Representation Autoencoders",
+      "date": "2026-01-22",
+      "status": "preprint",
+      "task": "真正自由文本T2I；GenEval、DPG；0.5B–9.8B DiT",
+      "primary_url": "https://arxiv.org/html/2601.16208v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2601.16208v1"
+      ],
+      "challenge": "ImageNet的RAE优势能否扩展到开放词汇、文字和大模型。",
+      "motivation": "检验迁移条件，辨别真正必需设计与小规模补丁。",
+      "mechanism": "扩大SigLIP2 decoder训练数据；LLM+DiT在RAE与FLUX VAE上同设置训练/微调。",
+      "finding": "维度噪声仍关键，宽head/噪声增强收益消退；高质量小数据微调RAE较抗过拟合。",
+      "reading": "selected_methods_results；§2–4；Fig1–7；AppendixC；v1",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F03",
+      "work_key": "arxiv:2504.10483",
+      "lane": "基础生成与表示",
+      "title": "REPA-E: Unlocking VAE for End-to-End Tuning with Latent Diffusion Transformers",
+      "date": "2025-04-14",
+      "status": "ICCV 2025；published_main_conference",
+      "task": "ImageNet；MSCOCO T2I扩展和2025-10 T2I-VAE发布",
+      "primary_url": "https://arxiv.org/abs/2504.10483",
+      "primary_urls": [
+        "https://arxiv.org/abs/2504.10483"
+      ],
+      "challenge": "固定tokenizer限制生成；标准扩散损失直接联合训练会退化。",
+      "motivation": "让tokenizer与生成任务共同适配。",
+      "mechanism": "表示对齐驱动VAE与DiT共同训练；发布可替换现有VAE的端到端调优权重。",
+      "finding": "T2I补充实验和后续发布显示换VAE能改善T2I；表示训练可成为上游改进。",
+      "reading": "abstract_metadata_release；官方仓库Overview/Oct2025 release；CVF补充Table12",
+      "selected_methods_results": false,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F04",
+      "work_key": "arxiv:2512.04926",
+      "lane": "基础生成与表示",
+      "title": "Semantics Lead the Way: Harmonizing Semantic and Texture Modeling with Asynchronous Latent Diffusion",
+      "date": "2025-12-04",
+      "status": "CVPR 2026；published_main_conference",
+      "task": "ImageNet类别条件；无T2I主实验",
+      "primary_url": "https://arxiv.org/html/2512.04926v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2512.04926v1"
+      ],
+      "challenge": "语义先于纹理形成，同步联合去噪未利用这一顺序。",
+      "motivation": "让较清楚的语义给纹理提供锚点，同时保持协作。",
+      "mechanism": "Semantic VAE压缩视觉表示，与纹理latent并行；两个时钟有固定偏移。",
+      "finding": "偏移0.3优于同步；偏移1的完整顺序生成更差；ImageNet XL FID1.06。",
+      "reading": "selected_methods_results；§3–4，Fig5，Tables2–3；v1",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F05",
+      "work_key": "arxiv:2507.15856",
+      "lane": "基础生成与表示",
+      "title": "Latent Denoising Makes Good Tokenizers",
+      "date": "2025-07-21",
+      "status": "ICLR 2026；published_main_conference",
+      "task": "ImageNet；最终版包含MSCOCO T2I",
+      "primary_url": "https://arxiv.org/html/2507.15856v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2507.15856v1"
+      ],
+      "challenge": "好的重建latent不一定能从噪声/缺失状态被生成模型恢复。",
+      "motivation": "按下游去噪任务设计tokenizer。",
+      "mechanism": "编码latent与高斯噪声插值，加随机mask，再重建干净图；作为tokenizer时关闭扰动。",
+      "finding": "跨六种生成器改善；v1 MAR-L+decoder微调FID1.35，改善不依赖外部语义teacher。",
+      "reading": "selected_methods_results；v1 §3/5，Tables1–2；final venue摘要",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F06",
+      "work_key": "arxiv:2510.12586",
+      "lane": "基础生成与表示",
+      "title": "There is No VAE: End-to-End Pixel-Space Generative Modeling via Self-Supervised Pre-training",
+      "date": "2025-10-14",
+      "status": "ICLR 2026；published_main_conference",
+      "task": "ImageNet类别条件；pixel diffusion与consistency；无T2I",
+      "primary_url": "https://arxiv.org/html/2510.12586v3",
+      "primary_urls": [
+        "https://arxiv.org/html/2510.12586v3"
+      ],
+      "challenge": "pixel生成要同时学语义和细节，强噪声上普通SSL容易崩。",
+      "motivation": "先学跨噪声语义再做端到端像素生成。",
+      "mechanism": "干净增强视图对比＋同源相邻噪声点一致性；配随机decoder共同微调；CM加干净目标表示辅助。",
+      "finding": "v3 diffusion FID1.58/2.35；单步CM8.82，说明预训练适用不止多步。",
+      "reading": "selected_methods_results；v1/v3 §3–4，噪声正样本构造，Tables1/2/4",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F07",
+      "work_key": "arxiv:2511.13720",
+      "lane": "基础生成与表示",
+      "title": "Back to Basics: Let Denoising Generative Models Denoise",
+      "date": "2025-11-17",
+      "status": "CVPR 2026；published_main_conference",
+      "task": "ImageNet256/512/1024类别条件；无T2I主实验",
+      "primary_url": "https://arxiv.org/html/2511.13720v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2511.13720v1"
+      ],
+      "challenge": "高维噪声/速度目标需要拟合非数据流形；有限容量大patch模型困难。",
+      "motivation": "把网络容量用于预测有结构的干净数据。",
+      "mechanism": "JiT直接预测像素x，转换成velocity后用velocity损失/采样；大patch普通Transformer。",
+      "finding": "x预测可使欠宽网络工作，噪声/速度参数化明显失败；G/16 ImageNet256 FID1.82。",
+      "reading": "selected_methods_results；§3–4，参数化分析，网络/噪声尺度；v1",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F08",
+      "work_key": "arxiv:2511.20645",
+      "lane": "基础生成与表示",
+      "title": "PixelDiT: Pixel Diffusion Transformers for Image Generation",
+      "date": "2025-11-25",
+      "status": "CVPR 2026；published_main_conference",
+      "task": "ImageNet类别条件；真正1024×1024 T2I",
+      "primary_url": "https://arxiv.org/html/2511.20645v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2511.20645v1"
+      ],
+      "challenge": "autoencoder丢失细节并隔断端到端优化；直接像素计算大。",
+      "motivation": "保留像素精度同时组织全局与局部计算。",
+      "mechanism": "patch DiT建模全局；pixel PiT建模细节；pixel AdaLN与token compaction控制计算。",
+      "finding": "ImageNet FID1.61；T2I1024 GenEval0.74/DPG83.5；发布训练/推理权重。",
+      "reading": "selected_methods_results；§3.1–3.4，T2I分支；官方仓库训练/模型表",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F09",
+      "work_key": "arxiv:2609.24919",
+      "lane": "基础生成与表示",
+      "title": "PixelDiT2: Representation-Grounded Pixel Diffusion Transformers",
+      "date": "2026-09-21",
+      "status": "NeurIPS 2026；author_reported_accepted_upcoming_official_poster_not_verified",
+      "task": "ImageNet类别条件；无T2I主实验",
+      "primary_url": "https://arxiv.org/html/2609.24919v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2609.24919v1"
+      ],
+      "challenge": "pixel模型缺乏显式表示先验，表示学习与像素生成互相拖累。",
+      "motivation": "把成熟视觉表示作为持续可用先验。",
+      "mechanism": "每步用冻结DINOv3编码当前噪声图，经时间条件投影形成grounding特征送入patch DiT。",
+      "finding": "ImageNet FID1.46/1.48；时间投影吸收teacher在噪声上的表示漂移。",
+      "reading": "selected_methods_results；§3.2/4；噪声漂移/encoder消融；官方仓库",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F10",
+      "work_key": "arxiv:2608.16887",
+      "lane": "基础生成与表示",
+      "title": "An Empirical Study of Training Pixel-Space Text-to-Image Diffusion Models",
+      "date": "2026-08-17",
+      "status": "preprint",
+      "task": "真正大规模自由T2I；GenEval、DPG",
+      "primary_url": "https://arxiv.org/html/2608.16887v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2608.16887v1"
+      ],
+      "challenge": "ImageNet pixel配方在大型T2I是否同样高效。",
+      "motivation": "识别以像素精度换取训练困难的实际成本。",
+      "mechanism": "同token长度比较latent/pixel；latent权重初始化后转pixel，混合真实和自产数据，比较x/v与decoder。",
+      "finding": "直接pixel预训练慢；初始化使x/v均可收敛但x更好；自产数据继承VAE错误，真实数据纠正。",
+      "reading": "selected_methods_results；§3–5，Fig7/8，Table1，AppendixA同架构设置",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F11",
+      "work_key": "arxiv:2508.10711",
+      "lane": "基础生成与表示",
+      "title": "NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale",
+      "date": "2025-08-14",
+      "status": "ICLR 2026；published_main_conference",
+      "task": "真正T2I、编辑与图文交错",
+      "primary_url": "https://arxiv.org/html/2508.10711v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2508.10711v1"
+      ],
+      "challenge": "离散VQ损失信息；重型整图diffusion削弱统一AR优势。",
+      "motivation": "统一next-token语义与高保真连续图像token。",
+      "mechanism": "14B因果Transformer；离散text CE，连续patch用157M MLP flow head；VAE通道归一化。",
+      "finding": "head从40M到528M性能近似，主AR承担条件建模；强CFG会放大latent漂移。",
+      "reading": "selected_methods_results；§2/4/6，Tables6–9；v1与final主会",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F12",
+      "work_key": "arxiv:2505.23660",
+      "lane": "基础生成与表示",
+      "title": "D-AR: Diffusion via Autoregressive Models",
+      "date": "2025-05-29",
+      "status": "ICLR 2026；published_main_conference",
+      "task": "ImageNet类别条件、部分token预览和布局；无T2I主实验",
+      "primary_url": "https://arxiv.org/abs/2505.23660",
+      "primary_urls": [
+        "https://arxiv.org/abs/2505.23660"
+      ],
+      "challenge": "展平图像patch缺乏自然因果顺序。",
+      "motivation": "用扩散的粗到细过程定义token顺序。",
+      "mechanism": "序列diffusion tokenizer将不同token位置绑定像素去噪步骤，普通NTP逐步产生并可流式解码。",
+      "finding": "final ImageNet256tokens 775M/1.4B FID2.09/2.00；支持部分token预览。",
+      "reading": "abstract_metadata_release；主会摘要/intro、官方仓库",
+      "selected_methods_results": false,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F13",
+      "work_key": "arxiv:2507.04947",
+      "lane": "基础生成与表示",
+      "title": "DC-AR: Efficient Masked Autoregressive Image Generation with Deep Compression Hybrid Tokenizer",
+      "date": "2025-07-07",
+      "status": "ICCV 2025；published_main_conference",
+      "task": "真正T2I；MJHQ30k、GenEval",
+      "primary_url": "https://arxiv.org/html/2507.04947v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2507.04947v1"
+      ],
+      "challenge": "高压缩VQ难保细节；纯连续MAR又需很多步骤。",
+      "motivation": "把结构选择与细节精度交给不同类型token。",
+      "mechanism": "32×二维混合tokenizer；masked transformer先预测离散tokens，再以hidden state条件生成连续残差。",
+      "finding": "12步完整生成；MJHQ gFID5.49/GenEval0.69；二维token支持跨分辨率。",
+      "reading": "selected_methods_results；§3–4，混合token与discrete-only消融，finalPDF/仓库",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F14",
+      "work_key": "arxiv:2603.06449",
+      "lane": "基础生成与表示",
+      "title": "CaTok: Taming Mean Flows for One-Dimensional Causal Image Tokenization",
+      "date": "2026-03-06",
+      "status": "CVPR 2026；published_main_conference",
+      "task": "ImageNet重建/类别AR；无T2I主实验",
+      "primary_url": "https://arxiv.org/pdf/2603.06449",
+      "primary_urls": [
+        "https://arxiv.org/pdf/2603.06449"
+      ],
+      "challenge": "人为1D顺序、全token条件decoder与NTP因果性冲突；nested dropout失衡。",
+      "motivation": "让token前缀自然对应可执行的逐层内容。",
+      "mechanism": "因果ViT tokenizer按时间区间供给MeanFlow decoder，REPA-A辅助训练。",
+      "finding": "256token重建FID0.75；部分区间/前缀有不同信息且支持单/多步。",
+      "reading": "abstract_metadata_release；CVF摘要/intro；作者project方法；arXiv首稿日期页已核实",
+      "selected_methods_results": false,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F15",
+      "work_key": "arxiv:2510.17171",
+      "lane": "基础生成与表示",
+      "title": "Generation then Reconstruction: Accelerating Masked Autoregressive Models via Two-Stage Sampling",
+      "date": "2025-10-20",
+      "status": "ICLR 2026；published_main_conference",
+      "task": "ImageNet MAR；LightGen7B真正T2I",
+      "primary_url": "https://arxiv.org/html/2510.17171v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2510.17171v1"
+      ],
+      "challenge": "空间相关token同一步建模困难，统一计算浪费在容易补全的区域。",
+      "motivation": "先形成足够骨架，再快速补全，困难细节保留预算。",
+      "mechanism": "无需训练的两阶段mask采样；特征频谱为token分配额外diffusion步骤。",
+      "finding": "MAR-H报告3.72×；方法也在T2I LightGen上验证。",
+      "reading": "selected_methods_results；§3–4，Tables1/4，LightGen设置",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F16",
+      "work_key": "arxiv:2505.13447",
+      "lane": "基础生成与表示",
+      "title": "Mean Flows for One-step Generative Modeling",
+      "date": "2025-05-19",
+      "status": "NeurIPS 2025；published_main_conference",
+      "task": "ImageNet类别条件；无T2I主实验",
+      "primary_url": "https://arxiv.org/abs/2505.13447",
+      "primary_urls": [
+        "https://arxiv.org/abs/2505.13447"
+      ],
+      "challenge": "瞬时速度必须多步积分；单步并非换采样步数即可。",
+      "motivation": "直接学习时间区间平均速度。",
+      "mechanism": "两个时间参数，平均/瞬时速度恒等式和JVP用于训练，无预训练蒸馏。",
+      "finding": "ImageNet1NFE FID3.43，构成独立从零训练范式。",
+      "reading": "abstract_metadata_release；主会摘要与原理；官方仓库；后续iMF/pMF谱系",
+      "selected_methods_results": false,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F17",
+      "work_key": "arxiv:2512.02012",
+      "lane": "基础生成与表示",
+      "title": "Improved Mean Flows: On the Challenges of Fastforward Generative Models",
+      "date": "2025-12-01",
+      "status": "CVPR 2026；published_main_conference",
+      "task": "ImageNet类别条件；无T2I主实验",
+      "primary_url": "https://arxiv.org/html/2512.02012v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2512.02012v1"
+      ],
+      "challenge": "原MF目标自依赖，JVP使用未观测条件速度；CFG训练定死。",
+      "motivation": "让实际预测函数输入合法，保留部署引导灵活性。",
+      "mechanism": "以u参数化v-loss；JVP方向用模型边际v；CFG作为显式输入条件。",
+      "finding": "从零单步FID1.72；参数化修正提高训练稳定性。",
+      "reading": "selected_methods_results；§3/4，Algorithm1，JVP/input消融；v1",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F18",
+      "work_key": "arxiv:2601.22158",
+      "lane": "基础生成与表示",
+      "title": "One-step Latent-free Image Generation with Pixel Mean Flows",
+      "date": "2026-01-29",
+      "status": "ICML 2026；published_main_conference",
+      "task": "ImageNet类别条件；无T2I主实验",
+      "primary_url": "https://arxiv.org/html/2601.22158v2",
+      "primary_urls": [
+        "https://arxiv.org/html/2601.22158v2"
+      ],
+      "challenge": "像素高维与一步跨度同时要求过高容量。",
+      "motivation": "把易学的输出空间与动力学损失空间分开。",
+      "mechanism": "网络预测两时间索引的denoised-image field；x→u→v转换，按iMF训练，支持感知损失。",
+      "finding": "ImageNet单步FID2.22/2.48；直接u预测严重退化。",
+      "reading": "selected_methods_results；§3–6，Table1、Algorithm1、x/u消融；v2/PMLR",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F19",
+      "work_key": "arxiv:2602.04770",
+      "lane": "基础生成与表示",
+      "title": "Generative Modeling via Drifting",
+      "date": "2026-02-04",
+      "status": "preprint",
+      "task": "ImageNet类别条件latent/pixel；无T2I主实验",
+      "primary_url": "https://arxiv.org/html/2602.04770v2",
+      "primary_urls": [
+        "https://arxiv.org/html/2602.04770v2"
+      ],
+      "challenge": "推理反复演化样本昂贵；端到端直接生成缺少分布移动信号。",
+      "motivation": "把分布的演化搬到训练，部署只执行映射。",
+      "mechanism": "核场吸向真实样本、斥离生成样本；冻结drift target做回归，在多尺度特征空间计算。",
+      "finding": "ImageNet一步latent/pixel FID1.54/1.61；特征编码器与温度是重要设计。",
+      "reading": "selected_methods_results；§3/4，Algorithms1/2，AppendixA特征/核/温度；v2",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "F20",
+      "work_key": "arxiv:2512.10953",
+      "lane": "基础生成与表示",
+      "title": "Bidirectional Normalizing Flow: From Data to Noise and Back",
+      "date": "2025-12-11",
+      "status": "CVPR 2026；published_main_conference",
+      "task": "ImageNet类别条件；无T2I主实验",
+      "primary_url": "https://arxiv.org/html/2512.10953v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2512.10953v1"
+      ],
+      "challenge": "精确解析逆的因果解码限制NF采样速度和架构。",
+      "motivation": "保留前向data→noise学习，灵活学习近似逆。",
+      "mechanism": "冻结前向NF，逆模型hidden alignment投影对齐前向中间状态；学进denoising步骤。",
+      "finding": "hidden alignment优于只终态/硬中间态蒸馏；单NFE并改善ImageNet质量。",
+      "reading": "selected_methods_results；§4，reverse learning消融，AppendixC/Table7；v1",
+      "selected_methods_results": true,
+      "source_file": "foundations_records.json"
+    },
+    {
+      "id": "C01",
+      "work_key": "arxiv:2510.22946",
+      "lane": "条件控制与推理",
+      "title": "LightBagel: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation",
+      "date": "2025-10-27（首稿）",
+      "status": "预印本；看到ICLR 2026投稿材料，但未核实正式接收记录",
+      "task": "真实T2I、图像编辑、多模态理解",
+      "primary_url": "https://arxiv.org/abs/2510.22946",
+      "primary_urls": [
+        "https://arxiv.org/abs/2510.22946"
+      ],
+      "challenge": "强VLM与DiT各自有效，但只传递VLM末层语义会压缩空间细节，重新统一预训练又昂贵。",
+      "motivation": "复用已有专长，同时让语义与生成状态在整个网络中交换。",
+      "mechanism": "保留Qwen2.5-VL-7B与Wan2.2-TI2V-5B原有块，在各层插入零初始化多模态注意力；理解分支处理文本/ViT，生成分支处理VAE。",
+      "finding": "同参数数量的注入深度对照支持逐层融合优于只重复末层；ViT+VAE对编辑互补。",
+      "reading": "方法及消融深读；arXiv v1 §3、§4.4；官方作者发表页；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C02",
+      "work_key": "title:thinkthengeneratereasoningawaretexttoimagediffusionwithllmencoders",
+      "lane": "条件控制与推理",
+      "title": "Think-Then-Generate: Reasoning-Aware Text-to-Image Diffusion with LLM Encoders",
+      "date": "2026-01-15（首稿）",
+      "status": "ICML 2026主会，PMLR 306:60480–60494",
+      "task": "真实T2I；另有推理编辑扩展",
+      "primary_url": "https://proceedings.mlr.press/v306/kou26b.html",
+      "primary_urls": [
+        "https://proceedings.mlr.press/v306/kou26b.html"
+      ],
+      "challenge": "LLM文本编码器被当作静态特征提取器，能表达事实不代表条件适合DiT执行。",
+      "motivation": "令知识推断与画面表达共同适应最终图像结果。",
+      "mechanism": "SFT激活推理后重写，使用重写状态条件化DiT；每条推理采样多个图像，Dual-GRPO分别更新LLM与DiT。",
+      "finding": "作者比较SFT与联合后训练，报告推理生成/编辑提升；末端图像反馈用于适应文字条件。",
+      "reading": "方法与部分结果深读；arXiv v1 §3、§4.2–4.3；PMLR正式条目及官方repo；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C03",
+      "work_key": "arxiv:2512.23568",
+      "lane": "条件控制与推理",
+      "title": "ThinkGen: Generalized Thinking for Visual Generation",
+      "date": "2025-12-29（首稿）",
+      "status": "CVPR 2026主会",
+      "task": "真实T2I、文字渲染、编辑、参考条件生成与反思",
+      "primary_url": "https://arxiv.org/abs/2512.23568",
+      "primary_urls": [
+        "https://arxiv.org/abs/2512.23568"
+      ],
+      "challenge": "统一模型的CoT可能仅帮助某类知识任务，却扰乱长提示、组合或文字渲染。",
+      "motivation": "学会生成器实际能利用的任务相关条件，减少跨任务失配。",
+      "mechanism": "MLLM与DiT解耦，learnable prepadding+线性connector接条件；先监督训练生成，再SepGRPO固定DiT训MLLM、固定MLLM训DiT，覆盖五类场景。",
+      "finding": "方法区明确区分两模块的rollout；任务分解使推理条件对生成器适配。",
+      "reading": "方法深读；arXiv v1 §3–4、表1；CVF正式条目；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C04",
+      "work_key": "title:interleavingreasoningforbettertexttoimagegenerationirg",
+      "lane": "条件控制与推理",
+      "title": "Interleaving Reasoning for Better Text-to-Image Generation（IRG）",
+      "date": "2025-09-08（首稿早于窗口；近一年主会谱系补充）",
+      "status": "ICLR 2026主会",
+      "task": "真实T2I，经初始生成再编辑细化",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/ad48f017e6c3d474caf511208e600459-Abstract-Conference.html",
+      "primary_urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2026/hash/ad48f017e6c3d474caf511208e600459-Abstract-Conference.html"
+      ],
+      "challenge": "先写完想法再出图的流程无法观察渲染出的细节错误。",
+      "motivation": "把反思依据从想象的图变为已生成的图，并学习保留语义的修正。",
+      "mechanism": "BAGEL按text-image-text-image交错；首次图像经ViT/VAE回读；IRGL-300K包含六种分解监督，再训练完整轨迹；改善阶段分开引导图像保持与反思执行。",
+      "finding": "作者多个benchmark显示改善；self-CoT与IRG是不同干预，后者含实际图像状态和修订目标。",
+      "reading": "方法及部分结果深读；arXiv v2 §2.2.1–2.2.4；正式ICLR条目与repo；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C05",
+      "work_key": "title:showdonttellmorphinglatentreasoningintoimagegenerationlatentmorph",
+      "lane": "条件控制与推理",
+      "title": "Show, Don’t Tell: Morphing Latent Reasoning into Image Generation（LatentMorph）",
+      "date": "2026-02-02（首稿）",
+      "status": "ICML 2026主会，PMLR 306:17940–17959",
+      "task": "真实T2I；Janus-Pro自回归图像token主实验",
+      "primary_url": "https://proceedings.mlr.press/v306/chen26fv.html",
+      "primary_urls": [
+        "https://proceedings.mlr.press/v306/chen26fv.html"
+      ],
+      "challenge": "生成隐藏状态不易被理解分支读取，理解隐藏状态也不能直接改变下一图像token；频繁图像/文字decode-encode额外丢失信息。",
+      "motivation": "学习双向状态接口，并在有需要时而非固定时刻推理。",
+      "mechanism": "短/长期condenser读取生成历史；translator把latent thought转换为控制向量，shaper注入KV；invoker在继续/推理两动作间学习，代价约束控制调用频率。",
+      "finding": "作者报告相对Janus-Pro的组合提升与相对显式循环的时间/token减少；模块消融检验状态压缩和控制。",
+      "reading": "方法深读；arXiv v1 §3–4、部分§5；PMLR及官方repo；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C06",
+      "work_key": "title:hint2genbridgingunderstandingandgenerationviacodestructuredhints",
+      "lane": "条件控制与推理",
+      "title": "Hint2Gen: Bridging Understanding and Generation via Code-structured Hints",
+      "date": "2026-06（主会公开；未核实更早首稿日）",
+      "status": "CVPR 2026主会，36593–36603",
+      "task": "主要是问题图+指令的推理生成/编辑；不以纯开放域T2I结果替代它",
+      "primary_url": "https://openaccess.thecvf.com/CVPR2026?day=2026-06-07",
+      "primary_urls": [
+        "https://openaccess.thecvf.com/CVPR2026?day=2026-06-07"
+      ],
+      "challenge": "模型能用符号解决迷宫/拼装等任务，却难把解答落实在指定图像位置。",
+      "motivation": "提供生成器可以读取的显式图面工作区。",
+      "mechanism": "把解答编码为轻量SVG/HTML叠层，渲染成hint，再条件化FLUX.1 Kontext；Reason2Gen覆盖22类问题。",
+      "finding": "公开实现保留原图、HTML和渲染hint；明确以指令与预期结果的双一致性评价。",
+      "reading": "正式条目与官方实现阅读；CVF正式索引、HKU记录、README方法及输入/输出协议；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": false,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C07",
+      "work_key": "arxiv:2601.14602",
+      "lane": "条件控制与推理",
+      "title": "3D Space as a Scratchpad for Editable Text-to-Image Generation",
+      "date": "2026-01-21（首稿）",
+      "status": "CVPR 2026主会",
+      "task": "真实T2I；支持生成后3D编辑",
+      "primary_url": "https://arxiv.org/abs/2601.14602",
+      "primary_urls": [
+        "https://arxiv.org/abs/2601.14602"
+      ],
+      "challenge": "2D框和文本难表示朝向、遮挡、深度与相对尺度，也难维持编辑对象身份。",
+      "motivation": "把对象与关系落到可操作三维状态，再绘制最终像素。",
+      "mechanism": "先为各主体生成身份图/mesh；分解、bbox规划、姿态修正和视点选择操作3D场景；depth+身份参考由SIGMA-Gen绘制。",
+      "finding": "同提示比较多类推理基线；支持移动/缩放/旋转后重绘；作者报告GenAI-Bench对齐改善。",
+      "reading": "方法及部分对照深读；arXiv v1 §3–4及表4–5；CVF PDF/官方项目页；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C08",
+      "work_key": "arxiv:2603.20741",
+      "lane": "条件控制与推理",
+      "title": "CTCal: Rethinking Text-to-Image Diffusion Models via Cross-Timestep Self-Calibration",
+      "date": "2026-03-21（首稿）",
+      "status": "CVPR 2026主会",
+      "task": "真实T2I：绑定、空间、计数",
+      "primary_url": "https://arxiv.org/abs/2603.20741",
+      "primary_urls": [
+        "https://arxiv.org/abs/2603.20741"
+      ],
+      "challenge": "同一图文对在高噪声时缺少可靠实体-空间对应；标准去噪损失间接监督绑定，多个主体响应又不均。",
+      "motivation": "把可观测的低噪声对应迁到缺少证据的高噪声生成阶段。",
+      "mechanism": "同模型双时间点，低噪声attention stop-gradient作teacher；选择名词token，联合空间与semantic-map损失、重建与主体响应正则；时间权重随噪声调整。",
+      "finding": "SD3 GenEval 0.62→0.69；同数据GORS对照及消融显示对所有token盲校准反而退步，语义选择重要。",
+      "reading": "方法、结果、消融深读；arXiv v1 §3、§4及表2/4/5；CVF正式条目；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C09",
+      "work_key": "arxiv:2603.10780",
+      "lane": "条件控制与推理",
+      "title": "Guiding Diffusion Models with Semantically Degraded Conditions（CDG）",
+      "date": "2026-03-11（首稿）",
+      "status": "CVPR 2026主会",
+      "task": "真实T2I；训练外条件引导",
+      "primary_url": "https://arxiv.org/abs/2603.10780",
+      "primary_urls": [
+        "https://arxiv.org/abs/2603.10780"
+      ],
+      "challenge": "完整提示与null的差可能同时推动一般去噪和语义变化，对细粒度条件的分辨不足。",
+      "motivation": "构造相近条件对照，使引导更集中于被改变的语义。",
+      "mechanism": "文本encoder attention图上的Weighted PageRank识别内容/context聚合token，分层把内容embedding向null插值，使用完整-退化条件prediction差做guidance。",
+      "finding": "作者在SD3/FLUX/Qwen-Image等测试并分析引导子空间；多架构组合指标改善。",
+      "reading": "方法与分析深读；arXiv v1 §4–6，语义退化与几何分析；CVF与repo；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C10",
+      "work_key": "title:dynfusionrethinkingconditionfusionforadaptivemulticonditionaltexttoimagegeneration",
+      "lane": "条件控制与推理",
+      "title": "DynFusion: Rethinking Condition Fusion for Adaptive Multi-Conditional Text-to-Image Generation",
+      "date": "2026-03-03（大学归档；主会2026-06）",
+      "status": "CVPR 2026主会；大学保存正式版本",
+      "task": "文本+depth/edge/subject/background多条件T2I",
+      "primary_url": "https://wrap.warwick.ac.uk/id/eprint/197869/",
+      "primary_urls": [
+        "https://wrap.warwick.ac.uk/id/eprint/197869/"
+      ],
+      "challenge": "静态叠加异质条件会产生冗余和相互冲突，条件强度需求又随时间、任务、层变化。",
+      "motivation": "让模型决定哪些信息在当前状态应参与绘制。",
+      "mechanism": "condition adaptation模块按噪声状态预测激活子集，在不同DiT块动态融合；补充算法明确以noise状态选条件mask。",
+      "finding": "作者多条件任务显示相对均匀融合的保真/控制与效率改善。",
+      "reading": "原文摘要及补充算法阅读；Warwick正式版摘要；CVF supplement Algorithm1；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": false,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C11",
+      "work_key": "arxiv:2512.12675",
+      "lane": "条件控制与推理",
+      "title": "Scone: Bridging Composition and Distinction in Subject-Driven Image Generation via Unified Understanding-Generation Modeling",
+      "date": "2025-12-14（首稿）",
+      "status": "CVPR 2026主会Highlight；官方节目与作者repo确认",
+      "task": "参考条件新图生成；主体选择与多主体组合",
+      "primary_url": "https://arxiv.org/abs/2512.12675",
+      "primary_urls": [
+        "https://arxiv.org/abs/2512.12675"
+      ],
+      "challenge": "参考图里有多个候选，能组合参考图不代表能选对指令要求的主体；背景和非目标主体会串入结果。",
+      "motivation": "理解专家先识别可用条件，让生成专家集中于正确主体。",
+      "mechanism": "BAGEL早层text/ViT语义对齐形成相关token mask，在attention logits中屏蔽无关参考信息；先single-candidate composition再multi-candidate distinction训练。",
+      "finding": "OmniContext与SconeEval分别评价组合/区别；原有MSE目标下学习semantic bridge，无新参数。",
+      "reading": "方法及部分结果深读；arXiv v1 §3、§4–5部分；原文Eq1–5；官方repo/主会节目；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C12",
+      "work_key": "title:contextgencontextuallayoutanchoringforidentityconsistentmultiinstancegeneration",
+      "lane": "条件控制与推理",
+      "title": "ContextGen: Contextual Layout Anchoring for Identity-Consistent Multi-Instance Generation",
+      "date": "2025-10-13（首稿）",
+      "status": "ICLR 2026主会",
+      "task": "文本+布局+多参考的新图生成；不是纯文本输入",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9b01b79449b54c24ead5725e14affa79-Abstract-Conference.html",
+      "primary_urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9b01b79449b54c24ead5725e14affa79-Abstract-Conference.html"
+      ],
+      "challenge": "拼接layout压缩了细节，重叠遮挡丢失身份；独立reference又易串扰。",
+      "motivation": "给布局与主体细节不同的空间角色，同时保持全图上下文。",
+      "mechanism": "FLUX-Kontext上下文包含layout composite和原reference；前/后层CLA处理全局，middle ICA按框连接对应reference；instance-wise位置index区分来源。",
+      "finding": "作者相对layout/identity基线改善；IMIG-100K提供布局-身份配对监督。",
+      "reading": "方法及部分结果深读；arXiv v1 §3，正式ICLR条目与repo；v3日期已核实；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C13",
+      "work_key": "arxiv:2604.00849",
+      "lane": "条件控制与推理",
+      "title": "Disentangling to Re-couple: Resolving the Similarity-Controllability Paradox in Subject-Driven Text-to-Image Generation（DisCo）",
+      "date": "2026-04-01（首稿）",
+      "status": "CVPR 2026主会；官方节目确认",
+      "task": "reference+文本修改的新图生成/主体驱动编辑",
+      "primary_url": "https://arxiv.org/abs/2604.00849",
+      "primary_urls": [
+        "https://arxiv.org/abs/2604.00849"
+      ],
+      "challenge": "提示同时描述身份与情境会与具体reference冲突；严格分开后又可能像贴图、不融于新环境。",
+      "motivation": "明确每种信息的来源，再学习符合新语境的耦合。",
+      "mechanism": "VLM找entity word并用代词简化修改提示，GroundingDINO定位reference主体；专用subject similarity+context integration偏好数据训练RM，GRPO再耦合。",
+      "finding": "attention分析检验身份信息来源迁移；作者报告同时改善主体相似与可控性。",
+      "reading": "方法深读；arXiv v1 §3及部分§4；官方主会节目；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C14",
+      "work_key": "title:withanyonetowardcontrollableandidconsistentimagegeneration",
+      "lane": "条件控制与推理",
+      "title": "WithAnyone: Toward Controllable and ID Consistent Image Generation",
+      "date": "2025-10-16（首稿）",
+      "status": "ICLR 2026主会",
+      "task": "单/多人身份参考+文本的新图生成；编辑变体独立",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d432fbe4877ee1a6a51632a18e69784f-Abstract-Conference.html",
+      "primary_urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d432fbe4877ee1a6a51632a18e69784f-Abstract-Conference.html"
+      ],
+      "challenge": "单图重建训练把同身份误学成同姿态/光照拷贝，身份相似与可控变化互相拉扯。",
+      "motivation": "用真实同身份不同画面的监督，区分身份不变性和外观变化。",
+      "mechanism": "MultiID-2M配对多人物数据；face-recognition+通用image特征，区域attention限制主体对应，contrastive ID与GT-aligned ID损失。",
+      "finding": "作者同时评价copy-paste和身份相似；新姿态/表情的可控性改善。",
+      "reading": "主会摘要、数据/方法部分阅读；arXiv v1 §3、Fig4说明；正式ICLR条目与repo；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": false,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C15",
+      "work_key": "arxiv:2608.05213",
+      "lane": "条件控制与推理",
+      "title": "StyleComposer: Training-Free Multi-Reference Style Composition",
+      "date": "2026-08-05（首稿）",
+      "status": "预印本；官方实验室仍标arXiv",
+      "task": "文本+颜色/纹理/结构reference的新图生成",
+      "primary_url": "https://arxiv.org/abs/2608.05213",
+      "primary_urls": [
+        "https://arxiv.org/abs/2608.05213"
+      ],
+      "challenge": "同一style embedding混合颜色、纹理、结构，强化某参考会把不需要的内容一并迁移。",
+      "motivation": "为不同属性找可单独干预的表示与时间区间。",
+      "mechanism": "颜色在VAE 3维chromatic子空间做分布运输；纹理用低频RoPE K/V路由；结构用早期Q锚定后衰减，跨时间协调。",
+      "finding": "单一路由、重叠时间窗、full-band K消融均有不同失败；多参考联合达成优于单属性强迁移。",
+      "reading": "方法及消融深读；arXiv v1 §4–5、表3–4；原文limitation；官方repo/实验室；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C16",
+      "work_key": "title:qwenimagelayeredtowardsinherenteditabilityvialayerdecomposition",
+      "lane": "条件控制与推理",
+      "title": "Qwen-Image-Layered: Towards Inherent Editability via Layer Decomposition",
+      "date": "2025-12-17（首稿）",
+      "status": "CVPR 2026主会",
+      "task": "主模型image-to-RGBA-layers；论文另含text-to-RGBA、text-to-layers训练与结果",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Yin_Qwen-Image-Layered_Towards_Inherent_Editability_via_Layer_Decomposition_CVPR_2026_paper.html",
+      "primary_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Yin_Qwen-Image-Layered_Towards_Inherent_Editability_via_Layer_Decomposition_CVPR_2026_paper.html"
+      ],
+      "challenge": "全部内容在单画布纠缠，修改局部会让非目标内容漂移；局部编辑要求可独立操作的对象。",
+      "motivation": "令可编辑性成为输出表示的性质。",
+      "mechanism": "统一RGB/RGBA VAE；VLD-MMDiT与layer维RoPE联合各层；阶段训练从单图透明生成到多层生成再分解，PSD提取层监督。",
+      "finding": "结构性操作能直接编辑指定层；论文分别测分解、多层生成，不混为同一T2I分数。",
+      "reading": "方法深读；arXiv v1 §3；CVF正式摘要与官方repo；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": true,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C17",
+      "work_key": "title:maskedregiontransformerforlayeredimagegenerationandeditingatscalemrt",
+      "lane": "条件控制与推理",
+      "title": "Masked Region Transformer for Layered Image Generation and Editing at Scale（MRT）",
+      "date": "2026-06（主会；首稿月份2026-05）",
+      "status": "CVPR 2026主会",
+      "task": "text-to-layers、image-to-layers、layers-to-layers",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Masked_Region_Transformer_for_Layered_Image_Generation_and_Editing_at_CVPR_2026_paper.html",
+      "primary_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Masked_Region_Transformer_for_Layered_Image_Generation_and_Editing_at_CVPR_2026_paper.html"
+      ],
+      "challenge": "层数多时每层整幅画布token成本高，画布外对象内容缺失又妨碍移动与重用。",
+      "motivation": "统一生成/分解/局部修订，使完整对象的可复用层可规模化产生。",
+      "mechanism": "20B masked region diffusion共享三任务，通过选择token mask切换条件；overflow-aware canvas layer补足可见边界外部分，另有8步蒸馏。",
+      "finding": "正式摘要及项目说明报告三任务质量/效率改善；mask控制作用范围。",
+      "reading": "正式摘要与官方项目阅读；CVF正式条目/作者项目页；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": false,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C18",
+      "work_key": "arxiv:2510.16888",
+      "lane": "条件控制与推理",
+      "title": "UniWorld-V2 / Edit-R1: Reinforce Image Editing with Diffusion Negative-aware Finetuning and MLLM Implicit Feedback",
+      "date": "2025-10-19（首稿）",
+      "status": "预印本；该轮未核实正式主会接收",
+      "task": "指令图像编辑；不把编辑基准总分当纯T2I",
+      "primary_url": "https://arxiv.org/abs/2510.16888",
+      "primary_urls": [
+        "https://arxiv.org/abs/2510.16888"
+      ],
+      "challenge": "编辑指令差异大，SFT易只复刻已有修改；普适编辑奖励难，MLLM离散判断噪声大。",
+      "motivation": "用同一理解模型读取原图/目标关系，提供细粒度编辑结果反馈。",
+      "mechanism": "DiffusionNFT在forward-process上利用正负生成；MLLM输出logit作隐式reward，过滤低组差异稳定训练，可迁到多个编辑base。",
+      "finding": "作者ImgEdit/GEdit等编辑指标提升，并在不同base上测试；实际标签是编辑遵循。",
+      "reading": "方法概要与官方实现阅读；arXiv v1 方法概览/摘要、官方repo；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": false,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C19",
+      "work_key": "title:theconsistencycriticcorrectinginconsistenciesingeneratedimagesviareferenceguidedattentivealignmentimagecritic",
+      "lane": "条件控制与推理",
+      "title": "The Consistency Critic: Correcting Inconsistencies in Generated Images via Reference-Guided Attentive Alignment（ImageCritic）",
+      "date": "2025-11-25（首稿）",
+      "status": "CVPR 2026主会",
+      "task": "已有生成结果的reference-guided后编辑",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ouyang_The_Consistency_Critic_Correcting_Inconsistencies_in_Generated_Images_via_Reference-Guided_CVPR_2026_paper.html",
+      "primary_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Ouyang_The_Consistency_Critic_Correcting_Inconsistencies_in_Generated_Images_via_Reference-Guided_CVPR_2026_paper.html"
+      ],
+      "challenge": "主体大体正确，文字/logo等局部细节仍不一致；整图重生会改变已正确部分。",
+      "motivation": "把细节对应与保留目标直接作为修复学习对象。",
+      "mechanism": "reference-degraded-target triplet通过VLM选择+显式退化构造；detail encoder与attention alignment loss定位对应，可agent多轮局部编辑。",
+      "finding": "作者多种已生成图上的细节一致性提升；这属于后编辑增益。",
+      "reading": "正式摘要及官方实现阅读；CVF摘要、官方repo/模型卡；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": false,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "C20",
+      "work_key": "arxiv:2608.20334",
+      "lane": "条件控制与推理",
+      "title": "Swift-Image: Exploring the Performance Frontier of Compact Unified Image Generation Models（v2标题省略Swift-Image前缀）",
+      "date": "2026-08-20（首稿）；2026-08-21 v2",
+      "status": "预印本技术报告",
+      "task": "真实T2I、单图与多图编辑；此处统一生成/编辑而非理解问答统一",
+      "primary_url": "https://arxiv.org/abs/2608.20334",
+      "primary_urls": [
+        "https://arxiv.org/abs/2608.20334"
+      ],
+      "challenge": "模型紧凑时，多种生成/编辑与后训练目标相互干扰；复杂用户请求需要转为可渲染说明。",
+      "motivation": "系统地控制训练课程与任务干扰，使小生成器也能执行复杂多模态条件。",
+      "mechanism": "6B单流DiT、渐进数据/分辨率课程；parallel expert RL+multi-teacher on-policy distillation，Prompt Enhancer分开高层推理与像素绘制。",
+      "finding": "作者报告6B/3B及少步变体的聚合表现；说明语义改写与多任务冲突的系统性处理。",
+      "reading": "作者摘要与版本元数据阅读；arXiv v1/v2 metadata/abstract；正文获取失败；只归因于所列阅读范围；未运行模型",
+      "selected_methods_results": false,
+      "source_file": "composition_records.json"
+    },
+    {
+      "id": "P01",
+      "work_key": "title:flowgrpotrainingflowmatchingmodelsviaonlinerl",
+      "lane": "反馈与推理计算",
+      "title": "Flow-GRPO: Training Flow Matching Models via Online RL",
+      "date": "2025-05初稿；2025-12主会",
+      "status": "NeurIPS 2025主会",
+      "task": "文生图组合性、OCR、偏好",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/3a10c46572628d58cb44fb705f25cbbf-Abstract-Conference.html",
+      "primary_urls": [
+        "https://proceedings.neurips.cc/paper_files/paper/2025/hash/3a10c46572628d58cb44fb705f25cbbf-Abstract-Conference.html"
+      ],
+      "challenge": "确定性flow缺少逐步探索和可用转移似然",
+      "motivation": "让flow模型接受在线可验证反馈",
+      "mechanism": "ODE转SDE保留边缘分布；缩短训练去噪而保留部署步数",
+      "finding": "SD3.5-M作者报告GenEval63%→95%、OCR59%→92%",
+      "reading": "原文摘要、正式会议页、官方README",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P02",
+      "work_key": "title:diffusionnftonlinediffusionreinforcementwithforwardprocess",
+      "lane": "反馈与推理计算",
+      "title": "DiffusionNFT: Online Diffusion Reinforcement with Forward Process",
+      "date": "2025-09-19初稿；2026主会",
+      "status": "ICLR 2026主会Oral；原稿在窗口前，按正式主会纳入",
+      "task": "文生图后训练",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d8e68ddfe22520b45b8fb8d5cbde5a21-Abstract-Conference.html",
+      "primary_urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d8e68ddfe22520b45b8fb8d5cbde5a21-Abstract-Conference.html"
+      ],
+      "challenge": "逐步似然与采样器限制使flow强化学习昂贵",
+      "motivation": "把奖励放回熟悉的前向训练接口",
+      "mechanism": "正负输出对比、重新加噪、flow matching更新；只需终点图像",
+      "finding": "作者报告相对Flow-GRPO更快，并支持黑箱solver",
+      "reading": "正式会议摘要、官方算法README",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P03",
+      "work_key": "title:gdrogrouplevelrewardposttrainingsuitablefordiffusionmodels",
+      "lane": "反馈与推理计算",
+      "title": "GDRO: Group-level Reward Post-training Suitable for Diffusion Models",
+      "date": "2026-01-05初稿；2026-06主会",
+      "status": "CVPR 2026主会",
+      "task": "FLUX.1-dev OCR/GenEval",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_GDRO_Group-level_Reward_Post-training_Suitable_for_Diffusion_Models_CVPR_2026_paper.html",
+      "primary_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_GDRO_Group-level_Reward_Post-training_Suitable_for_Diffusion_Models_CVPR_2026_paper.html"
+      ],
+      "challenge": "在线rollout占训练成本；排名变好不保证优样本似然变高",
+      "motivation": "尽量重用已生成组数据，保留高质量支持",
+      "mechanism": "离线组soft排名交叉熵；噪声预测隐式reward；top-1去噪稳定项",
+      "finding": "表3 OCR0.8721、29.60GPUh；Flow-GRPO相近OCR0.8714、59.73GPUh；GenEval0.8517/68.4GPUh",
+      "reading": "深读：§3、§4.1–4.5、表1–3、附录DPO关系",
+      "selected_methods_results": true,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P04",
+      "work_key": "title:compositionaltexttoimagegenerationviaregionawarebimodaldirectpreferenceoptimization",
+      "lane": "反馈与推理计算",
+      "title": "Compositional Text-to-Image Generation Via Region-aware Bimodal Direct Preference Optimization",
+      "date": "2026-06正式主会",
+      "status": "CVPR 2026主会",
+      "task": "属性绑定/关系/计数",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Liu_Compositional_Text-to-Image_Generation_Via_Region-aware_Bimodal_Direct_Preference_Optimization_CVPR_2026_paper.html",
+      "primary_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Liu_Compositional_Text-to-Image_Generation_Via_Region-aware_Bimodal_Direct_Preference_Optimization_CVPR_2026_paper.html"
+      ],
+      "challenge": "全图偏好被无关像素和文本错误混淆",
+      "motivation": "把偏好对准决定组合能力的语义和区域",
+      "mechanism": "BICOMP偏好构建；联合图文偏好；区域guidance",
+      "finding": "原文报告跨组合benchmark改善",
+      "reading": "正式摘要、官方README",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P05",
+      "work_key": "title:tdmr1reinforcingfewstepdiffusionmodelswithnondifferentiablereward",
+      "lane": "反馈与推理计算",
+      "title": "TDM-R1: Reinforcing Few-Step Diffusion Models with Non-Differentiable Reward",
+      "date": "2026-03-08初稿；2026-07主会",
+      "status": "ICML 2026主会",
+      "task": "1/4步文生图、OCR、偏好",
+      "primary_url": "https://proceedings.mlr.press/v306/luo26j.html",
+      "primary_urls": [
+        "https://proceedings.mlr.press/v306/luo26j.html"
+      ],
+      "challenge": "少步直接奖励加权去噪容易模糊；非微分reward无法直接反传",
+      "motivation": "低部署成本下仍吸收通用反馈",
+      "mechanism": "确定性TDM轨迹；噪声态组偏好surrogate；生成器与surrogate分开更新，分布KL约束",
+      "finding": "v1表1同SD3.5-M 4NFE TDM GenEval0.61→0.92；原多步base0.63",
+      "reading": "深读：arXivv1 §3–4、算法1、表1–3；正式页；代码README",
+      "selected_methods_results": true,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P06",
+      "work_key": "arxiv:2605.10759",
+      "lane": "反馈与推理计算",
+      "title": "Reinforce Adjoint Matching",
+      "date": "2026-05-11 v1",
+      "status": "预印本；未确认正式会议",
+      "task": "SD3.5-M组合/OCR/偏好后训练",
+      "primary_url": "https://arxiv.org/html/2605.10759v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2605.10759v1"
+      ],
+      "challenge": "精确控制目标会引入高方差/长轨迹VJP",
+      "motivation": "以可承受的目标偏差换稳定高效训练",
+      "mechanism": "终点采样+解析加噪；Bayes bridge score奖励修正；丢弃path-cost项",
+      "finding": "表2 RAM270步GenEval0.97；重训NFT900步0.95；RAM OCR0.97时质量损失小于其重训NFT",
+      "reading": "深读：§3–6、表1–2、§C估计器；官方README",
+      "selected_methods_results": true,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P07",
+      "work_key": "arxiv:2605.25661",
+      "lane": "反馈与推理计算",
+      "title": "DRM: Diffusion-based Reward Model With Step-wise Guidance",
+      "date": "2026-05-25初稿；2026-06主会",
+      "status": "CVPR 2026主会（CVF论文记录和官方仓库）",
+      "task": "噪声态偏好评分、Step-GRPO、逐步采样",
+      "primary_url": "https://arxiv.org/html/2605.25661v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2605.25661v1"
+      ],
+      "challenge": "VLM语义表示遗漏感知品质；终点奖励credit粗",
+      "motivation": "让反馈在生成所处状态直接可用",
+      "mechanism": "SD3.5 DiT奖励骨干；胜负图像对加噪BT学习；逐步候选组评分",
+      "finding": "报告Step-GRPO约3.5倍GPUh收敛改善；表4 k1→k6推理2.88→9.83秒，ImageReward1.01→1.15",
+      "reading": "深读：§3.2–3.4、§4、表1–4；CVF PDF索引；官方README",
+      "selected_methods_results": true,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P08",
+      "work_key": "arxiv:2602.11146",
+      "lane": "反馈与推理计算",
+      "title": "Beyond VLM-Based Rewards: Diffusion-Native Latent Reward Modeling",
+      "date": "2026-02-11 v1",
+      "status": "预印本；未确认正式会议",
+      "task": "潜空间偏好模型/对齐",
+      "primary_url": "https://arxiv.org/html/2602.11146v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2602.11146v1"
+      ],
+      "challenge": "像素VLM评分昂贵且latent-domain不匹配",
+      "motivation": "训练与评分都在diffusion原生域完成",
+      "mechanism": "timestep奖励头；noise-calibrated Thurstone偏好likelihood；多噪声ensemble",
+      "finding": "原文报告偏好预测接近强VLM而成本较低",
+      "reading": "摘要、§3–4机制和讨论标题核查",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P09",
+      "work_key": "arxiv:2608.06125",
+      "lane": "反馈与推理计算",
+      "title": "Sample-Adaptive Latent Rewards for Uncertainty-Guided Diffusion Post-Training",
+      "date": "2026-08-06 v1",
+      "status": "预印本；未确认正式会议",
+      "task": "SURE-LRM潜奖励和置信度",
+      "primary_url": "https://arxiv.org/html/2608.06125v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2608.06125v1"
+      ],
+      "challenge": "同一噪声级样本可有不同评分可靠性",
+      "motivation": "让生成器知道该相信哪些反馈",
+      "mechanism": "样本条件均值/方差；异方差偏好likelihood；uncertainty-guided更新",
+      "finding": "作者报告更可靠潜奖励与后训练表现",
+      "reading": "摘要、§3奖励分布/异方差likelihood",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P10",
+      "work_key": "arxiv:2601.03468",
+      "lane": "反馈与推理计算",
+      "title": "Understanding Reward Hacking in Text-to-Image Reinforcement Learning",
+      "date": "2026-01-06初稿；2026-06程序列出主会",
+      "status": "CVPR 2026主会（官方program佐证）；深读arXivv1",
+      "task": "T2I奖励盲区与ArtifactReward",
+      "primary_url": "https://arxiv.org/html/2601.03468v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2601.03468v1"
+      ],
+      "challenge": "偏好/检测/VQA高分可能奖励不真实结构",
+      "motivation": "用实际优化后失败样本补上共有盲区",
+      "mechanism": "约200有/无artifact图；MLLM自动prompt优化；辅助结构reward",
+      "finding": "不同reward偏置不同，集成仅部分缓解；artifact信号改善现实感",
+      "reading": "原文§3–4、共有盲区、表/样例；官方README；CVPR程序",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P11",
+      "work_key": "arxiv:2601.12401",
+      "lane": "反馈与推理计算",
+      "title": "Beyond the Dirac Delta: Mitigating Diversity Collapse in Reinforcement Fine-Tuning for Versatile Image Generation",
+      "date": "2026-01-18 v1",
+      "status": "预印本；未确认正式会议",
+      "task": "DRIFT质量/多样性Pareto",
+      "primary_url": "https://arxiv.org/html/2601.12401v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2601.12401v1"
+      ],
+      "challenge": "单目标强化会集中到少数高分输出",
+      "motivation": "同prompt仍提供多样候选",
+      "mechanism": "reward集中子组过滤outlier；prompt embedding扰动；DreamSim组差异shaping",
+      "finding": "作者表1跨指标报告9.08–43.46% diversity gain等；保留为其特征度量内结果",
+      "reading": "深读：§4–6、表1、reward shaping公式8–12",
+      "selected_methods_results": true,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P12",
+      "work_key": "arxiv:2607.14962",
+      "lane": "反馈与推理计算",
+      "title": "Multi-Axis Max@K Reinforcement Learning for Representative Diversity in Text-to-Image Generation",
+      "date": "2026-07-16 v1",
+      "status": "预印本；未确认正式会议",
+      "task": "预定义模式覆盖、race5及race5×gender2外观分类",
+      "primary_url": "https://arxiv.org/html/2607.14962v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2607.14962v1"
+      ],
+      "challenge": "单样本高分和feature差异不能保证特定稀有模式出现",
+      "motivation": "让一组不同输出各自承担代表性贡献",
+      "mechanism": "对每类别取组内最大score，再汇总；category代表获得credit",
+      "finding": "相同backbone/prompt/rollout下race5相对count-GRPO F增加0.18/0.26/0.22（三judge）",
+      "reading": "深读：§3–4、§6、表1、有限batch覆盖与pooled分布",
+      "selected_methods_results": true,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P13",
+      "work_key": "title:promptrlpromptmattersinrlforflowbasedimagegeneration",
+      "lane": "反馈与推理计算",
+      "title": "PromptRL: Prompt Matters in RL for Flow-Based Image Generation",
+      "date": "2026-02-01初稿；2026-07主会",
+      "status": "ICML 2026主会",
+      "task": "语言改写器+图像flow共同RL",
+      "primary_url": "https://proceedings.mlr.press/v306/wang26kl.html",
+      "primary_urls": [
+        "https://proceedings.mlr.press/v306/wang26kl.html"
+      ],
+      "challenge": "prompt phrasing过拟合和组内多样性减少",
+      "motivation": "在条件空间主动生成等语义变体",
+      "mechanism": "可训练LM改写器和FM两套策略，共享视觉reward，reward tags",
+      "finding": "作者报告约50% fewer rollouts达到更高性能",
+      "reading": "§3–4、摘要/正式页；官方README",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P14",
+      "work_key": "title:diffusiontreesamplingscalableinferencetimealignmentofdiffusionmodels",
+      "lane": "反馈与推理计算",
+      "title": "Diffusion Tree Sampling: Scalable inference-time alignment of diffusion models",
+      "date": "2025-06-25初稿；2025-12主会",
+      "status": "NeurIPS 2025主会",
+      "task": "DTS分布采样与DTS*高reward搜索",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/d6484394c4cb5e1f4ecad8d90b912025-Paper-Conference.pdf",
+      "primary_urls": [
+        "https://proceedings.neurips.cc/paper_files/paper/2025/file/d6484394c4cb5e1f4ecad8d90b912025-Paper-Conference.pdf"
+      ],
+      "challenge": "噪声态clean估计reward有偏；旧轨迹计算丢失",
+      "motivation": "额外算力改善值估计，而不仅多跑样本",
+      "mechanism": "树节点缓存rollout，终点reward软Bellman回传；sample/search两变体",
+      "finding": "SD1.5+ImageReward下报告DTS*匹配BoN最多5倍少compute；MNIST/CIFAR为另一结果",
+      "reading": "深读：arXivv1 §3–5、soft-value、backup、§F成本；正式NeurIPS PDF/作者主页",
+      "selected_methods_results": true,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P15",
+      "work_key": "title:testtimescalingofdiffusionmodelsvianoisetrajectorysearch",
+      "lane": "反馈与推理计算",
+      "title": "Test-Time Scaling of Diffusion Models via Noise Trajectory Search",
+      "date": "2025-05/06初稿；2025-12主会",
+      "status": "NeurIPS 2025主会",
+      "task": "EDM/Stable Diffusion噪声轨迹搜索",
+      "primary_url": "https://openreview.net/pdf?id=fnkkY7UGRl",
+      "primary_urls": [
+        "https://openreview.net/pdf?id=fnkkY7UGRl"
+      ],
+      "challenge": "增加去噪步收益饱和；MCTS全搜索昂贵",
+      "motivation": "搜索随机性实现更多有效探索",
+      "mechanism": "将MDP近似为contextual bandits；ε-greedy不同时间全局/局部探索",
+      "finding": "报告比基线更佳reward/搜索效率",
+      "reading": "正式PDF摘要/方法；官方README",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P16",
+      "work_key": "title:inferencetimescalingofdiscretediffusionmodelsviaimportanceweightingandoptimalproposaldesign",
+      "lane": "反馈与推理计算",
+      "title": "Inference-Time Scaling of Discrete Diffusion Models via Importance Weighting and Optimal Proposal Design",
+      "date": "2025-05-28初稿；2026主会",
+      "status": "ICLR 2026主会",
+      "task": "离散扩散SMC，包含T2I/语言/生物设计",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/3df1eca840e82b11bbc33f68c773c38e-Abstract-Conference.html",
+      "primary_urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2026/hash/3df1eca840e82b11bbc33f68c773c38e-Abstract-Conference.html"
+      ],
+      "challenge": "粒子weights退化且proposal不合目标",
+      "motivation": "结合合法权重与更好的proposal",
+      "mechanism": "SMC中间targets；first-order proposal；amortized log-variance最小化proposal",
+      "finding": "报告跨对象可控性/质量提升",
+      "reading": "正式会议摘要；原稿摘要/元数据",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P17",
+      "work_key": "arxiv:2607.21591",
+      "lane": "反馈与推理计算",
+      "title": "Inference-Time Scaling of Diffusion Models via Progressive Seed Pruning",
+      "date": "2026-07 v1；2026 ECCV",
+      "status": "ECCV 2026（官方repo声明，未另核会议程序）",
+      "task": "SD1.5/SDXL/SD3.5 seed选择",
+      "primary_url": "https://arxiv.org/html/2607.21591v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2607.21591v1"
+      ],
+      "challenge": "固定粒子数浪费大量低潜力终程",
+      "motivation": "先广探索，再保留有希望seed",
+      "mechanism": "评分denoised估计，逐步减少存活pool；预算Σk_t",
+      "finding": "SDXL Nbar4 GenEval BoN0.629→PSP0.645；human0.682→0.713",
+      "reading": "深读：§3–4、表1–2、solver/预算设定；官方repo",
+      "selected_methods_results": true,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P18",
+      "work_key": "arxiv:2607.04461",
+      "lane": "反馈与推理计算",
+      "title": "Flash-BoN: Instant Drafts for Inference-Time Scaling in Diffusion Models",
+      "date": "2026-07-05初稿；2026 ECCV",
+      "status": "ECCV 2026（官方repo声明）",
+      "task": "廉价draft、多阶段验证、完整refinement",
+      "primary_url": "https://arxiv.org/html/2607.04461v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2607.04461v1"
+      ],
+      "challenge": "只算NFE隐藏verifier开销",
+      "motivation": "把同时间预算分配给更多不同候选",
+      "mechanism": "timestep截短+层跳过+activation proxy；draft筛选后恢复full质量",
+      "finding": "作者wall-clock比较中简单BoN能胜部分搜索；廉价draft扩探索",
+      "reading": "摘要、§4、wall-clock动机；官方README",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P19",
+      "work_key": "arxiv:2604.13491",
+      "lane": "反馈与推理计算",
+      "title": "Enhanced Text-to-Image Generation by Fine-grained Multimodal Reasoning",
+      "date": "2026-04-15 v1",
+      "status": "预印本；未确认正式会议",
+      "task": "FiMR显式反馈与局部自修正",
+      "primary_url": "https://arxiv.org/html/2604.13491v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2604.13491v1"
+      ],
+      "challenge": "整图judge遗漏细小约束，语言rationale可能被decoder绕过",
+      "motivation": "把失败解释变成可执行局部纠正",
+      "mechanism": "prompt拆VQA最小语义单位，逐项验证，局部修改，训练理解-修正接口",
+      "finding": "报告组合benchmark改善；显式反馈/细粒度judging有消融",
+      "reading": "§3局限、§4方法、§6消融标题/机制",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P20",
+      "work_key": "title:rewardflowgenerateimagesbyoptimizingwhatyoureward",
+      "lane": "反馈与推理计算",
+      "title": "RewardFlow: Generate Images by Optimizing What You Reward",
+      "date": "2026-04-09初稿；2026-06主会",
+      "status": "CVPR 2026主会",
+      "task": "训练无关文生图/局部编辑",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Susladkar_RewardFlow_Generate_Images_by_Optimizing_What_You_Reward_CVPR_2026_paper.html",
+      "primary_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Susladkar_RewardFlow_Generate_Images_by_Optimizing_What_You_Reward_CVPR_2026_paper.html"
+      ],
+      "challenge": "局部要求与整体品质多目标耦合",
+      "motivation": "动态调整多反馈影响方向/范围",
+      "mechanism": "multi-reward Langevin；prompt语义解析调权/步长；VQA+SAM局部reward",
+      "finding": "正式原文报告零样本编辑保真和组合对齐改善",
+      "reading": "正式摘要、作者repo README",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P21",
+      "work_key": "arxiv:2510.16888",
+      "lane": "反馈与推理计算",
+      "title": "Uniworld-V2: Reinforce Image Editing with Diffusion Negative-aware Finetuning and MLLM Implicit Feedback",
+      "date": "2025-10-19 v1",
+      "status": "技术预印本；仓库现名Edit-R1",
+      "task": "通用指令编辑",
+      "primary_url": "https://arxiv.org/html/2510.16888v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2510.16888v1"
+      ],
+      "challenge": "多任务无统一reward，MLLM分数噪声影响更新",
+      "motivation": "利用理解模型的隐式判断，降低annotation依赖",
+      "mechanism": "NFT更新+MLLM输出logits反馈+低variance组过滤",
+      "finding": "作者报告ImgEdit/GEdit-Bench提升，适配多编辑backbone",
+      "reading": "摘要、feedback/logit/组filter机制；官方README",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "P22",
+      "work_key": "title:grpoguardmitigatingimplicitoveroptimizationinflowmatchingviaregulatedclipping",
+      "lane": "反馈与推理计算",
+      "title": "GRPO-Guard: Mitigating Implicit Over-Optimization in Flow Matching via Regulated Clipping",
+      "date": "2025-10-25初稿；2026-06主会",
+      "status": "CVPR 2026主会",
+      "task": "flow在线RL更新稳定性",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_GRPO-Guard_Mitigating_Implicit_Over-Optimization_in_Flow_Matching_via_Regulated_Clipping_CVPR_2026_paper.html",
+      "primary_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_GRPO-Guard_Mitigating_Implicit_Over-Optimization_in_Flow_Matching_via_Regulated_Clipping_CVPR_2026_paper.html"
+      ],
+      "challenge": "时间相关ratio/clipping失衡，代理reward涨而其它质量降",
+      "motivation": "区分优化器过更新与reward自身缺陷",
+      "mechanism": "ratio normalization和timestep gradient reweighting",
+      "finding": "作者报告多个flowbackbone缓解隐性过优化",
+      "reading": "arXivv1 §3、公式7–8、局限；正式CVF摘要",
+      "selected_methods_results": false,
+      "source_file": "feedback_records.json"
+    },
+    {
+      "id": "E01",
+      "work_key": "arxiv:2512.16853",
+      "lane": "评价与泛化",
+      "title": "GenEval 2: Addressing Benchmark Drift in Text-to-Image Evaluation",
+      "date": "2025-12-18",
+      "status": "预印本；本轮未确认最终会议状态",
+      "task": "真实文生图评测",
+      "primary_url": "https://arxiv.org/html/2512.16853v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2512.16853v1"
+      ],
+      "challenge": "评价器随输出分布变化偏离人工判断",
+      "motivation": "分数应反映对象、属性和关系的真实执行能力",
+      "mechanism": "更丰富的组合提示与按原子要求聚合的Soft-TIFA",
+      "finding": "整体评测与逐要求评测捕捉的能力存在差异",
+      "reading": "方法与能力分析章节、官方代码入口",
+      "selected_methods_results": false,
+      "source_file": "evaluation_records.json"
+    },
+    {
+      "id": "E02",
+      "work_key": "arxiv:2511.10547",
+      "lane": "评价与泛化",
+      "title": "Benchmarking Diversity in Image Generation via Attribute-Conditional Human Evaluation",
+      "date": "2025-11-13",
+      "status": "预印本；本轮未确认最终会议状态",
+      "task": "文生图集合多样性评价",
+      "primary_url": "https://arxiv.org/html/2511.10547v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2511.10547v1"
+      ],
+      "challenge": "整体距离混合内容差异与有意义属性变化",
+      "motivation": "沿具体概念属性评价集合覆盖",
+      "mechanism": "概念—属性任务、人工配对集合比较和表征评价",
+      "finding": "不同表征对变化维度的敏感性不同",
+      "reading": "方法、人工任务和自动评价比较",
+      "selected_methods_results": false,
+      "source_file": "evaluation_records.json"
+    },
+    {
+      "id": "E03",
+      "work_key": "arxiv:2602.19946",
+      "lane": "评价与泛化",
+      "title": "When Pretty Isn't Useful: Investigating Why Modern Text-to-Image Models Fail as Reliable Training Data Generators",
+      "date": "2026-02",
+      "status": "CVPR 2026 主会，CVF正式版本已核对",
+      "task": "文生图合成数据的下游用途",
+      "primary_url": "https://arxiv.org/html/2602.19946v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2602.19946v1"
+      ],
+      "challenge": "视觉质量进步没有同步改善合成数据训练价值",
+      "motivation": "研究生成分布中对下游泛化有用的内容",
+      "mechanism": "生成数据训练分类器并测试真实数据，分解纹理、结构和覆盖",
+      "finding": "美观、条件遵循与有效数据分布不完全一致",
+      "reading": "设置、结构纹理、频谱和分布分析",
+      "selected_methods_results": false,
+      "source_file": "evaluation_records.json"
+    },
+    {
+      "id": "E04",
+      "work_key": "arxiv:2509.14232",
+      "lane": "评价与泛化",
+      "title": "GenExam: A Multidisciplinary Text-to-Image Exam",
+      "date": "2025-09",
+      "status": "ICML 2026；官方会议目录与作者仓库已核对",
+      "task": "知识和约束密集的绘图考试",
+      "primary_url": "https://arxiv.org/html/2509.14232v5",
+      "primary_urls": [
+        "https://arxiv.org/html/2509.14232v5"
+      ],
+      "challenge": "视觉观感难代表技术绘图正确性",
+      "motivation": "评价知识与生成执行的结合",
+      "mechanism": "多学科题目、参考图和逐项评分点",
+      "finding": "需要按具体知识与关系检查生成结果",
+      "reading": "任务、协议和结果分析",
+      "selected_methods_results": false,
+      "source_file": "evaluation_records.json"
+    },
+    {
+      "id": "E05",
+      "work_key": "arxiv:2503.07265",
+      "lane": "评价与泛化",
+      "title": "WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation",
+      "date": "2025-03",
+      "status": "作者官方仓库标注ICML 2026；首次稿件早于窗口",
+      "task": "知识密集的文生图评价",
+      "primary_url": "https://arxiv.org/html/2503.07265v2",
+      "primary_urls": [
+        "https://arxiv.org/html/2503.07265v2"
+      ],
+      "challenge": "显式词语匹配不足以实现隐含知识",
+      "motivation": "测量知识能否转化为正确视觉内容",
+      "mechanism": "文化、时空和自然科学知识提示及多维评价",
+      "finding": "理解能力与生成中的知识实现需要分别检验",
+      "reading": "任务、知识维度与评价机制",
+      "selected_methods_results": false,
+      "source_file": "evaluation_records.json"
+    },
+    {
+      "id": "E06",
+      "work_key": "arxiv:2509.16447",
+      "lane": "评价与泛化",
+      "title": "Local Mechanisms of Compositional Generalization in Conditional Diffusion",
+      "date": "2025-09-19",
+      "status": "ICML 2026 主会，PMLR正式记录已核对",
+      "task": "受控CLEVR组合泛化；自然图像机制探索",
+      "primary_url": "https://arxiv.org/html/2509.16447v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2509.16447v1"
+      ],
+      "challenge": "熟悉概念的新组合何时能被生成",
+      "motivation": "建立可干预的机制解释",
+      "mechanism": "局部条件score、特定组合结构理论与干预",
+      "finding": "所研究条件下局部依赖与长度泛化有关",
+      "reading": "定义、理论条件与干预机制",
+      "selected_methods_results": false,
+      "source_file": "evaluation_records.json"
+    },
+    {
+      "id": "E07",
+      "work_key": "arxiv:2606.20155",
+      "lane": "评价与泛化",
+      "title": "NAMESAKES: Probing Identity Memorization in Text-to-Image Models",
+      "date": "2026-06-18",
+      "status": "预印本；本轮未确认正式会议状态",
+      "task": "人脸身份记忆探测",
+      "primary_url": "https://arxiv.org/html/2606.20155v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2606.20155v1"
+      ],
+      "challenge": "仅凭外观难区分记忆与泛化",
+      "motivation": "用生成行为探测身份知识",
+      "mechanism": "同名生成分散度和跨名称中心相似性",
+      "finding": "单一分散指标的解释依赖模型特性",
+      "reading": "探针定义与跨模型分析",
+      "selected_methods_results": false,
+      "source_file": "evaluation_records.json"
+    }
+  ]
+}

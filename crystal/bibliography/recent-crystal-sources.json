@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "updated_on": "2026-10-09",
+  "scope": "三篇提案的新增原始文献、读取段落与基座发布记录；43篇历史索引保留原核查日期。",
+  "proposal_sources": [
+    {
+      "proposal": "R1",
+      "source_file": "../evidence/sources-r1.json",
+      "scope": "联合科学提议"
+    },
+    {
+      "proposal": "R2",
+      "source_file": "../evidence/sources-r2.json",
+      "scope": "对象关系执行"
+    },
+    {
+      "proposal": "R3",
+      "source_file": "../evidence/sources-r3.json",
+      "scope": "后果到动作学习"
+    }
+  ]
+}

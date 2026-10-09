@@ -1,0 +1,600 @@
+{
+  "as_of": "2026-10-09",
+  "window": [
+    "2025-10-09",
+    "2026-10-09"
+  ],
+  "language": "zh-CN",
+  "scope": "文本/多模态理解、组合生成、推理和可控生成",
+  "records": [
+    {
+      "id": "C01",
+      "title": "LightBagel: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation",
+      "date": "2025-10-27（首稿）",
+      "status": "预印本；看到ICLR 2026投稿材料，但未核实正式接收记录",
+      "primary_url": "https://arxiv.org/abs/2510.22946",
+      "additional_primary_urls": [
+        "https://chenhuigou.github.io/publications/"
+      ],
+      "code_verified": {
+        "url": null,
+        "repository_page_verified": false,
+        "implementation_verified": false,
+        "evidence": "论文声明发布计划；项目页读取失败，未核实训练实现"
+      },
+      "task": "真实T2I、图像编辑、多模态理解",
+      "challenge": "强VLM与DiT各自有效，但只传递VLM末层语义会压缩空间细节，重新统一预训练又昂贵。",
+      "motivation": "复用已有专长，同时让语义与生成状态在整个网络中交换。",
+      "mechanism": "保留Qwen2.5-VL-7B与Wan2.2-TI2V-5B原有块，在各层插入零初始化多模态注意力；理解分支处理文本/ViT，生成分支处理VAE。",
+      "finding": "同参数数量的注入深度对照支持逐层融合优于只重复末层；ViT+VAE对编辑互补。",
+      "limitation": "作者部分总分在摘要/表格间不同；本记录依赖机制与受控消融，不拼接统一排名。跨架构泛化仍需分别验证。",
+      "read_depth": {
+        "level": "方法及消融深读",
+        "sections": "arXiv v1 §3、§4.4；官方作者发表页",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C02",
+      "title": "Think-Then-Generate: Reasoning-Aware Text-to-Image Diffusion with LLM Encoders",
+      "date": "2026-01-15（首稿）",
+      "status": "ICML 2026主会，PMLR 306:60480–60494",
+      "primary_url": "https://proceedings.mlr.press/v306/kou26b.html",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2601.10332v1"
+      ],
+      "code_verified": {
+        "url": "https://github.com/SJTU-DENG-Lab/Think-Then-Generate",
+        "repository_page_verified": true,
+        "implementation_verified": true,
+        "evidence": "README、inference.py及模型链接；训练算法另接入UniRL"
+      },
+      "task": "真实T2I；另有推理编辑扩展",
+      "challenge": "LLM文本编码器被当作静态特征提取器，能表达事实不代表条件适合DiT执行。",
+      "motivation": "令知识推断与画面表达共同适应最终图像结果。",
+      "mechanism": "SFT激活推理后重写，使用重写状态条件化DiT；每条推理采样多个图像，Dual-GRPO分别更新LLM与DiT。",
+      "finding": "作者比较SFT与联合后训练，报告推理生成/编辑提升；末端图像反馈用于适应文字条件。",
+      "limitation": "奖励与数据构成影响学到的可视语义；文字推理正确和几何执行正确仍是两个对象。",
+      "read_depth": {
+        "level": "方法与部分结果深读",
+        "sections": "arXiv v1 §3、§4.2–4.3；PMLR正式条目及官方repo",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C03",
+      "title": "ThinkGen: Generalized Thinking for Visual Generation",
+      "date": "2025-12-29（首稿）",
+      "status": "CVPR 2026主会",
+      "primary_url": "https://arxiv.org/abs/2512.23568",
+      "additional_primary_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Jiao_ThinkGen_Generalized_Thinking_for_Visual_Generation_CVPR_2026_paper.html"
+      ],
+      "code_verified": {
+        "url": "https://github.com/jiaosiyuu/ThinkGen",
+        "repository_page_verified": false,
+        "implementation_verified": false,
+        "evidence": "作者论文与HF提供代码/权重URL；本次仓库页面读取失败"
+      },
+      "task": "真实T2I、文字渲染、编辑、参考条件生成与反思",
+      "challenge": "统一模型的CoT可能仅帮助某类知识任务，却扰乱长提示、组合或文字渲染。",
+      "motivation": "学会生成器实际能利用的任务相关条件，减少跨任务失配。",
+      "mechanism": "MLLM与DiT解耦，learnable prepadding+线性connector接条件；先监督训练生成，再SepGRPO固定DiT训MLLM、固定MLLM训DiT，覆盖五类场景。",
+      "finding": "方法区明确区分两模块的rollout；任务分解使推理条件对生成器适配。",
+      "limitation": "不同任务用不同rule/reward，联合能力不等同于任意新条件无需训练；方法还包含大量生成预训练。",
+      "read_depth": {
+        "level": "方法深读",
+        "sections": "arXiv v1 §3–4、表1；CVF正式条目",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C04",
+      "title": "Interleaving Reasoning for Better Text-to-Image Generation（IRG）",
+      "date": "2025-09-08（首稿早于窗口；近一年主会谱系补充）",
+      "status": "ICLR 2026主会",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/ad48f017e6c3d474caf511208e600459-Abstract-Conference.html",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2509.06945v2"
+      ],
+      "code_verified": {
+        "url": "https://github.com/Osilly/Interleaving-Reasoning-Generation",
+        "repository_page_verified": true,
+        "implementation_verified": true,
+        "evidence": "SFT/eval目录、README和Toy数据链接；不据README承诺认定全部大数据已发布"
+      },
+      "task": "真实T2I，经初始生成再编辑细化",
+      "challenge": "先写完想法再出图的流程无法观察渲染出的细节错误。",
+      "motivation": "把反思依据从想象的图变为已生成的图，并学习保留语义的修正。",
+      "mechanism": "BAGEL按text-image-text-image交错；首次图像经ViT/VAE回读；IRGL-300K包含六种分解监督，再训练完整轨迹；改善阶段分开引导图像保持与反思执行。",
+      "finding": "作者多个benchmark显示改善；self-CoT与IRG是不同干预，后者含实际图像状态和修订目标。",
+      "limitation": "多轮代价及高质量目标数据不能忽略；这条首稿较早，仅用于解释谱系，不作为窗口内新首发数量。",
+      "read_depth": {
+        "level": "方法及部分结果深读",
+        "sections": "arXiv v2 §2.2.1–2.2.4；正式ICLR条目与repo",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C05",
+      "title": "Show, Don’t Tell: Morphing Latent Reasoning into Image Generation（LatentMorph）",
+      "date": "2026-02-02（首稿）",
+      "status": "ICML 2026主会，PMLR 306:17940–17959",
+      "primary_url": "https://proceedings.mlr.press/v306/chen26fv.html",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2602.02227v1"
+      ],
+      "code_verified": {
+        "url": "https://github.com/EnVision-Research/LatentMorph",
+        "repository_page_verified": true,
+        "implementation_verified": true,
+        "evidence": "SFT/RL控制器、inference目录及权重命令在README中核实"
+      },
+      "task": "真实T2I；Janus-Pro自回归图像token主实验",
+      "challenge": "生成隐藏状态不易被理解分支读取，理解隐藏状态也不能直接改变下一图像token；频繁图像/文字decode-encode额外丢失信息。",
+      "motivation": "学习双向状态接口，并在有需要时而非固定时刻推理。",
+      "mechanism": "短/长期condenser读取生成历史；translator把latent thought转换为控制向量，shaper注入KV；invoker在继续/推理两动作间学习，代价约束控制调用频率。",
+      "finding": "作者报告相对Janus-Pro的组合提升与相对显式循环的时间/token减少；模块消融检验状态压缩和控制。",
+      "limitation": "已深读机制的成立对象是AR图像token；不能直接移植为任意diffusion速度场控制，也不能把无显式文字称为物理推理。",
+      "read_depth": {
+        "level": "方法深读",
+        "sections": "arXiv v1 §3–4、部分§5；PMLR及官方repo",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C06",
+      "title": "Hint2Gen: Bridging Understanding and Generation via Code-structured Hints",
+      "date": "2026-06（主会公开；未核实更早首稿日）",
+      "status": "CVPR 2026主会，36593–36603",
+      "primary_url": "https://openaccess.thecvf.com/CVPR2026?day=2026-06-07",
+      "additional_primary_urls": [
+        "https://hub.hku.hk/handle/10722/375944"
+      ],
+      "code_verified": {
+        "url": "https://github.com/yuanpengtu/Hint2Gen",
+        "repository_page_verified": true,
+        "implementation_verified": true,
+        "evidence": "hint_generate.py、reason2gen_hint、evaluation.py与README核实"
+      },
+      "task": "主要是问题图+指令的推理生成/编辑；不以纯开放域T2I结果替代它",
+      "challenge": "模型能用符号解决迷宫/拼装等任务，却难把解答落实在指定图像位置。",
+      "motivation": "提供生成器可以读取的显式图面工作区。",
+      "mechanism": "把解答编码为轻量SVG/HTML叠层，渲染成hint，再条件化FLUX.1 Kontext；Reason2Gen覆盖22类问题。",
+      "finding": "公开实现保留原图、HTML和渲染hint；明确以指令与预期结果的双一致性评价。",
+      "limitation": "该轮未深读最终论文正文；VLM judge与给定问题图的任务范围必须保留，不能概括为无条件生成提升。",
+      "read_depth": {
+        "level": "正式条目与官方实现阅读",
+        "sections": "CVF正式索引、HKU记录、README方法及输入/输出协议",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C07",
+      "title": "3D Space as a Scratchpad for Editable Text-to-Image Generation",
+      "date": "2026-01-21（首稿）",
+      "status": "CVPR 2026主会",
+      "primary_url": "https://arxiv.org/abs/2601.14602",
+      "additional_primary_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/papers/Saha_3D_Space_as_a_Scratchpad_for_Editable_Text-to-Image_Generation_CVPR_2026_paper.pdf",
+        "https://oindrilasaha.github.io/3DScratchpad/"
+      ],
+      "code_verified": {
+        "url": "https://oindrilasaha.github.io/3DScratchpad/",
+        "repository_page_verified": false,
+        "implementation_verified": false,
+        "evidence": "官方项目页与Code入口已看到；未独立核实完整可运行仓库"
+      },
+      "task": "真实T2I；支持生成后3D编辑",
+      "challenge": "2D框和文本难表示朝向、遮挡、深度与相对尺度，也难维持编辑对象身份。",
+      "motivation": "把对象与关系落到可操作三维状态，再绘制最终像素。",
+      "mechanism": "先为各主体生成身份图/mesh；分解、bbox规划、姿态修正和视点选择操作3D场景；depth+身份参考由SIGMA-Gen绘制。",
+      "finding": "同提示比较多类推理基线；支持移动/缩放/旋转后重绘；作者报告GenAI-Bench对齐改善。",
+      "limitation": "最终是可编辑2D图像流程；mesh生成、主体实例化和agent调用成本存在，空间正确仍依赖计划和执行。",
+      "read_depth": {
+        "level": "方法及部分对照深读",
+        "sections": "arXiv v1 §3–4及表4–5；CVF PDF/官方项目页",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C08",
+      "title": "CTCal: Rethinking Text-to-Image Diffusion Models via Cross-Timestep Self-Calibration",
+      "date": "2026-03-21（首稿）",
+      "status": "CVPR 2026主会",
+      "primary_url": "https://arxiv.org/abs/2603.20741",
+      "additional_primary_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Guo_CTCal_Rethinking_Text-to-Image_Diffusion_Models_via_Cross-Timestep_Self-Calibration_CVPR_2026_paper.html"
+      ],
+      "code_verified": {
+        "url": "https://github.com/xiefan-guo/ctcal",
+        "repository_page_verified": true,
+        "implementation_verified": false,
+        "evidence": "公开仓库页面核实；此次未确认完整训练资产"
+      },
+      "task": "真实T2I：绑定、空间、计数",
+      "challenge": "同一图文对在高噪声时缺少可靠实体-空间对应；标准去噪损失间接监督绑定，多个主体响应又不均。",
+      "motivation": "把可观测的低噪声对应迁到缺少证据的高噪声生成阶段。",
+      "mechanism": "同模型双时间点，低噪声attention stop-gradient作teacher；选择名词token，联合空间与semantic-map损失、重建与主体响应正则；时间权重随噪声调整。",
+      "finding": "SD3 GenEval 0.62→0.69；同数据GORS对照及消融显示对所有token盲校准反而退步，语义选择重要。",
+      "limitation": "teacher时间选择依赖训练时间分布；attention对应是学习对象而非最终关系满足的证书。",
+      "read_depth": {
+        "level": "方法、结果、消融深读",
+        "sections": "arXiv v1 §3、§4及表2/4/5；CVF正式条目",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C09",
+      "title": "Guiding Diffusion Models with Semantically Degraded Conditions（CDG）",
+      "date": "2026-03-11（首稿）",
+      "status": "CVPR 2026主会",
+      "primary_url": "https://arxiv.org/abs/2603.10780",
+      "additional_primary_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Han_Guiding_Diffusion_Models_with_Semantically_Degraded_Conditions_CVPR_2026_paper.html"
+      ],
+      "code_verified": {
+        "url": "https://github.com/Ming-321/Classifier-Degradation-Guidance",
+        "repository_page_verified": true,
+        "implementation_verified": true,
+        "evidence": "configs/models/runner、多个模型入口与官方README核实"
+      },
+      "task": "真实T2I；训练外条件引导",
+      "challenge": "完整提示与null的差可能同时推动一般去噪和语义变化，对细粒度条件的分辨不足。",
+      "motivation": "构造相近条件对照，使引导更集中于被改变的语义。",
+      "mechanism": "文本encoder attention图上的Weighted PageRank识别内容/context聚合token，分层把内容embedding向null插值，使用完整-退化条件prediction差做guidance。",
+      "finding": "作者在SD3/FLUX/Qwen-Image等测试并分析引导子空间；多架构组合指标改善。",
+      "limitation": "共同分量抵消与几何解耦是作者解释，所测子空间支持它的局部版本；退化哪些条件并非通用固定语法。",
+      "read_depth": {
+        "level": "方法与分析深读",
+        "sections": "arXiv v1 §4–6，语义退化与几何分析；CVF与repo",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C10",
+      "title": "DynFusion: Rethinking Condition Fusion for Adaptive Multi-Conditional Text-to-Image Generation",
+      "date": "2026-03-03（大学归档；主会2026-06）",
+      "status": "CVPR 2026主会；大学保存正式版本",
+      "primary_url": "https://wrap.warwick.ac.uk/id/eprint/197869/",
+      "additional_primary_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/supplemental/Fang_DynFusion_Rethinking_Condition_CVPR_2026_supplemental.pdf"
+      ],
+      "code_verified": {
+        "url": null,
+        "repository_page_verified": false,
+        "implementation_verified": false,
+        "evidence": "未核实公开可运行实现"
+      },
+      "task": "文本+depth/edge/subject/background多条件T2I",
+      "challenge": "静态叠加异质条件会产生冗余和相互冲突，条件强度需求又随时间、任务、层变化。",
+      "motivation": "让模型决定哪些信息在当前状态应参与绘制。",
+      "mechanism": "condition adaptation模块按噪声状态预测激活子集，在不同DiT块动态融合；补充算法明确以noise状态选条件mask。",
+      "finding": "作者多条件任务显示相对均匀融合的保真/控制与效率改善。",
+      "limitation": "阅读到摘要与补充算法；未声称处理任意逻辑不相容约束或普适条件组合。公开代码未核实。",
+      "read_depth": {
+        "level": "原文摘要及补充算法阅读",
+        "sections": "Warwick正式版摘要；CVF supplement Algorithm1",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C11",
+      "title": "Scone: Bridging Composition and Distinction in Subject-Driven Image Generation via Unified Understanding-Generation Modeling",
+      "date": "2025-12-14（首稿）",
+      "status": "CVPR 2026主会Highlight；官方节目与作者repo确认",
+      "primary_url": "https://arxiv.org/abs/2512.12675",
+      "additional_primary_urls": [
+        "https://media.eventhosts.cc/Conferences/CVPR2026/CVPR_main_conf_2026_15.pdf"
+      ],
+      "code_verified": {
+        "url": "https://github.com/Ryann-Ran/Scone",
+        "repository_page_verified": true,
+        "implementation_verified": true,
+        "evidence": "训练/推理与benchmark发布记录、模型链接、目录核实"
+      },
+      "task": "参考条件新图生成；主体选择与多主体组合",
+      "challenge": "参考图里有多个候选，能组合参考图不代表能选对指令要求的主体；背景和非目标主体会串入结果。",
+      "motivation": "理解专家先识别可用条件，让生成专家集中于正确主体。",
+      "mechanism": "BAGEL早层text/ViT语义对齐形成相关token mask，在attention logits中屏蔽无关参考信息；先single-candidate composition再multi-candidate distinction训练。",
+      "finding": "OmniContext与SconeEval分别评价组合/区别；原有MSE目标下学习semantic bridge，无新参数。",
+      "limitation": "mask阈值、视觉语义分辨与多候选训练分布决定选择效果；语义mask不保证低层细节和所有关系。",
+      "read_depth": {
+        "level": "方法及部分结果深读",
+        "sections": "arXiv v1 §3、§4–5部分；原文Eq1–5；官方repo/主会节目",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C12",
+      "title": "ContextGen: Contextual Layout Anchoring for Identity-Consistent Multi-Instance Generation",
+      "date": "2025-10-13（首稿）",
+      "status": "ICLR 2026主会",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9b01b79449b54c24ead5725e14affa79-Abstract-Conference.html",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2510.11000v1"
+      ],
+      "code_verified": {
+        "url": "https://github.com/nenhang/ContextGen",
+        "repository_page_verified": true,
+        "implementation_verified": true,
+        "evidence": "inference、train/config、数据构建与benchmark目录及adapter链接核实"
+      },
+      "task": "文本+布局+多参考的新图生成；不是纯文本输入",
+      "challenge": "拼接layout压缩了细节，重叠遮挡丢失身份；独立reference又易串扰。",
+      "motivation": "给布局与主体细节不同的空间角色，同时保持全图上下文。",
+      "mechanism": "FLUX-Kontext上下文包含layout composite和原reference；前/后层CLA处理全局，middle ICA按框连接对应reference；instance-wise位置index区分来源。",
+      "finding": "作者相对layout/identity基线改善；IMIG-100K提供布局-身份配对监督。",
+      "limitation": "身份控制依赖给定框与参考对应；论文和repo也显示分辨率、种子影响，任意无布局T2I不在同一任务。",
+      "read_depth": {
+        "level": "方法及部分结果深读",
+        "sections": "arXiv v1 §3，正式ICLR条目与repo；v3日期已核实",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C13",
+      "title": "Disentangling to Re-couple: Resolving the Similarity-Controllability Paradox in Subject-Driven Text-to-Image Generation（DisCo）",
+      "date": "2026-04-01（首稿）",
+      "status": "CVPR 2026主会；官方节目确认",
+      "primary_url": "https://arxiv.org/abs/2604.00849",
+      "additional_primary_urls": [
+        "https://media.eventhosts.cc/Conferences/CVPR2026/CVPR_main_conf_2026_15.pdf"
+      ],
+      "code_verified": {
+        "url": null,
+        "repository_page_verified": false,
+        "implementation_verified": false,
+        "evidence": "未核实公开可运行实现"
+      },
+      "task": "reference+文本修改的新图生成/主体驱动编辑",
+      "challenge": "提示同时描述身份与情境会与具体reference冲突；严格分开后又可能像贴图、不融于新环境。",
+      "motivation": "明确每种信息的来源，再学习符合新语境的耦合。",
+      "mechanism": "VLM找entity word并用代词简化修改提示，GroundingDINO定位reference主体；专用subject similarity+context integration偏好数据训练RM，GRPO再耦合。",
+      "finding": "attention分析检验身份信息来源迁移；作者报告同时改善主体相似与可控性。",
+      "limitation": "解耦需可靠定位，recoupling依赖专门偏好数据与奖励；不能把最终一致性当作全部物理交互已学会。",
+      "read_depth": {
+        "level": "方法深读",
+        "sections": "arXiv v1 §3及部分§4；官方主会节目",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C14",
+      "title": "WithAnyone: Toward Controllable and ID Consistent Image Generation",
+      "date": "2025-10-16（首稿）",
+      "status": "ICLR 2026主会",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d432fbe4877ee1a6a51632a18e69784f-Abstract-Conference.html",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2510.14975v1"
+      ],
+      "code_verified": {
+        "url": "https://github.com/doby-xu/WithAnyone",
+        "repository_page_verified": true,
+        "implementation_verified": true,
+        "evidence": "训练代码发布、主FLUX模型、Kontext生成/编辑变体在README区分"
+      },
+      "task": "单/多人身份参考+文本的新图生成；编辑变体独立",
+      "challenge": "单图重建训练把同身份误学成同姿态/光照拷贝，身份相似与可控变化互相拉扯。",
+      "motivation": "用真实同身份不同画面的监督，区分身份不变性和外观变化。",
+      "mechanism": "MultiID-2M配对多人物数据；face-recognition+通用image特征，区域attention限制主体对应，contrastive ID与GT-aligned ID损失。",
+      "finding": "作者同时评价copy-paste和身份相似；新姿态/表情的可控性改善。",
+      "limitation": "人脸身份数据/表示有明确领域；不等同于任意物体/框架身份泛化。",
+      "read_depth": {
+        "level": "主会摘要、数据/方法部分阅读",
+        "sections": "arXiv v1 §3、Fig4说明；正式ICLR条目与repo",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C15",
+      "title": "StyleComposer: Training-Free Multi-Reference Style Composition",
+      "date": "2026-08-05（首稿）",
+      "status": "预印本；官方实验室仍标arXiv",
+      "primary_url": "https://arxiv.org/abs/2608.05213",
+      "additional_primary_urls": [
+        "https://gcl-inha.github.io/publications/"
+      ],
+      "code_verified": {
+        "url": "https://github.com/lexxsh/StyleComposer",
+        "repository_page_verified": true,
+        "implementation_verified": false,
+        "evidence": "当前公开仓库为静态项目页，Code/Paper按钮模板说明；未核实算法实现"
+      },
+      "task": "文本+颜色/纹理/结构reference的新图生成",
+      "challenge": "同一style embedding混合颜色、纹理、结构，强化某参考会把不需要的内容一并迁移。",
+      "motivation": "为不同属性找可单独干预的表示与时间区间。",
+      "mechanism": "颜色在VAE 3维chromatic子空间做分布运输；纹理用低频RoPE K/V路由；结构用早期Q锚定后衰减，跨时间协调。",
+      "finding": "单一路由、重叠时间窗、full-band K消融均有不同失败；多参考联合达成优于单属性强迁移。",
+      "limitation": "原文明确设计/分析建立于FLUX；对AR及其他架构尚待研究。正式论文发表与可运行代码未核实。",
+      "read_depth": {
+        "level": "方法及消融深读",
+        "sections": "arXiv v1 §4–5、表3–4；原文limitation；官方repo/实验室",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C16",
+      "title": "Qwen-Image-Layered: Towards Inherent Editability via Layer Decomposition",
+      "date": "2025-12-17（首稿）",
+      "status": "CVPR 2026主会",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Yin_Qwen-Image-Layered_Towards_Inherent_Editability_via_Layer_Decomposition_CVPR_2026_paper.html",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2512.15603v1"
+      ],
+      "code_verified": {
+        "url": "https://github.com/QwenLM/Qwen-Image-Layered",
+        "repository_page_verified": true,
+        "implementation_verified": true,
+        "evidence": "官方实现/模型链接与RGBA层分解说明核实"
+      },
+      "task": "主模型image-to-RGBA-layers；论文另含text-to-RGBA、text-to-layers训练与结果",
+      "challenge": "全部内容在单画布纠缠，修改局部会让非目标内容漂移；局部编辑要求可独立操作的对象。",
+      "motivation": "令可编辑性成为输出表示的性质。",
+      "mechanism": "统一RGB/RGBA VAE；VLD-MMDiT与layer维RoPE联合各层；阶段训练从单图透明生成到多层生成再分解，PSD提取层监督。",
+      "finding": "结构性操作能直接编辑指定层；论文分别测分解、多层生成，不混为同一T2I分数。",
+      "limitation": "层独立像素操作不自动保证新遮挡/光照合理；自然图层分解还涉及隐蔽内容重建。",
+      "read_depth": {
+        "level": "方法深读",
+        "sections": "arXiv v1 §3；CVF正式摘要与官方repo",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C17",
+      "title": "Masked Region Transformer for Layered Image Generation and Editing at Scale（MRT）",
+      "date": "2026-06（主会；首稿月份2026-05）",
+      "status": "CVPR 2026主会",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Masked_Region_Transformer_for_Layered_Image_Generation_and_Editing_at_CVPR_2026_paper.html",
+      "additional_primary_urls": [
+        "https://arxiv.org/abs/2605.27235",
+        "https://mrt-cvpr.github.io/"
+      ],
+      "code_verified": {
+        "url": "https://mrt-cvpr.github.io/",
+        "repository_page_verified": false,
+        "implementation_verified": false,
+        "evidence": "官方项目页已看到，未核实算法仓库"
+      },
+      "task": "text-to-layers、image-to-layers、layers-to-layers",
+      "challenge": "层数多时每层整幅画布token成本高，画布外对象内容缺失又妨碍移动与重用。",
+      "motivation": "统一生成/分解/局部修订，使完整对象的可复用层可规模化产生。",
+      "mechanism": "20B masked region diffusion共享三任务，通过选择token mask切换条件；overflow-aware canvas layer补足可见边界外部分，另有8步蒸馏。",
+      "finding": "正式摘要及项目说明报告三任务质量/效率改善；mask控制作用范围。",
+      "limitation": "本轮仅正式摘要/项目读取，不把峰值速度比推广到任意图像/层数；超界层的内容仍需生成推断。",
+      "read_depth": {
+        "level": "正式摘要与官方项目阅读",
+        "sections": "CVF正式条目/作者项目页",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C18",
+      "title": "UniWorld-V2 / Edit-R1: Reinforce Image Editing with Diffusion Negative-aware Finetuning and MLLM Implicit Feedback",
+      "date": "2025-10-19（首稿）",
+      "status": "预印本；该轮未核实正式主会接收",
+      "primary_url": "https://arxiv.org/abs/2510.16888",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2510.16888v1"
+      ],
+      "code_verified": {
+        "url": "https://github.com/PKU-YuanGroup/Edit-R1",
+        "repository_page_verified": true,
+        "implementation_verified": true,
+        "evidence": "原UniWorld-V2地址重定向到官方Edit-R1；代码/模型使用README核实"
+      },
+      "task": "指令图像编辑；不把编辑基准总分当纯T2I",
+      "challenge": "编辑指令差异大，SFT易只复刻已有修改；普适编辑奖励难，MLLM离散判断噪声大。",
+      "motivation": "用同一理解模型读取原图/目标关系，提供细粒度编辑结果反馈。",
+      "mechanism": "DiffusionNFT在forward-process上利用正负生成；MLLM输出logit作隐式reward，过滤低组差异稳定训练，可迁到多个编辑base。",
+      "finding": "作者ImgEdit/GEdit等编辑指标提升，并在不同base上测试；实际标签是编辑遵循。",
+      "limitation": "MLLM评判不能替代独立保留区/关系检查；泛化依赖其感知与反馈可靠性。",
+      "read_depth": {
+        "level": "方法概要与官方实现阅读",
+        "sections": "arXiv v1 方法概览/摘要、官方repo",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C19",
+      "title": "The Consistency Critic: Correcting Inconsistencies in Generated Images via Reference-Guided Attentive Alignment（ImageCritic）",
+      "date": "2025-11-25（首稿）",
+      "status": "CVPR 2026主会",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ouyang_The_Consistency_Critic_Correcting_Inconsistencies_in_Generated_Images_via_Reference-Guided_CVPR_2026_paper.html",
+      "additional_primary_urls": [
+        "https://arxiv.org/abs/2511.20614"
+      ],
+      "code_verified": {
+        "url": "https://github.com/HVision-NKU/ImageCritic",
+        "repository_page_verified": true,
+        "implementation_verified": true,
+        "evidence": "train.py、推理及Critic-10K/模型链接核实"
+      },
+      "task": "已有生成结果的reference-guided后编辑",
+      "challenge": "主体大体正确，文字/logo等局部细节仍不一致；整图重生会改变已正确部分。",
+      "motivation": "把细节对应与保留目标直接作为修复学习对象。",
+      "mechanism": "reference-degraded-target triplet通过VLM选择+显式退化构造；detail encoder与attention alignment loss定位对应，可agent多轮局部编辑。",
+      "finding": "作者多种已生成图上的细节一致性提升；这属于后编辑增益。",
+      "limitation": "需要reference提供正确细节；修复不能凭空验证无reference的新内容，生成与修复费用不同。",
+      "read_depth": {
+        "level": "正式摘要及官方实现阅读",
+        "sections": "CVF摘要、官方repo/模型卡",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    },
+    {
+      "id": "C20",
+      "title": "Swift-Image: Exploring the Performance Frontier of Compact Unified Image Generation Models（v2标题省略Swift-Image前缀）",
+      "date": "2026-08-20（首稿）；2026-08-21 v2",
+      "status": "预印本技术报告",
+      "primary_url": "https://arxiv.org/abs/2608.20334",
+      "additional_primary_urls": [],
+      "code_verified": {
+        "url": null,
+        "repository_page_verified": false,
+        "implementation_verified": false,
+        "evidence": "只核实作者报告；未定位公开可运行算法仓库"
+      },
+      "task": "真实T2I、单图与多图编辑；此处统一生成/编辑而非理解问答统一",
+      "challenge": "模型紧凑时，多种生成/编辑与后训练目标相互干扰；复杂用户请求需要转为可渲染说明。",
+      "motivation": "系统地控制训练课程与任务干扰，使小生成器也能执行复杂多模态条件。",
+      "mechanism": "6B单流DiT、渐进数据/分辨率课程；parallel expert RL+multi-teacher on-policy distillation，Prompt Enhancer分开高层推理与像素绘制。",
+      "finding": "作者报告6B/3B及少步变体的聚合表现；说明语义改写与多任务冲突的系统性处理。",
+      "limitation": "本轮正文HTML不可读，仅摘要机制；没有依据细分每一组件增益，未用外部同名商业网站推断结构。",
+      "read_depth": {
+        "level": "作者摘要与版本元数据阅读",
+        "sections": "arXiv v1/v2 metadata/abstract；正文获取失败",
+        "scope": "只归因于所列阅读范围；未运行模型"
+      },
+      "verified_on": "2026-10-09"
+    }
+  ],
+  "reading_summary": {
+    "method_or_ablation_deep_read": [
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C07",
+      "C08",
+      "C09",
+      "C11",
+      "C12",
+      "C13",
+      "C15",
+      "C16"
+    ],
+    "primary_only": true,
+    "scientific_execution": "无"
+  },
+  "diagnostic_sources": [
+    {
+      "title": "The Plan, Not the Decoder: Diagnosing and Repairing Compositional Failure in Reasoning-Augmented Text-to-Image Generation",
+      "date": "2026-08-22",
+      "status": "预印本",
+      "url": "https://arxiv.org/html/2608.21713v1",
+      "read_depth": "§3–4 controlled setup and decoder/plan interventions",
+      "finding": "GoT-R1-1B特定系统对计划执行约93.8%；同义左右描述导致约98%/54%计划差。不是所有模型的通则。"
+    }
+  ]
+}

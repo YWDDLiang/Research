@@ -1,0 +1,636 @@
+{
+  "schema_version": "1.0",
+  "created_on": "2026-10-09",
+  "language": "zh-CN",
+  "window": {
+    "from": "2025-10-09",
+    "to": "2026-10-09",
+    "policy": "主会在窗口内可纳入较早首稿，并明确标注；新增预印本按首稿日期；不是全领域穷尽清单"
+  },
+  "reading_levels": {
+    "selected_methods_results": "原文选读具体方法和结果/消融，不等于全文精读",
+    "abstract_metadata_release": "摘要/intro/发布材料；不可当完整机制证据"
+  },
+  "records": [
+    {
+      "id": "F01",
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "first_public_date": "2025-10-13",
+      "venue": "ICLR 2026",
+      "status": "published_main_conference",
+      "window_basis": "preprint_and_venue",
+      "task": {
+        "description": "ImageNet类别条件；无T2I主实验",
+        "true_t2i": false
+      },
+      "category": "生成友好表示",
+      "primary_urls": [
+        "https://arxiv.org/html/2510.11690v1"
+      ],
+      "venue_or_status_evidence_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/3c4141c12660ad3625eb4ae845e0a6f9-Abstract-Conference.html",
+      "code": {
+        "url": "https://github.com/bytetriper/RAE",
+        "status": "verified_official_repo"
+      },
+      "challenge": "重建训练的窄VAE latent缺少语义结构；高维表示又难去噪。",
+      "motivation": "直接在强表示空间生成，消除压缩瓶颈并承接预训练。",
+      "mechanism": "冻结DINO/SigLIP/MAE编码器配训练decoder；按token维度调噪声、增宽head并增强decoder噪声鲁棒性。",
+      "findings": "v1显示重建最好的MAE并非生成最好的DINO；普通DiT直接换RAE失败，调整后生成改善。",
+      "limitations": "任务为ImageNet；宽head和decoder增强的收益需随规模复查。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "v1 §3–6，Tables1–3，宽度/噪声消融；final venue摘要"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F02",
+      "title": "Scaling Text-to-Image Diffusion Transformers with Representation Autoencoders",
+      "first_public_date": "2026-01-22",
+      "venue": null,
+      "status": "preprint",
+      "window_basis": "preprint",
+      "task": {
+        "description": "真正自由文本T2I；GenEval、DPG；0.5B–9.8B DiT",
+        "true_t2i": true
+      },
+      "category": "生成友好表示",
+      "primary_urls": [
+        "https://arxiv.org/html/2601.16208v1"
+      ],
+      "venue_or_status_evidence_url": null,
+      "code": {
+        "url": null,
+        "status": "not_verified"
+      },
+      "challenge": "ImageNet的RAE优势能否扩展到开放词汇、文字和大模型。",
+      "motivation": "检验迁移条件，辨别真正必需设计与小规模补丁。",
+      "mechanism": "扩大SigLIP2 decoder训练数据；LLM+DiT在RAE与FLUX VAE上同设置训练/微调。",
+      "findings": "维度噪声仍关键，宽head/噪声增强收益消退；高质量小数据微调RAE较抗过拟合。",
+      "limitations": "文字重建需定向数据；抗过拟合机制解释仍为作者假设。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§2–4；Fig1–7；AppendixC；v1"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F03",
+      "title": "REPA-E: Unlocking VAE for End-to-End Tuning with Latent Diffusion Transformers",
+      "first_public_date": "2025-04-14",
+      "venue": "ICCV 2025",
+      "status": "published_main_conference",
+      "window_basis": "venue_in_window_with_older_preprint_and_oct2025_release",
+      "task": {
+        "description": "ImageNet；MSCOCO T2I扩展和2025-10 T2I-VAE发布",
+        "true_t2i": true
+      },
+      "category": "表示联合训练",
+      "primary_urls": [
+        "https://arxiv.org/abs/2504.10483"
+      ],
+      "venue_or_status_evidence_url": "https://openaccess.thecvf.com/content/ICCV2025/supplemental/Leng_REPA-E_Unlocking_VAE_ICCV_2025_supplemental.pdf",
+      "code": {
+        "url": "https://github.com/End2End-Diffusion/REPA-E",
+        "status": "verified_official_repo_and_release"
+      },
+      "challenge": "固定tokenizer限制生成；标准扩散损失直接联合训练会退化。",
+      "motivation": "让tokenizer与生成任务共同适配。",
+      "mechanism": "表示对齐驱动VAE与DiT共同训练；发布可替换现有VAE的端到端调优权重。",
+      "findings": "T2I补充实验和后续发布显示换VAE能改善T2I；表示训练可成为上游改进。",
+      "limitations": "论文早于窗口，按ICCV2025与10月发布纳入；不能把ImageNet倍速当T2I倍速。",
+      "reading": {
+        "level": "abstract_metadata_release",
+        "locators": "官方仓库Overview/Oct2025 release；CVF补充Table12"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F04",
+      "title": "Semantics Lead the Way: Harmonizing Semantic and Texture Modeling with Asynchronous Latent Diffusion",
+      "first_public_date": "2025-12-04",
+      "venue": "CVPR 2026",
+      "status": "published_main_conference",
+      "window_basis": "preprint_and_venue",
+      "task": {
+        "description": "ImageNet类别条件；无T2I主实验",
+        "true_t2i": false
+      },
+      "category": "多模态时间/责任分工",
+      "primary_urls": [
+        "https://arxiv.org/html/2512.04926v1"
+      ],
+      "venue_or_status_evidence_url": "https://media.eventhosts.cc/Conferences/CVPR2026/CVPR_main_conf_2026_15.pdf",
+      "code": {
+        "url": "https://github.com/yuemingPAN/SFD",
+        "status": "verified_official_repo"
+      },
+      "challenge": "语义先于纹理形成，同步联合去噪未利用这一顺序。",
+      "motivation": "让较清楚的语义给纹理提供锚点，同时保持协作。",
+      "mechanism": "Semantic VAE压缩视觉表示，与纹理latent并行；两个时钟有固定偏移。",
+      "findings": "偏移0.3优于同步；偏移1的完整顺序生成更差；ImageNet XL FID1.06。",
+      "limitations": "语义先行来自图像实证；最优偏移固定，当前主结果非T2I。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§3–4，Fig5，Tables2–3；v1"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F05",
+      "title": "Latent Denoising Makes Good Tokenizers",
+      "first_public_date": "2025-07-21",
+      "venue": "ICLR 2026",
+      "status": "published_main_conference",
+      "window_basis": "venue_in_window_with_older_preprint",
+      "task": {
+        "description": "ImageNet；最终版包含MSCOCO T2I",
+        "true_t2i": true
+      },
+      "category": "生成友好表示",
+      "primary_urls": [
+        "https://arxiv.org/html/2507.15856v1"
+      ],
+      "venue_or_status_evidence_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/649ad92e7067b3553a0f15acac68806d-Abstract-Conference.html",
+      "code": {
+        "url": "https://github.com/Jiawei-Yang/DeTok",
+        "status": "verified_official_repo"
+      },
+      "challenge": "好的重建latent不一定能从噪声/缺失状态被生成模型恢复。",
+      "motivation": "按下游去噪任务设计tokenizer。",
+      "mechanism": "编码latent与高斯噪声插值，加随机mask，再重建干净图；作为tokenizer时关闭扰动。",
+      "findings": "跨六种生成器改善；v1 MAR-L+decoder微调FID1.35，改善不依赖外部语义teacher。",
+      "limitations": "最终T2I存在由主会摘要核实；本轮细读的是v1 ImageNet方法与结果。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "v1 §3/5，Tables1–2；final venue摘要"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F06",
+      "title": "There is No VAE: End-to-End Pixel-Space Generative Modeling via Self-Supervised Pre-training",
+      "first_public_date": "2025-10-14",
+      "venue": "ICLR 2026",
+      "status": "published_main_conference",
+      "window_basis": "preprint_and_venue",
+      "task": {
+        "description": "ImageNet类别条件；pixel diffusion与consistency；无T2I",
+        "true_t2i": false
+      },
+      "category": "噪声状态表示训练",
+      "primary_urls": [
+        "https://arxiv.org/html/2510.12586v3"
+      ],
+      "venue_or_status_evidence_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/a834ac3dfdb90da54292c2c932c997cc-Abstract-Conference.html",
+      "code": {
+        "url": "https://github.com/AMAP-ML/EPG",
+        "status": "verified_official_repo"
+      },
+      "challenge": "pixel生成要同时学语义和细节，强噪声上普通SSL容易崩。",
+      "motivation": "先学跨噪声语义再做端到端像素生成。",
+      "mechanism": "干净增强视图对比＋同源相邻噪声点一致性；配随机decoder共同微调；CM加干净目标表示辅助。",
+      "findings": "v3 diffusion FID1.58/2.35；单步CM8.82，说明预训练适用不止多步。",
+      "limitations": "同源加噪点是轨迹近似；有额外SSL训练成本；未展示自由T2I。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "v1/v3 §3–4，噪声正样本构造，Tables1/2/4"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F07",
+      "title": "Back to Basics: Let Denoising Generative Models Denoise",
+      "first_public_date": "2025-11-17",
+      "venue": "CVPR 2026",
+      "status": "published_main_conference",
+      "window_basis": "preprint_and_venue",
+      "task": {
+        "description": "ImageNet256/512/1024类别条件；无T2I主实验",
+        "true_t2i": false
+      },
+      "category": "预测对象与流形",
+      "primary_urls": [
+        "https://arxiv.org/html/2511.13720v1"
+      ],
+      "venue_or_status_evidence_url": "https://media.eventhosts.cc/Conferences/CVPR2026/CVPR_main_conf_2026_15.pdf",
+      "code": {
+        "url": null,
+        "status": "repo_fetch_failed_not_verified"
+      },
+      "challenge": "高维噪声/速度目标需要拟合非数据流形；有限容量大patch模型困难。",
+      "motivation": "把网络容量用于预测有结构的干净数据。",
+      "mechanism": "JiT直接预测像素x，转换成velocity后用velocity损失/采样；大patch普通Transformer。",
+      "findings": "x预测可使欠宽网络工作，噪声/速度参数化明显失败；G/16 ImageNet256 FID1.82。",
+      "limitations": "理论/经验依赖数据低维流形与参数化；尚非T2I规模结论。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§3–4，参数化分析，网络/噪声尺度；v1"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F08",
+      "title": "PixelDiT: Pixel Diffusion Transformers for Image Generation",
+      "first_public_date": "2025-11-25",
+      "venue": "CVPR 2026",
+      "status": "published_main_conference",
+      "window_basis": "preprint_and_venue",
+      "task": {
+        "description": "ImageNet类别条件；真正1024×1024 T2I",
+        "true_t2i": true
+      },
+      "category": "原始空间多尺度",
+      "primary_urls": [
+        "https://arxiv.org/html/2511.20645v1"
+      ],
+      "venue_or_status_evidence_url": "https://github.com/NVlabs/PixelDiT",
+      "code": {
+        "url": "https://github.com/NVlabs/PixelDiT",
+        "status": "verified_official_repo_and_checkpoints"
+      },
+      "challenge": "autoencoder丢失细节并隔断端到端优化；直接像素计算大。",
+      "motivation": "保留像素精度同时组织全局与局部计算。",
+      "mechanism": "patch DiT建模全局；pixel PiT建模细节；pixel AdaLN与token compaction控制计算。",
+      "findings": "ImageNet FID1.61；T2I1024 GenEval0.74/DPG83.5；发布训练/推理权重。",
+      "limitations": "全像素并非零代价；pixel层仍有训练尖峰，仓库后续增加post-modulation。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§3.1–3.4，T2I分支；官方仓库训练/模型表"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F09",
+      "title": "PixelDiT2: Representation-Grounded Pixel Diffusion Transformers",
+      "first_public_date": "2026-09-21",
+      "venue": "NeurIPS 2026",
+      "status": "author_reported_accepted_upcoming_official_poster_not_verified",
+      "window_basis": "preprint_in_window",
+      "task": {
+        "description": "ImageNet类别条件；无T2I主实验",
+        "true_t2i": false
+      },
+      "category": "表示作为采样条件",
+      "primary_urls": [
+        "https://arxiv.org/html/2609.24919v1"
+      ],
+      "venue_or_status_evidence_url": "https://github.com/NVlabs/PixelDiT",
+      "code": {
+        "url": "https://github.com/NVlabs/PixelDiT",
+        "status": "verified_official_repo_and_checkpoints"
+      },
+      "challenge": "pixel模型缺乏显式表示先验，表示学习与像素生成互相拖累。",
+      "motivation": "把成熟视觉表示作为持续可用先验。",
+      "mechanism": "每步用冻结DINOv3编码当前噪声图，经时间条件投影形成grounding特征送入patch DiT。",
+      "findings": "ImageNet FID1.46/1.48；时间投影吸收teacher在噪声上的表示漂移。",
+      "limitations": "teacher留在每步推理；主结果不含T2I，主会身份目前来自作者仓库。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§3.2/4；噪声漂移/encoder消融；官方仓库"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F10",
+      "title": "An Empirical Study of Training Pixel-Space Text-to-Image Diffusion Models",
+      "first_public_date": "2026-08-17",
+      "venue": null,
+      "status": "preprint",
+      "window_basis": "preprint",
+      "task": {
+        "description": "真正大规模自由T2I；GenEval、DPG",
+        "true_t2i": true
+      },
+      "category": "latent到原始空间迁移",
+      "primary_urls": [
+        "https://arxiv.org/html/2608.16887v1"
+      ],
+      "venue_or_status_evidence_url": null,
+      "code": {
+        "url": null,
+        "status": "not_verified"
+      },
+      "challenge": "ImageNet pixel配方在大型T2I是否同样高效。",
+      "motivation": "识别以像素精度换取训练困难的实际成本。",
+      "mechanism": "同token长度比较latent/pixel；latent权重初始化后转pixel，混合真实和自产数据，比较x/v与decoder。",
+      "findings": "直接pixel预训练慢；初始化使x/v均可收敛但x更好；自产数据继承VAE错误，真实数据纠正。",
+      "limitations": "3.18–4.75×为作者端到端推理条件；训练捷径依赖已有latent模型。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§3–5，Fig7/8，Table1，AppendixA同架构设置"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F11",
+      "title": "NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale",
+      "first_public_date": "2025-08-14",
+      "venue": "ICLR 2026",
+      "status": "published_main_conference",
+      "window_basis": "venue_in_window_with_older_preprint",
+      "task": {
+        "description": "真正T2I、编辑与图文交错",
+        "true_t2i": true
+      },
+      "category": "连续token AR",
+      "primary_urls": [
+        "https://arxiv.org/html/2508.10711v1"
+      ],
+      "venue_or_status_evidence_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/974ff7b5bf08dbf9400b5d599a39c77f-Abstract-Conference.html",
+      "code": {
+        "url": "https://github.com/stepfun-ai/NextStep-1",
+        "status": "verified_official_repo_and_models"
+      },
+      "challenge": "离散VQ损失信息；重型整图diffusion削弱统一AR优势。",
+      "motivation": "统一next-token语义与高保真连续图像token。",
+      "mechanism": "14B因果Transformer；离散text CE，连续patch用157M MLP flow head；VAE通道归一化。",
+      "findings": "head从40M到528M性能近似，主AR承担条件建模；强CFG会放大latent漂移。",
+      "limitations": "顺序AR与每patch flow都耗时；高分辨率训练仍困难。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§2/4/6，Tables6–9；v1与final主会"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F12",
+      "title": "D-AR: Diffusion via Autoregressive Models",
+      "first_public_date": "2025-05-29",
+      "venue": "ICLR 2026",
+      "status": "published_main_conference",
+      "window_basis": "venue_in_window_with_older_preprint",
+      "task": {
+        "description": "ImageNet类别条件、部分token预览和布局；无T2I主实验",
+        "true_t2i": false
+      },
+      "category": "AR因果顺序设计",
+      "primary_urls": [
+        "https://arxiv.org/abs/2505.23660"
+      ],
+      "venue_or_status_evidence_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/6f479ea488e0908ac8b1b37b27fd134c-Abstract-Conference.html",
+      "code": {
+        "url": "https://github.com/showlab/D-AR",
+        "status": "verified_official_repo"
+      },
+      "challenge": "展平图像patch缺乏自然因果顺序。",
+      "motivation": "用扩散的粗到细过程定义token顺序。",
+      "mechanism": "序列diffusion tokenizer将不同token位置绑定像素去噪步骤，普通NTP逐步产生并可流式解码。",
+      "findings": "final ImageNet256tokens 775M/1.4B FID2.09/2.00；支持部分token预览。",
+      "limitations": "布局与预览不等同完整自由T2I；此项未通读全部方法消融。",
+      "reading": {
+        "level": "abstract_metadata_release",
+        "locators": "主会摘要/intro、官方仓库"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F13",
+      "title": "DC-AR: Efficient Masked Autoregressive Image Generation with Deep Compression Hybrid Tokenizer",
+      "first_public_date": "2025-07-07",
+      "venue": "ICCV 2025",
+      "status": "published_main_conference",
+      "window_basis": "venue_in_window_with_older_preprint",
+      "task": {
+        "description": "真正T2I；MJHQ30k、GenEval",
+        "true_t2i": true
+      },
+      "category": "离散连续混合mask生成",
+      "primary_urls": [
+        "https://arxiv.org/html/2507.04947v1"
+      ],
+      "venue_or_status_evidence_url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_DC-AR_Efficient_Masked_Autoregressive_Image_Generation_with_Deep_Compression_Hybrid_ICCV_2025_paper.pdf",
+      "code": {
+        "url": "https://github.com/dc-ai-projects/DC-AR",
+        "status": "verified_official_repo"
+      },
+      "challenge": "高压缩VQ难保细节；纯连续MAR又需很多步骤。",
+      "motivation": "把结构选择与细节精度交给不同类型token。",
+      "mechanism": "32×二维混合tokenizer；masked transformer先预测离散tokens，再以hidden state条件生成连续残差。",
+      "findings": "12步完整生成；MJHQ gFID5.49/GenEval0.69；二维token支持跨分辨率。",
+      "limitations": "残差被设定只细化既定结构；错误离散结构能否回改是保留问题。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§3–4，混合token与discrete-only消融，finalPDF/仓库"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F14",
+      "title": "CaTok: Taming Mean Flows for One-Dimensional Causal Image Tokenization",
+      "first_public_date": "2026-03-06",
+      "venue": "CVPR 2026",
+      "status": "published_main_conference",
+      "window_basis": "venue_in_window",
+      "task": {
+        "description": "ImageNet重建/类别AR；无T2I主实验",
+        "true_t2i": false
+      },
+      "category": "token顺序与decoder一致性",
+      "primary_urls": [
+        "https://arxiv.org/pdf/2603.06449"
+      ],
+      "venue_or_status_evidence_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chen_CaTok_Taming_Mean_Flows_for_One-Dimensional_Causal_Image_Tokenization_CVPR_2026_paper.html",
+      "code": {
+        "url": "https://github.com/ShareLab-SII/CaTok",
+        "status": "verified_official_repo"
+      },
+      "challenge": "人为1D顺序、全token条件decoder与NTP因果性冲突；nested dropout失衡。",
+      "motivation": "让token前缀自然对应可执行的逐层内容。",
+      "mechanism": "因果ViT tokenizer按时间区间供给MeanFlow decoder，REPA-A辅助训练。",
+      "findings": "256token重建FID0.75；部分区间/前缀有不同信息且支持单/多步。",
+      "limitations": "重建指标非生成指标；本轮读摘要、intro及官方方法页，未深入主表消融。",
+      "reading": {
+        "level": "abstract_metadata_release",
+        "locators": "CVF摘要/intro；作者project方法；arXiv首稿日期页已核实"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F15",
+      "title": "Generation then Reconstruction: Accelerating Masked Autoregressive Models via Two-Stage Sampling",
+      "first_public_date": "2025-10-20",
+      "venue": "ICLR 2026",
+      "status": "published_main_conference",
+      "window_basis": "preprint_and_venue",
+      "task": {
+        "description": "ImageNet MAR；LightGen7B真正T2I",
+        "true_t2i": true
+      },
+      "category": "生成与重建计算分工",
+      "primary_urls": [
+        "https://arxiv.org/html/2510.17171v1"
+      ],
+      "venue_or_status_evidence_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d9251dc20346dffe9b6db86dcc6f8cc9-Abstract-Conference.html",
+      "code": {
+        "url": "https://github.com/feihongyan1/GtR",
+        "status": "verified_repo_limited_contents"
+      },
+      "challenge": "空间相关token同一步建模困难，统一计算浪费在容易补全的区域。",
+      "motivation": "先形成足够骨架，再快速补全，困难细节保留预算。",
+      "mechanism": "无需训练的两阶段mask采样；特征频谱为token分配额外diffusion步骤。",
+      "findings": "MAR-H报告3.72×；方法也在T2I LightGen上验证。",
+      "limitations": "频谱在特征通道上计算，非普适物理频率；仓库当前内容不能视为完整可复现包。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§3–4，Tables1/4，LightGen设置"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F16",
+      "title": "Mean Flows for One-step Generative Modeling",
+      "first_public_date": "2025-05-19",
+      "venue": "NeurIPS 2025",
+      "status": "published_main_conference",
+      "window_basis": "venue_in_window_with_older_preprint",
+      "task": {
+        "description": "ImageNet类别条件；无T2I主实验",
+        "true_t2i": false
+      },
+      "category": "少步生成学习对象",
+      "primary_urls": [
+        "https://arxiv.org/abs/2505.13447"
+      ],
+      "venue_or_status_evidence_url": "https://papers.neurips.cc/paper_files/paper/2025/hash/6d13e085b79d454da5910e4ca82a3d9d-Abstract-Conference.html",
+      "code": {
+        "url": "https://github.com/Gsunshine/meanflow",
+        "status": "verified_official_repo"
+      },
+      "challenge": "瞬时速度必须多步积分；单步并非换采样步数即可。",
+      "motivation": "直接学习时间区间平均速度。",
+      "mechanism": "两个时间参数，平均/瞬时速度恒等式和JVP用于训练，无预训练蒸馏。",
+      "findings": "ImageNet1NFE FID3.43，构成独立从零训练范式。",
+      "limitations": "首稿在窗口前，主会在窗口内；细节由iMF/pMF后续原文补足。",
+      "reading": {
+        "level": "abstract_metadata_release",
+        "locators": "主会摘要与原理；官方仓库；后续iMF/pMF谱系"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F17",
+      "title": "Improved Mean Flows: On the Challenges of Fastforward Generative Models",
+      "first_public_date": "2025-12-01",
+      "venue": "CVPR 2026",
+      "status": "published_main_conference",
+      "window_basis": "preprint_and_venue",
+      "task": {
+        "description": "ImageNet类别条件；无T2I主实验",
+        "true_t2i": false
+      },
+      "category": "少步目标与条件化",
+      "primary_urls": [
+        "https://arxiv.org/html/2512.02012v1"
+      ],
+      "venue_or_status_evidence_url": "https://media.eventhosts.cc/Conferences/CVPR2026/CVPR_main_conf_2026_15.pdf",
+      "code": {
+        "url": "https://github.com/Lyy-iiis/imeanflow",
+        "status": "verified_official_repo"
+      },
+      "challenge": "原MF目标自依赖，JVP使用未观测条件速度；CFG训练定死。",
+      "motivation": "让实际预测函数输入合法，保留部署引导灵活性。",
+      "mechanism": "以u参数化v-loss；JVP方向用模型边际v；CFG作为显式输入条件。",
+      "findings": "从零单步FID1.72；参数化修正提高训练稳定性。",
+      "limitations": "JVP和时钟机制是训练的一部分；非普通一步终态回归。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§3/4，Algorithm1，JVP/input消融；v1"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F18",
+      "title": "One-step Latent-free Image Generation with Pixel Mean Flows",
+      "first_public_date": "2026-01-29",
+      "venue": "ICML 2026",
+      "status": "published_main_conference",
+      "window_basis": "preprint_and_venue",
+      "task": {
+        "description": "ImageNet类别条件；无T2I主实验",
+        "true_t2i": false
+      },
+      "category": "预测对象与少步映射",
+      "primary_urls": [
+        "https://arxiv.org/html/2601.22158v2"
+      ],
+      "venue_or_status_evidence_url": "https://proceedings.mlr.press/v306/lu26t.html",
+      "code": {
+        "url": "https://github.com/Lyy-iiis/pMF",
+        "status": "verified_official_repo_and_checkpoints"
+      },
+      "challenge": "像素高维与一步跨度同时要求过高容量。",
+      "motivation": "把易学的输出空间与动力学损失空间分开。",
+      "mechanism": "网络预测两时间索引的denoised-image field；x→u→v转换，按iMF训练，支持感知损失。",
+      "findings": "ImageNet单步FID2.22/2.48；直接u预测严重退化。",
+      "limitations": "一般r,t下低维流形是经验假设；ImageNet单步质量不等同晶体稳定。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§3–6，Table1、Algorithm1、x/u消融；v2/PMLR"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F19",
+      "title": "Generative Modeling via Drifting",
+      "first_public_date": "2026-02-04",
+      "venue": null,
+      "status": "preprint",
+      "window_basis": "preprint",
+      "task": {
+        "description": "ImageNet类别条件latent/pixel；无T2I主实验",
+        "true_t2i": false
+      },
+      "category": "训练时分布演化",
+      "primary_urls": [
+        "https://arxiv.org/html/2602.04770v2"
+      ],
+      "venue_or_status_evidence_url": null,
+      "code": {
+        "url": "https://github.com/lambertae/drifting",
+        "status": "verified_official_repo_and_checkpoints"
+      },
+      "challenge": "推理反复演化样本昂贵；端到端直接生成缺少分布移动信号。",
+      "motivation": "把分布的演化搬到训练，部署只执行映射。",
+      "mechanism": "核场吸向真实样本、斥离生成样本；冻结drift target做回归，在多尺度特征空间计算。",
+      "findings": "ImageNet一步latent/pixel FID1.54/1.61；特征编码器与温度是重要设计。",
+      "limitations": "真实数据分布的匹配不自动等于目标功能；特征空间无法区分的模式可能丢失。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§3/4，Algorithms1/2，AppendixA特征/核/温度；v2"
+      },
+      "checked_on": "2026-10-09"
+    },
+    {
+      "id": "F20",
+      "title": "Bidirectional Normalizing Flow: From Data to Noise and Back",
+      "first_public_date": "2025-12-11",
+      "venue": "CVPR 2026",
+      "status": "published_main_conference",
+      "window_basis": "preprint_and_venue",
+      "task": {
+        "description": "ImageNet类别条件；无T2I主实验",
+        "true_t2i": false
+      },
+      "category": "生成映射与可逆约束",
+      "primary_urls": [
+        "https://arxiv.org/html/2512.10953v1"
+      ],
+      "venue_or_status_evidence_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lu_Bidirectional_Normalizing_Flow_From_Data_to_Noise_and_Back_CVPR_2026_paper.html",
+      "code": {
+        "url": null,
+        "status": "official_code_not_verified"
+      },
+      "challenge": "精确解析逆的因果解码限制NF采样速度和架构。",
+      "motivation": "保留前向data→noise学习，灵活学习近似逆。",
+      "mechanism": "冻结前向NF，逆模型hidden alignment投影对齐前向中间状态；学进denoising步骤。",
+      "findings": "hidden alignment优于只终态/硬中间态蒸馏；单NFE并改善ImageNet质量。",
+      "limitations": "逆过程为近似学习，不继承精确可逆和精确采样保证。",
+      "reading": {
+        "level": "selected_methods_results",
+        "locators": "§4，reverse learning消融，AppendixC/Table7；v1"
+      },
+      "checked_on": "2026-10-09"
+    }
+  ]
+}

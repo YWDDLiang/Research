@@ -1,0 +1,23 @@
+{
+  "as_of": "2026-10-09",
+  "records": 69,
+  "distinct_works": 68,
+  "lane_counts": {
+    "基础生成与表示": 20,
+    "条件控制与推理": 20,
+    "反馈与推理计算": 22,
+    "评价与泛化": 7
+  },
+  "selected_methods_results_in_three_method_lanes": 37,
+  "duplicate_views": [
+    [
+      "C18",
+      "P21"
+    ]
+  ],
+  "diagnostic_sources_not_counted": [
+    "The Plan, Not the Decoder: https://arxiv.org/html/2608.21713v1"
+  ],
+  "scope_note": "包含真实文生图、编辑、类别条件基础生成和相关评价，非68篇均为文生图方法。会议、任务与选读范围按原记录。",
+  "scientific_experiments": 0
+}

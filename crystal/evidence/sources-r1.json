@@ -1,0 +1,211 @@
+{
+  "proposal": "R1",
+  "created_on": "2026-10-09",
+  "language": "zh-CN",
+  "scope": "科学动作联合提议分布：局部化学替换与匹配几何补偿；generate+一次学习修订",
+  "sources": [
+    {
+      "id": "R1-C01",
+      "title": "Open Materials Generation with Stochastic Interpolants",
+      "url": "https://proceedings.mlr.press/v267/hollmer25a.html",
+      "text_url": "https://arxiv.org/html/2502.02582v1",
+      "status": "ICML2025主会",
+      "read_sections": [
+        "§3.2–3.4（首稿III.2–III.4）",
+        "Appendix B.6（首稿A.5）",
+        "官方README SI/DFM接口"
+      ],
+      "supports": "晶体离散元素与周期坐标/晶格联合生成；SI可使用数据相关耦合。R1不能把joint或源—目标耦合本身称首次。",
+      "code": "https://github.com/FERMat-ML/OMatG",
+      "code_status": "官方仓库与相关源码已读；未运行"
+    },
+    {
+      "id": "R1-C02",
+      "title": "Multimodal Crystal Flow: Any-to-Any Modality Generation for Unified Crystal Modeling",
+      "url": "https://proceedings.mlr.press/v306/seong26a.html",
+      "text_url": "https://arxiv.org/html/2602.20210v1",
+      "status": "ICML2026主会",
+      "read_sections": [
+        "§3.1 Eq1–10",
+        "§3.2原子排序",
+        "§4.3–4.4",
+        "项目缓存final Tables3–4/Appendix H"
+      ],
+      "supports": "化学CTMC与几何ODE用独立时钟；已有structure-conditioned composition与多模态后验。新缺口在具体科学修订及匹配物理响应的监督。",
+      "code": null,
+      "code_status": "官方页面与已读PDF未定位代码/权重；不选为实施主基座"
+    },
+    {
+      "id": "R1-C03",
+      "title": "A generative model for inorganic materials design",
+      "url": "https://www.nature.com/articles/s41586-025-08628-5",
+      "text_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11922738/",
+      "status": "Nature2025",
+      "read_sections": [
+        "主文joint diffusion描述",
+        "训练/条件化原文及现有L08记录",
+        "官方README模型发布"
+      ],
+      "supports": "MatterGen联合元素、坐标与晶格；结构分布已能学习化学—几何关系，不可声称现有模型完全解耦。",
+      "code": "https://github.com/microsoft/mattergen",
+      "code_status": "官方代码与模型发布入口已核；非R1实施基座"
+    },
+    {
+      "id": "R1-C04",
+      "title": "Crystal Structure Prediction by Joint Equivariant Diffusion",
+      "url": "https://arxiv.org/html/2309.04475v1",
+      "status": "NeurIPS2023主会",
+      "read_sections": [
+        "§4.1–4.2",
+        "Appendix E.2–E.3"
+      ],
+      "supports": "主任务固定组成联合位置/晶格；另有离散/连续元素DNG扩展。化学改变后的几何生成是成熟能力，source-aware response需超越fresh CSP。",
+      "code": "https://github.com/jiaor17/DiffCSP",
+      "code_status": "官方仓库已核"
+    },
+    {
+      "id": "R1-C05",
+      "title": "SymmCD: Symmetry-Preserving Crystal Generation with Diffusion Models",
+      "url": "https://arxiv.org/html/2502.03638v1",
+      "status": "ICLR2025主会",
+      "read_sections": [
+        "§4.1–4.3",
+        "Appendix C",
+        "Appendix F.2/Table5"
+      ],
+      "supports": "联合站点对称、元素、代表坐标与晶格；复制ASU得到完整晶体，站点表示可补几何信息。",
+      "code": "https://github.com/sibasmarak/SymmCD",
+      "code_status": "官方实现已读；checkpoint入口本轮未定位"
+    },
+    {
+      "id": "R1-C06",
+      "title": "Space Group Equivariant Crystal Diffusion",
+      "url": "https://arxiv.org/html/2505.10994v1",
+      "status": "NeurIPS2025主会",
+      "read_sections": [
+        "§3ASU/对称",
+        "§4.1–4.4",
+        "Appendix A.4",
+        "官方README数据/checkpoints"
+      ],
+      "supports": "先生成晶格/元素/Wyckoff再约束坐标；固定对称的向量场有可达性限制。R1全胞响应不把源框架身份当硬限制。",
+      "code": "https://github.com/rees-c/sgequidiff",
+      "code_status": "官方代码与checkpoint链接已核元数据"
+    },
+    {
+      "id": "R1-C07",
+      "title": "Let CSP Be Your ANCHOR: Adaptive Crystal Search over Frozen Structure Priors",
+      "url": "https://arxiv.org/html/2609.33407v1",
+      "status": "2026-09新预印本",
+      "read_sections": [
+        "§2–3",
+        "§4 composition/structure reciprocal controls",
+        "Appendix C Eq29–30",
+        "Appendix D frozen CSP/relaxation"
+      ],
+      "supports": "GRPO选择composition，冻结CSP每次新采结构；不接受特定源结构/局部编辑作为结构生成条件。R1需同化学改动的fresh-CSP对照。",
+      "code": null,
+      "code_status": "已读原文未定位官方代码"
+    },
+    {
+      "id": "R1-C08",
+      "title": "Reinforcement Learning on the Discrete Composition Channel of a Crystal Generator: Validated Gains and Reward Hacking",
+      "url": "https://arxiv.org/html/2610.03880v1",
+      "status": "2026-10新预印本",
+      "read_sections": [
+        "§3离散通道",
+        "Appendix D Tables7–8",
+        "Appendix F"
+      ],
+      "supports": "composition-only RL是近邻；奖励移植Chemeleon2的52/2500 strict SUN相对36/2500需纳入，同奖励强基线不可略去。",
+      "code": null,
+      "code_status": "本轮未核可复现训练release"
+    },
+    {
+      "id": "R1-C09",
+      "title": "OMatG-flash: An All-Atom Flow Map with Reinforce Adjoint Matching for Scalable Materials Discovery",
+      "url": "https://arxiv.org/html/2609.26402v1",
+      "status": "2026-09新预印本",
+      "read_sections": [
+        "§3.1–3.2",
+        "Appendix A单位胞/连续atom descriptor"
+      ],
+      "supports": "已出现全原子flow-map及物理reward适配；少步/联合更新本身不是R1空白。",
+      "code": null,
+      "code_status": "本轮未核官方release"
+    },
+    {
+      "id": "R1-V01",
+      "title": "Semantics Lead the Way: Harmonizing Semantic and Texture Modeling with Asynchronous Latent Diffusion",
+      "url": "https://arxiv.org/html/2512.04926v1",
+      "status": "CVPR2026主会；ImageNet类别条件",
+      "read_sections": [
+        "§3双时钟",
+        "§4.2/4.3 offset消融"
+      ],
+      "supports": "中等先行与完整硬顺序不同，动机启发；不作为晶体耦合已经失效的证据。",
+      "code": "https://github.com/yuemingPAN/SFD",
+      "code_status": "官方仓库已核"
+    },
+    {
+      "id": "R1-A01",
+      "title": "OMatG MP-20 DNG — Linear-SDE-Gamma release",
+      "url": "https://huggingface.co/OMatG/MP-20-DNG/tree/main/Linear-SDE-Gamma",
+      "read_sections": [
+        "model card",
+        "文件树checkpoint.ckpt/train.yaml",
+        "公开train.yaml全文"
+      ],
+      "checkpoint": "OMatG/MP-20-DNG/Linear-SDE-Gamma/checkpoint.ckpt",
+      "revision": "6af2cc9a1fa569341fb7a08a542490868ab84867",
+      "config": "https://huggingface.co/OMatG/MP-20-DNG/resolve/main/Linear-SDE-Gamma/train.yaml",
+      "metadata": {
+        "mask_noise": 0.18946955217679085,
+        "coordinate_interpolant": "PeriodicLinearInterpolant",
+        "coordinate_sampler": "SDE",
+        "lattice_sampler": "ODE",
+        "integration_time_steps": 710,
+        "encoder": "CSPNetFull"
+      },
+      "status": "已核元数据/配置/接口；未下载权重、未运行"
+    },
+    {
+      "id": "R1-A02",
+      "title": "OMatG MP-20 CSP — Linear-ODE release",
+      "url": "https://huggingface.co/OMatG/MP-20-CSP/tree/main/Linear-ODE",
+      "read_sections": [
+        "文件树checkpoint.ckpt/train.yaml",
+        "公开train.yaml全文"
+      ],
+      "checkpoint": "OMatG/MP-20-CSP/Linear-ODE/checkpoint.ckpt",
+      "config": "https://huggingface.co/OMatG/MP-20-CSP/resolve/main/Linear-ODE/train.yaml",
+      "metadata": {
+        "species": "SingleStochasticInterpolantIdentity",
+        "coordinate_interpolant": "PeriodicLinearInterpolant",
+        "sampler": "ODE",
+        "integration_time_steps": 210,
+        "encoder": "CSPNetFull"
+      },
+      "status": "同基座CSP teacher/对照；已核元数据/接口，未运行"
+    },
+    {
+      "id": "R1-A03",
+      "title": "OMatG DiscreteFlowMatchingMask / Uniform source",
+      "url": "https://raw.githubusercontent.com/FERMat-ML/OMatG/main/omg/si/discrete_flow_matching_mask.py",
+      "additional_url": "https://raw.githubusercontent.com/FERMat-ML/OMatG/main/omg/si/discrete_flow_matching_uniform.py",
+      "read_sections": [
+        "Mask.integrate Lines159–175",
+        "Uniform.interpolate/loss/integrate"
+      ],
+      "supports": "mask noise>0重新mask已解码元素；uniform类当前base假设仍uniform。R1源条件bridge不是现成配置切换。",
+      "status": "原始源码已读，未执行"
+    },
+    {
+      "id": "R1-H01",
+      "title": "Project historical physical/refinement evidence",
+      "supports": "几何能改变stable端点；特定小干预无strict增益；旧文本edit构建/语义失败说明精确动作/源对应需要工程落实，不代表本方案已验证。",
+      "status": "历史已完成结果；R1未实验",
+      "public_history_reference": "historical-evidence.md"
+    }
+  ]
+}

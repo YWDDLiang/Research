@@ -1,0 +1,313 @@
+{
+  "proposal": "R2",
+  "language": "zh-CN",
+  "as_of": "2026-10-09",
+  "status": "研究提案，无新实验结果",
+  "method_revision": "2026-10-09 root/R1 peer：原生joint NLL监督真实y*，draft仅作q条件；物理监督改为正负有限能量增量的一个L_resp，保留力/应力与曲率；同信息同完成容量同Φ_O对照，owner扰动必须保持可实现性。",
+  "primary_sources": [
+    {
+      "id": "R2-P01",
+      "title": "CrystalFormer / Space Group Informed Transformer for Crystalline Materials Generation",
+      "status": "原始2024模型论文；当前官方DNG/CSP/RL发布版入口已核实",
+      "primary_url": "https://arxiv.org/html/2403.15734v3",
+      "additional_primary_urls": [
+        "https://github.com/deepmodeling/CrystalFormer",
+        "https://raw.githubusercontent.com/deepmodeling/CrystalFormer/main/MODEL_CARD.md",
+        "https://raw.githubusercontent.com/deepmodeling/CrystalFormer/main/crystalformer/src/transformer.py",
+        "https://raw.githubusercontent.com/deepmodeling/CrystalFormer/main/crystalformer/src/sample.py"
+      ],
+      "reading": {
+        "depth": "选定原文方法/结果或公开源码阅读",
+        "sections": "原文表示/自回归方法；官方README Model Card；MODEL_CARD；src/transformer.py、sample.py选定数据流",
+        "as_of": "2026-10-09",
+        "execution": "无模型执行、训练或复现"
+      },
+      "supported_content": "真实g-(W-A-X)_n-L；W/A分类、X von-Mises、L Gaussian；Alex20s multitask/csp分别发布；当前模型13.8M参数",
+      "proposal_difference": "新增orbit-owned S/R字段与对象索引、完成头和解码响应监督；不把现有站点交错或Wyckoff表示称为新贡献",
+      "code_verified": {
+        "repository": "https://github.com/deepmodeling/CrystalFormer",
+        "commit": "31bb734a3fd006af49a021921839061e6184cbf1",
+        "commit_date": "2026-03-31T13:17:31Z",
+        "scope": "只读取公开源码/配置"
+      }
+    },
+    {
+      "id": "R2-P02",
+      "title": "LLM Meets Diffusion: A Hybrid Framework for Crystal Material Generation（CrysLLMGen）",
+      "status": "NeurIPS 2025主会；正式论文集优先于README内部ICLR2025文字",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/f789a628fca473e922c806657512a20f-Abstract-Conference.html",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2510.23040v1",
+        "https://github.com/kdmsit/crysllmgen"
+      ],
+      "reading": {
+        "depth": "选定原文方法/结果或公开源码阅读",
+        "sections": "arXiv v1 §4、§5.3、§7；项目L09已核正式§3–5",
+        "as_of": "2026-10-09",
+        "execution": "无模型执行、训练或复现"
+      },
+      "supported_content": "LLM出元素/粗几何，固定元素数经扩展DiffCSP细化；作者§7明确两个模块独立训练、无相互作用",
+      "proposal_difference": "R2沿真实对象对应学习科学关系到几何的执行，区分选择与实现；不重提通用LLM+diffusion串联",
+      "code_verified": {
+        "repository": "https://github.com/kdmsit/crysllmgen",
+        "scope": "README、训练/采样入口已读；未载入checkpoint"
+      }
+    },
+    {
+      "id": "R2-P03",
+      "title": "PLaID++: A Preference Aligned Language Model for Targeted Inorganic Materials Design",
+      "status": "ICML 2026主会，PMLR 306:140903–140922",
+      "primary_url": "https://proceedings.mlr.press/v306/xu26l.html",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2509.07150v4",
+        "https://github.com/andaero/PLaID",
+        "https://huggingface.co/HOPE-Lab-HMC/PLaID"
+      ],
+      "reading": {
+        "depth": "选定原文方法/结果或公开源码阅读",
+        "sections": "arXiv v4 §4–5选定；R-IC01已核final§4/5/Appendix7.2；官方repo/HF",
+        "as_of": "2026-10-09",
+        "execution": "无模型执行、训练或复现"
+      },
+      "supported_content": "Qwen2.5-7B LoRA，Wyckoff文字、迭代DPO和条件/非条件联合；表示与alignment一起改善",
+      "proposal_difference": "R2保持字段到具体轨道的执行对应；只作为至多一个验证基座，终态alignment与baseline共享",
+      "code_verified": {
+        "repository": "https://github.com/andaero/PLaID",
+        "release": "https://huggingface.co/HOPE-Lab-HMC/PLaID",
+        "scope": "官方README、LoRA发布元数据；未运行"
+      }
+    },
+    {
+      "id": "R2-P04",
+      "title": "CrystalReasoner: Reasoning and RL for Property-Conditioned Crystal Structure Generation",
+      "status": "2026-05-14预印本；本轮未核实正式主会接收",
+      "primary_url": "https://arxiv.org/html/2605.14344v1",
+      "additional_primary_urls": [],
+      "reading": {
+        "depth": "选定原文方法/结果或公开源码阅读",
+        "sections": "§3.1–3.2、§4.1、Appendix C指标",
+        "as_of": "2026-10-09",
+        "execution": "无模型执行、训练或复现"
+      },
+      "supported_content": "科学thinking先描述对称/局部环境/性质，后出CIF；最终scalar多目标GRPO；§3.2指出先验与输出不保证一致；文中SUN阈值<0.016eV/atom",
+      "proposal_difference": "不是再增加科学CoT；用所有者字段与真实几何响应来建立可检查执行接口",
+      "code_verified": null
+    },
+    {
+      "id": "R2-P05",
+      "title": "SymmCD: Symmetry-Preserving Crystal Generation with Diffusion Models",
+      "status": "ICLR 2025主会",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/3a14ae9951e8153a8fc814b5f506b5b7-Paper-Conference.pdf",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2502.03638v2",
+        "https://github.com/sibasmarak/SymmCD"
+      ],
+      "reading": {
+        "depth": "选定原文方法/结果或公开源码阅读",
+        "sections": "arXiv v2 symmetry表示及Algorithm1/2；官方README",
+        "as_of": "2026-10-09",
+        "execution": "无模型执行、训练或复现"
+      },
+      "supported_content": "asymmetric unit与site symmetry的联合扩散；投影到有效site symmetry/Wyckoff位置后复制完整晶体",
+      "proposal_difference": "对称chart/展开是复用基础；R2的新增目标是化学关系与物理响应，不是构造对称本身",
+      "code_verified": {
+        "repository": "https://github.com/sibasmarak/SymmCD",
+        "scope": "README训练/采样命令与公开代码目录；未运行"
+      }
+    },
+    {
+      "id": "R2-P06",
+      "title": "CrystalREPA: Transferring Physical Priors from Universal MLIPs to Crystal Generative Models",
+      "status": "2026-05-09预印本；未核实正式主会状态",
+      "primary_url": "https://arxiv.org/html/2605.08960v1",
+      "additional_primary_urls": [
+        "https://arxiv.org/abs/2605.08960"
+      ],
+      "reading": {
+        "depth": "选定原文方法/结果或公开源码阅读",
+        "sections": "Fig1、§3–4全文方法、§5/Table1选定",
+        "as_of": "2026-10-09",
+        "execution": "无模型执行、训练或复现"
+      },
+      "supported_content": "形成能探针显示表示差；噪声原子hidden与clean MLIP原子特征对齐，元素感知InfoNCE，推理原流程不变",
+      "proposal_difference": "R2把物理监督放到对象绑定的解码响应；相同teacher/数据REPA是必须面对的直接baseline",
+      "code_verified": null
+    },
+    {
+      "id": "R2-P07",
+      "title": "Composable Crystals: Controllable Materials Discovery via Concept Learning",
+      "status": "2026-05-14 v1；2026-05-25 v2；预印本",
+      "primary_url": "https://arxiv.org/abs/2605.14769",
+      "additional_primary_urls": [
+        "https://arxiv.org/html/2605.14769v1"
+      ],
+      "reading": {
+        "depth": "选定原文方法/结果或公开源码阅读",
+        "sections": "v1 §2–3（局部VQ-VAE、composition generator、downstream DDPM）及版本metadata",
+        "as_of": "2026-10-09",
+        "execution": "无模型执行、训练或复现"
+      },
+      "supported_content": "局部邻居Transformer VQ 10000-code concepts，联合decoder重建；latent组合generator经自身高质量sample细化，concept conditions逐层加入",
+      "proposal_difference": "concept提取/复用已被覆盖；R2不依赖新codebook，强调实际轨道所有者、明确关系与敏感物理实现",
+      "code_verified": null
+    },
+    {
+      "id": "R2-P08",
+      "title": "Topology-Stratified Materials Discovery with A Flow-Based Generative Model（UFO-MGen）",
+      "status": "2026-09-22预印本",
+      "primary_url": "https://arxiv.org/html/2609.26547v1",
+      "additional_primary_urls": [],
+      "reading": {
+        "depth": "选定原文方法/结果或公开源码阅读",
+        "sections": "§2.1–2.2；S3.3方法段选定及评价框架定义",
+        "as_of": "2026-10-09",
+        "execution": "无模型执行、训练或复现"
+      },
+      "supported_content": "scaffold=(G,K,W,s)，fiber为Wyckoff自由度/晶格；hierarchical topology→chemical occupancy→structured Wyckoff flow",
+      "proposal_difference": "离散/连续分解不是R2创新；同等O输入之外，要研究orbit-owned关系和方向响应监督",
+      "code_verified": null
+    },
+    {
+      "id": "R2-P09",
+      "title": "Text-guided flow matching enables sample-efficient crystal structure generation（TFMat）",
+      "status": "2026-09-01预印本；v2已读",
+      "primary_url": "https://arxiv.org/html/2609.01076v2",
+      "additional_primary_urls": [],
+      "reading": {
+        "depth": "选定原文方法/结果或公开源码阅读",
+        "sections": "Methods: Datasets and text conditions、flow formulation、结果/Discussion选定",
+        "as_of": "2026-10-09",
+        "execution": "无模型执行、训练或复现"
+      },
+      "supported_content": "结构化组成/对称/性质元数据，MatSciBERT mean pooling作CrystalFlow语义先验；主要CSP匹配和DNG分布结果",
+      "proposal_difference": "global语义条件已存在；R2建立具体关系所有者与自由坐标执行，并评价终态strictSUN",
+      "code_verified": null
+    },
+    {
+      "id": "R2-P10",
+      "title": "Crystal Generation using the Fully Differentiable Pipeline and Latent Space Optimization",
+      "status": "2026-01-08首稿；v2 2026-08更新；预印本",
+      "primary_url": "https://arxiv.org/html/2601.04606v2",
+      "additional_primary_urls": [],
+      "reading": {
+        "depth": "选定原文方法/结果或公开源码阅读",
+        "sections": "III.2–III.4；Fig2、C6/C288示例；CVAE/direct-latent描述",
+        "as_of": "2026-10-09",
+        "execution": "无模型执行、训练或复现"
+      },
+      "supported_content": "CVAE带空间群/Wyckoff条件；SO(3)环境目标可微，direct/latent交替优化；C6能量松弛转sp3而指定环境优化得sp2",
+      "proposal_difference": "可微局部环境执行已有；R2需学习自主生成的实现分布和物理方向响应，不只加descriptor optimization",
+      "code_verified": null
+    },
+    {
+      "id": "R2-P11",
+      "title": "Guiding generative models to uncover diverse and novel crystals via reinforcement learning（Chemeleon2）",
+      "status": "Nature Machine Intelligence，2026-07-06，8:1087–1099",
+      "primary_url": "https://www.nature.com/articles/s42256-026-01262-4",
+      "additional_primary_urls": [
+        "https://arxiv.org/abs/2511.07158",
+        "https://github.com/hspark1212/chemeleon2"
+      ],
+      "reading": {
+        "depth": "选定原文方法/结果或公开源码阅读",
+        "sections": "正式正文Main与Results: Latent diffusion model for the policy network；repo README",
+        "as_of": "2026-10-09",
+        "execution": "无模型执行、训练或复现"
+      },
+      "supported_content": "VAE统一A/X/L连续latent，LDM/GRPO多目标reward；压缩latent主要动机为可计算policy和rollout效率",
+      "proposal_difference": "不是首次joint latent或RL；R2保留可操作对象与几何chart并做response preserving执行",
+      "code_verified": {
+        "repository": "https://github.com/hspark1212/chemeleon2",
+        "scope": "公开训练/采样、HF checkpoint入口与reward docs此前核实；本轮正式文章核对"
+      }
+    },
+    {
+      "id": "R2-P12",
+      "title": "CrysLDNet（原文方法名）：latent diffusion预训练晶体表示",
+      "status": "ICLR 2026正式PDF；仅按所读段落归因",
+      "primary_url": "https://openreview.net/pdf?id=l1H5bKhG5R",
+      "additional_primary_urls": [],
+      "reading": {
+        "depth": "选定原文方法/结果或公开源码阅读",
+        "sections": "正式PDF Algorithm1、§3.2.1选段",
+        "as_of": "2026-10-09",
+        "execution": "无模型执行、训练或复现"
+      },
+      "supported_content": "VAE+LDM表示预训练，再fine-tune性质预测；物理对称不变量encoder与MLP重建",
+      "proposal_difference": "重建/性质表示证据不能充当新材料生成SUN；仅作latent近邻范围说明",
+      "code_verified": null
+    }
+  ],
+  "selected_base": {
+    "name": "CrystalFormer Alex20s multitask",
+    "checkpoint_path": "alex20s/multi/epoch_044000.pkl",
+    "checkpoint_url": "https://huggingface.co/zdcao/CrystalFormer/resolve/main/alex20s/multi/epoch_044000.pkl",
+    "file_size_bytes": 166094129,
+    "lfs_sha256": "847e8f3962226d0539722c851bd615479d9c7fc2d5be9112898c1cdd2b7b700a",
+    "file_metadata_url": "https://huggingface.co/api/models/zdcao/CrystalFormer/tree/main/alex20s/multi?recursive=false&expand=false",
+    "metadata_read_method": "只读公开HF API；未下载权重",
+    "configuration": {
+      "params_approx": 13800000,
+      "layers": 16,
+      "heads": 8,
+      "d_model": 256,
+      "Kx": 16,
+      "Kl": 4,
+      "n_max": 21,
+      "cfg_drop_prob": "0<cfg_drop_prob<1"
+    },
+    "dataset_url": "https://huggingface.co/datasets/zdcao/alex-20s",
+    "dataset_scope": "约1.7M，E_hull<0.1，常规胞≤20 Wyckoff sites；不是≤20原子",
+    "source_commit": "31bb734a3fd006af49a021921839061e6184cbf1",
+    "config_source": "https://raw.githubusercontent.com/deepmodeling/CrystalFormer/main/MODEL_CARD.md"
+  },
+  "validation_base": {
+    "name": "PLaID++ Qwen2.5-7B Wyckoff",
+    "release": "https://huggingface.co/HOPE-Lab-HMC/PLaID",
+    "scope": "最多一个验证基座；未下载或执行"
+  },
+  "historical_evidence": [
+    {
+      "id": "DLM33",
+      "read_scope": "Observations/Operation/Protocol、saved numerical fields",
+      "observation": "40 matched TRAIN sources；teacher/free-student raw force RMS mean 0.179845/24.07336 eV/Å",
+      "evidence_boundary": "既有几何cross，非conditional regeneration；不能定位唯一因果或SUN提升",
+      "public_history_reference": "historical-evidence.md"
+    },
+    {
+      "id": "DLM19",
+      "observation": "gold typedPlan小几何响应；没有SUN结论",
+      "public_history_reference": "historical-evidence.md"
+    },
+    {
+      "id": "DLM20",
+      "observation": "sharedPlan整体gate失败；非物理label选择",
+      "public_history_reference": "historical-evidence.md"
+    },
+    {
+      "id": "DLM22",
+      "observation": "volumePlan strictSUN不变，MSUN下降",
+      "public_history_reference": "historical-evidence.md"
+    },
+    {
+      "id": "DLM31",
+      "observation": "fresh512 nativeSUN16，tau80035；rawN/U与relaxedS分阶段，非当前共同终态SUN协议",
+      "public_history_reference": "historical-evidence.md"
+    }
+  ],
+  "cv_inspiration": [
+    {
+      "name": "LightBagel",
+      "url": "https://arxiv.org/html/2510.22946v1",
+      "read_scope": "§3和同参数注入深度消融",
+      "role": "借鉴问题：末层理解表示可能不足以执行细空间关系；不是晶体新机制证明"
+    },
+    {
+      "name": "The Plan, Not the Decoder",
+      "url": "https://arxiv.org/html/2608.21713v1",
+      "read_scope": "§3–4 controlled planner/decoder interventions",
+      "role": "特定GoT-R1系统planner错、decoder忠实；要求R2不预设计划正确"
+    }
+  ],
+  "actions_taken": "文献/公开源码/发布元数据阅读；新草稿与sources写入。无SSH、Git、模型运行、训练或科学实验。"
+}
