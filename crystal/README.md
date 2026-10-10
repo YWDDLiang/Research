@@ -2,6 +2,12 @@
 
 目标是无条件生成更多不同的低能新颖晶体，提高严格 SUN，并保持独特性。熟悉框架中的新稳定化学组合同样属于有效发现。
 
+## 领域演化：从早期难点到六挑战与四方向
+
+[综述正文](./evolution/README.md)围绕57项原始研究、必要背景及更正，追溯表示、条件控制、物理反馈三条并行演化链，并逐一回答研究问题、重要性、困难、已有进展与剩余缺口，以及核心方法和结果。
+
+[演化总图](./evolution/figures/evolution-map.svg) · [文献年表](./evolution/chronology.md) · [六挑战谱系](./evolution/challenge-genealogy.md) · [方法继承关系](./evolution/lineage.md) · [结果与评价口径](./evolution/results-and-protocols.md) · [逐篇证据](./evolution/paper-catalog.md)
+
 ## 四个独立研究方向
 
 四个方向分别选择中心主张与技术范式，围绕共同的严格SUN目标研究不同能力。

@@ -1,0 +1,964 @@
+{
+  "edge_interpretation": "保留原始关系标签；引用、比较、方法采用与本文概念综合不混同。",
+  "records": [
+    {
+      "paper": "R01",
+      "title": "High-Pressure Phases of Silane",
+      "source": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.97.045504",
+      "relationship": "原始随机搜索—弛豫方法；与learned proposal的联系是综述归纳"
+    },
+    {
+      "paper": "R02",
+      "title": "Crystal structure prediction using ab initio evolutionary techniques: Principles and applications",
+      "source": "https://doi.org/10.1063/1.2210932",
+      "relationship": "作为物理搜索的代表性祖先；与后续生成模型的连线为任务/能力对照，不默认直接引用继承"
+    },
+    {
+      "paper": "R03",
+      "title": "Ab initio Random Structure Searching",
+      "source": "https://arxiv.org/abs/1101.3987",
+      "relationship": {
+        "verified_citations": [],
+        "review_conceptual_relation": "本综述将AIRSS作为物理搜索祖先；GSS原文§1实际引用Pickard与Needs 2006/2011，后者的混合搜索由目的论文提供直接引文证据。"
+      }
+    },
+    {
+      "paper": "R04",
+      "title": "Commentary: The Materials Project: A materials genome approach to accelerating materials innovation",
+      "source": "https://doi.org/10.1063/1.4812323",
+      "relationship": "CDVAE/DiffCSP及多个后续模型明确使用Materials Project衍生数据"
+    },
+    {
+      "paper": "R05",
+      "title": "Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties",
+      "source": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.120.145301",
+      "relationship": "图表示与局部到整体归纳偏置的背景，具体生成谱系需要各原文引用确认"
+    },
+    {
+      "paper": "R06",
+      "title": "Inverse Design of Solid-State Materials via a Continuous Representation",
+      "source": "https://doi.org/10.1016/j.matt.2019.08.017",
+      "relationship": [
+        {
+          "type": "conceptual_link_only",
+          "predecessor": null,
+          "evidence": "作为FTCP/CDVAE之前的可逆逆设计节点；不声称所有后续方法直接继承其代码或架构。"
+        }
+      ]
+    },
+    {
+      "paper": "R07",
+      "title": "An invertible crystallographic representation for general inverse design of inorganic crystals with targeted properties",
+      "source": "https://arxiv.org/pdf/2005.07609v3",
+      "relationship": [
+        {
+          "type": "cited_predecessor",
+          "predecessor": "imatgen",
+          "evidence": "原文讨论既有图像型连续表示；沿用可逆表示与性质组织潜空间的问题，不认定架构直接继承。",
+          "locator": "Introduction; invertible representation context"
+        }
+      ]
+    },
+    {
+      "paper": "R07",
+      "title": "An invertible crystallographic representation for general inverse design of inorganic crystals with targeted properties",
+      "source": "https://arxiv.org/pdf/2005.07609v3",
+      "relationship": {
+        "kind": "explicit_later_baseline",
+        "relation": "CDVAE直接比较FTCP，Con-CDVAE讨论此前逆设计表示",
+        "locator": "CDVAE §5.3/Table3; Con-CDVAE Introduction"
+      }
+    },
+    {
+      "paper": "R08",
+      "title": "Crystal Diffusion Variational Autoencoder for Periodic Material Generation",
+      "source": "https://arxiv.org/abs/2110.06197",
+      "relationship": [
+        {
+          "type": "cited_predecessor_and_baseline",
+          "predecessor": "ftcp",
+          "evidence": "直接讨论FTCP坐标表示的不变性并将其作为重构、DNG和性质优化基线。",
+          "locator": "Related Work; Section 5; Tables 1–3"
+        }
+      ]
+    },
+    {
+      "paper": "R08",
+      "title": "Crystal Diffusion Variational Autoencoder for Periodic Material Generation",
+      "source": "https://arxiv.org/abs/2110.06197",
+      "relationship": {
+        "kind": "explicit_extension",
+        "relation": "Con-CDVAE明确以CDVAE为基模型；DiffCSP、MatterGen引用其周期生成先例",
+        "locator": "Con-CDVAE title/§2; DiffCSP Related Work; MatterGen references"
+      }
+    },
+    {
+      "paper": "R09",
+      "title": "GFlowNet Foundations",
+      "source": "https://jmlr.org/papers/v24/22-0364.html",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "Flow Network Based Generative Models for Non-Iterative Diverse Candidate Generation",
+            "locator": "Introduction opening paragraph",
+            "type": "explicit theory foundation"
+          }
+        ],
+        "review_conceptual_relation": "与SHAFT连接为概念路线；SHAFT v1直接引用2021原始GFlowNet与2023 continuous GFlowNet，而不凭名称假定其直接采用本JMLR篇。"
+      }
+    },
+    {
+      "paper": "R10",
+      "title": "A universal graph deep learning interatomic potential for the periodic table",
+      "source": "https://www.nature.com/articles/s43588-022-00349-3",
+      "relationship": "为后续生成、弛豫与反馈学习提供评价工具；不能把预测器本身当生成器"
+    },
+    {
+      "paper": "R11",
+      "title": "CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling",
+      "source": "https://www.nature.com/articles/s42256-023-00716-3",
+      "relationship": "多个生成研究明确采用CHGNet物理评价；本项目也保留该评价路线"
+    },
+    {
+      "paper": "R12",
+      "title": "Crystal structure generation with autoregressive large language modeling",
+      "source": "https://www.nature.com/articles/s41467-024-54639-7",
+      "relationship": [
+        {
+          "type": "cited_baseline",
+          "predecessor": "diffcsp",
+          "evidence": "CSP Table 4直接采用DiffCSP/CDVAE基准；这不是几何架构继承。",
+          "locator": "Table 4"
+        }
+      ]
+    },
+    {
+      "paper": "R12",
+      "title": "Crystal structure generation with autoregressive large language modeling",
+      "source": "https://www.nature.com/articles/s41467-024-54639-7",
+      "relationship": {
+        "kind": "distinct_representation_lineage",
+        "relation": "与Gruver Crystal-LLM不同：scratch CIF model vs pretrained LLaMA geometry text；后者原文明确讨论tokenized atomistic建模",
+        "locator": "CrystaLLM Methods; Crystal-LLM §2/§4"
+      }
+    },
+    {
+      "paper": "R13",
+      "title": "Crystal Structure Prediction by Joint Equivariant Diffusion",
+      "source": "https://arxiv.org/abs/2309.04475",
+      "relationship": [
+        {
+          "type": "explicit_problem_extension",
+          "predecessor": "cdvae",
+          "evidence": "直接解释与CDVAE原任务/生成过程的区别，并为CSP构造组成条件CDVAE基线。",
+          "locator": "Introduction; Related Work; Section 5.1"
+        }
+      ]
+    },
+    {
+      "paper": "R13",
+      "title": "Crystal Structure Prediction by Joint Equivariant Diffusion",
+      "source": "https://arxiv.org/abs/2309.04475",
+      "relationship": {
+        "kind": "explicit_backbone",
+        "relation": "SCIGEN实例包装DiffCSP；CrysLLMGen连续模型扩展DiffCSP",
+        "locator": "SCIGEN Algorithms1/2; CrysLLMGen §4/§7"
+      }
+    },
+    {
+      "paper": "R14",
+      "title": "Reinforcement learning in crystal structure prediction",
+      "source": "https://pubs.rsc.org/en/content/articlehtml/2023/dd/d3dd00063j",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "FUSE and MC-EMMA basin hopping",
+            "locator": "§2 and §4",
+            "type": "implemented search-code lineage"
+          }
+        ],
+        "review_conceptual_relation": "是C4早期显式化先例；OMatG-IRL的首次主张应限定其预训练连续生成器接口，不能扩展成所有RL-CSP首次。"
+      }
+    },
+    {
+      "paper": "R15",
+      "title": "Scalable Diffusion for Materials Generation",
+      "source": "https://arxiv.org/abs/2311.09235",
+      "relationship": [
+        {
+          "type": "cited_baseline_and_problem_reformulation",
+          "predecessor": "cdvae",
+          "evidence": "沿用CDVAE代理基准，同时明确指出代理指标饱和和不可靠，加入DFT及同组成比较。",
+          "locator": "Sections 1, 3.1–3.2"
+        }
+      ]
+    },
+    {
+      "paper": "R16",
+      "title": "An invertible, invariant crystal representation for inverse design of solid-state materials using generative deep learning",
+      "source": "https://www.nature.com/articles/s41467-023-42870-7",
+      "relationship": [
+        {
+          "type": "conceptual_link_only",
+          "predecessor": "ftcp",
+          "evidence": "二者都处理可逆表示，但SLICES引入周期商图与独立几何实现；此处是综述的表示问题关联，不宣称VAE架构继承。"
+        }
+      ]
+    },
+    {
+      "paper": "R17",
+      "title": "Author Correction: An autonomous laboratory for the accelerated synthesis of inorganic materials",
+      "source": "https://www.nature.com/articles/s41586-025-09992-y",
+      "relationship": "作为发现链下游背景和评价概念参照，不作为生成模型同榜比较"
+    },
+    {
+      "paper": "R17",
+      "title": "Author Correction: An autonomous laboratory for the accelerated synthesis of inorganic materials",
+      "source": "https://www.nature.com/articles/s41586-025-09992-y",
+      "relationship": "对ALab2023的直接更正关系"
+    },
+    {
+      "paper": "R18",
+      "title": "Scaling deep learning for materials discovery",
+      "source": "https://www.nature.com/articles/s41586-023-06735-9",
+      "relationship": "直接展示物理计算反哺学习，C6不能表述为历史空白"
+    },
+    {
+      "paper": "R18",
+      "title": "Scaling deep learning for materials discovery",
+      "source": "https://www.nature.com/articles/s41586-023-06735-9",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "Data-mined ionic substitutions",
+            "locator": "Methods Substitution patterns",
+            "type": "candidate-generation method"
+          },
+          {
+            "target": "Materials Project/OQMD/WBM",
+            "locator": "Methods Datasets and candidate generation",
+            "type": "data lineage"
+          }
+        ],
+        "review_conceptual_relation": "用于说明C6的物理数据积累早已部分解决，不能把它直接改写为扩散后训练。"
+      }
+    },
+    {
+      "paper": "R19",
+      "title": "A generative model for inorganic materials design",
+      "source": "https://www.nature.com/articles/s41586-025-08628-5",
+      "relationship": [
+        {
+          "type": "cited_predecessor_and_baseline",
+          "predecessors": [
+            "cdvae",
+            "diffcsp"
+          ],
+          "evidence": "Nature正文把二者作为前代生成器，并在同MP-20训练模型中比较；联合三变量扩散进一步发展前代状态空间设计。",
+          "locator": "Diffusion process; benchmark discussion"
+        }
+      ]
+    },
+    {
+      "paper": "R19",
+      "title": "A generative model for inorganic materials design",
+      "source": "https://www.nature.com/articles/s41586-025-08628-5",
+      "relationship": {
+        "kind": "explicit_successor_and_baseline",
+        "relation": "从周期生成到多性质设计；TFMat/UFO/Composable及后训练工作将其作为重要先行或基线",
+        "locator": "MatterGen main; successors references/results"
+      }
+    },
+    {
+      "paper": "R19",
+      "title": "A generative model for inorganic materials design",
+      "source": "https://www.nature.com/articles/s41586-025-08628-5",
+      "relationship": {
+        "verified_citations": [],
+        "review_conceptual_relation": "本分稿只核系统机制；MatInvent §2.1明确以MatterGen为默认扩散基座，为后继继承提供直接证据。"
+      }
+    },
+    {
+      "paper": "R20",
+      "title": "Invariant Tokenization of Crystalline Materials for Language Model Enabled Generation",
+      "source": "https://papers.nips.cc/paper_files/paper/2024/hash/e23133d34964a0a09f6d076fc4b922a4-Abstract-Conference.html",
+      "relationship": [
+        {
+          "type": "explicit_representation_problem_extension",
+          "predecessors": [
+            "crystallm",
+            "crystal_llm"
+          ],
+          "evidence": "Introduction/Section 3直接指出前代CIF/text序列的不唯一性，并比较周期变换后的表示。",
+          "locator": "Introduction; Table 1"
+        }
+      ]
+    },
+    {
+      "paper": "R21",
+      "title": "Fine-Tuned Language Models Generate Stable Inorganic Materials as Text",
+      "source": "https://arxiv.org/abs/2402.04379",
+      "relationship": [
+        {
+          "type": "cited_parallel_predecessor",
+          "predecessor": "crystallm",
+          "evidence": "引用CrystaLLM的CIF语言建模工作；本工作强调通用预训练LLM+LoRA与精简结构文本。",
+          "locator": "References; representation discussion; Appendix A.5"
+        }
+      ]
+    },
+    {
+      "paper": "R21",
+      "title": "Fine-Tuned Language Models Generate Stable Inorganic Materials as Text",
+      "source": "https://arxiv.org/abs/2402.04379",
+      "relationship": {
+        "kind": "explicit_model_lineage",
+        "relation": "FlowLLM基分布及CrysLLMGen语言模块沿用fine-tuned LLaMA crystal text路线",
+        "locator": "FlowLLM §3/Algorithm1; CrysLLMGen §4.3"
+      }
+    },
+    {
+      "paper": "R22",
+      "title": "Space Group Constrained Crystal Generation",
+      "source": "https://arxiv.org/abs/2402.03992",
+      "relationship": [
+        {
+          "type": "explicit_extension",
+          "predecessor": "diffcsp",
+          "evidence": "摘要和Introduction明确称对DiffCSP增加空间群约束；保留联合扩散并改变可采样几何空间。",
+          "locator": "Introduction; Section 4"
+        }
+      ]
+    },
+    {
+      "paper": "R23",
+      "title": "Illuminating the property space in crystal structure prediction using Quality-Diversity algorithms",
+      "source": "https://arxiv.org/html/2403.03511v1",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "MAP-Elites",
+            "locator": "§2.3",
+            "type": "archive algorithm"
+          },
+          {
+            "target": "USPEX/XtalOpt",
+            "locator": "§2.1",
+            "type": "evolutionary CSP background"
+          }
+        ],
+        "review_conceptual_relation": "D开放发现沿用质量—多样性基础，再研究未知合格集合形成；不把archive本身当新贡献。"
+      }
+    },
+    {
+      "paper": "R24",
+      "title": "Con-CDVAE: A method for the conditional generation of crystal structures",
+      "source": "https://arxiv.org/html/2403.12478v1",
+      "relationship": {
+        "kind": "explicit_extension",
+        "relation": "模型名/正文明确扩展CDVAE；同名近似Cond-CDVAE压力CSP工作属于另一论文",
+        "locator": "§2; title; introduction"
+      }
+    },
+    {
+      "paper": "R25",
+      "title": "Space group informed transformer for crystalline materials generation",
+      "source": "https://arxiv.org/abs/2403.15734",
+      "relationship": [
+        {
+          "type": "conceptual_link_only",
+          "predecessor": "diffcsppp",
+          "evidence": "二者把群约束变成可执行表示；前者AR、后者扩散。时间接近，仅凭共同Wyckoff思路不宣称单向继承。"
+        }
+      ]
+    },
+    {
+      "paper": "R26",
+      "title": "FlowMM: Generating Materials with Riemannian Flow Matching",
+      "source": "https://proceedings.mlr.press/v235/miller24a.html",
+      "relationship": [
+        {
+          "type": "explicit_architecture_reuse",
+          "predecessor": "diffcsp",
+          "evidence": "Section 4.1声明两者使用完全相同网络，直接隔离生成路径及采样机制的贡献。",
+          "locator": "Section 4.1"
+        }
+      ]
+    },
+    {
+      "paper": "R27",
+      "title": "Structural constraint integration in a generative model for the discovery of quantum materials",
+      "source": "https://www.nature.com/articles/s41563-025-02355-y",
+      "relationship": {
+        "kind": "explicit_backbone_and_inpainting",
+        "relation": "v1 Algorithms1/2直接包装DiffCSP；最终supp把生成、筛选、弛豫、畸变和合成分级",
+        "locator": "v1 Methods; final supplement §12"
+      }
+    },
+    {
+      "paper": "R28",
+      "title": "Generative Hierarchical Materials Search",
+      "source": "https://proceedings.neurips.cc/paper_files/paper/2024/file/447d012bd95b6767a4bfdebf96cdfcc9-Paper-Conference.pdf",
+      "relationship": {
+        "kind": "explicit_hierarchical_factorization",
+        "relation": "作者从语言→公式知识与公式→结构数据库分解数据缺口，并比较直接文本LLM生成",
+        "locator": "§1–2/Fig1"
+      }
+    },
+    {
+      "paper": "R29",
+      "title": "FlowLLM: Flow Matching for Material Generation with Large Language Models as Base Distributions",
+      "source": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/51d317df78eded9eb3c9d3fb1091c279-Abstract-Conference.html",
+      "relationship": [
+        {
+          "type": "explicit_combination",
+          "predecessors": [
+            "crystal_llm",
+            "flowmm"
+          ],
+          "evidence": "方法明确采用Gruver等文本LLM与FlowMM训练目标，把LLM用作base distribution。",
+          "locator": "Section 4; Algorithm 1"
+        }
+      ]
+    },
+    {
+      "paper": "R29",
+      "title": "FlowLLM: Flow Matching for Material Generation with Large Language Models as Base Distributions",
+      "source": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/51d317df78eded9eb3c9d3fb1091c279-Abstract-Conference.html",
+      "relationship": {
+        "kind": "explicit_model_combination",
+        "relation": "fine-tuned crystal LLM + FlowMM RFM objective，重新针对LLM基分布训练而非直接套任意flow",
+        "locator": "§3/Algorithm1"
+      }
+    },
+    {
+      "paper": "R30",
+      "title": "Efficient Symmetry-Aware Materials Generation via Hierarchical Generative Flow Networks",
+      "source": "https://arxiv.org/html/2411.04323v1",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "Bengio et al. 2021 GFlowNet",
+            "locator": "§3.2 and References",
+            "type": "theory"
+          },
+          {
+            "target": "Lahlou et al. 2023 continuous GFlowNet",
+            "locator": "§5 Baselines",
+            "type": "continuous action method"
+          },
+          {
+            "target": "Malkin et al. 2022 trajectory balance",
+            "locator": "References and training objective",
+            "type": "training"
+          }
+        ],
+        "review_conceptual_relation": "将其视作C5分布探索的晶体先行，未声称其完成未知strict SUN结果类学习。"
+      }
+    },
+    {
+      "paper": "R31",
+      "title": "Establishing baselines for generative discovery of inorganic crystals",
+      "source": "https://pubs.rsc.org/en/content/articlehtml/2025/mh/d5mh00010f",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "MatterGen/CrystaLLM/CDVAE/FTCP",
+            "locator": "Methods Generative modeling",
+            "type": "implemented benchmark"
+          },
+          {
+            "target": "Data-mined substitution prediction",
+            "locator": "Methods Data-driven ion exchange",
+            "type": "baseline method"
+          }
+        ],
+        "review_conceptual_relation": "该篇建立反事实基线标准，支持把D的结果发现与C的物理知识贡献分开。"
+      }
+    },
+    {
+      "paper": "R32",
+      "title": "A generative material transformer using Wyckoff representation",
+      "source": "https://www.nature.com/articles/s41524-025-01940-8",
+      "relationship": [
+        {
+          "type": "conceptual_link_only",
+          "predecessor": "crystalformer",
+          "evidence": "同属Wyckoff+自由坐标的AR分支；不同论文机制相关，未以共同主题推断直接架构继承。"
+        }
+      ]
+    },
+    {
+      "paper": "R32",
+      "title": "A generative material transformer using Wyckoff representation",
+      "source": "https://www.nature.com/articles/s41524-025-01940-8",
+      "relationship": {
+        "kind": "explicit_representation_extension",
+        "relation": "原文比较CIF、diffusion和Wyckoff模型，结合对称离散项与连续自由参数",
+        "locator": "Introduction/Representation"
+      }
+    },
+    {
+      "paper": "R33",
+      "title": "A Periodic Bayesian Flow for Material Generation",
+      "source": "https://arxiv.org/abs/2502.02016",
+      "relationship": [
+        {
+          "type": "cited_comparison",
+          "predecessors": [
+            "diffcsp",
+            "flowmm"
+          ],
+          "evidence": "在同CSP/DNG基准中比较其周期BFN；直接理论起点是原BFN，而非将FlowMM重命名。",
+          "locator": "Sections 3–5; Tables 1–2"
+        }
+      ]
+    },
+    {
+      "paper": "R34",
+      "title": "Open Materials Generation with Stochastic Interpolants",
+      "source": "https://proceedings.mlr.press/v267/hollmer25a.html",
+      "relationship": [
+        {
+          "type": "explicit_architecture_and_framework_extension",
+          "predecessors": [
+            "diffcsp",
+            "flowmm"
+          ],
+          "evidence": "采用DiffCSP网络；SI以flow/diffusion为特例，并原文系统比较路径和采样器。",
+          "locator": "Sections 2–4.2"
+        }
+      ]
+    },
+    {
+      "paper": "R35",
+      "title": "SymmCD: Symmetry-Preserving Crystal Generation with Diffusion Models",
+      "source": "https://arxiv.org/abs/2502.03638",
+      "relationship": [
+        {
+          "type": "explicit_limitation_response",
+          "predecessor": "diffcsppp",
+          "evidence": "Related Work/Section 5.1明确针对预定义模板限制，学习模板的对称信息而非只在模板中采样。",
+          "locator": "Related Work; Section 5.1"
+        },
+        {
+          "type": "cited_concurrent_work",
+          "predecessor": "crystalformer",
+          "evidence": "原文称并行工作；共同Wyckoff思路不写为前后继承。",
+          "locator": "Related Work"
+        }
+      ]
+    },
+    {
+      "paper": "R36",
+      "title": "WyckoffDiff – A Generative Diffusion Model for Crystal Symmetry",
+      "source": "https://proceedings.mlr.press/v267/ekstrom-kelvinius25a.html",
+      "relationship": [
+        {
+          "type": "explicit_method_adaptation",
+          "predecessor": "D3PM/DiGress",
+          "evidence": "Section 3直接采用离散扩散框架与交叉熵目标；对CDVAE/DiffCSP++/SymmCD为基线比较而非代码继承。",
+          "locator": "Section 3; Table 1"
+        }
+      ]
+    },
+    {
+      "paper": "R37",
+      "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
+      "source": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/24e4e3234178a836b70e0aa48827e0ff-Abstract-Conference.html",
+      "relationship": {
+        "kind": "explicit_text_joint_diffusion",
+        "relation": "在periodic diffusion中引入语料提供的global/local结构知识；TFMat引用其long/short对照",
+        "locator": "TGDMat §4; TFMat Table1/Introduction"
+      }
+    },
+    {
+      "paper": "R38",
+      "title": "Wyckoff Transformer: Generation of Symmetric Crystals",
+      "source": "https://arxiv.org/abs/2503.02407",
+      "relationship": [
+        {
+          "type": "explicit_decoder_reuse",
+          "predecessor": "diffcsppp",
+          "evidence": "WyFormerDiffCSP++直接采用其几何解码，并与CHGNet实现比较。",
+          "locator": "Section 2.4; Table 1"
+        },
+        {
+          "type": "cited_concurrent_work",
+          "predecessor": "symmcd",
+          "evidence": "Section 3.1.4称SymmCD并行工作，二者位点对称思想相近；不写成单向继承。"
+        }
+      ]
+    },
+    {
+      "paper": "R39",
+      "title": "Exploration of crystal chemical space using text-guided generative artificial intelligence",
+      "source": "https://www.nature.com/articles/s41467-025-59636-y",
+      "relationship": {
+        "kind": "explicit_successor",
+        "relation": "Chemeleon2在不同latent架构中发展目标驱动RL，TFMat引用text-conditioned先例",
+        "locator": "Chemeleon2 main comparison; TFMat Introduction"
+      }
+    },
+    {
+      "paper": "R40",
+      "title": "PLaID++: A Preference Aligned Language Model for Targeted Inorganic Materials Design",
+      "source": "https://arxiv.org/html/2509.07150v4",
+      "relationship": {
+        "kind": "explicit_representation_posttraining",
+        "relation": "从crystal text LLM到physically ranked preferences；与Matra-Genoa共享Wyckoff几何表征主题但不推定单一路径",
+        "locator": "Introduction/§4/Discussion"
+      }
+    },
+    {
+      "paper": "R40",
+      "title": "PLaID++: A Preference Aligned Language Model for Targeted Inorganic Materials Design",
+      "source": "https://arxiv.org/html/2509.07150v4",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "Fine-tuned language models generate stable inorganic materials as text",
+            "locator": "§4.1, §5.1",
+            "type": "SFT/template procedure"
+          },
+          {
+            "target": "Direct Preference Optimization",
+            "locator": "§3.2/§4.2",
+            "type": "algorithm"
+          }
+        ],
+        "review_conceptual_relation": "支持C5的质量与概率集中区别，并提供C6已完成部分。"
+      }
+    },
+    {
+      "paper": "R41",
+      "title": "OpenCSP: A Deep Learning Framework for Crystal Structure Prediction from Ambient to High Pressure",
+      "source": "https://arxiv.org/html/2509.10293v1",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "CALYPSO and DP-GEN",
+            "locator": "Introduction and concurrent-learning Methods",
+            "type": "implemented search/data acquisition"
+          },
+          {
+            "target": "GNoME and MatterGen",
+            "locator": "Introduction",
+            "type": "explicit materials discovery context"
+          }
+        ],
+        "review_conceptual_relation": "提供C6信息采集/PES学习先例，与新的可行动关系知识范围分开。"
+      }
+    },
+    {
+      "paper": "R42",
+      "title": "All that structure matches does not glitter",
+      "source": "https://arxiv.org/html/2509.12178v2",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "OMatG, DiffCSP and other CSP models",
+            "locator": "§2.4 and §5",
+            "type": "benchmark"
+          }
+        ],
+        "review_conceptual_relation": "OMatG-IRL §4/§5.2与flash §4.1实际使用其split/metrics，属于可核评价继承。"
+      }
+    },
+    {
+      "paper": "R43",
+      "title": "LLM Meets Diffusion: A Hybrid Framework for Crystal Material Generation",
+      "source": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/f789a628fca473e922c806657512a20f-Abstract-Conference.html",
+      "relationship": [
+        {
+          "type": "explicit_comparison_and_interface_change",
+          "predecessors": [
+            "flowllm",
+            "diffcsp",
+            "crystal_llm"
+          ],
+          "evidence": "原文明确比较FlowLLM训练/集成策略，采用DiffCSP分数坐标扩散与Gruver等prompt/增强。",
+          "locator": "Related Work Key Differences; Sections 4.3–4.4"
+        }
+      ]
+    },
+    {
+      "paper": "R43",
+      "title": "LLM Meets Diffusion: A Hybrid Framework for Crystal Material Generation",
+      "source": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/f789a628fca473e922c806657512a20f-Abstract-Conference.html",
+      "relationship": {
+        "kind": "explicit_model_combination",
+        "relation": "复用Crystal-LLM prompt与DiffCSP式continuous model；§3讨论FlowLLM的另一混合机制",
+        "locator": "§3/§4/§7"
+      }
+    },
+    {
+      "paper": "R44",
+      "title": "Accelerating inverse materials design using generative diffusion models with reinforcement learning",
+      "source": "https://arxiv.org/html/2511.03112v1",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "MatterGen",
+            "locator": "§2.1: default model unless otherwise specified",
+            "type": "implemented backbone"
+          },
+          {
+            "target": "Diffusion policy optimization and molecular-design replay",
+            "locator": "§1 and Methods",
+            "type": "algorithm foundation"
+          }
+        ],
+        "review_conceptual_relation": "这是物理/目标计算进入生成权重的直接先例，C6须超出仅加RL。"
+      }
+    },
+    {
+      "paper": "R45",
+      "title": "Guiding Generative Models to Uncover Diverse and Novel Crystals via Reinforcement Learning",
+      "source": "https://www.nature.com/articles/s42256-026-01262-4",
+      "relationship": {
+        "kind": "explicit_successor_and_compared_mechanism",
+        "relation": "作者Chemeleon语言生成路线发展为latent RL；CFG/LoRA/RL对照定位后训练作用",
+        "locator": "main comparison; property-guided Results"
+      }
+    },
+    {
+      "paper": "R45",
+      "title": "Guiding Generative Models to Uncover Diverse and Novel Crystals via Reinforcement Learning",
+      "source": "https://www.nature.com/articles/s42256-026-01262-4",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "Chemeleon text-guided diffusion",
+            "locator": "Main model comparison and Methods",
+            "type": "model background"
+          },
+          {
+            "target": "GRPO/PPO",
+            "locator": "Methods RL",
+            "type": "policy algorithm"
+          },
+          {
+            "target": "MatInvent",
+            "locator": "References and Main recent RL",
+            "type": "related primary work"
+          }
+        ],
+        "review_conceptual_relation": "已有novelty–stability目标对齐，不能将D定义为首次稳定/多样加权奖励。"
+      }
+    },
+    {
+      "paper": "R46",
+      "title": "LeMat-GenBench: A Unified Evaluation Framework for Crystal Generative Models",
+      "source": "https://arxiv.org/html/2512.04562v2",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "MatterGen SUN framework and adapted StructureMatcher",
+            "locator": "§3.2",
+            "type": "evaluation method"
+          }
+        ],
+        "review_conceptual_relation": "为C4–6提供一致观测对象，不从横截面权衡推出任何范式的内在定理。"
+      }
+    },
+    {
+      "paper": "R47",
+      "title": "Periodic Bayesian Flow Networks with Additive Accuracy",
+      "source": "https://proceedings.mlr.press/v306/lin26ar.html",
+      "relationship": [
+        {
+          "type": "explicit_theoretical_correction_and_architecture_reuse",
+          "predecessor": "crysbfn",
+          "evidence": "直接分析圆周不可加精度并复用CrysBFN网络，为其日程困难提出新表示。",
+          "locator": "Sections 3.3–4; Implementation"
+        }
+      ]
+    },
+    {
+      "paper": "R48",
+      "title": "Open Materials Generation with Inference-Time Reinforcement Learning",
+      "source": "https://arxiv.org/html/2602.00424v2",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "Open Materials Generation with Stochastic Interpolants",
+            "locator": "§2 and §3",
+            "type": "implemented backbone/framework"
+          },
+          {
+            "target": "MatInvent and Chemeleon2",
+            "locator": "§1.1",
+            "type": "explicit related DNG RL"
+          },
+          {
+            "target": "Flow-GRPO",
+            "locator": "§1.1 and AppendixB",
+            "type": "technical comparison"
+          },
+          {
+            "target": "Structure Matches metrics and LeMat-GenBench",
+            "locator": "§4 and AppendixK",
+            "type": "evaluation"
+          }
+        ],
+        "review_conceptual_relation": "C4/C6为后继残余对象；作者first RL to CSP的文字不得覆盖2023 basin-hopping RL-CSP。"
+      }
+    },
+    {
+      "paper": "R49",
+      "title": "Multimodal Crystal Flow: Any-to-Any Modality Generation for Unified Crystal Modeling",
+      "source": "https://proceedings.mlr.press/v306/seong26a.html",
+      "relationship": {
+        "kind": "explicit_task_unification",
+        "relation": "原文对照task-specific crystal generators，独立时间轴把多个推断路径统一",
+        "locator": "§1–3/Fig1"
+      }
+    },
+    {
+      "paper": "R50",
+      "title": "Generative structure search for efficient and diverse discovery of molecular and crystal structures",
+      "source": "https://arxiv.org/html/2604.27636v2",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "Pickard and Needs 2006/2011 random structure search",
+            "locator": "§1",
+            "type": "explicit physical-search ancestor"
+          },
+          {
+            "target": "Diffusion generative sampling",
+            "locator": "§2.1/§4.1",
+            "type": "score sampler component"
+          }
+        ],
+        "review_conceptual_relation": "提供prior/search关系和C4状态自适应缺口的直接原文支持。"
+      }
+    },
+    {
+      "paper": "R51",
+      "title": "Composable Crystals: Controllable Materials Discovery via Concept Learning",
+      "source": "https://arxiv.org/html/2605.14769v2",
+      "relationship": {
+        "kind": "explicit_concept_composition",
+        "relation": "直接先例为VQ邻域概念→组合生成→晶体条件DDPM；不把有用概念限定为纯局部化学",
+        "locator": "§2.1/§3/§4"
+      }
+    },
+    {
+      "paper": "R52",
+      "title": "Substitution-Based Analysis of Structural Novelty for Generative Models of Materials",
+      "source": "https://arxiv.org/html/2606.23166v1",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "Szymanski and Bartel baselines",
+            "locator": "§1 and References",
+            "type": "motivation"
+          },
+          {
+            "target": "MatterGen, DiffCSP++, WyckoffTransformer, Crystalite, Chemeleon2",
+            "locator": "Table2 and §2.1",
+            "type": "evaluated primary models"
+          }
+        ],
+        "review_conceptual_relation": "用于校准开放发现的不同新颖性含义，不将所有unmatched称作新连接机制。"
+      }
+    },
+    {
+      "paper": "R53",
+      "title": "Text-guided flow matching enables sample-efficient crystal structure generation",
+      "source": "https://arxiv.org/html/2609.01076v2",
+      "relationship": {
+        "kind": "explicit_backbone_and_text_predecessors",
+        "relation": "CrystalFlow+frozen materials-language prior；Introduction引用TGDMat/Chemeleon/FlowLLM，Table1比较long/short",
+        "locator": "Introduction/Methods/Tables1–2"
+      }
+    },
+    {
+      "paper": "R54",
+      "title": "OMatG-flash: An All-Atom Flow Map with Reinforce Adjoint Matching for Scalable Materials Discovery",
+      "source": "https://arxiv.org/html/2609.26402v1",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "OMatG-IRL",
+            "locator": "§2/§3.2/§5.1 and reference32",
+            "type": "explicit policy-gradient comparison"
+          },
+          {
+            "target": "Reinforce Adjoint Matching",
+            "locator": "§3.2 reference8",
+            "type": "adopted post-training algorithm"
+          },
+          {
+            "target": "Structure Matches",
+            "locator": "§4.1",
+            "type": "polymorph-aware metrics"
+          }
+        ],
+        "review_conceptual_relation": "把物理反馈学习扩展到few-step界面；本综述不将RAM称作记录了有限物理干预关系的证据。"
+      }
+    },
+    {
+      "paper": "R55",
+      "title": "Topology-Stratified Materials Discovery with A Flow-Based Generative Model",
+      "source": "https://arxiv.org/html/2609.26547v1",
+      "relationship": {
+        "kind": "explicit_discrete_continuous_factorization",
+        "relation": "Wyckoff topological scaffold与continuous fiber构成分层先例；同任务主文比较MatterGen等生成器",
+        "locator": "§2.1/Fig1; §2.5"
+      }
+    },
+    {
+      "paper": "R56",
+      "title": "Let CSP Be Your ANCHOR: Adaptive Crystal Search over Frozen Structure Priors",
+      "source": "https://arxiv.org/html/2609.33407v2",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "KLDM/Crystalite CSP",
+            "locator": "Methods and AppendixE/F",
+            "type": "implemented frozen priors"
+          },
+          {
+            "target": "MatInvent and Chemeleon2",
+            "locator": "§1/§2 reward-guided generation",
+            "type": "explicit related approaches"
+          },
+          {
+            "target": "MatterGen and LeMat",
+            "locator": "AppendixE",
+            "type": "evaluation"
+          }
+        ],
+        "review_conceptual_relation": "为A/C/D提供化学访问与结构实现的竞争解释，未来关系学习贡献需在其基线上具体化。"
+      }
+    },
+    {
+      "paper": "R57",
+      "title": "Where Should Physics Enter a Molecular Crystal Generator?",
+      "source": "https://arxiv.org/html/2609.36398v1",
+      "relationship": {
+        "verified_citations": [
+          {
+            "target": "Clari",
+            "locator": "§1/§3",
+            "type": "distilled teacher"
+          },
+          {
+            "target": "DiffusionNFT",
+            "locator": "§3.3",
+            "type": "post-training algorithm"
+          },
+          {
+            "target": "PackFlow",
+            "locator": "§1",
+            "type": "molecular physics-RL related work"
+          }
+        ],
+        "review_conceptual_relation": "邻近领域的机制比较，仅作为物理入口与表示问题的支持，不用PB作无机发现率。"
+      }
+    }
+  ]
+}

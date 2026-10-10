@@ -2,6 +2,8 @@
 
 A、B、C、D分别形成独立中心主张、技术路线与论文问题。各自的生成范式见[四方向方法构思](../focus/README.md)与[LLM、Diffusion、SI的分工](../focus/technical-basis.md)。
 
+这些方向的历史来源与推导见[领域演化综述](../evolution/README.md)及[六挑战谱系](../evolution/challenge-genealogy.md)。综述区分原论文成果与四方向应建立的新结果。
+
 更新：2026-10-10。[研究入口](../README.md) · [六条原始挑战](../landscape/02-open-problems.md)
 
 目标保持为：让生成分布覆盖更多低 $E_{\mathrm{hull}}$ 的新颖结构，同时保持独特性，提高严格SUN。熟悉框架的新稳定化学组合继续计入发现。

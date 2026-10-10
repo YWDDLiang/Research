@@ -2,6 +2,8 @@
 
 [返回晶体索引](../README.md)
 
+按领域演化组织的57项去重来源另见[综述文献目录](../evolution/paper-catalog.md)、[首稿与发表年表](../evolution/chronology.md)及[可导入BibTeX](../evolution/references.bib)。该目录保留具体版本和结果口径。
+
 [论文元数据](papers.json)保存论文、任务、方法、证据和研究比较；[CSV索引](paper-index.csv)提供筛选与导入。详细分析位于papers目录，43篇论文的标题和标识保持一致。
 
 | 字段 | 含义 |
