@@ -1,5 +1,7 @@
 # C｜物理反馈何时能改变生成，怎样成为可积累的发现知识
 
+**技术范式定位：**优先研究SI/flow的分布与路径学习，使有条件的物理响应关系进入自主生成。LLM/AR科学决策加连续生成是离散选择占主导时的竞争路线。 [方法说明](../focus/technical-basis.md)
+
 [四组研究总览](README.md) · [六条挑战](../landscape/02-open-problems.md) · [论文中心论题](research-agenda.md)
 
 2026-10-10。研究纲领，尚无本纲领的新实验。对应“反馈时机与可行动性”“推理计算积累成知识”。R1/R2/R3仅为技术备选，不以特定教师、Gaussian动作族、checkpoint或损失组织问题。原文和历史依据见[sources-c.json](sources-c.json)。

@@ -1,74 +1,93 @@
 {
-  "topic": "从物理反馈学习可迁移的稳定结构实现",
-  "research_status": "方法设计与研究假设",
+  "topic": "四个独立晶体生成方向的技术范式",
+  "research_status": "研究主张与方法构思",
+  "programmes": {
+    "A": {
+      "primary": "LLM + Diffusion/SI协同生成",
+      "alternative": "纯混合离散—连续SI",
+      "question": "化学与几何怎样共同形成正确配对"
+    },
+    "B": {
+      "primary": "组合条件Diffusion",
+      "alternative": "LLM关系组织及SI连续实现",
+      "question": "局部知识怎样迁移成新的周期整体"
+    },
+    "C": {
+      "primary": "SI/flow分布与路径学习",
+      "alternative": "LLM/AR科学决策加连续生成",
+      "question": "物理经验怎样转化为可复用生成知识"
+    },
+    "D": {
+      "primary": "层级LLM/AR + Diffusion与开放探索",
+      "alternative": "固定低层的探索学习或联合分布适应",
+      "question": "怎样持续发现并保持多种未知合格结果"
+    }
+  },
   "references": [
     {
       "title": "Open Materials Generation with Stochastic Interpolants",
       "venue": "ICML 2025",
       "url": "https://proceedings.mlr.press/v267/hollmer25a.html",
-      "code": "https://github.com/FERMat-ML/OMatG",
-      "role": "离散化学、周期坐标和晶胞的原生联合生成基座"
+      "role": "SI范式的晶体实现参照"
     },
     {
-      "title": "OMatG MP-20-DNG pretrained model",
-      "url": "https://huggingface.co/OMatG/MP-20-DNG",
-      "configuration": "Linear-SDE-Gamma",
-      "configuration_url": "https://huggingface.co/OMatG/MP-20-DNG/blob/6af2cc9a1fa569341fb7a08a542490868ab84867/Linear-SDE-Gamma/train.yaml",
-      "role": "主模型初始化及公开数据约定"
-    },
-    {
-      "title": "OMatG MP-20-CSP pretrained model",
-      "url": "https://huggingface.co/OMatG/MP-20-CSP",
-      "role": "明确给定组成的独立条件生成参照"
-    },
-    {
-      "title": "Multimodal Crystal Flow: Any-to-Any Modality Generation for Unified Crystal Modeling",
+      "title": "Multimodal Crystal Flow",
       "venue": "ICML 2026",
       "url": "https://proceedings.mlr.press/v306/seong26a.html",
-      "text": "https://arxiv.org/html/2602.20210v3",
-      "relevant_sections": "Section 3; Appendix H.7–H.8",
-      "role": "多条件联合训练与条件接口的直接先行；相关数值为CSP匹配率"
+      "role": "联合与互条件生成参照"
     },
     {
-      "title": "Let CSP Be Your ANCHOR: Adaptive Crystal Search over Frozen Structure Priors",
-      "status": "2026年9月预印本，v2",
-      "url": "https://arxiv.org/html/2609.33407v2",
-      "relevant_sections": "Section 4; Appendix F.6, Table 23",
-      "role": "组成访问与结构学习的分离，以及结构语料来源效应",
-      "corpus_definition": "重放搜索访问的组成并重新生成几何，未采用稳定或新颖阈值筛选"
+      "title": "NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale",
+      "url": "https://arxiv.org/html/2508.10711v1",
+      "role": "离散上下文与连续生成分工的CV参照"
     },
     {
-      "title": "PLaID++: A Preference Aligned Language Model for Targeted Inorganic Materials Design",
+      "title": "PLaID++",
       "venue": "ICML 2026",
       "url": "https://proceedings.mlr.press/v306/xu26l.html",
-      "role": "科学表示、偏好学习与条件／无条件任务共享的先行"
+      "role": "LLM科学表示及偏好学习参照"
+    },
+    {
+      "title": "Composable Crystals",
+      "url": "https://arxiv.org/html/2605.14769v2",
+      "role": "局部concept与整体生成的直接先行"
+    },
+    {
+      "title": "Local Mechanisms of Compositional Generalization in Conditional Diffusion",
+      "venue": "ICML 2026",
+      "url": "https://proceedings.mlr.press/v306/bradley26a.html",
+      "role": "组合条件与生成依赖的机制参照"
     },
     {
       "title": "Open Materials Generation with Inference-Time Reinforcement Learning",
       "venue": "ICML 2026",
-      "url": "https://proceedings.mlr.press/v306/hollmer26a.html",
-      "text": "https://arxiv.org/html/2602.00424v2",
-      "relevant_sections": "Methods; Appendix K.1",
-      "role": "物理标量后训练，以及条件物理训练后恢复DNG的直接先行"
+      "url": "https://arxiv.org/html/2602.00424v2",
+      "role": "物理反馈进入生成模型的先行"
     },
     {
       "title": "OMatG-flash",
-      "status": "2026年9月预印本",
       "url": "https://arxiv.org/html/2609.26402v1",
-      "relevant_sections": "Section 3.2; Appendix E",
-      "role": "flow-map生成与RAM物理奖励学习"
+      "role": "生成flow map及物理奖励学习"
     },
     {
-      "title": "Where Should Physics Enter a Molecular Crystal Generator?",
-      "status": "2026年9月预印本",
-      "url": "https://arxiv.org/html/2609.36398v1",
-      "relevant_sections": "Sections 3–4",
-      "role": "分子晶体中物理后训练、结果回归与推理修复的不同作用"
+      "title": "Let CSP Be Your ANCHOR",
+      "url": "https://arxiv.org/html/2609.33407v2",
+      "role": "组成探索、发现历史与结构学习"
     },
     {
-      "title": "CHGNet",
-      "url": "https://github.com/CederGroupHub/chgnet",
-      "role": "完整晶体的能量、力、应力与结构弛豫；共同评价使用一致模型及能量参考"
+      "title": "Efficient Symmetry-Aware Materials Generation via Hierarchical Generative Flow Networks",
+      "url": "https://arxiv.org/html/2411.04323",
+      "role": "层级生成与多解探索的先行"
+    },
+    {
+      "title": "Illuminating the property space in crystal structure prediction using Quality-Diversity algorithms",
+      "url": "https://arxiv.org/html/2403.03511",
+      "role": "多个低能结果的搜索参照"
+    },
+    {
+      "title": "Multi-Axis Max@K Reinforcement Learning for Representative Diversity in Text-to-Image Generation",
+      "url": "https://arxiv.org/html/2607.14962v1",
+      "role": "已知语义轴的集合覆盖参照"
     }
   ],
   "project_evidence": "../evidence/historical-evidence.md"

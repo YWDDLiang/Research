@@ -1,6 +1,6 @@
 # 四组研究纲领：从重要问题到晶体生成能力
 
-当前具体主线是[从物理反馈学习可迁移的稳定结构实现](../focus/README.md)，主基座为[OMatG的原生混合生成](../focus/technical-basis.md)。以下四组保留为领域问题地图，分别解释联合形成、组合迁移、物理知识与多解发现。
+A、B、C、D分别形成独立中心主张、技术路线与论文问题。各自的生成范式见[四方向方法构思](../focus/README.md)与[LLM、Diffusion、SI的分工](../focus/technical-basis.md)。
 
 更新：2026-10-10。[研究入口](../README.md) · [六条原始挑战](../landscape/02-open-problems.md)
 

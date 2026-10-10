@@ -1,5 +1,7 @@
 # D｜物理优化怎样扩大可发现的合格结果，并保留多种成功
 
+**技术范式定位：**优先研究层级生成与开放探索，连接LLM/AR的科学选择和Diffusion的多解实现。该方向独立研究未知合格结果的发现与保持，可在固定低层生成器时单独开展。 [方法说明](../focus/technical-basis.md)
+
 [四组研究总览](README.md) · [六条挑战](../landscape/02-open-problems.md) · [论文中心论题](research-agenda.md)
 
 2026-10-10。研究纲领；本文提出科学问题和候选研究路线，未进行新科学实验。对应六条挑战中的第5条，联系第6条。原文阅读范围见 [sources-d.json](sources-d.json)。
