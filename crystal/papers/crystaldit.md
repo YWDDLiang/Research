@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # CrystalDiT: A Diffusion Transformer for Crystal Generation
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2508.16614) · [官方/作者项目](https://github.com/hanyi2021/CrystalDiT)
 
-首轮状态：已发表；SUN 数字在论文版本与仓库可能有更新，索引以原论文为准。
+文献状态：已发表；SUN 数字在论文版本与仓库可能有更新，索引以原论文为准。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 清晰的简化架构与训练策略贡献，但没有重新定义晶体生成问题。
 
-首轮角色：架构/训练策略。历史六维记录：[0, 1, 1, 1, 1, 0]。
+工作定位：架构/训练策略。六维贡献描述：[0, 1, 1, 1, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 有价值的工程/架构论文，不能仅凭单一 SUN 排名视为范式突破。
 
-首轮使用建议：作为 de novo Transformer backbone 和“简单强基线”。
+研究参考：作为 de novo Transformer backbone 和“简单强基线”。
 
 具体结论范围：不能把高 SUN 直接解释为更强结构创新，需结合 substitution novelty 和 evaluator robustness。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 在 LeMat-GenBench、substitution-aware novelty 和 PhononBench 上统一重评。

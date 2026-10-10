@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Discovering Crystal Structure Prediction Algorithms with an AI Co-Scientist
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2606.22866) · [官方/作者项目](https://github.com/kiyoung98/maskgxt)
 
-首轮状态：2026 新预印本；另有 HACO 系统代码 https://github.com/kiyoung98/HACO。
+文献状态：2026 新预印本；另有 HACO 系统代码 https://github.com/kiyoung98/HACO。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 MaskGXT 的离散并行机制有实质贡献；HACO 是系统/过程贡献，证据标准与模型贡献不同。
 
-首轮角色：跨域机制迁移/系统。历史六维记录：[1, 2, 2, 1, 2, 0]。
+工作定位：跨域机制迁移/系统。六维贡献描述：[1, 2, 2, 1, 2, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ MaskGXT 的离散并行机制有实质贡献；HACO 是系统/过程贡献，证
 
 对我们最有启发的是方法发现流程与离散—连续接口；同时要警惕成功后的回溯性故事。
 
-首轮使用建议：作为 MaskGIT 晶体迁移、polymorph-aware 评测和 co-scientist 案例。
+研究参考：作为 MaskGIT 晶体迁移、polymorph-aware 评测和 co-scientist 案例。
 
 具体结论范围：不能据一次成功就声称 AI 能普遍发现算法，也不能把所有增益归因于 MaskGIT。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 复现 MaskGXT 的 tokenization/decoder 分离消融，并把同流程用于 basin token 而非完整坐标分箱。

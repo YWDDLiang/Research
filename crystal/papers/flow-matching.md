@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Flow Matching for Generative Modeling
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2210.02747) · [官方/作者项目](https://github.com/facebookresearch/flow_matching)
 
-首轮状态：已审计；基础方法论文
+文献状态：基础方法论文
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 它提出通用训练原语和路径设计坐标系，属于机制型开创工作，后续晶体 flow 多建立在此。
 
-首轮角色：连续生成原语。历史六维记录：[2, 1, 2, 2, 1, 0]。
+工作定位：连续生成原语。六维贡献描述：[2, 1, 2, 2, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 基础且重要。它不意味着 flow 天生更物理，也不保证更适合多峰势能面；目标仍是数据分布运输。
 
-首轮使用建议：用于判断晶体中不同 base distribution、晶格/坐标路径和 basin-conditioned bridge 是否真正降低问题难度。
+研究参考：用于判断晶体中不同 base distribution、晶格/坐标路径和 basin-conditioned bridge 是否真正降低问题难度。
 
 具体结论范围：不能将生成 ODE 向量场解释为原子力或弛豫轨迹，除非有额外物理监督和可识别证据。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 测量不同晶体 bridge 的路径长度、最终 basin entropy、NFE 与 DFT 质量，区分路径设计收益和 backbone 收益。

@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # LeMat-Traj: A Scalable and Unified Dataset of Materials Trajectories for Atomistic Modeling
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2508.20875) · [官方/作者项目](https://github.com/LeMaterial/lematerial-fetcher)
 
-首轮状态：开放数据/工具发布；跨泛函混用需谨慎。
+文献状态：开放数据/工具发布；跨泛函混用需谨慎。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 大型轨迹数据整合贡献强；对生成方法的意义取决于是否利用顺序、力与盆地信息。
 
-首轮角色：数据标准化。历史六维记录：[1, 2, 1, 1, 1, 0]。
+工作定位：数据标准化。六维贡献描述：[1, 2, 1, 1, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 对我们极重要，但不能把下载轨迹数据本身当作方法创新。
 
-首轮使用建议：用于训练局部物理修正、定义 basin transition、分析 force/energy 分布。
+研究参考：用于训练局部物理修正、定义 basin transition、分析 force/energy 分布。
 
 具体结论范围：不能跨泛函直接混合绝对能量，也不能把几何优化轨迹当作有限温度动力学。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 构建同组成多起点轨迹子集，标注 relaxed basin id，测有序轨迹对 basin-aware 生成的增益。

@@ -2,7 +2,6 @@
   "created_on": "2026-10-09",
   "language": "zh-CN",
   "proposal": "R3",
-  "experimental_status": "仅研究文档；没有新科学实验/训练/SSH/git；未下载checkpoint",
   "records": [
     {
       "id": "R3-S01",
@@ -18,15 +17,15 @@
     },
     {
       "id": "R3-S02",
-      "title": "OMatG MP-20-DNG Trig-SDE-Gamma release",
-      "date": "2026-10-09只读核查；仓库2025-12-10修改",
-      "status": "发布metadata+配置核查；未下载checkpoint",
+      "title": "OMatG公开DNG模型与混合动力学接口",
+      "date": "模型资料截至2026-10-09",
+      "status": "公开模型和配置",
       "task": "主基座",
-      "primary_url": "https://huggingface.co/OMatG/MP-20-DNG/tree/main/Trig-SDE-Gamma",
-      "code_url": "https://huggingface.co/OMatG/MP-20-DNG/raw/main/Trig-SDE-Gamma/train.yaml",
-      "read_depth": "HF API当前revision/siblings及完整train.yaml",
-      "supported_claim": "sha6af2cc9a1fa569341fb7a08a542490868ab84867；checkpoint/train.yaml存在；760steps；species noise13.14607468893319；coordinates SDE、cell ODE",
-      "boundary": "未测性能、未加载权重"
+      "primary_url": "https://huggingface.co/OMatG/MP-20-DNG",
+      "code_url": "https://github.com/FERMat-ML/OMatG",
+      "read_depth": "模型说明、配置和原生采样接口",
+      "supported_claim": "公开配置支持species DFM、周期坐标SDE与cell ODE等组合。",
+      "boundary": "具体动力学取决于配置；原生通道不能一律当作Gaussian action。"
     },
     {
       "id": "R3-S03",
@@ -86,7 +85,7 @@
       "code_url": "https://github.com/learningmatter-mit/packflow",
       "read_depth": "§2.4、奖励/advantage混合、proxy比较",
       "supported_claim": "energy+force优势后训练已有直接晶体近邻",
-      "boundary": "heavy-atom proxy与后续H补全；固定molecularfamily，非元素自由DNG；code链接为作者声明，未在本轮运行"
+      "boundary": "heavy-atom proxy与后续H补全；固定molecularfamily，非元素自由DNG；code链接为作者声明，未在运行"
     },
     {
       "id": "R3-S08",
@@ -109,8 +108,10 @@
       "primary_url": "https://arxiv.org/html/2609.33407v1",
       "code_url": null,
       "read_depth": "Intro/Methods、composition结构分解、likelihood distillation、Appendix解释",
-      "supported_claim": "搜索发现结构可提高条件生成器；反馈作用位置会改变科学结果",
-      "boundary": "作者scorer/gate下结果；不能把冻结CSP优于联合DNG当成所有任务的架构定理"
+      "supported_claim": "搜索访问组成重放形成的结构语料可改善部分条件生成器；反馈作用位置影响结果",
+      "boundary": "作者scorer/gate下结果；不能把冻结CSP优于联合DNG当成所有任务的架构定理",
+      "corpus_definition": "v2附录F.6：搜索保存composition和scores；27,136个训练结构由重放访问组成重新实现，未按稳定或新颖阈值筛选，不能将全体语料称为成功终点。",
+      "corpus_definition_source": "https://arxiv.org/html/2609.33407v2"
     },
     {
       "id": "R3-S10",
@@ -140,11 +141,11 @@
       "id": "R3-S12",
       "title": "Reinforcement Learning via Self-Distillation",
       "date": "2026-01稿件；v2",
-      "status": "论文稿件，本轮未另核会议",
+      "status": "论文稿件，未另核会议",
       "task": "LLM反馈条件教师自蒸馏",
       "primary_url": "https://arxiv.org/html/2601.20802v2",
       "code_url": "https://github.com/lasgroup/SDPO",
-      "read_depth": "前轮方法/feedbackconstruction阅读；本轮重新打开原文",
+      "read_depth": "方法/feedbackconstruction阅读；重新打开原文",
       "supported_claim": "训练期feedback-conditioned teacher可提供比terminal scalar更细的policy信息",
       "boundary": "LLM token policy与native晶体Gaussian/categorical支持不同，需要当前提案的动作likelihood适配"
     },
@@ -152,7 +153,7 @@
       "id": "R3-S13",
       "title": "OMatG-flash: An All-Atom Flow Map with Reinforce Adjoint Matching for Scalable Materials Discovery",
       "date": "2026-09预印本",
-      "status": "预印本；本轮读取项目已保存原始PDF文本",
+      "status": "预印本；读取项目已保存原始PDF文本",
       "task": "无机CSP/DNG flow-map；RAM后训练实测CSP",
       "primary_url": "https://arxiv.org/abs/2609.26402",
       "code_url": "https://github.com/FERMat-ML/OMatG",
@@ -184,5 +185,6 @@
       "boundary": "历史N/U在CHGNetrelax前、energy在relax后；pending不是不稳定标签",
       "public_history_reference": "historical-evidence.md"
     }
-  ]
+  ],
+  "status": "候选方法；尚无该方法独立实验结果"
 }

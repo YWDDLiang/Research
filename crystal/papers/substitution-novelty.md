@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Are Crystal Generative Models Truly Discovering Novel Structures?
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2606.23166)；首轮未核实项目入口。
 
-首轮状态：已审计；2026 新预印本，百分比随版本和口径复核
+文献状态：2026 新预印本，百分比随版本和口径复核
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 它改变了 novelty 的操作定义，并迫使论文把“新组成”“新结构原型”“新性质”和“新可合成材料”分开。
 
-首轮角色：新颖性审计 / 替换派生。历史六维记录：[2, 2, 1, 0, 2, 1]。
+工作定位：新颖性审计 / 替换派生。六维贡献描述：[2, 2, 1, 0, 2, 1]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 这是高价值概念纠偏。其结论应被理解为对现有 novelty 口径的反证，而非否定原型迁移在材料发现中的意义。
 
-首轮使用建议：当前项目必须报告 duplicate、substitution-derived、prototype-known、motif-novel 四级 novelty，并与随机/规则替换比较。
+研究参考：当前项目必须报告 duplicate、substitution-derived、prototype-known、motif-novel 四级 novelty，并与随机/规则替换比较。
 
 具体结论范围：不能仅凭该论文的百分比断言所有模型都在记忆；不同模型、数据切分和结构归一化会改变比例。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 构建弛豫前后双口径 substitution graph，并让结构专家盲评一批边界样本，量化自动规则的假阳性/假阴性。

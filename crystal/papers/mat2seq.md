@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Invariant Tokenization of Crystalline Materials for Language Model Enabled Generation
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2503.00152)；首轮未核实项目入口。
 
-首轮状态：已发表；未在本轮核验到明确官方代码仓库。
+文献状态：已发表；资料核查时未确认官方代码仓库。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 强表示贡献：把 LLM 晶体生成中的数学不适定性显式提出并解决。
 
-首轮角色：表示/形式化。历史六维记录：[1, 2, 1, 1, 1, 0]。
+工作定位：表示/形式化。六维贡献描述：[1, 2, 1, 1, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 比“直接用 CIF 喂 LLM”更扎实；即使未来不用 LLM，表示问题仍然成立。
 
-首轮使用建议：用作任何序列/DLM 晶体项目的表示审计基线。
+研究参考：用作任何序列/DLM 晶体项目的表示审计基线。
 
 具体结论范围：不能把 canonicalization 等同于物理合理性，也不能忽略数值不连续与标准化失败样本。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 比较 Mat2Seq、原始 CIF、Wyckoff token 和结构图 token 在小模型与大模型下的样本效率。

@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # CrystalGRPO: Target-Aligned and Coverage-Preserving Reinforcement Learning for Flow-Based Crystal Structure Prediction
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2608.06582)；首轮未核实项目入口。
 
-首轮状态：2026-08 新预印本；与当前研究想法高度重叠，需优先完整复现和审计。
+文献状态：2026-08 新预印本；与当前研究想法高度重叠，其任务、指标和原文结果需要分别比较。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ CrystalGRPO-Q 优先单样本命中，CrystalGRPO-C 用全轨迹正则和 covera
 
 问题意识非常重要：首次明确把 energy 与 coverage 冲突放到 flow-RL；但目标仍偏 benchmark-aligned。
 
-首轮角色：目标重定义/直接先例。历史六维记录：[2, 1, 2, 1, 2, 0]。
+工作定位：目标重定义/直接先例。六维贡献描述：[2, 1, 2, 1, 2, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ CrystalGRPO-Q 优先单样本命中，CrystalGRPO-C 用全轨迹正则和 covera
 
 是我们原“conditional diffusion+GRPO”设想的强近邻，迫使主线升级为未知 basin-level search。
 
-首轮使用建议：作为最直接 RL baseline 与研究问题对照。
+研究参考：作为最直接 RL baseline 与研究问题对照。
 
 具体结论范围：不能再把 token/step reward 本身当贡献；必须超越参考结构奖励并使用物理盆地定义。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 建立 reference-free relaxed-basin archive，比较 CrystalGRPO-C 与 basin-aware objective 在未知多晶型覆盖上的差异。

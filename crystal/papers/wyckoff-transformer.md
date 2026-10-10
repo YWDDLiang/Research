@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Wyckoff Transformer: Generation of Symmetric Crystals
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2503.02407) · [官方/作者项目](https://github.com/SymmetryAdvantage/WyckoffTransformer)
 
-首轮状态：已发表；官方代码已核验。
+文献状态：已发表；官方代码已核验。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 压缩表示和快速对称生成贡献明确，算法本身较工程化。
 
-首轮角色：表示/高效自回归。历史六维记录：[0, 2, 1, 2, 1, 0]。
+工作定位：表示/高效自回归。六维贡献描述：[0, 2, 1, 2, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 适合作为全局离散 proposal，但不应承担连续势能面探索的全部职责。
 
-首轮使用建议：用于检验 LLM 是否真的优于小型结构化 Transformer。
+研究参考：用于检验 LLM 是否真的优于小型结构化 Transformer。
 
 具体结论范围：不能用大模型叙事掩盖小模型已经足够，也不能忽略下游解码成本。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 把 WyFormer 作为 LLM basin-token proposal 的强小模型基线。

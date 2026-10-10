@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # FlowLLM: Flow Matching for Material Generation with Large Language Models as Base Distributions
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2410.23405) · [官方/作者项目](https://github.com/facebookresearch/flowmm)
 
-首轮状态：已发表；代码集成于 FlowMM 仓库。
+文献状态：已发表；代码集成于 FlowMM 仓库。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ LLM 可能只是昂贵的原型采样器；简单 nearest-neighbor、元素替�
 
 A+B 接口较清楚：LLM 负责非平凡起点，flow 负责连续运输；属于较好的结构化组合。
 
-首轮角色：结构化组合。历史六维记录：[1, 1, 2, 1, 1, 0]。
+工作定位：结构化组合。六维贡献描述：[1, 1, 2, 1, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ A+B 接口较清楚：LLM 负责非平凡起点，flow 负责连续运输；属�
 
 比一般 LLM+Diffusion 故事更扎实，但 LLM 的不可替代性仍是关键弱点。
 
-首轮使用建议：作为任何 global proposal + continuous refinement 的强基线。
+研究参考：作为任何 global proposal + continuous refinement 的强基线。
 
 具体结论范围：不能把 base 更接近终点直接解释为跨势阱搜索能力，也不能忽视检索基线。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 以 basin family token 为 LLM 输出，比较完整 CIF base 与结构化 z 对覆盖、成本和可解释性的影响。

@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Open Materials Generation with Stochastic Interpolants
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2502.02582) · [官方/作者项目](https://github.com/FERMat-ML/OMatG)
 
-首轮状态：已发表；首轮审计基于论文、官方实现与后续 benchmark 使用。
+文献状态：已发表；文献分析基于论文、官方实现与后续 benchmark 使用。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 生成机制与统一框架贡献明确；“SI 用于晶体”此后已不再构成新颖点。
 
-首轮角色：统一机制。历史六维记录：[1, 2, 2, 1, 1, 0]。
+工作定位：统一机制。六维贡献描述：[1, 2, 2, 1, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 重要机制工作，也是对任何新 SI 晶体论文的直接先例。
 
-首轮使用建议：作为当前 SI/flow 强基线和 OMatG-IRL 的基础。
+研究参考：作为当前 SI/flow 强基线和 OMatG-IRL 的基础。
 
 具体结论范围：不能把可调随机桥自动解释为物理路径，也不能再以“首次 SI 晶体生成”为贡献。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 构造 global-proposal/local-relaxation 混合 base，并测 bridge 对跨盆地与盆地内修正的分离作用。

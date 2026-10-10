@@ -1,20 +1,19 @@
-# Crystal Literature Watchlist
+# 补充研究主题
 
 > [返回晶体索引](../README.md) · 更新时间：2026-09-03
 
-本页只记录后续需要核验和完成十二项报告的候选。  
-**这些条目不属于主论文索引，也不能在未完成审计前作为本库的结论依据。**
+这些主题补充生成模型、物理搜索、数据与评价的研究范围。具体文献的状态和证据以来源索引为准。
 
-## A. 需要补齐的生成模型
+## A. 生成模型与条件信息
 
-- SGEquiDiff：核验任务、正式标题、代码与对称机制；
-- TGDMat：核验任务定义、条件信息和相对 DiffCSP 的增量；
-- UniMat / 统一材料生成表示：核验是否真正覆盖 3D 周期结构；
-- CrystalFlow / 相关 flow-based CSP：核验与 FlowMM 的差异；
-- CrystalFormer 与 CrystalFormer-RL：核验生成目标、RL 奖励及正式版本；
-- CRYSTAL: Coordinated Multi-Objective Reinforcement Learning for Crystal Generation：重点审计 S.U.N. 口径和集合覆盖；
+- SGEquiDiff：比较任务、正式标题、代码与对称机制；
+- TGDMat：比较任务定义、条件信息和相对 DiffCSP 的增量；
+- UniMat / 统一材料生成表示：比较是否真正覆盖 3D 周期结构；
+- CrystalFlow / 相关 flow-based CSP：比较与 FlowMM 的差异；
+- CrystalFormer 与 CrystalFormer-RL：比较生成目标、RL 奖励及正式版本；
+- CRYSTAL: Coordinated Multi-Objective Reinforcement Learning for Crystal Generation：关注 S.U.N. 口径和集合覆盖；
 - SG/space-group conditional generators：补齐空间群条件与硬约束路线；
-- property-guided crystal diffusion：按性质类型、oracle 和 OOD 分层审计。
+- property-guided crystal diffusion：按性质类型、oracle 和 OOD 分层分析。
 
 ## B. 传统 CSP 与搜索基线
 
@@ -64,13 +63,3 @@
 - process reward 与 verifier；
 - self-correction 与 test-time search；
 - distributional RL / risk-sensitive optimization。
-
-## 进入主索引的条件
-
-1. 核验论文与官方/作者项目；
-2. 锁定版本；
-3. 完成十二项报告；
-4. 指出危险基线和杀手实验；
-5. 说明与现有索引的直接重叠；
-6. 更新 `papers.json`、CSV 和主索引；
-7. 通过 `scripts/validate_repo.py`。

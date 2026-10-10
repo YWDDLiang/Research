@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # MP-ALOE: An r2SCAN dataset for universal machine learning interatomic potentials
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2507.05559)；首轮未核实项目入口。
 
-首轮状态：开放数据论文；本轮未核验独立代码仓库。
+文献状态：开放数据论文；未核验独立代码仓库。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 数据采样策略与科学鲁棒性贡献强，直接支持“Science 决定能力不能丢”的原则。
 
-首轮角色：科学分层数据。历史六维记录：[2, 2, 2, 1, 2, 0]。
+工作定位：科学分层数据。六维贡献描述：[2, 2, 2, 1, 2, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 比仅追求平均误差的数据选择更有研究意义，是我们数据策略的重要模板。
 
-首轮使用建议：用于 evaluator 鲁棒性、主动学习和生成 OOD 安全边界。
+研究参考：用于 evaluator 鲁棒性、主动学习和生成 OOD 安全边界。
 
 具体结论范围：不能为了降低平均误差而少采困难体系，也不能把模型不确定性当作唯一价值函数。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 设计 composition × force × coordination × pressure 分层 acquisition，并比较每层最坏性能。

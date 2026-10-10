@@ -6,7 +6,6 @@
     "2026-10-09"
   ],
   "scope": "文生图后训练、反馈学习与推理计算/搜索；窗口按初稿或正式主会日期；只使用primary papers/repos",
-  "scientific_execution": "没有训练、生成、物理实验、SSH",
   "records": [
     {
       "id": "P01",
@@ -57,7 +56,7 @@
       "code_verified": {
         "verified": false,
         "url": null,
-        "note": "本轮未确认可用官方代码；不等于代码不存在"
+        "note": "未确认可用官方代码；不等于代码不存在"
       },
       "read_depth": "深读：§3、§4.1–4.5、表1–3、附录DPO关系",
       "task": "FLUX.1-dev OCR/GenEval",
@@ -157,7 +156,7 @@
       "code_verified": {
         "verified": false,
         "url": null,
-        "note": "本轮未确认可用官方代码；不等于代码不存在"
+        "note": "未确认可用官方代码；不等于代码不存在"
       },
       "read_depth": "摘要、§3–4机制和讨论标题核查",
       "task": "潜空间偏好模型/对齐",
@@ -165,7 +164,7 @@
       "motivation": "训练与评分都在diffusion原生域完成",
       "mechanism": "timestep奖励头；noise-calibrated Thurstone偏好likelihood；多噪声ensemble",
       "main_finding": "原文报告偏好预测接近强VLM而成本较低",
-      "boundary": "未核算跨backbone统一倍数；本轮未确认官方仓库",
+      "boundary": "未核算跨backbone统一倍数；未确认官方仓库",
       "deep_read": false
     },
     {
@@ -177,7 +176,7 @@
       "code_verified": {
         "verified": false,
         "url": null,
-        "note": "本轮未确认可用官方代码；不等于代码不存在"
+        "note": "未确认可用官方代码；不等于代码不存在"
       },
       "read_depth": "摘要、§3奖励分布/异方差likelihood",
       "task": "SURE-LRM潜奖励和置信度",
@@ -217,7 +216,7 @@
       "code_verified": {
         "verified": false,
         "url": null,
-        "note": "本轮未确认可用官方代码；不等于代码不存在"
+        "note": "未确认可用官方代码；不等于代码不存在"
       },
       "read_depth": "深读：§4–6、表1、reward shaping公式8–12",
       "task": "DRIFT质量/多样性Pareto",
@@ -237,7 +236,7 @@
       "code_verified": {
         "verified": false,
         "url": null,
-        "note": "本轮未确认可用官方代码；不等于代码不存在"
+        "note": "未确认可用官方代码；不等于代码不存在"
       },
       "read_depth": "深读：§3–4、§6、表1、有限batch覆盖与pooled分布",
       "task": "预定义模式覆盖、race5及race5×gender2外观分类",
@@ -277,7 +276,7 @@
       "code_verified": {
         "verified": false,
         "url": null,
-        "note": "本轮未确认可用官方代码；不等于代码不存在"
+        "note": "未确认可用官方代码；不等于代码不存在"
       },
       "read_depth": "深读：arXivv1 §3–5、soft-value、backup、§F成本；正式NeurIPS PDF/作者主页",
       "task": "DTS分布采样与DTS*高reward搜索",
@@ -317,7 +316,7 @@
       "code_verified": {
         "verified": false,
         "url": null,
-        "note": "本轮未确认可用官方代码；不等于代码不存在"
+        "note": "未确认可用官方代码；不等于代码不存在"
       },
       "read_depth": "正式会议摘要；原稿摘要/元数据",
       "task": "离散扩散SMC，包含T2I/语言/生物设计",
@@ -377,7 +376,7 @@
       "code_verified": {
         "verified": false,
         "url": null,
-        "note": "本轮未确认可用官方代码；不等于代码不存在"
+        "note": "未确认可用官方代码；不等于代码不存在"
       },
       "read_depth": "§3局限、§4方法、§6消融标题/机制",
       "task": "FiMR显式反馈与局部自修正",
@@ -437,7 +436,7 @@
       "code_verified": {
         "verified": false,
         "url": null,
-        "note": "本轮未确认可用官方代码；不等于代码不存在"
+        "note": "未确认可用官方代码；不等于代码不存在"
       },
       "read_depth": "arXivv1 §3、公式7–8、局限；正式CVF摘要",
       "task": "flow在线RL更新稳定性",

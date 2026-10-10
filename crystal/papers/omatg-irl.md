@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Open Materials Generation with Inference-Time Reinforcement Learning
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2602.00424) · [官方/作者项目](https://github.com/FERMat-ML/OMatG)
 
-首轮状态：已发表/官方实现并入 OMatG；“首次”主张应按任务边界理解。
+文献状态：已发表/官方实现并入 OMatG；“首次”主张应按任务边界理解。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 将 policy gradient 推到 velocity-only flow 的技术贡献清晰；科学目标仍较窄。
 
-首轮角色：连续时间策略优化。历史六维记录：[1, 1, 2, 1, 1, 0]。
+工作定位：连续时间策略优化。六维贡献描述：[1, 1, 2, 1, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -72,12 +72,12 @@ last_verified: "2026-09-03"
 
 ## 12. Final verdict
 
-是 flow-RL 的关键直接先例。我们的贡献不能停留在“给 flow/diffusion 加 RL”。
+是 flow-RL 的关键直接先例。后续研究的贡献不能停留在“给 flow/diffusion 加 RL”。
 
-首轮使用建议：作为连续时间 RL、noise policy 与时间步分配基线。
+研究参考：作为连续时间 RL、noise policy 与时间步分配基线。
 
 具体结论范围：不能把 composition conditioning 当作充分的多样性保护，也不能只看平均能量。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 将其策略构造保留，替换为 basin archive/uncertainty-aware reward，比较 energy–coverage Pareto。

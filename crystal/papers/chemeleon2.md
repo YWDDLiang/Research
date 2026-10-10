@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Guiding Generative Models to Uncover Diverse and Novel Crystals via Reinforcement Learning
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2511.07158) · [官方/作者项目](https://github.com/hspark1212/chemeleon2)
 
-首轮状态：已发表；官方代码已核验。
+文献状态：已发表；官方代码已核验。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ rejection sampling、archive sampling、cSUN reward、substitution-aware novelty
 
 多目标 RL 工程与目标错位讨论有价值；在 2026 已构成必须超越的直接先例。
 
-首轮角色：多目标对齐。历史六维记录：[1, 1, 2, 1, 2, 0]。
+工作定位：多目标对齐。六维贡献描述：[1, 1, 2, 1, 2, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ rejection sampling、archive sampling、cSUN reward、substitution-aware novelty
 
 重要 RL 基线，也提醒我们的新工作不能只做 GRPO+稳定/多样 reward。
 
-首轮使用建议：作为 de novo RL 和 reward hacking 分析对照。
+研究参考：作为 de novo RL 和 reward hacking 分析对照。
 
 具体结论范围：不能把传统 novelty 奖励当作 genuine structural novelty，也不能用同一模型训练和评价。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 在 basin-level archive reward 中加入 substitution-aware 与 evaluator uncertainty，并与 Chemeleon2 复现对比。

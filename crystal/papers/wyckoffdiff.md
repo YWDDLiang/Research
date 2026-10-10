@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # WyckoffDiff -- A Generative Diffusion Model for Crystal Symmetry
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2502.06485) · [官方/作者项目](https://github.com/httk/wyckoffdiff)
 
-首轮状态：已发表；官方代码已核验。
+文献状态：已发表；官方代码已核验。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ Wyckoff 频率模型、无扩散的 autoregressive set model、相同 downstream
 
 表示、离散生成和对称评价三项贡献较清楚。
 
-首轮角色：表示/离散机制。历史六维记录：[1, 2, 2, 2, 1, 0]。
+工作定位：表示/离散机制。六维贡献描述：[1, 2, 2, 2, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ Wyckoff 频率模型、无扩散的 autoregressive set model、相同 downstream
 
 强对称路线论文，但与我们强调的未知多盆地探索存在潜在上限冲突。
 
-首轮使用建议：作为 Wyckoff 离散模型与 fast proposal 基线。
+研究参考：作为 Wyckoff 离散模型与 fast proposal 基线。
 
 具体结论范围：不能把 protostructure 新颖等同于完整结构新颖，不能忽略连续实例化失败。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 用同一批 protostructure 比较不同 continuous decoder，并分析其可达低能盆地集合。

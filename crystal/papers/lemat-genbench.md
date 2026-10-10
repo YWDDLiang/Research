@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # LeMat-GenBench: A Unified Benchmark for Generative Materials Models
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2512.04562) · [官方/作者项目](https://github.com/LeMaterial/lemat-genbench)
 
-首轮状态：已审计；预印本与代码均可能更新
+文献状态：预印本与代码均可能更新
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 它提供统一实验基础设施和多目标证据标准，价值在可复现比较而非提出新的科学模型。
 
-首轮角色：统一生成 Benchmark。历史六维记录：[1, 2, 1, 1, 2, 0]。
+工作定位：统一生成 Benchmark。六维贡献描述：[1, 2, 1, 1, 2, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 这是重要的系统性 benchmark。它能降低论文间不可比性，但不能把数据库指标自动转化为真实材料发现能力。
 
-首轮使用建议：当前项目应直接兼容其输入输出接口，并在其维度之外补充多晶型 coverage、计算预算和 evaluator robustness。
+研究参考：当前项目应直接兼容其输入输出接口，并在其维度之外补充多晶型 coverage、计算预算和 evaluator robustness。
 
 具体结论范围：不能从横截面模型排名推出某一生成范式在理论上更优；也不能忽略训练/采样预算差异。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 选择 3–5 个最接近基线，以完全相同训练数据与推理预算复现实验，绘制稳定性—novelty—basin coverage 三维 Pareto。

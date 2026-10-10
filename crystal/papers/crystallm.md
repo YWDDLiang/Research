@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Crystal Structure Generation with Autoregressive Large Language Modeling
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2307.04340) · [官方/作者项目](https://github.com/lantunes/CrystaLLM)
 
-首轮状态：已发表；首轮审计基于论文、官方代码与 Nature Communications 版本。
+文献状态：已发表；文献分析基于论文、官方代码与 Nature Communications 版本。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ CIF 序列化不引入有害非唯一性；规模效应来自预训练知识而�
 
 证明 CIF 自回归生成可行，属于重要先例与系统整合；表示的非唯一性后来由 Mat2Seq 更直接处理。
 
-首轮角色：表示/系统先例。历史六维记录：[1, 1, 1, 1, 1, 0]。
+工作定位：表示/系统先例。六维贡献描述：[1, 1, 1, 1, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ CIF 序列化不引入有害非唯一性；规模效应来自预训练知识而�
 
 值得读，但要把 LLM、文本表示、训练规模与 MCTS evaluator 四种贡献拆开。
 
-首轮使用建议：作为 LLM 晶体生成基线和全局候选 proposal 参考。
+研究参考：作为 LLM 晶体生成基线和全局候选 proposal 参考。
 
 具体结论范围：不能把生成语法正确或 DFT 个例直接称为理解势能面；也不能忽视原型记忆。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 用统一数据训练 100M/1B/7B 模型，控制预训练与容量，并测 basin coverage 与 substitution novelty。

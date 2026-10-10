@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # PhononScore: Efficient Multi-Fidelity Scoring of Dynamical Stability for Generated Crystals
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2607.08518) · [官方/作者项目](http://phononbench.cn/phononscore/)
 
-首轮状态：已审计；2026 新预印本与在线项目
+文献状态：2026 新预印本与在线项目
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 它主要改变计算效率和 evaluator 接口，使动力学信号有机会进入大规模生成循环。
 
-首轮角色：多保真动力学评分。历史六维记录：[1, 2, 2, 2, 2, 0]。
+工作定位：多保真动力学评分。六维贡献描述：[1, 2, 2, 2, 2, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 有较强工程与评价价值；尚不能说明用其优化后的模型会在真实 DFT 下可靠提升。
 
-首轮使用建议：可作为 archive 重排的第二层筛选，并保留冻结的 DFT/不同模型 holdout 作防 reward hacking 审计。
+研究参考：可作为 archive 重排的第二层筛选，并保留冻结的 DFT/不同模型 holdout 作防 reward hacking 审计。
 
 具体结论范围：不能声称代理分数等于声子稳定，更不能由动力学稳定直接推出热力学稳定或可合成性。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 用完全未参与训练的化学族做 prospective 生成—重排—DFT phonon 验证，报告富集率、校准误差与成本。

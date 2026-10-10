@@ -10,7 +10,9 @@
       "status": "September 2026 preprint",
       "read_depth": "Methods, main experiments, Appendix C reward tilting, selected backbone-update results",
       "supports": "Composition allocation and adaptive novelty can change discovery outcomes under the tested CSP backbones.",
-      "interpretation": "Use composition/conditional decomposition to study adaptation; do not generalize freezing into a universal optimum."
+      "interpretation": "Use composition/conditional decomposition to study adaptation; do not generalize freezing into a universal optimum.",
+      "corpus_definition": "v2附录F.6：搜索保存composition和scores；27,136个训练结构由重放访问组成重新实现，未按稳定或新颖阈值筛选，不能将全体语料称为成功终点。",
+      "corpus_definition_source": "https://arxiv.org/html/2609.33407v2"
     },
     {
       "id": "D02",

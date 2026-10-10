@@ -1,0 +1,75 @@
+{
+  "topic": "从物理反馈学习可迁移的稳定结构实现",
+  "research_status": "方法设计与研究假设",
+  "references": [
+    {
+      "title": "Open Materials Generation with Stochastic Interpolants",
+      "venue": "ICML 2025",
+      "url": "https://proceedings.mlr.press/v267/hollmer25a.html",
+      "code": "https://github.com/FERMat-ML/OMatG",
+      "role": "离散化学、周期坐标和晶胞的原生联合生成基座"
+    },
+    {
+      "title": "OMatG MP-20-DNG pretrained model",
+      "url": "https://huggingface.co/OMatG/MP-20-DNG",
+      "configuration": "Linear-SDE-Gamma",
+      "configuration_url": "https://huggingface.co/OMatG/MP-20-DNG/blob/6af2cc9a1fa569341fb7a08a542490868ab84867/Linear-SDE-Gamma/train.yaml",
+      "role": "主模型初始化及公开数据约定"
+    },
+    {
+      "title": "OMatG MP-20-CSP pretrained model",
+      "url": "https://huggingface.co/OMatG/MP-20-CSP",
+      "role": "明确给定组成的独立条件生成参照"
+    },
+    {
+      "title": "Multimodal Crystal Flow: Any-to-Any Modality Generation for Unified Crystal Modeling",
+      "venue": "ICML 2026",
+      "url": "https://proceedings.mlr.press/v306/seong26a.html",
+      "text": "https://arxiv.org/html/2602.20210v3",
+      "relevant_sections": "Section 3; Appendix H.7–H.8",
+      "role": "多条件联合训练与条件接口的直接先行；相关数值为CSP匹配率"
+    },
+    {
+      "title": "Let CSP Be Your ANCHOR: Adaptive Crystal Search over Frozen Structure Priors",
+      "status": "2026年9月预印本，v2",
+      "url": "https://arxiv.org/html/2609.33407v2",
+      "relevant_sections": "Section 4; Appendix F.6, Table 23",
+      "role": "组成访问与结构学习的分离，以及结构语料来源效应",
+      "corpus_definition": "重放搜索访问的组成并重新生成几何，未采用稳定或新颖阈值筛选"
+    },
+    {
+      "title": "PLaID++: A Preference Aligned Language Model for Targeted Inorganic Materials Design",
+      "venue": "ICML 2026",
+      "url": "https://proceedings.mlr.press/v306/xu26l.html",
+      "role": "科学表示、偏好学习与条件／无条件任务共享的先行"
+    },
+    {
+      "title": "Open Materials Generation with Inference-Time Reinforcement Learning",
+      "venue": "ICML 2026",
+      "url": "https://proceedings.mlr.press/v306/hollmer26a.html",
+      "text": "https://arxiv.org/html/2602.00424v2",
+      "relevant_sections": "Methods; Appendix K.1",
+      "role": "物理标量后训练，以及条件物理训练后恢复DNG的直接先行"
+    },
+    {
+      "title": "OMatG-flash",
+      "status": "2026年9月预印本",
+      "url": "https://arxiv.org/html/2609.26402v1",
+      "relevant_sections": "Section 3.2; Appendix E",
+      "role": "flow-map生成与RAM物理奖励学习"
+    },
+    {
+      "title": "Where Should Physics Enter a Molecular Crystal Generator?",
+      "status": "2026年9月预印本",
+      "url": "https://arxiv.org/html/2609.36398v1",
+      "relevant_sections": "Sections 3–4",
+      "role": "分子晶体中物理后训练、结果回归与推理修复的不同作用"
+    },
+    {
+      "title": "CHGNet",
+      "url": "https://github.com/CederGroupHub/chgnet",
+      "role": "完整晶体的能量、力、应力与结构弛豫；共同评价使用一致模型及能量参考"
+    }
+  ],
+  "project_evidence": "../evidence/historical-evidence.md"
+}

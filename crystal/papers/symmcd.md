@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # SymmCD: Symmetry-Preserving Crystal Generation with Diffusion Models
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2502.03638) · [官方/作者项目](https://github.com/sibasmarak/SymmCD)
 
-首轮状态：已发表；首轮审计基于论文与官方代码。
+文献状态：已发表；文献分析基于论文与官方代码。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 对称表示和生成机制贡献较强，科学问题仍是已有对称有效性问题。
 
-首轮角色：表示/机制。历史六维记录：[1, 2, 2, 1, 1, 0]。
+工作定位：表示/机制。六维贡献描述：[1, 2, 2, 1, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 比简单增加 space-group token 更扎实，但仍需与未知结构发现和对称破缺能力权衡。
 
-首轮使用建议：作为 symmetry-preserving de novo 强基线。
+研究参考：作为 symmetry-preserving de novo 强基线。
 
 具体结论范围：不能把真实对称分布匹配等同于发现新结构，也不能忽视标准化器的作用。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 统一比较 SymmCD、WyckoffDiff、WyFormer、SbCD 在对称有效、低能盆地覆盖和破缺能力上的 Pareto。

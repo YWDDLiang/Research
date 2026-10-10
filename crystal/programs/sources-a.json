@@ -3,11 +3,7 @@
   "created_on": "2026-10-10",
   "language": "zh-CN",
   "research_question": "化学选择与几何实现能否在生成过程中共同形成",
-  "state": "研究纲领；已完成一次同行科学讨论修订；无新实验结果",
-  "peer_revision": {
-    "review": "reviews/c-reviews-a.md",
-    "response": "将中心转为有限数据下正确配对信息用于新组合；区分内生联合推断与新增外部观测；以共同可实现的独立条件族及物理配对锚定兼容性；配对内容、条件信息与行动敏感性共同描述形成。"
-  },
+  "state": "研究纲领；方法假设尚待实验验证",
   "sources": [
     {
       "id": "A-C01",
@@ -73,7 +69,9 @@
       "fact": "其匹配组成对照中DNG→CSP结构替换较小，组成策略改变发现分配。",
       "role": "组成分配优先的实质竞争解释，而非共同形成路线的弱基线。",
       "scope": "作者protocol、基座与组成级Unique定义保留；不作为所有联合生成的因果结论。",
-      "reading": "方法/结果选读，2026-10-09与10-10"
+      "reading": "方法/结果选读，2026-10-09与10-10",
+      "corpus_definition": "v2附录F.6：搜索保存composition和scores；27,136个训练结构由重放访问组成重新实现，未按稳定或新颖阈值筛选，不能将全体语料称为成功终点。",
+      "corpus_definition_source": "https://arxiv.org/html/2609.33407v2"
     },
     {
       "id": "A-C05",
@@ -196,7 +194,7 @@
         "独立学得条件族的共同可实现性与其物理配对正确性分别研究；兼容需连接未见组合的决策收益",
         "Gaussian加噪的precision一般稠密；不把单谐近似当完整多模态晶体score规律"
       ],
-      "role": "用于提出条件兼容和通信范围问题，未运行数值验证"
+      "role": "用于提出条件兼容和通信范围问题，独立复现结果未提供数值验证"
     }
   ],
   "public_history_reference": "../evidence/historical-evidence.md"

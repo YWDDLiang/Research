@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Accelerating Inverse Materials Design Using Generative Diffusion Models with Reinforcement Learning
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ MatInvent 用 RL 直接优化晶体扩散模型，在较少性质评估下处理
 
 [论文](https://arxiv.org/abs/2511.03112)；首轮未核实项目入口。
 
-首轮状态：较新预印本；本轮未核验官方代码仓库。
+文献状态：较新预印本；未核验官方代码仓库。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ MatInvent 用 RL 直接优化晶体扩散模型，在较少性质评估下处理
 
 目标对齐与低评估预算系统贡献明确，但“RL 用于晶体设计”已不是空白。
 
-首轮角色：目标对齐/系统。历史六维记录：[1, 1, 2, 1, 1, 0]。
+工作定位：目标对齐/系统。六维贡献描述：[1, 1, 2, 1, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ MatInvent 用 RL 直接优化晶体扩散模型，在较少性质评估下处理
 
 对性质优化有启发；与多势阱 CSP 目标不同，不能直接拿来证明 energy-only RL 合理。
 
-首轮使用建议：作为 property-RL、评估预算和多目标对照。
+研究参考：作为 property-RL、评估预算和多目标对照。
 
 具体结论范围：不能把代理 reward 上升等同于科学性质改善，也不能忽略 best-of-N 基线。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 在固定 oracle 调用下将 RL、CEM、GFlowNet、archive reweighting 放在同一 Pareto 图。

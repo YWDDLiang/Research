@@ -85,10 +85,10 @@
 
 | ID | 工作与原始来源 | 日期／会议状态 | 实际任务 | 核心挑战 |
 |---|---|---|---|---|
-| E01 | [GenEval 2: Addressing Benchmark Drift in Text-to-Image Evaluation](https://arxiv.org/html/2512.16853v1) | 2025-12-18；预印本；本轮未确认最终会议状态 | 真实文生图评测 | 评价器随输出分布变化偏离人工判断 |
-| E02 | [Benchmarking Diversity in Image Generation via Attribute-Conditional Human Evaluation](https://arxiv.org/html/2511.10547v1) | 2025-11-13；预印本；本轮未确认最终会议状态 | 文生图集合多样性评价 | 整体距离混合内容差异与有意义属性变化 |
+| E01 | [GenEval 2: Addressing Benchmark Drift in Text-to-Image Evaluation](https://arxiv.org/html/2512.16853v1) | 2025-12-18；预印本；未确认最终会议状态 | 真实文生图评测 | 评价器随输出分布变化偏离人工判断 |
+| E02 | [Benchmarking Diversity in Image Generation via Attribute-Conditional Human Evaluation](https://arxiv.org/html/2511.10547v1) | 2025-11-13；预印本；未确认最终会议状态 | 文生图集合多样性评价 | 整体距离混合内容差异与有意义属性变化 |
 | E03 | [When Pretty Isn't Useful: Investigating Why Modern Text-to-Image Models Fail as Reliable Training Data Generators](https://arxiv.org/html/2602.19946v1) | 2026-02；CVPR 2026 主会，CVF正式版本已核对 | 文生图合成数据的下游用途 | 视觉质量进步没有同步改善合成数据训练价值 |
 | E04 | [GenExam: A Multidisciplinary Text-to-Image Exam](https://arxiv.org/html/2509.14232v5) | 2025-09；ICML 2026；官方会议目录与作者仓库已核对 | 知识和约束密集的绘图考试 | 视觉观感难代表技术绘图正确性 |
 | E05 | [WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation](https://arxiv.org/html/2503.07265v2) | 2025-03；作者官方仓库标注ICML 2026；首次稿件早于窗口 | 知识密集的文生图评价 | 显式词语匹配不足以实现隐含知识 |
 | E06 | [Local Mechanisms of Compositional Generalization in Conditional Diffusion](https://arxiv.org/html/2509.16447v1) | 2025-09-19；ICML 2026 主会，PMLR正式记录已核对 | 受控CLEVR组合泛化；自然图像机制探索 | 熟悉概念的新组合何时能被生成 |
-| E07 | [NAMESAKES: Probing Identity Memorization in Text-to-Image Models](https://arxiv.org/html/2606.20155v1) | 2026-06-18；预印本；本轮未确认正式会议状态 | 人脸身份记忆探测 | 仅凭外观难区分记忆与泛化 |
+| E07 | [NAMESAKES: Probing Identity Memorization in Text-to-Image Models](https://arxiv.org/html/2606.20155v1) | 2026-06-18；预印本；未确认正式会议状态 | 人脸身份记忆探测 | 仅凭外观难区分记忆与泛化 |

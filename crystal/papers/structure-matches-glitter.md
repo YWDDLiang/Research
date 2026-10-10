@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # All That Structure Matches Does Not Glitter: Evaluating Crystal Structure Generation
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2509.12178) · [官方/作者项目](https://huggingface.co/collections/colabfit/datasets-all-that-structure-matches-does-not-glitter)
 
-首轮状态：已审计；会议论文，配套数据持续维护
+文献状态：会议论文，配套数据持续维护
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ StructureMatcher 的二元命中、重复结构和随机 train/test split 可能
 
 它重新定义了什么证据才算 CSP/生成进步，是问题与评价层贡献，而不是又一个模型增量。
 
-首轮角色：Benchmark 纠偏 / 多晶型评价。历史六维记录：[2, 2, 1, 0, 2, 0]。
+工作定位：Benchmark 纠偏 / 多晶型评价。六维贡献描述：[2, 2, 1, 0, 2, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ StructureMatcher 的二元命中、重复结构和随机 train/test split 可能
 
 这是当前领域必须优先阅读的 benchmark 论文。它不能解决真实势能面覆盖，但足以否定许多只靠单参考 Match Rate 的强结论。
 
-首轮使用建议：当前 repo 的所有固定组成实验应采用 polymorph-aware split，并同时报告集合匹配、连续误差和弛豫后 basin coverage。
+研究参考：当前 repo 的所有固定组成实验应采用 polymorph-aware split，并同时报告集合匹配、连续误差和弛豫后 basin coverage。
 
 具体结论范围：不能把数据库未记录结构自动判为错误，也不能把新指标等同于真正的物理正确性。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 在 MP-20/更大数据上复现随机划分与多晶型划分的排名变化，并加入 DFT/MLIP basin 标签，检验指标与物理目标的一致性。

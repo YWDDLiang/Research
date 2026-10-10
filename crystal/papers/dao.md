@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Siamese Foundation Models for Crystal Structure Prediction
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ DAO-G 生成结构，DAO-P 预测能量并用于不稳定数据弛豫和采样�
 
 [论文](https://arxiv.org/abs/2503.10471) · [官方/作者项目](https://github.com/ManlioWu/DAO)
 
-首轮状态：已发表；首轮审计基于 Nature Communications、arXiv v2 与官方代码。
+文献状态：已发表；文献分析基于 Nature Communications、arXiv v2 与官方代码。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ DAO-P 在 OOD 高能结构上准确；模型弛豫不会放大偏差；双模型
 
 数据扩展与生成—预测双模型系统贡献强，纯架构新颖性次之。
 
-首轮角色：数据+双模型系统。历史六维记录：[1, 2, 2, 2, 1, 0]。
+工作定位：数据+双模型系统。六维贡献描述：[1, 2, 2, 2, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ DAO-P 在 OOD 高能结构上准确；模型弛豫不会放大偏差；双模型
 
 与我们轨迹/物理反馈路线高度相关；必须把数据贡献和模型贡献分离后再借鉴。
 
-首轮使用建议：作为不稳定数据、能量引导和 foundation pretraining 强基线。
+研究参考：作为不稳定数据、能量引导和 foundation pretraining 强基线。
 
 具体结论范围：不能把预测器引导称为模型理解真实 PES，不能用单 evaluator 自证。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 在相同 OMat24/LeMat-Traj 子集上比较 DAO 风格预训练、简单轨迹监督和我们的 basin-aware 目标。

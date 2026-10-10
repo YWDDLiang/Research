@@ -1,22 +1,18 @@
-# Bibliography data
+# 文献数据
 
-> [返回晶体索引](../README.md)
+[返回晶体索引](../README.md)
 
-- `papers.json`：完整机器可读元数据和审计字段；
-- `paper-index.csv`：便于筛选、排序和外部导入；
-- 单篇详细报告位于 `../papers/<slug>.md`。
-
-## 字段说明
+[论文元数据](papers.json)保存论文、任务、方法、证据和研究比较；[CSV索引](paper-index.csv)提供筛选与导入。详细分析位于papers目录，43篇论文的标题和标识保持一致。
 
 | 字段 | 含义 |
 |---|---|
-| `slug` | 稳定文件标识 |
-| `group` | 本库问题簇 |
-| `category` | 论文自己的任务/方法类别 |
-| `role` | 去故事化后的首轮角色判断 |
-| `problem`–`verdict` | 十二项论文审计的结构化字段 |
-| `scores` | \([\Delta P,\Delta I,\Delta O,\Delta C,\Delta E,\Delta K]\) |
-| `project_verified` | 当前是否已核验到官方/作者项目地址 |
-| `last_verified` | 元数据最后核验日期 |
+| slug | 稳定论文标识 |
+| group | 科学问题类别 |
+| category | 论文的任务或方法类别 |
+| role | 工作在领域中的作用 |
+| problem—verdict | 科学问题、方法、证据、比较与贡献分析 |
+| scores | 问题、信息、目标、计算、评价、知识六项定性贡献描述 |
+| project_verified | 作者项目来源是否明确 |
+| last_verified | 资料核查日期 |
 
-`project_verified=false` 不等于论文没有代码，只表示本库尚未把项目地址核验到主索引。
+贡献描述不是实验指标，不用于跨任务性能排名。项目来源未确认时保留未知，不推断代码不存在。

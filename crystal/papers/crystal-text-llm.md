@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Fine-Tuned Language Models Generate Stable Inorganic Materials as Text
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2402.04379) · [官方/作者项目](https://github.com/facebookresearch/crystal-text-llm)
 
-首轮状态：已发表；官方代码已核验。
+文献状态：已发表；官方代码已核验。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 规模实证和灵活文本接口贡献强，数学表示贡献弱于 Mat2Seq。
 
-首轮角色：规模/能力实证。历史六维记录：[1, 1, 1, 2, 1, 0]。
+工作定位：规模/能力实证。六维贡献描述：[1, 1, 1, 2, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 是 FlowLLM 和后续混合路线的重要基础，但“LLM 更懂化学”仍需机制性证据。
 
-首轮使用建议：作为 LLM base distribution 与模型规模消融基线。
+研究参考：作为 LLM base distribution 与模型规模消融基线。
 
 具体结论范围：不能仅凭生成稳定率声称推理或世界模型；必须报告结构记忆与替换来源。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 用 Mat2Seq/图 token 重训小中大模型，加入原型 OOD split 与 basin identity 预测探针。

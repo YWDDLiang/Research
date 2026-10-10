@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # FlowMM: Generating Materials with Riemannian Flow Matching
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2406.04713) · [官方/作者项目](https://github.com/facebookresearch/flowmm)
 
-首轮状态：已发表；官方仓库已归档但可复现。
+文献状态：已发表；官方仓库已归档但可复现。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 将通用流形 flow matching 扎实迁移到晶体，属于机制与效率贡献。
 
-首轮角色：几何机制。历史六维记录：[1, 2, 2, 2, 1, 0]。
+工作定位：几何机制。六维贡献描述：[1, 2, 2, 2, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 是现代晶体流模型的重要基础，但其 CSP 评价仍继承单参考任务局限。
 
-首轮使用建议：作为 Flow/SI/LLM 混合方法的统一基线和 base-distribution 研究平台。
+研究参考：作为 Flow/SI/LLM 混合方法的统一基线和 base-distribution 研究平台。
 
 具体结论范围：不能把积分步少直接等同于总计算成本低，也不能由终点质量推断模型探索了势能面。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 对比高斯、检索、LLM、盆地分层 base，在相同 NFE 与弛豫预算下测低能盆地覆盖。

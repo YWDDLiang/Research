@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # PackFlow: Generative Molecular Crystal Structure Prediction via Reinforcement Learning Alignment
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2602.20140)；首轮未核实项目入口。
 
-首轮状态：2026 新预印本；分子晶体与无机晶体边界需明确。
+文献状态：2026 新预印本；分子晶体与无机晶体边界需明确。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ RL 可能只是更强局部弛豫初始化，或过拟合特定 MLIP；低能集
 
 端到端 CSP 流程和物理后训练证据较强，是无机晶体路线的重要邻域先例。
 
-首轮角色：物理对齐/系统。历史六维记录：[1, 1, 2, 1, 1, 0]。
+工作定位：物理对齐/系统。六维贡献描述：[1, 1, 2, 1, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ RL 可能只是更强局部弛豫初始化，或过拟合特定 MLIP；低能集
 
 对我们直接构成先例：energy+force RL 不是新意，必须进一步解决多盆地覆盖与 evaluator 不确定性。
 
-首轮使用建议：用作物理对齐、relax-and-rank 和盲测设计参考。
+研究参考：用作物理对齐、relax-and-rank 和盲测设计参考。
 
 具体结论范围：不能把分子晶体结论无条件外推到无机晶体，也不能只报告最低能量。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 在无机固定组成上复刻同协议，增加 basin archive、Top-K recall 和多 MLIP/DFT。

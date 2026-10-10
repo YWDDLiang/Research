@@ -1,47 +1,38 @@
-# 晶体发现研究：严格SUN与低能新结构
+# 晶体生成研究：科学问题、方法与证据
 
-更新：2026-10-10。[返回仓库首页](../README.md)
+目标是无条件生成更多不同的低能新颖晶体，提高严格 SUN，并保持独特性。熟悉框架中的新稳定化学组合同样属于有效发现。
 
-当前目标是无条件生成更多不同的低能量新晶体，提高严格SUN，并保留独特性。熟悉框架上的新稳定化学组合继续计入发现；CSP、条件控制和框架分类用于理解能力。
+## 当前研究：从物理反馈学习稳定结构的实现关系
 
-研究以六条能力挑战和四组科学问题为主线，持续追问：即使一种方法实现成功，它回答了什么值得顶会讨论的重要问题？前轮 R1/R2/R3 保留为技术备选。
+**生成模型怎样把物理计算揭示的化学—几何关系学成可复用能力，使未见组合更容易形成稳定新结构？**
 
-## 六条挑战与四组研究主线
+主线采用OMatG MP-20-DNG / Linear-SDE-Gamma，在原生联合生成基础上学习多条件结构完成，并使用真实的条件变化与物理响应配对训练共享生成场。最终目标是独立生成的严格SUN与低能新颖结构覆盖，物理弛豫沿用CHGNet。
 
-[六条原始挑战](./landscape/02-open-problems.md) · [四组研究纲领](./programs/README.md)
+[中心问题与方法](./focus/README.md) · [证据与选择依据](./focus/evidence-and-alternatives.md) · [技术基座](./focus/technical-basis.md) · [主要参考文献](./focus/references.json)
 
-| 研究组 | 中心问题 | 对应原始挑战 |
+## 研究问题
+
+| 主题 | 核心问题 | 阅读入口 |
 |---|---|---|
-| [A 共同形成](./programs/a-coformation.md) | 化学选择与几何实现能否共同形成 | 1、2 |
-| [B 组合可行](./programs/b-compositional-feasibility.md) | 局部化学知识怎样形成未见但整体可行的晶体 | 3，联系1 |
-| [C 反馈与知识](./programs/c-physics-to-knowledge.md) | 物理反馈怎样成为有效决定与可积累知识 | 4、6 |
-| [D 开放多解](./programs/d-open-successful-discovery.md) | 物理优化怎样扩大有效解空间并保持多种成功 | 5，联系6 |
+| 共同形成 | 化学选择与几何实现怎样在部分信息下形成相互兼容的组合？ | [A：化学与几何共同形成](./programs/a-coformation.md) |
+| 组合可行 | 局部化学知识需要哪些共享条件，才能组成新的周期整体？ | [B：局部知识与整体可行](./programs/b-compositional-feasibility.md) |
+| 物理反馈与知识 | 物理观测怎样改变仍有效的决定，并帮助后续生成？ | [C：物理反馈到可复用知识](./programs/c-physics-to-knowledge.md) |
+| 开放多解发现 | 怎样让更多合格结果在有限计算下出现，并保留已学成功？ | [D：开放合格结果分布](./programs/d-open-successful-discovery.md) |
 
-[技术备选 R1/R2/R3](./ideas/README.md) · [本轮科学意义攻防](./programs/reviews/README.md) · [论文中心论题](./programs/research-agenda.md) · [共同评价](./evidence/common-protocol.md)
+这些文档提出竞争解释、技术路线和关键科学比较，方法主张仍是研究假设。可以结合[研究议程](./programs/research-agenda.md)、[六条挑战](./landscape/02-open-problems.md)和[领域数学对象](./landscape/00-field-mathematical-abstraction.md)阅读。
 
-## 当前问题地图
+## 方法与证据
 
-| 文档 | 内容 |
-|---|---|
-| [学习对象与成功定义](./landscape/00-field-mathematical-abstraction.md) | 联合分布、周期兼容、物理干预与合格结果分布 |
-| [已有能力与研究增量](./landscape/01-de-story-audit.md) | 近期晶体原文如何约束方法的新意 |
-| [开放能力问题](./landscape/02-open-problems.md) | 六个开放challenge |
-| [CV到晶体的对应](./landscape/03-cross-domain-transfer-map.md) | 从动机、任务和学习对象迁移 |
-| [共同SUN评价](./landscape/04-evaluation-protocol.md) | 最终物理状态、请求分母和费用 |
-| [当前研究主线](./landscape/05-current-research-thesis.md) | 六条挑战、四组问题与技术备选的关系 |
-| [贡献矩阵](./matrices/contribution-matrix.md) | 当前学习对象与近邻 |
-| [任务—数据—输出](./matrices/task-data-output-matrix.md) | 给定信息、训练单位和输出 |
-| [证据矩阵](./matrices/claim-evidence-matrix.md) | 文献事实、历史观测和新假设 |
+- [相关候选方法](./ideas/README.md)：联合修订、对象执行接口、物理后果学习。
+- [晶体原始文献支撑](./evidence/crystal-problem-support.md)与[来源索引](./evidence/README.md)：机制、证据范围和论文状态。
+- [历史实验](./evidence/historical-evidence.md)：成功、负结果、评价阶段和未知标签。
+- [共同评价](./evidence/common-protocol.md)：严格 SUN、最终结构身份与费用。
+- [CV 方法目录](./literature/README.md)：生成、表示、条件控制、反馈与泛化。
+- [文献—命题矩阵](./matrices/claim-evidence-matrix.md)与[能力矩阵](./matrices/contribution-matrix.md)：已有证据与待建立的科学认识。
 
-## 文献与研究依据
+## 43 篇论文分析
 
-[CV前沿目录](./literature/README.md)保存69条记录、68项不同工作，覆盖基础生成、条件／推理、反馈／搜索与评价。真正文生图、类别条件基础生成和相邻任务分别记录。
-
-[晶体原始论文支撑](./evidence/crystal-problem-support.md)与[四组与技术备选来源](./evidence/README.md)保存最近近邻、读取段落及具体基座发布入口。[项目历史摘要](./evidence/historical-evidence.md)同时保留精修成功、指定动作零增量、未知标签和旧评价阶段，作为新假设的依据。
-
-## 43篇历史首轮记录
-
-原核查日期保留2026-09-03。本轮依据既有[bibliography/papers.json](./bibliography/papers.json)精简各篇重复通用模板，保留具体问题、方法、论据和十二项标题，未重新核验全部旧论文。六维分数及首轮建议属于历史判断。
+以下记录的资料核查日期为 2026-09-03。条目保留原论文的任务、方法、证据、适用范围和研究比较；六维贡献描述属于定性分析，不能作为跨任务性能排名。
 
 <details>
 <summary>展开全部43篇历史论文及报告</summary>
@@ -94,4 +85,4 @@
 
 </details>
 
-[旧结构化索引](./bibliography/papers.json) · [原CSV索引](./bibliography/paper-index.csv) · [近期晶体来源索引](./bibliography/recent-crystal-sources.json) · [更新日志](./CHANGELOG.md)
+[论文元数据](./bibliography/papers.json) · [CSV 索引](./bibliography/paper-index.csv) · [近期晶体来源](./bibliography/recent-crystal-sources.json)

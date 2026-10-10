@@ -13,4 +13,4 @@
 
 无条件DNG是共同主任务。CSP、条件生成、可控有限晶体子域和真实物理干预用于分离机制。来源曝光、未知状态和实际费用与对应关系一起保留。
 
-[研究议程与候选平台](../programs/research-agenda.md) · [共同评价](../evidence/common-protocol.md) · [前轮技术方案](../ideas/README.md)
+[研究议程与候选平台](../programs/research-agenda.md) · [共同评价](../evidence/common-protocol.md) · [技术方案](../ideas/README.md)

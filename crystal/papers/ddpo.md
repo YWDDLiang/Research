@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Training Diffusion Models with Reinforcement Learning
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2305.13301) · [官方/作者项目](https://github.com/jannerm/ddpo)
 
-首轮状态：已审计；基础后训练方法
+文献状态：基础后训练方法
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ best-of-N/rejection、reward-weighted fine-tuning、PPO/GRPO、DPO，以及外�
 
 它建立了 diffusion 后训练的通用策略优化接口，但没有解决 reward 是否正确。
 
-首轮角色：扩散策略优化。历史六维记录：[2, 1, 2, 1, 1, 0]。
+工作定位：扩散策略优化。六维贡献描述：[2, 1, 2, 1, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ best-of-N/rejection、reward-weighted fine-tuning、PPO/GRPO、DPO，以及外�
 
 方法开创性明确，但也提供反面教材：可优化性与科学正确性是两个问题。
 
-首轮使用建议：作为晶体 RL 文献的理论起点，用于推导轨迹级/步骤级 credit 和 KL 约束。
+研究参考：作为晶体 RL 文献的理论起点，用于推导轨迹级/步骤级 credit 和 KL 约束。
 
 具体结论范围：不能把 reward 上升称为物理理解，也不能忽略候选覆盖和 evaluator shift。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 在同物理调用预算下比较 RL 与 rejection/archive reweighting，并用冻结 DFT/第二 MLIP 与 basin entropy 审计。

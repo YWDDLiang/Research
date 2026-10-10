@@ -31,7 +31,7 @@
       "read_depth": {
         "level": "方法及消融深读",
         "sections": "arXiv v1 §3、§4.4；官方作者发表页",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -59,7 +59,7 @@
       "read_depth": {
         "level": "方法与部分结果深读",
         "sections": "arXiv v1 §3、§4.2–4.3；PMLR正式条目及官方repo",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -76,7 +76,7 @@
         "url": "https://github.com/jiaosiyuu/ThinkGen",
         "repository_page_verified": false,
         "implementation_verified": false,
-        "evidence": "作者论文与HF提供代码/权重URL；本次仓库页面读取失败"
+        "evidence": "作者论文与HF提供代码/权重URL；仓库页面读取失败"
       },
       "task": "真实T2I、文字渲染、编辑、参考条件生成与反思",
       "challenge": "统一模型的CoT可能仅帮助某类知识任务，却扰乱长提示、组合或文字渲染。",
@@ -87,7 +87,7 @@
       "read_depth": {
         "level": "方法深读",
         "sections": "arXiv v1 §3–4、表1；CVF正式条目",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -115,7 +115,7 @@
       "read_depth": {
         "level": "方法及部分结果深读",
         "sections": "arXiv v2 §2.2.1–2.2.4；正式ICLR条目与repo",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -143,7 +143,7 @@
       "read_depth": {
         "level": "方法深读",
         "sections": "arXiv v1 §3–4、部分§5；PMLR及官方repo",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -171,7 +171,7 @@
       "read_depth": {
         "level": "正式条目与官方实现阅读",
         "sections": "CVF正式索引、HKU记录、README方法及输入/输出协议",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -200,7 +200,7 @@
       "read_depth": {
         "level": "方法及部分对照深读",
         "sections": "arXiv v1 §3–4及表4–5；CVF PDF/官方项目页",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -228,7 +228,7 @@
       "read_depth": {
         "level": "方法、结果、消融深读",
         "sections": "arXiv v1 §3、§4及表2/4/5；CVF正式条目",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -256,7 +256,7 @@
       "read_depth": {
         "level": "方法与分析深读",
         "sections": "arXiv v1 §4–6，语义退化与几何分析；CVF与repo",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -284,7 +284,7 @@
       "read_depth": {
         "level": "原文摘要及补充算法阅读",
         "sections": "Warwick正式版摘要；CVF supplement Algorithm1",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -312,7 +312,7 @@
       "read_depth": {
         "level": "方法及部分结果深读",
         "sections": "arXiv v1 §3、§4–5部分；原文Eq1–5；官方repo/主会节目",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -340,7 +340,7 @@
       "read_depth": {
         "level": "方法及部分结果深读",
         "sections": "arXiv v1 §3，正式ICLR条目与repo；v3日期已核实",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -368,7 +368,7 @@
       "read_depth": {
         "level": "方法深读",
         "sections": "arXiv v1 §3及部分§4；官方主会节目",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -396,7 +396,7 @@
       "read_depth": {
         "level": "主会摘要、数据/方法部分阅读",
         "sections": "arXiv v1 §3、Fig4说明；正式ICLR条目与repo",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -424,7 +424,7 @@
       "read_depth": {
         "level": "方法及消融深读",
         "sections": "arXiv v1 §4–5、表3–4；原文limitation；官方repo/实验室",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -452,7 +452,7 @@
       "read_depth": {
         "level": "方法深读",
         "sections": "arXiv v1 §3；CVF正式摘要与官方repo",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -477,11 +477,11 @@
       "motivation": "统一生成/分解/局部修订，使完整对象的可复用层可规模化产生。",
       "mechanism": "20B masked region diffusion共享三任务，通过选择token mask切换条件；overflow-aware canvas layer补足可见边界外部分，另有8步蒸馏。",
       "finding": "正式摘要及项目说明报告三任务质量/效率改善；mask控制作用范围。",
-      "limitation": "本轮仅正式摘要/项目读取，不把峰值速度比推广到任意图像/层数；超界层的内容仍需生成推断。",
+      "limitation": "仅正式摘要/项目读取，不把峰值速度比推广到任意图像/层数；超界层的内容仍需生成推断。",
       "read_depth": {
         "level": "正式摘要与官方项目阅读",
         "sections": "CVF正式条目/作者项目页",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -509,7 +509,7 @@
       "read_depth": {
         "level": "方法概要与官方实现阅读",
         "sections": "arXiv v1 方法概览/摘要、官方repo",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -537,7 +537,7 @@
       "read_depth": {
         "level": "正式摘要及官方实现阅读",
         "sections": "CVF摘要、官方repo/模型卡",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     },
@@ -559,11 +559,11 @@
       "motivation": "系统地控制训练课程与任务干扰，使小生成器也能执行复杂多模态条件。",
       "mechanism": "6B单流DiT、渐进数据/分辨率课程；parallel expert RL+multi-teacher on-policy distillation，Prompt Enhancer分开高层推理与像素绘制。",
       "finding": "作者报告6B/3B及少步变体的聚合表现；说明语义改写与多任务冲突的系统性处理。",
-      "limitation": "本轮正文HTML不可读，仅摘要机制；没有依据细分每一组件增益，未用外部同名商业网站推断结构。",
+      "limitation": "正文HTML不可读，仅摘要机制；没有依据细分每一组件增益，未用外部同名商业网站推断结构。",
       "read_depth": {
         "level": "作者摘要与版本元数据阅读",
         "sections": "arXiv v1/v2 metadata/abstract；正文获取失败",
-        "scope": "只归因于所列阅读范围；未运行模型"
+        "scope": "只归因于所列阅读范围；独立复现结果未提供模型"
       },
       "verified_on": "2026-10-09"
     }
@@ -584,8 +584,7 @@
       "C15",
       "C16"
     ],
-    "primary_only": true,
-    "scientific_execution": "无"
+    "primary_only": true
   },
   "diagnostic_sources": [
     {

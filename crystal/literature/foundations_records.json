@@ -160,7 +160,7 @@
       "motivation": "按下游去噪任务设计tokenizer。",
       "mechanism": "编码latent与高斯噪声插值，加随机mask，再重建干净图；作为tokenizer时关闭扰动。",
       "findings": "跨六种生成器改善；v1 MAR-L+decoder微调FID1.35，改善不依赖外部语义teacher。",
-      "limitations": "最终T2I存在由主会摘要核实；本轮细读的是v1 ImageNet方法与结果。",
+      "limitations": "最终T2I存在由主会摘要核实；细读的是v1 ImageNet方法与结果。",
       "reading": {
         "level": "selected_methods_results",
         "locators": "v1 §3/5，Tables1–2；final venue摘要"
@@ -439,7 +439,7 @@
       "motivation": "让token前缀自然对应可执行的逐层内容。",
       "mechanism": "因果ViT tokenizer按时间区间供给MeanFlow decoder，REPA-A辅助训练。",
       "findings": "256token重建FID0.75；部分区间/前缀有不同信息且支持单/多步。",
-      "limitations": "重建指标非生成指标；本轮读摘要、intro及官方方法页，未深入主表消融。",
+      "limitations": "重建指标非生成指标；读摘要、intro及官方方法页，未深入主表消融。",
       "reading": {
         "level": "abstract_metadata_release",
         "locators": "CVF摘要/intro；作者project方法；arXiv首稿日期页已核实"

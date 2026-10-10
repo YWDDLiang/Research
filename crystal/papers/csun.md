@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # cSUN: Continuous Stability, Uniqueness, and Novelty Metrics for Crystal Generation
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2510.12405)；首轮未核实项目入口。
 
-首轮状态：已审计；版本持续更新
+文献状态：版本持续更新
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ last_verified: "2026-09-03"
 
 它是评价和优化接口层贡献，解决了二元指标不连续，但没有解决每个分量是否与真实科学目标一致。
 
-首轮角色：连续评价 / 可优化 Reward。历史六维记录：[1, 1, 2, 0, 2, 0]。
+工作定位：连续评价 / 可优化 Reward。六维贡献描述：[1, 1, 2, 0, 2, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ last_verified: "2026-09-03"
 
 有实用价值，但不应成为论文唯一主贡献。连续化只能改善优化几何，不能自动修复错误的任务定义。
 
-首轮使用建议：可作为当前项目的辅助 reward/诊断量，不应替代 basin-level set objective 与独立 DFT 验证。
+研究参考：可作为当前项目的辅助 reward/诊断量，不应替代 basin-level set objective 与独立 DFT 验证。
 
 具体结论范围：不能声称连续分数更高就意味着更可合成；也不能把平滑后的 novelty 当成真正结构创新。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 比较 energy-only、binary SUN、cSUN 与 basin-aware reward，在相同 KL/采样预算下看独立 DFT 和 coverage 是否一致提升。

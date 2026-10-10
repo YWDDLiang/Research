@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # Open Materials 2024 (OMat24) Inorganic Materials Dataset and Models
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2410.12771) · [官方/作者项目](https://github.com/FAIR-Chem/fairchem)
 
-首轮状态：大型开放数据与模型发布；数据版本和许可应按官方页面持续更新。
+文献状态：大型开放数据与模型发布；数据版本和许可应按官方页面持续更新。
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ Matbench Discovery 等性能支持其作为强 evaluator/relaxer；不能由 agg
 
 数据规模和开放基础设施贡献极强，是生成后筛选与轨迹监督的重要底座。
 
-首轮角色：数据基础设施。历史六维记录：[1, 2, 1, 2, 2, 0]。
+工作定位：数据基础设施。六维贡献描述：[1, 2, 1, 2, 2, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ Matbench Discovery 等性能支持其作为强 evaluator/relaxer；不能由 agg
 
 必须读，但它是物理代理基础设施，不是自动正确的 oracle。
 
-首轮使用建议：用于候选弛豫、力/应力监督和 evaluator ensemble。
+研究参考：用于候选弛豫、力/应力监督和 evaluator ensemble。
 
 具体结论范围：不能只用一个 OMat24 势模型闭环训练再用同模型评价，避免自证与 reward hacking。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 建立 OMat24/MACE/MatterSim/DFT 小集的一致性矩阵，按组成与力范围分层。

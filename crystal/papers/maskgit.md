@@ -12,7 +12,7 @@ last_verified: "2026-09-03"
 
 # MaskGIT: Masked Generative Image Transformer
 
-> 历史首轮记录；原核查日期：2026-09-03。2026-10-09依据既有索引精简文字，没有新增论文核验或复现。
+> 文献分析；资料核查截至2026-09-03。
 >
 > [返回当前研究入口](../README.md)
 
@@ -22,7 +22,7 @@ last_verified: "2026-09-03"
 
 [论文](https://arxiv.org/abs/2202.04200) · [官方/作者项目](https://github.com/google-research/maskgit)
 
-首轮状态：已审计；基础 CV 方法
+文献状态：基础 CV 方法
 
 ## 1. Scientific problem
 
@@ -64,7 +64,7 @@ tokenization 保留任务结构；模型置信度可作为正确的固定顺序�
 
 它改变离散生成算子和采样并行性，属于可复用机制贡献。
 
-首轮角色：并行迭代离散生成。历史六维记录：[2, 1, 2, 2, 1, 0]。
+工作定位：并行迭代离散生成。六维贡献描述：[2, 1, 2, 2, 1, 0]。
 
 ## 11. Transferable abstraction
 
@@ -74,10 +74,10 @@ tokenization 保留任务结构；模型置信度可作为正确的固定顺序�
 
 基础 CV 贡献明确。HACO/MaskGXT 的价值不在“使用 Transformer”，而在证明该算子适合晶体多晶型生成。
 
-首轮使用建议：可用于审计 DLM 路线：并行掩码是否改善模式探索，还是只减少延迟。
+研究参考：可用于审计 DLM 路线：并行掩码是否改善模式探索，还是只减少延迟。
 
 具体结论范围：不能把图像早/晚 token 规律直接假设为晶体 lattice/coordinate 阶段规律。
 
-### 首轮留下的后续问题
+### 相关研究问题
 
 测量不同 token/轮次对弛豫后 basin identity、晶格和局部环境的因果敏感性，再设计重掩码策略。

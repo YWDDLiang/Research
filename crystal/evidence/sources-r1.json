@@ -17,7 +17,7 @@
       ],
       "supports": "晶体离散元素与周期坐标/晶格联合生成；SI可使用数据相关耦合。R1不能把joint或源—目标耦合本身称首次。",
       "code": "https://github.com/FERMat-ML/OMatG",
-      "code_status": "官方仓库与相关源码已读；未运行"
+      "code_status": "官方仓库与相关源码已读；独立复现结果未提供"
     },
     {
       "id": "R1-C02",
@@ -33,7 +33,7 @@
       ],
       "supports": "化学CTMC与几何ODE用独立时钟；已有structure-conditioned composition与多模态后验。新缺口在具体科学修订及匹配物理响应的监督。",
       "code": null,
-      "code_status": "官方页面与已读PDF未定位代码/权重；不选为实施主基座"
+      "code_status": "官方页面与已读PDF未定位代码/权重；"
     },
     {
       "id": "R1-C03",
@@ -48,7 +48,7 @@
       ],
       "supports": "MatterGen联合元素、坐标与晶格；结构分布已能学习化学—几何关系，不可声称现有模型完全解耦。",
       "code": "https://github.com/microsoft/mattergen",
-      "code_status": "官方代码与模型发布入口已核；非R1实施基座"
+      "code_status": "官方代码与模型发布入口已核；"
     },
     {
       "id": "R1-C04",
@@ -75,7 +75,7 @@
       ],
       "supports": "联合站点对称、元素、代表坐标与晶格；复制ASU得到完整晶体，站点表示可补几何信息。",
       "code": "https://github.com/sibasmarak/SymmCD",
-      "code_status": "官方实现已读；checkpoint入口本轮未定位"
+      "code_status": "官方实现已读；checkpoint入口未定位"
     },
     {
       "id": "R1-C06",
@@ -105,7 +105,9 @@
       ],
       "supports": "GRPO选择composition，冻结CSP每次新采结构；不接受特定源结构/局部编辑作为结构生成条件。R1需同化学改动的fresh-CSP对照。",
       "code": null,
-      "code_status": "已读原文未定位官方代码"
+      "code_status": "已读原文未定位官方代码",
+      "corpus_definition": "v2附录F.6：搜索保存composition和scores；27,136个训练结构由重放访问组成重新实现，未按稳定或新颖阈值筛选，不能将全体语料称为成功终点。",
+      "corpus_definition_source": "https://arxiv.org/html/2609.33407v2"
     },
     {
       "id": "R1-C08",
@@ -119,7 +121,7 @@
       ],
       "supports": "composition-only RL是近邻；奖励移植Chemeleon2的52/2500 strict SUN相对36/2500需纳入，同奖励强基线不可略去。",
       "code": null,
-      "code_status": "本轮未核可复现训练release"
+      "code_status": "未核可复现训练release"
     },
     {
       "id": "R1-C09",
@@ -132,7 +134,7 @@
       ],
       "supports": "已出现全原子flow-map及物理reward适配；少步/联合更新本身不是R1空白。",
       "code": null,
-      "code_status": "本轮未核官方release"
+      "code_status": "未核官方release"
     },
     {
       "id": "R1-V01",
@@ -146,47 +148,6 @@
       "supports": "中等先行与完整硬顺序不同，动机启发；不作为晶体耦合已经失效的证据。",
       "code": "https://github.com/yuemingPAN/SFD",
       "code_status": "官方仓库已核"
-    },
-    {
-      "id": "R1-A01",
-      "title": "OMatG MP-20 DNG — Linear-SDE-Gamma release",
-      "url": "https://huggingface.co/OMatG/MP-20-DNG/tree/main/Linear-SDE-Gamma",
-      "read_sections": [
-        "model card",
-        "文件树checkpoint.ckpt/train.yaml",
-        "公开train.yaml全文"
-      ],
-      "checkpoint": "OMatG/MP-20-DNG/Linear-SDE-Gamma/checkpoint.ckpt",
-      "revision": "6af2cc9a1fa569341fb7a08a542490868ab84867",
-      "config": "https://huggingface.co/OMatG/MP-20-DNG/resolve/main/Linear-SDE-Gamma/train.yaml",
-      "metadata": {
-        "mask_noise": 0.18946955217679085,
-        "coordinate_interpolant": "PeriodicLinearInterpolant",
-        "coordinate_sampler": "SDE",
-        "lattice_sampler": "ODE",
-        "integration_time_steps": 710,
-        "encoder": "CSPNetFull"
-      },
-      "status": "已核元数据/配置/接口；未下载权重、未运行"
-    },
-    {
-      "id": "R1-A02",
-      "title": "OMatG MP-20 CSP — Linear-ODE release",
-      "url": "https://huggingface.co/OMatG/MP-20-CSP/tree/main/Linear-ODE",
-      "read_sections": [
-        "文件树checkpoint.ckpt/train.yaml",
-        "公开train.yaml全文"
-      ],
-      "checkpoint": "OMatG/MP-20-CSP/Linear-ODE/checkpoint.ckpt",
-      "config": "https://huggingface.co/OMatG/MP-20-CSP/resolve/main/Linear-ODE/train.yaml",
-      "metadata": {
-        "species": "SingleStochasticInterpolantIdentity",
-        "coordinate_interpolant": "PeriodicLinearInterpolant",
-        "sampler": "ODE",
-        "integration_time_steps": 210,
-        "encoder": "CSPNetFull"
-      },
-      "status": "同基座CSP teacher/对照；已核元数据/接口，未运行"
     },
     {
       "id": "R1-A03",

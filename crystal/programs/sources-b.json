@@ -4,11 +4,7 @@
   "date": "2026-10-10",
   "language": "zh-CN",
   "status": "科学纲领；无新实验",
-  "final_revision": "2026-10-10 A/root peer后定稿：复用由跨连接/晶胞/共享场的条件完成或干预响应辨识；φ+Ψ函数分解不定位知识来源；已有坐标的闭合是恒等式，研究独立局部要求的联合可实现；CN注明平均/统一配位；集中保留训练曝光/UFO阈值/简谐例子范围。",
-  "peer_review": "reviews/a-reviews-b.md",
   "core_goal": "同一终态协议strictSUN（Ehull≤0）、保留U/N；熟悉框架新化学继续成功",
-  "fixed_checkpoint": null,
-  "fixed_budget": null,
   "records": [
     {
       "id": "B01",
@@ -19,8 +15,7 @@
       "reading": {
         "as_of": "2026-10-10",
         "depth": "方法、interpretability与评价附录选定深读",
-        "sections": "§2.1、§3.1–3.3、§4、Appendix C.1–C.4",
-        "execution": "无训练、采样或复现"
+        "sections": "§2.1、§3.1–3.3、§4、Appendix C.1–C.4"
       },
       "published_content": "局部atom-neighbor组VQ-VAE、concept集合generator、下游条件DDPM；atom vector含3坐标+100元素+6lattice，concept-set可预测spacegroup/family",
       "programme_role": "concept复用已是晶体直接先例；B研究知识组成的局部化学/全胞信息层级及未见整体的兼容",
@@ -35,8 +30,7 @@
       "reading": {
         "as_of": "2026-10-10",
         "depth": "表示、完整主要Results与机制段选读",
-        "sections": "§2.1–2.6，S3.3/S5定义选段",
-        "execution": "无训练、采样或复现"
+        "sections": "§2.1–2.6，S3.3/S5定义选段"
       },
       "published_content": "scaffold/fiber与三阶段topology→occupancy→continuous Wyckoff；未见scaffold试验绕过StageI；MSE热力学条件为formation energy<0",
       "programme_role": "离散关系与连续实现分工、条件结构转移是实质先例",
@@ -51,8 +45,7 @@
       "reading": {
         "as_of": "2026-10-10",
         "depth": "Methods与结果/Discussion选读",
-        "sections": "Methods: Datasets and text conditions、CSP/DNG flow formulation；CSP/DNG结果",
-        "execution": "无训练、采样或复现"
+        "sections": "Methods: Datasets and text conditions、CSP/DNG flow formulation；CSP/DNG结果"
       },
       "published_content": "MatSciBERT mean-pooled结构化组成/对称/性质信息条件化CrystalFlow；CSP与DNG分布结果",
       "programme_role": "科学元数据能指导生成，但未见局部组合的整体稳定需独立建立",
@@ -70,8 +63,7 @@
       "reading": {
         "as_of": "2026-10-10",
         "depth": "表示/算法选定阅读",
-        "sections": "asymmetric-unit/site-symmetry定义，Algorithm1/2；正式主会PDF此前核实",
-        "execution": "无训练、采样或复现"
+        "sections": "asymmetric-unit/site-symmetry定义，Algorithm1/2；正式主会PDF此前核实"
       },
       "published_content": "asymmetric unit与site symmetry联合扩散、有效Wyckoff投影/完整晶体展开",
       "programme_role": "周期/对称构造能力为组合的结构条件基础",
@@ -88,8 +80,7 @@
       "reading": {
         "as_of": "2026-10-10",
         "depth": "§3方法与任务定义深读",
-        "sections": "arXiv v1 §1–3.2，模式时间路径、ordering/permutation augmentation；PMLR条目",
-        "execution": "无训练、采样或复现"
+        "sections": "arXiv v1 §1–3.2，模式时间路径、ordering/permutation augmentation；PMLR条目"
       },
       "published_content": "独立A/X时间轴，一个模型支持CSP/DNG/structure-conditioned atom type；化学+Wyckoff排序及分层排列增强",
       "programme_role": "互条件完成的直接能力基础，B可用它研究局部条件族兼容而非重新宣称多模态",
@@ -98,14 +89,13 @@
     {
       "id": "B06",
       "title": "Substitution-Based Analysis of Structural Novelty for Generative Models of Materials",
-      "status": "2026-06预印本；原repo卡为历史首轮记录",
+      "status": "2026-06预印本；原repo卡为文献分析",
       "primary_url": "https://arxiv.org/html/2606.23166v1",
       "additional_primary_urls": [],
       "reading": {
         "as_of": "2026-10-10",
         "depth": "workflow/results深读",
-        "sections": "§2.1–2.2，Table2；有限候选选择与relaxation",
-        "execution": "无训练、采样或复现"
+        "sections": "§2.1–2.2，Table2；有限候选选择与relaxation"
       },
       "published_content": "Duplicate/Substituted/Unmatched；top-k替换+一次松弛；MP20 test Substituted88.4%；模型筛选集合按Ehull≤0.1",
       "programme_role": "原型迁移既是竞争解释也是合法化学发现；比较局部知识与有能力替换的实质增量",
@@ -120,8 +110,7 @@
       "reading": {
         "as_of": "2026-10-10",
         "depth": "方法/具体物理例子阅读",
-        "sections": "III.1–III.4、Fig2；CVAE与SO3/direct-latent优化",
-        "execution": "无训练、采样或复现"
+        "sections": "III.1–III.4、Fig2；CVAE与SO3/direct-latent优化"
       },
       "published_content": "对称CVAE与SO3目标；C6能量松弛得到sp3，环境优化指向sp2；C288不同目标的实现差",
       "programme_role": "局部要求、几何实现和物理优化目标可以分离，不能只看energy下降",
@@ -138,8 +127,7 @@
       "reading": {
         "as_of": "2026-10-10",
         "depth": "Results表示与Methods几何重构选段",
-        "sections": "Results: SLICES representation、labelled quotient graph与edge translations",
-        "execution": "无训练、采样或复现"
+        "sections": "Results: SLICES representation、labelled quotient graph与edge translations"
       },
       "published_content": "周期结构用带平移边标签的有限quotient graph表示；图提供几何实现初猜",
       "programme_role": "B的数学对象采用共享节点/边与周期绕行，不采用独立图像patch",
@@ -154,8 +142,7 @@
       "reading": {
         "as_of": "2026-10-10",
         "depth": "标准实现与框架正文阅读",
-        "sections": "§3–5，periodic/dual graph、standard realization、CVT和FCC/HCP/BCC例子",
-        "execution": "无训练、采样或复现"
+        "sections": "§3–5，periodic/dual graph、standard realization、CVT和FCC/HCP/BCC例子"
       },
       "published_content": "多面体连接的dual periodic graph、标准实现及CVT连接geometry",
       "programme_role": "为构造式组合的周期/几何要求提供真实晶体理论支撑",
@@ -172,8 +159,7 @@
       "reading": {
         "as_of": "2026-10-10",
         "depth": "理论§3与受控CLEVR/干预深读",
-        "sections": "arXiv v3 §2–4，Definition1/2、Lemma1、feature-space与approximation范围",
-        "execution": "无训练、采样或复现"
+        "sections": "arXiv v3 §2–4，Definition1/2、Lemma1、feature-space与approximation范围"
       },
       "published_content": "特定CPC的分离独立条件边际与特定LCS等价；general LCS也可有重叠/多条件，精确CPC等价需要指定子集结构；CLEVR中强制locality可恢复length泛化",
       "programme_role": "提供可检验的机制理论，而非“分组件自然泛化”的经验口号",
@@ -182,14 +168,13 @@
     {
       "id": "B11",
       "title": "Establishing baselines for generative discovery of inorganic crystals",
-      "status": "2025研究；本轮primary abstract/metadata阅读",
+      "status": "2025研究；primary abstract/metadata阅读",
       "primary_url": "https://arxiv.org/abs/2501.02144",
       "additional_primary_urls": [],
       "reading": {
         "as_of": "2026-10-10",
         "depth": "原始摘要，复用repo具体首轮卡",
-        "sections": "primary abstract；repo establishing-baselines card",
-        "execution": "无训练、采样或复现"
+        "sections": "primary abstract；repo establishing-baselines card"
       },
       "published_content": "枚举与离子交换为有竞争力的材料发现基线",
       "programme_role": "为prototype/chemistry prior解释提供直接baseline，熟悉框架化学合法",
@@ -230,6 +215,5 @@
       "scope": "几何cross诊断，不能唯一定位planner或executor"
     }
   ],
-  "actions": "只读原文/本地记录、数学推导、新B文档与sources保存；未改repo/AGENTS，未SSH/Git/训练/实验",
   "public_history_reference": "../evidence/historical-evidence.md"
 }
