@@ -2,7 +2,7 @@
 
 ## 晶体生成的能力演化、六个挑战与四条研究方向
 
-[学术汇报（30页PPT及PDF）](presentation/README.md) · [任务与路线的文献演化](presentation/tasks-and-evolution.md)
+[完整学术汇报（60页PPT及PDF）](presentation/complete-review/README.md) · [研究演化专题](presentation/README.md) · [任务与路线的文献演化](presentation/tasks-and-evolution.md)
 
 [面向AI研究者的补充汇报：数据、模型、指标与物理验证](presentation/domain-primer/README.md)（30页，含MatterGen五页详解，2026年10月13日）
 

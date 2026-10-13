@@ -1,0 +1,6005 @@
+{
+  "as_of": "2026-10-13",
+  "sources": [
+    {
+      "id": "R01",
+      "title": "High-Pressure Phases of Silane",
+      "aliases": [
+        "AIRSS2006"
+      ],
+      "themes": [
+        "物理与数据背景"
+      ],
+      "first_public_date": "2006-04-19",
+      "venue_date_status": "Physical Review Letters 97, 045504；2006-07-27正式发表",
+      "date_notes": [],
+      "authors": [
+        "Chris J. Pickard",
+        "R. J. Needs"
+      ],
+      "doi": "10.1103/PhysRevLett.97.045504",
+      "arxiv_id": null,
+      "primary_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.97.045504",
+      "primary_urls": [
+        "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.97.045504",
+        "https://arxiv.org/abs/cond-mat/0604454"
+      ],
+      "tasks": [
+        "高压硅烷的结构搜索"
+      ],
+      "challenge_before": "难以事先知道有竞争力的晶体构型",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "随机初始结构加第一性原理弛豫",
+      "remaining_gap": "每个新体系仍需付出物理搜索费用；没有学到跨体系生成分布",
+      "challenges": [
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "原文摘要与作者全文首页、日期",
+          "result_evidence": "在最多至少10原子的原胞实例中找到低焓结构并研究高压相",
+          "solution_scope": "具体高压CSP实例的可行搜索方法",
+          "lineage_evidence": "原始随机搜索—弛豫方法；与learned proposal的联系是综述归纳"
+        }
+      ],
+      "versions": [
+        {
+          "title": "High-Pressure Phases of Silane",
+          "venue": "Physical Review Letters 97, 045504；2006-07-27正式发表",
+          "source": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.97.045504"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "title": "Crystal structure prediction using ab initio evolutionary techniques: Principles and applications",
+      "aliases": [
+        "USPEX2006"
+      ],
+      "themes": [
+        "物理与数据背景"
+      ],
+      "first_public_date": "2006-06-28",
+      "venue_date_status": "Journal of Chemical Physics 124, 244704 (2006)",
+      "date_notes": [
+        "已核期刊在线日期；不声称不存在更早会议材料"
+      ],
+      "authors": [
+        "Artem R. Oganov",
+        "Colin W. Glass"
+      ],
+      "doi": "10.1063/1.2210932",
+      "arxiv_id": null,
+      "primary_url": "https://doi.org/10.1063/1.2210932",
+      "primary_urls": [
+        "https://doi.org/10.1063/1.2210932",
+        "https://uspex-team.org/static/file/JChemPhys-USPEX-2006.pdf"
+      ],
+      "tasks": [
+        "给定化合物的晶体结构搜索"
+      ],
+      "challenge_before": "候选结构数量巨大，第一性原理评价昂贵，局部极小值众多",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "进化搜索与第一性原理能量评价结合",
+      "remaining_gap": "跨化学空间的可复用生成分布与多解发现效率仍需学习",
+      "challenges": [
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "原始摘要、作者全文及出版元数据",
+          "result_evidence": "通过具体体系展示全局结构搜索的有效性；原文任务不包含现代DNG的SUN",
+          "solution_scope": "指定结构搜索任务的算法与实证能力",
+          "lineage_evidence": "作为物理搜索的代表性祖先；与后续生成模型的连线为任务/能力对照，不默认直接引用继承"
+        }
+      ],
+      "versions": [
+        {
+          "title": "Crystal structure prediction using ab initio evolutionary techniques: Principles and applications",
+          "venue": "Journal of Chemical Physics 124, 244704 (2006)",
+          "source": "https://doi.org/10.1063/1.2210932"
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "title": "Ab initio Random Structure Searching",
+      "aliases": [
+        "airss"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2011-01-05",
+      "venue_date_status": {
+        "venue": "Journal of Physics: Condensed Matter",
+        "year": 2011,
+        "published_online": "2011-01-05",
+        "status": "published",
+        "volume": "23",
+        "article_number": "053201",
+        "read_version": "arXiv 1101.3987v1；正式身份从publisher DOI metadata核"
+      },
+      "date_notes": [
+        "Crossref publisher online日期早于arXiv v1的2011-01-20；原方法更早的2006论文由背景文献索引独立记录，不将2011文章说成方法首次提出。"
+      ],
+      "authors": [
+        "Chris J Pickard",
+        "R J Needs"
+      ],
+      "doi": "10.1088/0953-8984/23/5/053201",
+      "arxiv_id": "1101.3987",
+      "primary_url": "https://arxiv.org/abs/1101.3987",
+      "primary_urls": [
+        "https://arxiv.org/abs/1101.3987"
+      ],
+      "tasks": [],
+      "challenge_before": "指定组成和外部条件后，怎样在极多局部极小值中找到低能结构？",
+      "why_important": "结构搜索使晶体候选能经物理计算获得检验，亚稳结构也有实际意义。",
+      "why_difficult": "极小值数量迅速增长、盆地吸引域不等、每次第一性原理松弛昂贵。",
+      "method": "生成满足可选化学、距离及对称约束的随机结构，物理松弛到局部极小值，并从重复搜索积累低能结构。",
+      "remaining_gap": "计算主要针对当前体系，跨体系的快速候选分布与可复用决策知识仍需学习；相竞争稳定与局部极小值需分别判断。",
+      "challenges": [
+        "C2",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "原始PDF选读Introduction、PES与basins、化学/距离/对称约束与搜索方法；未重审所有应用案例。",
+          "result_evidence": [
+            {
+              "locator": "§2 Potential energy surfaces；结构构造与约束章节",
+              "finding": "明确区分随机初始态、吸引盆地和物理极小值，展示多类系统的低能结构搜索。",
+              "quantitative_claim": null,
+              "protocol": "固定组成/条件的物理搜索；具体势能、约束与采样预算决定结果。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [],
+            "review_conceptual_relation": "本综述将AIRSS作为物理搜索祖先；GSS原文§1实际引用Pickard与Needs 2006/2011，后者的混合搜索由目的论文提供直接引文证据。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Ab initio Random Structure Searching",
+          "venue": {
+            "venue": "Journal of Physics: Condensed Matter",
+            "year": 2011,
+            "published_online": "2011-01-05",
+            "status": "published",
+            "volume": "23",
+            "article_number": "053201",
+            "read_version": "arXiv 1101.3987v1；正式身份从publisher DOI metadata核"
+          },
+          "source": "https://arxiv.org/abs/1101.3987"
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "title": "Commentary: The Materials Project: A materials genome approach to accelerating materials innovation",
+      "aliases": [
+        "MaterialsProject2013"
+      ],
+      "themes": [
+        "物理与数据背景"
+      ],
+      "first_public_date": "2013-07-18",
+      "venue_date_status": "APL Materials 1, 011002 (2013)",
+      "date_notes": [],
+      "authors": [
+        "Anubhav Jain",
+        "Shyue Ping Ong",
+        "Geoffroy Hautier",
+        "Wei Chen",
+        "William Davidson Richards",
+        "Stephen Dacek",
+        "Shreyas Cholia",
+        "Dan Gunter",
+        "David Skinner",
+        "Gerbrand Ceder",
+        "Kristin A. Persson"
+      ],
+      "doi": "10.1063/1.4812323",
+      "arxiv_id": null,
+      "primary_url": "https://doi.org/10.1063/1.4812323",
+      "primary_urls": [
+        "https://doi.org/10.1063/1.4812323",
+        "https://web.mit.edu/ceder/publications/2013_Jain_Materials_Project.pdf"
+      ],
+      "tasks": [
+        "高通量材料数据与开放计算生态"
+      ],
+      "challenge_before": "物理数据分散且逐材料计算成本高",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "标准化高通量第一性原理计算、结构及性质数据库",
+      "remaining_gap": "已观测数据分布不直接描述全部稳定材料空间或合成条件",
+      "challenges": [
+        "C1",
+        "C3",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "作者原文摘要与数据平台定位；出版元数据",
+          "result_evidence": "为结构、性质和竞争相信息提供可重复使用的数据资源",
+          "solution_scope": "数据基础设施",
+          "lineage_evidence": "CDVAE/DiffCSP及多个后续模型明确使用Materials Project衍生数据"
+        }
+      ],
+      "versions": [
+        {
+          "title": "Commentary: The Materials Project: A materials genome approach to accelerating materials innovation",
+          "venue": "APL Materials 1, 011002 (2013)",
+          "source": "https://doi.org/10.1063/1.4812323"
+        }
+      ]
+    },
+    {
+      "id": "R05",
+      "title": "Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties",
+      "aliases": [
+        "CGCNN2018"
+      ],
+      "themes": [
+        "物理与数据背景"
+      ],
+      "first_public_date": "2017-10-27",
+      "venue_date_status": "Physical Review Letters 120, 145301；2018-04-06",
+      "date_notes": [],
+      "authors": [
+        "Tian Xie",
+        "Jeffrey C. Grossman"
+      ],
+      "doi": "10.1103/PhysRevLett.120.145301",
+      "arxiv_id": null,
+      "primary_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.120.145301",
+      "primary_urls": [
+        "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.120.145301",
+        "https://arxiv.org/abs/1710.10324"
+      ],
+      "tasks": [
+        "给定晶体结构的性质预测"
+      ],
+      "challenge_before": "手工描述符难以统一不同结构与化学环境",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "从晶体图学习局部环境与整体性质映射",
+      "remaining_gap": "前向预测知识如何组织为可生成的周期结构仍是另一问题",
+      "challenges": [
+        "C1",
+        "C3",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "原始摘要、作者PDF及出版元数据",
+          "result_evidence": "原文研究八种性质，并用局部贡献解释材料设计规律",
+          "solution_scope": "前向性质学习",
+          "lineage_evidence": "图表示与局部到整体归纳偏置的背景，具体生成谱系需要各原文引用确认"
+        }
+      ],
+      "versions": [
+        {
+          "title": "Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties",
+          "venue": "Physical Review Letters 120, 145301；2018-04-06",
+          "source": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.120.145301"
+        }
+      ]
+    },
+    {
+      "id": "R06",
+      "title": "Inverse Design of Solid-State Materials via a Continuous Representation",
+      "aliases": [
+        "imatgen"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2019",
+      "venue_date_status": {
+        "venue": "Matter 1(5), 1370–1384",
+        "status": "published journal article",
+        "issue_date": "2019-11-06",
+        "online_date": null,
+        "date_note": "已核期刊卷期日期；更早在线公开日未知。DOI登记创建日期2019-10-02不可代作出版日。"
+      },
+      "date_notes": [],
+      "authors": [
+        "Juhwan Noh",
+        "Jaehoon Kim",
+        "Helge S. Stein",
+        "Benjamin Sanchez-Lengeling",
+        "John M. Gregoire",
+        "Alan Aspuru-Guzik",
+        "Yousung Jung"
+      ],
+      "doi": "10.1016/j.matt.2019.08.017",
+      "arxiv_id": null,
+      "primary_url": "https://doi.org/10.1016/j.matt.2019.08.017",
+      "primary_urls": [
+        "https://doi.org/10.1016/j.matt.2019.08.017",
+        "https://light.utoronto.ca/wp-content/uploads/2020/09/matter_inverse_design.pdf",
+        "https://github.com/kaist-amsg/imatgen"
+      ],
+      "tasks": [
+        "DNG within V–O",
+        "rediscovery",
+        "inverse design proof of concept"
+      ],
+      "challenge_before": "性质预测描述符通常不可逆，模型不能把潜变量解码为化学组成、晶胞和原子位置。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "把晶胞和原子基底拆成三维图像，经VAE压缩到连续潜空间，再将解码图像转换为晶胞与坐标并进行物理筛选。",
+      "remaining_gap": "实证集中于V–O，图像分辨率、元素扩展和几何等价表示增加学习成本；可解码性本身不保证候选稳定或可合成。",
+      "challenges": [
+        "C1",
+        "C3",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "selected_methods_results",
+            "locators": [
+              "原文连续表示段，Matter p.1373",
+              "原文摘要及V–O再发现结果概述"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "V–O候选生成与再发现",
+              "protocol": "在未包含若干已知实验结构的训练设置中再发现；生成约20,000个假想候选并开展DFT/亚稳性分析。",
+              "finding": "获得新的V–O组成和多晶型候选，证明连续潜空间能够产生可交给物理计算的结构。",
+              "locator": "原文摘要；Results and Discussion"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "conceptual_link_only",
+              "predecessor": null,
+              "evidence": "作为FTCP/CDVAE之前的可逆逆设计节点；不声称所有后续方法直接继承其代码或架构。"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "Inverse Design of Solid-State Materials via a Continuous Representation",
+          "venue": {
+            "venue": "Matter 1(5), 1370–1384",
+            "status": "published journal article",
+            "issue_date": "2019-11-06",
+            "online_date": null,
+            "date_note": "已核期刊卷期日期；更早在线公开日未知。DOI登记创建日期2019-10-02不可代作出版日。"
+          },
+          "source": "https://doi.org/10.1016/j.matt.2019.08.017"
+        }
+      ]
+    },
+    {
+      "id": "R07",
+      "title": "An invertible crystallographic representation for general inverse design of inorganic crystals with targeted properties",
+      "aliases": [
+        "ftcp",
+        "FTCP"
+      ],
+      "themes": [
+        "表示与生成",
+        "条件与知识"
+      ],
+      "first_public_date": "2020-05-15",
+      "venue_date_status": {
+        "venue": "Matter 5, 314–335",
+        "year": 2022,
+        "online_date": null,
+        "status": "published journal article; DOI与作者README年份含2021，卷期为2022"
+      },
+      "date_notes": [],
+      "authors": [
+        "Zekun Ren",
+        "Siyu Isaac Parker Tian",
+        "Juhwan Noh",
+        "Felipe Oviedo",
+        "Guangzong Xing",
+        "Jiali Li",
+        "Qiaohao Liang",
+        "Ruiming Zhu",
+        "Armin G. Aberle",
+        "Shijing Sun",
+        "Xiaonan Wang",
+        "Yi Liu",
+        "Qianxiao Li",
+        "Senthilnath Jayavelu",
+        "Kedar Hippalgaonkar",
+        "Yousung Jung",
+        "Tonio Buonassisi"
+      ],
+      "doi": "10.1016/j.matt.2021.11.032",
+      "arxiv_id": "2005.07609",
+      "primary_url": "https://arxiv.org/pdf/2005.07609v3",
+      "primary_urls": [
+        "https://arxiv.org/abs/2005.07609",
+        "https://doi.org/10.1016/j.matt.2021.11.032",
+        "https://github.com/PV-Lab/FTCP",
+        "https://arxiv.org/pdf/2005.07609v3"
+      ],
+      "tasks": [
+        "property conditional inverse design",
+        "joint composition/structure generation"
+      ],
+      "challenge_before": "生成器常限定元素/原型；目标性质难对应可解码的通用晶体结构。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "实空间与倒空间FTCP可逆表示、带性质分支VAE组织潜空间，再按目标采样/解码。",
+      "remaining_gap": "潜空间候选能命中功能，但复杂混合意图、精确结构关系以及共同严格相稳定资格尚需更直接控制。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "directions": [
+        "A",
+        "B"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "selected_methods_results",
+            "locators": [
+              "当前arXiv原文表示及VAE方法段",
+              "三个设计案例及DFT成功率",
+              "原文不变性讨论"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "三个性质设计案例",
+              "protocol": "作者以DFT弛豫和第一性原理性质验证目标是否满足；不同目标及候选分母分别计算。",
+              "finding": "共报告142个新候选，目标成功率7.1%–38.9%；原文同时讨论晶体不变性的困难。",
+              "locator": "原文三个设计案例、Results；arXiv最新稿"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "cited_predecessor",
+              "predecessor": "imatgen",
+              "evidence": "原文讨论既有图像型连续表示；沿用可逆表示与性质组织潜空间的问题，不认定架构直接继承。",
+              "locator": "Introduction; invertible representation context"
+            }
+          ]
+        },
+        {
+          "read_depth": {
+            "depth": "deep_selected_methods_results",
+            "version": "arXiv v3, 2021-12-15",
+            "sections": [
+              "representation",
+              "property-structured VAE",
+              "three design cases",
+              "Table 1"
+            ]
+          },
+          "result_evidence": {
+            "claim": "142个设计候选经第一性原理验证，三类设计成功率7.1%–38.9%；带隙1.5eV且形成能<-1.5eV/atom任务7/19=36.8%。",
+            "stage": "DFT relaxation/property calculations",
+            "definition": "首原理验证的目标满足数/设计数；形成能任务±0.06eV/atom",
+            "locator": "three design cases; Table 1; Fig.5"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_later_baseline",
+            "relation": "CDVAE直接比较FTCP，Con-CDVAE讨论此前逆设计表示",
+            "locator": "CDVAE §5.3/Table3; Con-CDVAE Introduction"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "An invertible crystallographic representation for general inverse design of inorganic crystals with targeted properties",
+          "venue": {
+            "venue": "Matter 5(1), 314–335",
+            "status": "published journal article",
+            "issue_date": "2022-01",
+            "online_date": "2021",
+            "date_note": "作者官方引用为2021；DOI注册卷期为2022-01；未核确切在线日。原始DOI为10.1016/j.matt.2021.11.032，2022.01.022为勘误。"
+          },
+          "source": "https://arxiv.org/abs/2005.07609"
+        },
+        {
+          "title": "An invertible crystallographic representation for general inverse design of inorganic crystals with targeted properties",
+          "venue": {
+            "venue": "Matter 5, 314–335",
+            "year": 2022,
+            "online_date": null,
+            "status": "published journal article; DOI与作者README年份含2021，卷期为2022"
+          },
+          "source": "https://arxiv.org/pdf/2005.07609v3"
+        }
+      ]
+    },
+    {
+      "id": "R08",
+      "title": "Crystal Diffusion Variational Autoencoder for Periodic Material Generation",
+      "aliases": [
+        "cdvae",
+        "CDVAE"
+      ],
+      "themes": [
+        "表示与生成",
+        "条件与知识"
+      ],
+      "first_public_date": "2021-10-12",
+      "venue_date_status": {
+        "venue": "ICLR 2022",
+        "year": 2022,
+        "online_date": null,
+        "status": "published main-conference paper"
+      },
+      "date_notes": [],
+      "authors": [
+        "Tian Xie",
+        "Xiang Fu",
+        "Octavian-Eugen Ganea",
+        "Regina Barzilay",
+        "Tommi Jaakkola"
+      ],
+      "doi": null,
+      "arxiv_id": "2110.06197",
+      "primary_url": "https://arxiv.org/abs/2110.06197",
+      "primary_urls": [
+        "https://arxiv.org/abs/2110.06197",
+        "https://github.com/txie-93/cdvae",
+        "https://openreview.net/forum?id=03RLpj-tc_"
+      ],
+      "tasks": [
+        "DNG",
+        "reconstruction",
+        "latent property optimization"
+      ],
+      "challenge_before": "有效周期排列稀少，表示/解码缺少周期、对称和邻居成键归纳偏置。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "VAE组织全局组成/晶格信息，周期图score decoder生成原子坐标与类型；性质分支支持潜空间梯度优化。",
+      "remaining_gap": "性质潜空间的良好目标值与实际弛豫后资格之间仍需物理连接；终态分布score与物理力不是同一已验证对象。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Sections 3–5",
+              "Tables 1–3",
+              "Appendices B–D/F"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20原始DNG",
+              "protocol": "10,000样本，距离/体积及SMACT检验；该表未对生成结构做DFT弛豫。",
+              "finding": "Table 2结构有效率100%、组成有效率86.70%；相比同期FTCP的1.55%结构有效率，几何执行能力显著改善。",
+              "locator": "Table 2"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "cited_predecessor_and_baseline",
+              "predecessor": "ftcp",
+              "evidence": "直接讨论FTCP坐标表示的不变性并将其作为重构、DNG和性质优化基线。",
+              "locator": "Related Work; Section 5; Tables 1–3"
+            }
+          ]
+        },
+        {
+          "read_depth": {
+            "depth": "deep_selected_objective_and_property_results",
+            "version": "ICLR paper / arXiv v3",
+            "sections": [
+              "§3",
+              "§5.3",
+              "Table3",
+              "AppendixD"
+            ]
+          },
+          "result_evidence": {
+            "claim": "重构、有效多样生成及性质优化优于当时基线；§5.3相对FTCP显著改善。",
+            "stage": "生成结构与学习性质预测器评价",
+            "definition": "不同数据集的代理性质优化/validity/coverage；该部分非独立DFT严格SUN",
+            "locator": "§5.3/Table3; AppendixD"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_extension",
+            "relation": "Con-CDVAE明确以CDVAE为基模型；DiffCSP、MatterGen引用其周期生成先例",
+            "locator": "Con-CDVAE title/§2; DiffCSP Related Work; MatterGen references"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Crystal Diffusion Variational Autoencoder for Periodic Material Generation",
+          "venue": {
+            "venue": "ICLR 2022",
+            "status": "published conference paper",
+            "year": 2022
+          },
+          "source": "https://arxiv.org/abs/2110.06197"
+        },
+        {
+          "title": "Crystal Diffusion Variational Autoencoder for Periodic Material Generation",
+          "venue": {
+            "venue": "ICLR 2022",
+            "year": 2022,
+            "online_date": null,
+            "status": "published main-conference paper"
+          },
+          "source": "https://arxiv.org/abs/2110.06197"
+        }
+      ]
+    },
+    {
+      "id": "R09",
+      "title": "GFlowNet Foundations",
+      "aliases": [
+        "gflownet"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2021-11-17",
+      "venue_date_status": {
+        "venue": "Journal of Machine Learning Research",
+        "year": 2023,
+        "published_month": "2023-06",
+        "status": "published",
+        "volume": "24(210)",
+        "pages": "1–55",
+        "read_version": "2023 JMLR PDF；未混用2026 arXiv v5新增内容"
+      },
+      "date_notes": [],
+      "authors": [
+        "Bengio, Yoshua",
+        "Lahlou, Salem",
+        "Deleu, Tristan",
+        "Hu, Edward J.",
+        "Tiwari, Mo",
+        "Bengio, Emmanuel"
+      ],
+      "doi": null,
+      "arxiv_id": "2111.09266",
+      "primary_url": "https://jmlr.org/papers/v24/22-0364.html",
+      "primary_urls": [
+        "https://jmlr.org/papers/v24/22-0364.html"
+      ],
+      "tasks": [],
+      "challenge_before": "怎样将多峰奖励函数变成可快速独立采样的生成器，而不是只求最高奖励？",
+      "why_important": "科学设计通常需要多个候选，昂贵MCMC及模式混合的工作有机会被训练摊销。",
+      "why_difficult": "一个对象有多条构造路径，奖励的归一化常未知，多峰探索与泛化都困难。",
+      "method": "在构造状态图上学习守恒流与前/后向策略，以平衡目标产生近似按非负终端奖励比例的采样。",
+      "remaining_gap": "奖励比例目标本身不指定未知合格结果的发现价值；物理后处理身份与资格需额外建模，有限训练不能继承理想分布保证。",
+      "challenges": [
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "正式PDFAbstract、§1.1、流/奖励定义及训练原理选读；不宣称全文逐个理论证明已审。",
+          "result_evidence": [
+            {
+              "locator": "§1.1与flow matching/detailed balance理论",
+              "finding": "建立奖励比例采样、条件边缘化与复合对象的理论基础。",
+              "quantitative_claim": null,
+              "protocol": "方法基础，非晶体strict SUN榜单。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "Flow Network Based Generative Models for Non-Iterative Diverse Candidate Generation",
+                "locator": "Introduction opening paragraph",
+                "type": "explicit theory foundation"
+              }
+            ],
+            "review_conceptual_relation": "与SHAFT连接为概念路线；SHAFT v1直接引用2021原始GFlowNet与2023 continuous GFlowNet，而不凭名称假定其直接采用本JMLR篇。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "GFlowNet Foundations",
+          "venue": {
+            "venue": "Journal of Machine Learning Research",
+            "year": 2023,
+            "published_month": "2023-06",
+            "status": "published",
+            "volume": "24(210)",
+            "pages": "1–55",
+            "read_version": "2023 JMLR PDF；未混用2026 arXiv v5新增内容"
+          },
+          "source": "https://jmlr.org/papers/v24/22-0364.html"
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "title": "A universal graph deep learning interatomic potential for the periodic table",
+      "aliases": [
+        "M3GNet2022"
+      ],
+      "themes": [
+        "物理与数据背景"
+      ],
+      "first_public_date": "2022-02",
+      "venue_date_status": "Nature Computational Science 2, 718–728；2022-11-28",
+      "date_notes": [
+        "arXiv 2202.02450；此记录仅使用已核月份"
+      ],
+      "authors": [
+        "Chi Chen",
+        "Shyue Ping Ong"
+      ],
+      "doi": "10.1038/s43588-022-00349-3",
+      "arxiv_id": null,
+      "primary_url": "https://www.nature.com/articles/s43588-022-00349-3",
+      "primary_urls": [
+        "https://www.nature.com/articles/s43588-022-00349-3",
+        "https://arxiv.org/abs/2202.02450"
+      ],
+      "tasks": [
+        "跨化学机器学习原子间势与筛选"
+      ],
+      "challenge_before": "广泛化学空间中的可负担物理评价与弛豫",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "三体图神经网络与Materials Project弛豫轨迹训练",
+      "remaining_gap": "势能近似、候选分布偏移与竞争相参照仍影响生成评价",
+      "challenges": [
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "摘要、结构弛豫与发现结果、数据来源及出版元数据",
+          "result_evidence": "作者对最低预测hull能的2000个候选进行DFT核验，其中1578个稳定；该选择性核验率不是独立生成SUN",
+          "solution_scope": "跨化学势能与选择性高保真核验",
+          "lineage_evidence": "为后续生成、弛豫与反馈学习提供评价工具；不能把预测器本身当生成器"
+        }
+      ],
+      "versions": [
+        {
+          "title": "A universal graph deep learning interatomic potential for the periodic table",
+          "venue": "Nature Computational Science 2, 718–728；2022-11-28",
+          "source": "https://www.nature.com/articles/s43588-022-00349-3"
+        }
+      ]
+    },
+    {
+      "id": "R11",
+      "title": "CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling",
+      "aliases": [
+        "CHGNet2023"
+      ],
+      "themes": [
+        "物理与数据背景"
+      ],
+      "first_public_date": "2023-02",
+      "venue_date_status": "Nature Machine Intelligence 5, 1031–1041；2023-09-14",
+      "date_notes": [
+        "arXiv 2302.14231；此记录仅使用已核月份"
+      ],
+      "authors": [
+        "Bowen Deng",
+        "Peichen Zhong",
+        "KyuJung Jun",
+        "Janosh Riebesell",
+        "Kevin Han",
+        "Christopher J. Bartel",
+        "Gerbrand Ceder"
+      ],
+      "doi": "10.1038/s42256-023-00716-3",
+      "arxiv_id": null,
+      "primary_url": "https://www.nature.com/articles/s42256-023-00716-3",
+      "primary_urls": [
+        "https://www.nature.com/articles/s42256-023-00716-3",
+        "https://arxiv.org/abs/2302.14231"
+      ],
+      "tasks": [
+        "跨化学原子间势与带电信息的原子建模"
+      ],
+      "challenge_before": "原子几何、电子状态相关性与计算代价",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "以磁矩监督表示、学习能量/力/应力等物理量",
+      "remaining_gap": "准确近似势不自动确定生成选择、新颖性或可合成性",
+      "challenges": [
+        "C3",
+        "C4",
+        "C6"
+      ],
+      "directions": [
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "架构、训练数据、主要E/F/stress结果与出版元数据",
+          "result_evidence": "在MPtrj测试集报告能量30meV/atom、力77meV/Å等MAE，并研究异价体系；这是预测与模拟结果",
+          "solution_scope": "物理预测/模拟工具",
+          "lineage_evidence": "多个生成研究明确采用CHGNet物理评价；本项目也保留该评价路线"
+        }
+      ],
+      "versions": [
+        {
+          "title": "CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling",
+          "venue": "Nature Machine Intelligence 5, 1031–1041；2023-09-14",
+          "source": "https://www.nature.com/articles/s42256-023-00716-3"
+        }
+      ]
+    },
+    {
+      "id": "R12",
+      "title": "Crystal structure generation with autoregressive large language modeling",
+      "aliases": [
+        "crystallm",
+        "CrystaLLM"
+      ],
+      "themes": [
+        "表示与生成",
+        "条件与知识"
+      ],
+      "first_public_date": "2023-07-10",
+      "venue_date_status": {
+        "venue": "Nature Communications 15, 10570",
+        "year": 2024,
+        "online_date": "2024-12-06",
+        "status": "published journal article"
+      },
+      "date_notes": [],
+      "authors": [
+        "Luis M. Antunes",
+        "Keith T. Butler",
+        "Ricardo Grau-Crespo"
+      ],
+      "doi": "10.1038/s41467-024-54639-7",
+      "arxiv_id": "2307.04340",
+      "primary_url": "https://www.nature.com/articles/s41467-024-54639-7",
+      "primary_urls": [
+        "https://www.nature.com/articles/s41467-024-54639-7",
+        "https://arxiv.org/abs/2307.04340",
+        "https://github.com/lantunes/CrystaLLM"
+      ],
+      "tasks": [
+        "formula/space-group prompted structure generation",
+        "CSP",
+        "unseen-compound generation",
+        "MCTS-guided decoding"
+      ],
+      "challenge_before": "给定组成后的候选生成需要晶体几何知识；CIF文字是否可以学习组成—空间群—坐标规律未知。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "从晶体语料训练自回归CIF语言模型，组成/空间群前缀生成；形成能预测器指导MCTS。",
+      "remaining_gap": "CIF前缀和学得模板提供重要晶体知识，如何把这些知识作用于未指定关系、连续实现反馈及新物理目标还可扩展。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "arXiv v3生成及标准化方法",
+              "Tables 1–4, 6",
+              "Limitations"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "约10,000个留出CIF生成",
+              "protocol": "组成与空间群前缀；CIF语法、计数、键长合理性和StructureMatcher检验。",
+              "finding": "小模型有空间群前缀时有效率94.0%，首次结构匹配78.4%；这是带已知组成/空间群的结构恢复指标。",
+              "locator": "arXiv v3 Tables 1–2"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "cited_baseline",
+              "predecessor": "diffcsp",
+              "evidence": "CSP Table 4直接采用DiffCSP/CDVAE基准；这不是几何架构继承。",
+              "locator": "Table 4"
+            }
+          ]
+        },
+        {
+          "read_depth": {
+            "depth": "deep_selected_methods_results; journal metadata/selected results",
+            "version": "author v3 2024-02-12 plus final journal result/status",
+            "sections": [
+              "composition/SG generation",
+              "challenge set",
+              "MCTS",
+              "DFT case study",
+              "Methods"
+            ]
+          },
+          "result_evidence": {
+            "claim": "未见组成/空间群组合能生成有效结构；选定DFT例子支持几何合理性；MCTS改善困难组成的有效率和预测能量。",
+            "stage": "CIF/结构匹配，预测形成能MCTS，选定DFT",
+            "definition": "提供空间群与否分别评价；100次挑战集尝试和标准CSP另设预算",
+            "locator": "main results; challenge set; author v3 Tables3/4/6"
+          },
+          "lineage_evidence": {
+            "kind": "distinct_representation_lineage",
+            "relation": "与Gruver Crystal-LLM不同：scratch CIF model vs pretrained LLaMA geometry text；后者原文明确讨论tokenized atomistic建模",
+            "locator": "CrystaLLM Methods; Crystal-LLM §2/§4"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Crystal structure generation with autoregressive large language modeling",
+          "venue": {
+            "venue": "Nature Communications 15, 10570",
+            "status": "published journal article",
+            "online_date": "2024-12-06",
+            "date_note": "在线日期由出版者提交的DOI登记元数据核验；方法和表格读取arXiv v3，未把当前仓库后续功能回写原稿。"
+          },
+          "source": "https://www.nature.com/articles/s41467-024-54639-7"
+        },
+        {
+          "title": "Crystal structure generation with autoregressive large language modeling",
+          "venue": {
+            "venue": "Nature Communications 15, 10570",
+            "year": 2024,
+            "online_date": "2024-12-06",
+            "status": "published journal article"
+          },
+          "source": "https://www.nature.com/articles/s41467-024-54639-7"
+        }
+      ]
+    },
+    {
+      "id": "R13",
+      "title": "Crystal Structure Prediction by Joint Equivariant Diffusion",
+      "aliases": [
+        "diffcsp",
+        "DiffCSP"
+      ],
+      "themes": [
+        "表示与生成",
+        "条件与知识"
+      ],
+      "first_public_date": "2023-07-30",
+      "venue_date_status": {
+        "venue": "NeurIPS 2023",
+        "year": 2023,
+        "online_date": null,
+        "status": "published main-conference paper"
+      },
+      "date_notes": [],
+      "authors": [
+        "Rui Jiao",
+        "Wenbing Huang",
+        "Peijia Lin",
+        "Jiaqi Han",
+        "Pin Chen",
+        "Yutong Lu",
+        "Yang Liu"
+      ],
+      "doi": null,
+      "arxiv_id": "2309.04475",
+      "primary_url": "https://arxiv.org/abs/2309.04475",
+      "primary_urls": [
+        "https://arxiv.org/abs/2309.04475",
+        "https://github.com/jiaor17/DiffCSP",
+        "https://arxiv.org/abs/2309.04475v1"
+      ],
+      "tasks": [
+        "CSP given atom-type multiset",
+        "DNG extension"
+      ],
+      "challenge_before": "给定原子类型后的晶格与坐标需联合搜索，同时处理旋转、平移、置换和周期性。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "分数坐标与晶格联合扩散，周期E(3)等变去噪；基本CSP任务固定组成。",
+      "remaining_gap": "物理功能设计往往还要决定组成和保存多晶型；恢复一个数据库参考之后，低能多解覆盖仍有独立问题。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Sections 3–5",
+              "Tables 1–3",
+              "Appendix G"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20 CSP",
+              "protocol": "标准60/20/20拆分，未弛豫；k=1和k=20按StructureMatcher参考恢复。",
+              "finding": "匹配率51.49%/77.93%；Table 3分阶段L→F为50.03%、F→L为36.73%，支持该实现中联合几何更新的收益。",
+              "locator": "Tables 1, 3"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "explicit_problem_extension",
+              "predecessor": "cdvae",
+              "evidence": "直接解释与CDVAE原任务/生成过程的区别，并为CSP构造组成条件CDVAE基线。",
+              "locator": "Introduction; Related Work; Section 5.1"
+            }
+          ]
+        },
+        {
+          "read_depth": {
+            "depth": "deep_selected_task_and_results",
+            "version": "v2, 2024-03-07; v1 submission history independently checked",
+            "sections": [
+              "§3–5",
+              "CSP fixed composition",
+              "Table1",
+              "Appendix G"
+            ]
+          },
+          "result_evidence": {
+            "claim": "标准CSP基准改善结构匹配和计算效率；样本数增加可提高参考恢复。",
+            "stage": "StructureMatcher reference recovery",
+            "definition": "MP-20等参考结构Match/RMSE；不直接测完整多晶型低能集合",
+            "locator": "§5/Table1; generation extension"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_backbone",
+            "relation": "SCIGEN实例包装DiffCSP；CrysLLMGen连续模型扩展DiffCSP",
+            "locator": "SCIGEN Algorithms1/2; CrysLLMGen §4/§7"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Crystal Structure Prediction by Joint Equivariant Diffusion",
+          "venue": {
+            "venue": "NeurIPS 2023",
+            "status": "published conference paper",
+            "year": 2023,
+            "date_note": "2026-10-10核arXiv abs及v1 history均显示2023-07-30；不以2309编号推断9月日期。"
+          },
+          "source": "https://arxiv.org/abs/2309.04475"
+        },
+        {
+          "title": "Crystal Structure Prediction by Joint Equivariant Diffusion",
+          "venue": {
+            "venue": "NeurIPS 2023",
+            "year": 2023,
+            "online_date": null,
+            "status": "published main-conference paper"
+          },
+          "source": "https://arxiv.org/abs/2309.04475"
+        }
+      ]
+    },
+    {
+      "id": "R14",
+      "title": "Reinforcement learning in crystal structure prediction",
+      "aliases": [
+        "rlcsp"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2023-09-26",
+      "venue_date_status": {
+        "venue": "Digital Discovery",
+        "year": 2023,
+        "published_online": "2023-09-26",
+        "status": "published",
+        "volume": "2",
+        "pages": "1831–1840",
+        "read_version": "publisher selected Methods/Conclusion"
+      },
+      "date_notes": [
+        "已核publisher首次在线日期；未确认更早公开预印本。"
+      ],
+      "authors": [
+        "Elena Zamaraeva",
+        "Christopher M. Collins",
+        "Dmytro Antypov",
+        "Vladimir V. Gusev",
+        "Rahul Savani",
+        "Matthew S. Dyer",
+        "George R. Darling",
+        "Igor Potapov",
+        "Matthew J. Rosseinsky",
+        "Paul G. Spirakis"
+      ],
+      "doi": "10.1039/D3DD00063J",
+      "arxiv_id": null,
+      "primary_url": "https://pubs.rsc.org/en/content/articlehtml/2023/dd/d3dd00063j",
+      "primary_urls": [
+        "https://pubs.rsc.org/en/content/articlehtml/2023/dd/d3dd00063j"
+      ],
+      "tasks": [],
+      "challenge_before": "手工固定的basin-hopping动作概率怎样随当前结构与搜索经验而改变？",
+      "why_important": "同一相域内的不同组成未必适用同一手调动作策略，物理调用可用于改善下一步选择。",
+      "why_difficult": "状态相关动作效果依赖体系与当前结构，学习过程也要保持搜索成本低。",
+      "method": "在FUSE和MC-EMMA中用policy gradient在线学习依赖当前结构的动作策略。",
+      "remaining_gap": "证明在线自适应搜索价值；不同生成状态中的可靠反馈与可执行决定、跨新请求知识迁移仍需专门研究。",
+      "challenges": [
+        "C4",
+        "C6"
+      ],
+      "directions": [
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "原始RSC摘要、basin-hopping/RL方法说明及Conclusion；HTTP正文直取被403限制，检索返回的原始全文段落已核。",
+          "result_evidence": [
+            {
+              "locator": "§4 Conclusion",
+              "finding": "两个basin-hopping代码的组成研究显示在线策略收益随体系而变化。",
+              "quantitative_claim": null,
+              "protocol": "两个basin-hopping CSP代码、六种组成的物理搜索；未提取原表，不录摘要或结论段的时间/胜率量化。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "FUSE and MC-EMMA basin hopping",
+                "locator": "§2 and §4",
+                "type": "implemented search-code lineage"
+              }
+            ],
+            "review_conceptual_relation": "是C4早期显式化先例；OMatG-IRL的首次主张应限定其预训练连续生成器接口，不能扩展成所有RL-CSP首次。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Reinforcement learning in crystal structure prediction",
+          "venue": {
+            "venue": "Digital Discovery",
+            "year": 2023,
+            "published_online": "2023-09-26",
+            "status": "published",
+            "volume": "2",
+            "pages": "1831–1840",
+            "read_version": "publisher selected Methods/Conclusion"
+          },
+          "source": "https://pubs.rsc.org/en/content/articlehtml/2023/dd/d3dd00063j"
+        }
+      ]
+    },
+    {
+      "id": "R15",
+      "title": "Scalable Diffusion for Materials Generation",
+      "aliases": [
+        "unimat"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2023-10-18",
+      "venue_date_status": {
+        "venue": "ICLR 2024",
+        "status": "published conference paper",
+        "year": 2024
+      },
+      "date_notes": [],
+      "authors": [
+        "Yang, Sherry",
+        "Cho, KwangHwan",
+        "Merchant, Amil",
+        "Abbeel, Pieter",
+        "Schuurmans, Dale",
+        "Mordatch, Igor",
+        "Cubuk, Ekin Dogus"
+      ],
+      "doi": null,
+      "arxiv_id": "2311.09235",
+      "primary_url": "https://arxiv.org/abs/2311.09235",
+      "primary_urls": [
+        "https://arxiv.org/abs/2311.09235",
+        "https://proceedings.iclr.cc/paper_files/paper/2024/hash/cea5ebedc384c5f4b4ef6b6eb29c197f-Abstract-Conference.html",
+        "https://unified-materials.github.io/"
+      ],
+      "tasks": [
+        "DNG",
+        "composition-conditioned structure proposal"
+      ],
+      "challenge_before": "显式结构图可能限制大规模训练；代理生成指标与实际低能结构产出之间不一致。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "把原子坐标按周期表的周期/族排成张量，以空位置标识缺失原子；训练注意力/卷积扩散模型，用随机置换旋转等增强处理等价性。",
+      "remaining_gap": "张量维度与最大原子数限制仍存在；不变性主要通过增强获得，规模收益和表示收益需结合训练分布理解；凸包参照变化影响稳定计数。",
+      "challenges": [
+        "C1",
+        "C3",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Section 2.1",
+              "Section 3.2",
+              "Tables 2–3"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20生成的DFT评估",
+              "protocol": "比较两生成器重合组成的弛豫结构，并相对MP2021/GNoME凸包评价。",
+              "finding": "重合组成中86.3% UniMat候选能量更低，平均形成能比CDVAE低0.216eV/atom；Table 3相对MP2021低于凸包候选数414对56。",
+              "locator": "Tables 2–3"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "cited_baseline_and_problem_reformulation",
+              "predecessor": "cdvae",
+              "evidence": "沿用CDVAE代理基准，同时明确指出代理指标饱和和不可靠，加入DFT及同组成比较。",
+              "locator": "Sections 1, 3.1–3.2"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "Scalable Diffusion for Materials Generation",
+          "venue": {
+            "venue": "ICLR 2024",
+            "status": "published conference paper",
+            "year": 2024
+          },
+          "source": "https://arxiv.org/abs/2311.09235"
+        }
+      ]
+    },
+    {
+      "id": "R16",
+      "title": "An invertible, invariant crystal representation for inverse design of solid-state materials using generative deep learning",
+      "aliases": [
+        "slices"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2023-11-02",
+      "venue_date_status": {
+        "venue": "Nature Communications 14, 7027",
+        "status": "published journal article",
+        "online_date": "2023-11-02",
+        "date_note": "记录已核期刊公开日，未核更早预印本。"
+      },
+      "date_notes": [],
+      "authors": [
+        "Hang Xiao",
+        "Rong Li",
+        "Xiaoyang Shi",
+        "Yan Chen",
+        "Liangliang Zhu",
+        "Xi Chen",
+        "Lei Wang"
+      ],
+      "doi": "10.1038/s41467-023-42870-7",
+      "arxiv_id": null,
+      "primary_url": "https://www.nature.com/articles/s41467-023-42870-7",
+      "primary_urls": [
+        "https://www.nature.com/articles/s41467-023-42870-7",
+        "https://github.com/xiaohang007/SLICES"
+      ],
+      "tasks": [
+        "structure reconstruction",
+        "topology-sequence inverse design",
+        "direct narrow-gap semiconductor design"
+      ],
+      "challenge_before": "CIF/坐标把同一个周期结构展开成大量不同序列；理想序列须保留周期连通关系并可实现回三维结构。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "以带周期平移标签的商图编码晶体为字符串；SLI2Cry先进行图论实现，再以修改的GFN-FF和M3GNet完成几何优化。",
+      "remaining_gap": "拓扑不能唯一确定连续晶胞及坐标，几何实现依赖优化器与势；物理相兼容性不能由字符串语法保证。",
+      "challenges": [
+        "C1",
+        "C3",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "selected_methods_results",
+            "locators": [
+              "Results: SLICES representation/reconstruction",
+              "Table 1",
+              "Discussion"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "重构与半导体逆设计",
+              "protocol": "在40,330个经筛选的MP-20结构上评价重构；解码包含物理优化，另开展DFT半导体筛选。",
+              "finding": "原文验证周期拓扑字符串可以恢复大批结构并提出满足目标的半导体候选；重构能力属于完整解码流程。",
+              "locator": "Results; Table 1"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "conceptual_link_only",
+              "predecessor": "ftcp",
+              "evidence": "二者都处理可逆表示，但SLICES引入周期商图与独立几何实现；此处是综述的表示问题关联，不宣称VAE架构继承。"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "An invertible, invariant crystal representation for inverse design of solid-state materials using generative deep learning",
+          "venue": {
+            "venue": "Nature Communications 14, 7027",
+            "status": "published journal article",
+            "online_date": "2023-11-02",
+            "date_note": "记录已核期刊公开日，未核更早预印本。"
+          },
+          "source": "https://www.nature.com/articles/s41467-023-42870-7"
+        }
+      ]
+    },
+    {
+      "id": "R17",
+      "title": "Author Correction: An autonomous laboratory for the accelerated synthesis of inorganic materials",
+      "aliases": [
+        "ALab2023",
+        "ALabCorrection2026"
+      ],
+      "themes": [
+        "物理与数据背景"
+      ],
+      "first_public_date": "2023-11-29",
+      "venue_date_status": "Nature 650, E1 (2026)",
+      "date_notes": [],
+      "authors": [
+        "Nathan J. Szymanski",
+        "Bernardus Rendy",
+        "Yuxing Fei",
+        "Rishi E. Kumar",
+        "Tanjin He",
+        "David Milsted",
+        "Matthew J. McDermott",
+        "Max Gallant",
+        "Ekin Dogus Cubuk",
+        "Amil Merchant",
+        "Haegyeom Kim",
+        "Anubhav Jain",
+        "Christopher J. Bartel",
+        "Kristin Persson",
+        "Yan Zeng",
+        "Gerbrand Ceder"
+      ],
+      "doi": "10.1038/s41586-025-09992-y",
+      "arxiv_id": null,
+      "primary_url": "https://www.nature.com/articles/s41586-025-09992-y",
+      "primary_urls": [
+        "https://www.nature.com/articles/s41586-023-06734-w",
+        "https://www.nature.com/articles/s41586-025-09992-y"
+      ],
+      "tasks": [
+        "实验合成流程与闭环决策",
+        "实验身份与新颖性表述的更正"
+      ],
+      "challenge_before": "新颖性参照和实验物相识别需要明确",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "重新分析衍射结果并修订原文",
+      "remaining_gap": "评价参照与不确定性是发现结论的组成部分",
+      "challenges": [
+        "C1",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "更正后摘要/主文实验计数和Author Correction",
+          "result_evidence": "更正版报告17天353次实验、57个目标中36个成功；身份与新颖性按更正后解释",
+          "solution_scope": "实验平台的指定目标实现",
+          "lineage_evidence": "作为发现链下游背景和评价概念参照，不作为生成模型同榜比较"
+        },
+        {
+          "read_depth": "完整更正说明及更新链接",
+          "result_evidence": "原新颖性措辞修订，36个成功、4个衍射不足以判断；另移除一项误入训练数据的目标",
+          "solution_scope": "原始结果更正",
+          "lineage_evidence": "对ALab2023的直接更正关系"
+        }
+      ],
+      "versions": [
+        {
+          "title": "An autonomous laboratory for the accelerated synthesis of inorganic materials",
+          "venue": "Nature 624, 86–91 (2023)，按2026-01-19更正版读取",
+          "source": "https://www.nature.com/articles/s41586-023-06734-w"
+        },
+        {
+          "title": "Author Correction: An autonomous laboratory for the accelerated synthesis of inorganic materials",
+          "venue": "Nature 650, E1 (2026)",
+          "source": "https://www.nature.com/articles/s41586-025-09992-y"
+        }
+      ]
+    },
+    {
+      "id": "R18",
+      "title": "Scaling deep learning for materials discovery",
+      "aliases": [
+        "GNoME2023",
+        "gnome"
+      ],
+      "themes": [
+        "物理与数据背景",
+        "物理与发现"
+      ],
+      "first_public_date": "2023-11-29",
+      "venue_date_status": {
+        "venue": "Nature",
+        "year": 2023,
+        "status": "published",
+        "published_online": "2023-11-29",
+        "read_version": "publisher article"
+      },
+      "date_notes": [
+        "Nature已核在线公开日期；本索引不声称不存在更早非出版公开稿。",
+        "已核正式公开日期"
+      ],
+      "authors": [
+        "Amil Merchant",
+        "Simon Batzner",
+        "Samuel S. Schoenholz",
+        "Muratahan Aykol",
+        "Gowoon Cheon",
+        "Ekin Dogus Cubuk"
+      ],
+      "doi": "10.1038/s41586-023-06735-9",
+      "arxiv_id": null,
+      "primary_url": "https://www.nature.com/articles/s41586-023-06735-9",
+      "primary_urls": [
+        "https://www.nature.com/articles/s41586-023-06735-9"
+      ],
+      "tasks": [
+        "生成候选、模型筛选、DFT验证与预测器迭代学习"
+      ],
+      "challenge_before": "怎样让一次次候选物理验证同时扩展材料库和后续预测/提出能力？",
+      "why_important": "单次筛选成功之外，昂贵DFT结果还可能提升整个发现循环。",
+      "why_difficult": "候选空间巨大，数据与稳定性标签随新竞争相变化，泛化需按组成隔离。",
+      "method": "结构替换与组成候选提出、图网络能量筛选、标准化DFT验证，以及将结果加入训练数据和未来候选来源的主动循环。",
+      "remaining_gap": "这里主要增长PES预测器与候选数据库；生成干预关系的学习、未知合格结果分布及应用实现仍有不同问题。",
+      "challenges": [
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "主文筛选—DFT—学习循环、更新凸包与发现结果、元数据",
+          "result_evidence": "相对旧资料约220万稳定候选，经相互竞争更新hull后为38.1万新稳定条目；不是38.1万已合成材料",
+          "solution_scope": "大规模计算发现和迭代物理知识积累",
+          "lineage_evidence": "直接展示物理计算反哺学习，C6不能表述为历史空白"
+        },
+        {
+          "read_depth": "原始Nature网页Active learning、Scaling and generalization、Methods candidate generation和composition-based hashing；背景元数据另见背景文献索引。",
+          "result_evidence": [
+            {
+              "locator": "Active learning；Methods Active learning；Composition-based hashing",
+              "finding": "DFT结果同时用于验证、重新训练GNN及扩大可替换父结构，体现计算积累的已完成能力。",
+              "quantitative_claim": null,
+              "protocol": "不同候选管线与新hull；本分稿不取Fig.1量化结果，避免把新hull条目称为全部已合成。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "Data-mined ionic substitutions",
+                "locator": "Methods Substitution patterns",
+                "type": "candidate-generation method"
+              },
+              {
+                "target": "Materials Project/OQMD/WBM",
+                "locator": "Methods Datasets and candidate generation",
+                "type": "data lineage"
+              }
+            ],
+            "review_conceptual_relation": "用于说明C6的物理数据积累早已部分解决，不能把它直接改写为扩散后训练。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Scaling deep learning for materials discovery",
+          "venue": "Nature 624, 80–85 (2023)",
+          "source": "https://www.nature.com/articles/s41586-023-06735-9"
+        },
+        {
+          "title": "Scaling deep learning for materials discovery",
+          "venue": {
+            "venue": "Nature",
+            "year": 2023,
+            "status": "published",
+            "published_online": "2023-11-29",
+            "read_version": "publisher article"
+          },
+          "source": "https://www.nature.com/articles/s41586-023-06735-9"
+        }
+      ]
+    },
+    {
+      "id": "R19",
+      "title": "A generative model for inorganic materials design",
+      "aliases": [
+        "mattergen",
+        "MatterGen"
+      ],
+      "themes": [
+        "表示与生成",
+        "条件与知识",
+        "物理与发现"
+      ],
+      "first_public_date": "2023-12-06",
+      "venue_date_status": {
+        "venue": "Nature",
+        "year": 2025,
+        "published_online": "2025-01-16",
+        "status": "published",
+        "volume": "639",
+        "pages": "624–632",
+        "read_version": "formal Nature text and supplement；2023/2024 arXiv only for first date"
+      },
+      "date_notes": [],
+      "authors": [
+        "Claudio Zeni",
+        "Robert Pinsler",
+        "Daniel Zügner",
+        "Andrew Fowler",
+        "Matthew Horton",
+        "Xiang Fu",
+        "Zilong Wang",
+        "Aliaksandra Shysheya",
+        "Jonathan Crabbé",
+        "Shoko Ueda",
+        "Roberto Sordillo",
+        "Lixin Sun",
+        "Jake Smith",
+        "Bichlien Nguyen",
+        "Hannes Schulz",
+        "Sarah Lewis",
+        "Chin-Wei Huang",
+        "Ziheng Lu",
+        "Yichi Zhou",
+        "Han Yang",
+        "Hongxia Hao",
+        "Jielan Li",
+        "Chunlei Yang",
+        "Wenjie Li",
+        "Ryota Tomioka",
+        "Tian Xie"
+      ],
+      "doi": "10.1038/s41586-025-08628-5",
+      "arxiv_id": "2312.03687",
+      "primary_url": "https://www.nature.com/articles/s41586-025-08628-5",
+      "primary_urls": [
+        "https://www.nature.com/articles/s41586-025-08628-5",
+        "https://arxiv.org/abs/2312.03687",
+        "https://github.com/microsoft/mattergen"
+      ],
+      "tasks": [
+        "DNG",
+        "property/chemistry/symmetry conditional generation after adapter fine-tuning"
+      ],
+      "challenge_before": "能否直接提出稳定、新颖且满足多种目标性质的完整周期结构，并进入物理验证？",
+      "why_important": "从仅检索已有候选发展为可扩展逆向设计，需要可靠结构提出与验证闭环。",
+      "why_difficult": "元素、坐标、晶格相互依赖；性质标注不均；稳定与新颖受数据/参照/筛选影响。",
+      "method": "联合扩散生成元素、坐标和晶格，性质adapter微调，MLFF预筛与DFT/实验验证。",
+      "remaining_gap": "完整闭环已实现，但不同收益来自模型、训练规模、化学访问还是后处理，需要有针对性分解；机制泛化仍受分布限制。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "selected_methods_results",
+            "locators": [
+              "Nature main text: Diffusion process for materials",
+              "Figure 1",
+              "Generating stable, diverse materials; Figure 2"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "基模DNG",
+              "protocol": "1,024个生成结构做DFT，相对联合Alex-MP-ICSD凸包，能量阈值0.1eV/atom。",
+              "finding": "75%低于0.1eV/atom、3%低于0；95%生成到DFT弛豫的RMSD低于0.076Å，说明学到接近终态的结构分布。",
+              "locator": "Nature Figure 2 and main text"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "cited_predecessor_and_baseline",
+              "predecessors": [
+                "cdvae",
+                "diffcsp"
+              ],
+              "evidence": "Nature正文把二者作为前代生成器，并在同MP-20训练模型中比较；联合三变量扩散进一步发展前代状态空间设计。",
+              "locator": "Diffusion process; benchmark discussion"
+            }
+          ]
+        },
+        {
+          "read_depth": {
+            "depth": "deep main-paper conditional results; final/supplement locators retained",
+            "version": "Nature final",
+            "sections": [
+              "property-guided design",
+              "joint magnetic density/HHI",
+              "experimental validation",
+              "Figs4–6"
+            ]
+          },
+          "result_evidence": {
+            "claim": "广泛单性质及磁密度+HHI联合设计；180次DFT性质调用获得106个高模量SUN候选，筛选40个；TaCr2O6合成验证目标设计。",
+            "stage": "MLIP筛选→DFT/性质→选定合成",
+            "definition": "论文SUN采用其近凸包/去重/ordered-disordered matcher；预算为性质调用，不是全部计算。目标200GPa，DFT222GPa；实验无序样品最高169GPa、四次158±11GPa。",
+            "locator": "Property-guided design; Fig6; Experimental validation; supplement B/D"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_successor_and_baseline",
+            "relation": "从周期生成到多性质设计；TFMat/UFO/Composable及后训练工作将其作为重要先行或基线",
+            "locator": "MatterGen main; successors references/results"
+          }
+        },
+        {
+          "read_depth": "正式原文base model、chemistry/property-guided design、experimental validation及训练/评价定义；首稿元数据另核。",
+          "result_evidence": [
+            {
+              "locator": "Base model evaluation；Chemistry-/Property-guided design；Experimental validation",
+              "finding": "展示多类性质/化学条件材料提出、DFT验证与一个实验验证案例。",
+              "quantitative_claim": null,
+              "protocol": "正式base评价1024生成样本；stable允许DFT-relaxed energy above Alex-MP-ICSD hull≤0.1 eV/atom；不能与on-hull SUN直接混比。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [],
+            "review_conceptual_relation": "本分稿只核系统机制；MatInvent §2.1明确以MatterGen为默认扩散基座，为后继继承提供直接证据。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "A generative model for inorganic materials design",
+          "venue": {
+            "venue": "Nature 639, 624–632",
+            "status": "published journal article",
+            "online_date": "2025-01-16",
+            "issue_date": "2025-03-20"
+          },
+          "source": "https://www.nature.com/articles/s41586-025-08628-5"
+        },
+        {
+          "title": "A generative model for inorganic materials design",
+          "venue": {
+            "venue": "Nature 639, 624–632",
+            "year": 2025,
+            "online_date": "2025-01-16",
+            "status": "published journal article"
+          },
+          "source": "https://www.nature.com/articles/s41586-025-08628-5"
+        },
+        {
+          "title": "A generative model for inorganic materials design",
+          "venue": {
+            "venue": "Nature",
+            "year": 2025,
+            "published_online": "2025-01-16",
+            "status": "published",
+            "volume": "639",
+            "pages": "624–632",
+            "read_version": "formal Nature text and supplement；2023/2024 arXiv only for first date"
+          },
+          "source": "https://www.nature.com/articles/s41586-025-08628-5"
+        }
+      ]
+    },
+    {
+      "id": "R20",
+      "title": "Invariant Tokenization of Crystalline Materials for Language Model Enabled Generation",
+      "aliases": [
+        "mat2seq"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2024",
+      "venue_date_status": {
+        "venue": "NeurIPS 2024",
+        "status": "published conference paper",
+        "year": 2024,
+        "date_note": "最早已核公开年份为官方NeurIPS2024会议录；OpenReview准确公开时刻未核（浏览验证/API403），不把2025 arXiv上传日当方法起点。"
+      },
+      "date_notes": [],
+      "authors": [
+        "Yan, Keqiang",
+        "Li, Xiner",
+        "Ling, Hongyi",
+        "Ashen, Kenna",
+        "Edwards, Carl",
+        "Arróyave, Raymundo",
+        "Zitnik, Marinka",
+        "Ji, Heng",
+        "Qian, Xiaofeng",
+        "Qian, Xiaoning",
+        "Ji, Shuiwang"
+      ],
+      "doi": null,
+      "arxiv_id": "2503.00152",
+      "primary_url": "https://papers.nips.cc/paper_files/paper/2024/hash/e23133d34964a0a09f6d076fc4b922a4-Abstract-Conference.html",
+      "primary_urls": [
+        "https://papers.nips.cc/paper_files/paper/2024/hash/e23133d34964a0a09f6d076fc4b922a4-Abstract-Conference.html",
+        "https://arxiv.org/abs/2503.00152",
+        "https://github.com/divelab/AIRS/tree/main/OpenMat/Mat2Seq"
+      ],
+      "tasks": [
+        "CSP",
+        "DNG",
+        "band-gap conditional generation"
+      ],
+      "challenge_before": "同一晶体的多种CIF序列使序列模型重复学习等价性，缺少可完整重建且规范化的结构序列。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "用Niggli晶格约化、原点选择及原子排序构造规范单位胞，将SO(3)等变晶胞转成SE(3)及周期不变序列，并训练AR模型。",
+      "remaining_gap": "表示完整性与不变性的论证针对其归一化定义和数值编码；性质控制主要依赖代理预测，规范化不会自行保证几何或竞争相稳定。",
+      "challenges": [
+        "C1",
+        "C3",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Sections 3–4",
+              "Tables 1–2, 4, 6",
+              "Appendix Table 10"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20 CSP",
+              "protocol": "与此前结构生成器的标准参考匹配口径；one-shot。",
+              "finding": "匹配率61.3%，高于表内DiffCSP51.5%；DFT DNG附表在温度1.35下SUN2.0%，说明表示收益与物理发现须分别评价。",
+              "locator": "Table 2; Appendix Table 10"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "explicit_representation_problem_extension",
+              "predecessors": [
+                "crystallm",
+                "crystal_llm"
+              ],
+              "evidence": "Introduction/Section 3直接指出前代CIF/text序列的不唯一性，并比较周期变换后的表示。",
+              "locator": "Introduction; Table 1"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "Invariant Tokenization of Crystalline Materials for Language Model Enabled Generation",
+          "venue": {
+            "venue": "NeurIPS 2024",
+            "status": "published conference paper",
+            "year": 2024,
+            "date_note": "最早已核公开年份为官方NeurIPS2024会议录；OpenReview准确公开时刻未核（浏览验证/API403），不把2025 arXiv上传日当方法起点。"
+          },
+          "source": "https://papers.nips.cc/paper_files/paper/2024/hash/e23133d34964a0a09f6d076fc4b922a4-Abstract-Conference.html"
+        }
+      ]
+    },
+    {
+      "id": "R21",
+      "title": "Fine-Tuned Language Models Generate Stable Inorganic Materials as Text",
+      "aliases": [
+        "crystal_llm",
+        "Crystal-LLM"
+      ],
+      "themes": [
+        "表示与生成",
+        "条件与知识"
+      ],
+      "first_public_date": "2024-02-06",
+      "venue_date_status": {
+        "venue": "ICLR 2024",
+        "year": 2024,
+        "online_date": null,
+        "status": "published main-conference paper"
+      },
+      "date_notes": [],
+      "authors": [
+        "Nate Gruver",
+        "Anuroop Sriram",
+        "Andrea Madotto",
+        "Andrew Gordon Wilson",
+        "C. Lawrence Zitnick",
+        "Zachary Ulissi"
+      ],
+      "doi": null,
+      "arxiv_id": "2402.04379",
+      "primary_url": "https://arxiv.org/abs/2402.04379",
+      "primary_urls": [
+        "https://arxiv.org/abs/2402.04379",
+        "https://github.com/facebookresearch/crystal-text-llm",
+        "https://proceedings.iclr.cc/paper_files/paper/2024/hash/5dc6d1c81754c32008c9667339b3fdd3-Abstract-Conference.html"
+      ],
+      "tasks": [
+        "DNG as text",
+        "text/property conditioning",
+        "infilling"
+      ],
+      "challenge_before": "多类型科学数据难共享生成接口；通用LLM能否学习晶体数字几何与对称未知。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "LoRA微调LLaMA-2，固定精度晶体文本，任务提示与平移增强支持生成、条件和infilling。",
+      "remaining_gap": "语言编码已构成可用晶体接口；精确计量、数值性质和几何反馈下的决定修订仍可提升。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "directions": [
+        "A",
+        "B"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Crystal string representation/LoRA methods",
+              "Table 1",
+              "symmetry learning",
+              "Limitations"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20文本DNG",
+              "protocol": "M3GNet先弛豫/筛选，只有预测低于0.1eV/atom者送DFT；Table 1稳定率按原生成候选计算。",
+              "finding": "可生成经DFT验证低于参考凸包的候选，并显示相对于从头训练文本模型的预训练收益；逐项数字见原Table 1。",
+              "locator": "Table 1; Appendix A.5/B.2"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "cited_parallel_predecessor",
+              "predecessor": "crystallm",
+              "evidence": "引用CrystaLLM的CIF语言建模工作；本工作强调通用预训练LLM+LoRA与精简结构文本。",
+              "locator": "References; representation discussion; Appendix A.5"
+            }
+          ]
+        },
+        {
+          "read_depth": {
+            "depth": "deep_selected_methods_conditional_results",
+            "version": "ICLR 2024 paper",
+            "sections": [
+              "§4",
+              "§5",
+              "Fig7"
+            ]
+          },
+          "result_evidence": {
+            "claim": "70B模型约49%预测亚稳率（CDVAE28%）；空间群提示约24%命中，并展示结构填补。",
+            "stage": "M3GNet relaxation与selected DFT；条件匹配",
+            "definition": "49%为预测亚稳，不是全部DFT严格SUN；空间群判断symprec0.2Å",
+            "locator": "§5/Figs4–7"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_model_lineage",
+            "relation": "FlowLLM基分布及CrysLLMGen语言模块沿用fine-tuned LLaMA crystal text路线",
+            "locator": "FlowLLM §3/Algorithm1; CrysLLMGen §4.3"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Fine-Tuned Language Models Generate Stable Inorganic Materials as Text",
+          "venue": {
+            "venue": "ICLR 2024",
+            "status": "published conference paper",
+            "year": 2024
+          },
+          "source": "https://arxiv.org/abs/2402.04379"
+        },
+        {
+          "title": "Fine-Tuned Language Models Generate Stable Inorganic Materials as Text",
+          "venue": {
+            "venue": "ICLR 2024",
+            "year": 2024,
+            "online_date": null,
+            "status": "published main-conference paper"
+          },
+          "source": "https://arxiv.org/abs/2402.04379"
+        }
+      ]
+    },
+    {
+      "id": "R22",
+      "title": "Space Group Constrained Crystal Generation",
+      "aliases": [
+        "diffcsppp"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2024-02-06",
+      "venue_date_status": {
+        "venue": "ICLR 2024",
+        "status": "published conference paper",
+        "year": 2024
+      },
+      "date_notes": [],
+      "authors": [
+        "Jiao, Rui",
+        "Huang, Wenbing",
+        "Liu, Yu",
+        "Zhao, Deli",
+        "Liu, Yang"
+      ],
+      "doi": null,
+      "arxiv_id": "2402.03992",
+      "primary_url": "https://arxiv.org/abs/2402.03992",
+      "primary_urls": [
+        "https://arxiv.org/abs/2402.03992",
+        "https://github.com/jiaor17/DiffCSP-PP"
+      ],
+      "tasks": [
+        "CSP",
+        "DNG with sampled templates",
+        "space-group-controlled generation"
+      ],
+      "challenge_before": "周期平移和整体旋转处理正确，仍不足以生成目标空间群；空间群约束同时影响晶格与各原子轨道。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "在O(3)不变的晶格对数空间施加晶系基约束，将坐标噪声/去噪限制到给定Wyckoff轨道的自由参数，并由群操作展开等价原子。",
+      "remaining_gap": "DNG使用已有结构模板，限制模板创新；高对称约束可能排除较低能的对称破缺，满足指定群不等于最终精确空间群或稳定性保证。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Sections 4–5",
+              "Table 1",
+              "generation template sampling"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20 CSP",
+              "protocol": "需区分空间群/模板的预测与真值输入，未弛豫的参考匹配。",
+              "finding": "Table 1真值模板/空间群设置匹配率80.27%，CSPML预测条件设置70.58%；条件来源实质改变任务难度。",
+              "locator": "Table 1"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "explicit_extension",
+              "predecessor": "diffcsp",
+              "evidence": "摘要和Introduction明确称对DiffCSP增加空间群约束；保留联合扩散并改变可采样几何空间。",
+              "locator": "Introduction; Section 4"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "Space Group Constrained Crystal Generation",
+          "venue": {
+            "venue": "ICLR 2024",
+            "status": "published conference paper",
+            "year": 2024
+          },
+          "source": "https://arxiv.org/abs/2402.03992"
+        }
+      ]
+    },
+    {
+      "id": "R23",
+      "title": "Illuminating the property space in crystal structure prediction using Quality-Diversity algorithms",
+      "aliases": [
+        "qd"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2024-03-06",
+      "venue_date_status": {
+        "venue": "Digital Discovery",
+        "year": 2024,
+        "published_online": "2024-06-19",
+        "status": "published",
+        "volume": "3",
+        "pages": "1554–1563",
+        "read_version": "arXiv v1与publisher身份"
+      },
+      "date_notes": [],
+      "authors": [
+        "Marta Wolinska",
+        "Aron Walsh",
+        "Antoine Cully"
+      ],
+      "doi": "10.1039/D4DD00054D",
+      "arxiv_id": "2403.03511",
+      "primary_url": "https://arxiv.org/html/2403.03511v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2403.03511v1"
+      ],
+      "tasks": [],
+      "challenge_before": "怎样同时找出低能与电子/机械性质不同的多种晶体，而非只找单一最低点？",
+      "why_important": "多种可行结构和性质图谱能支持选材与理解搜索空间。",
+      "why_difficult": "高维构形与昂贵性质评价限制多样探索，单一最优或Pareto前沿会丢弃其它有用结构。",
+      "method": "MAP-Elites按预设性质特征组织archive，在各区域优化能量；ML代理提供能量与性质评价。",
+      "remaining_gap": "已有多样低能档案；未知资格与结果类别如何共同学习，以及档案怎样影响未见请求生成能力仍有空间。",
+      "challenges": [
+        "C4",
+        "C5"
+      ],
+      "directions": [
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "§1–4方法、档案与固定组成结果，§5未来工作。",
+          "result_evidence": [
+            {
+              "locator": "§4 TiO2与扩展系统",
+              "finding": "恢复TiO2参考结构并探索C、SiO2、SiC多个具有不同性质的局部极小值。",
+              "quantitative_claim": null,
+              "protocol": "固定组成CSP、指定property feature space；不是开放组成DNG strict SUN。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "MAP-Elites",
+                "locator": "§2.3",
+                "type": "archive algorithm"
+              },
+              {
+                "target": "USPEX/XtalOpt",
+                "locator": "§2.1",
+                "type": "evolutionary CSP background"
+              }
+            ],
+            "review_conceptual_relation": "D开放发现沿用质量—多样性基础，再研究未知合格集合形成；不把archive本身当新贡献。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Illuminating the property space in crystal structure prediction using Quality-Diversity algorithms",
+          "venue": {
+            "venue": "Digital Discovery",
+            "year": 2024,
+            "published_online": "2024-06-19",
+            "status": "published",
+            "volume": "3",
+            "pages": "1554–1563",
+            "read_version": "arXiv v1与publisher身份"
+          },
+          "source": "https://arxiv.org/html/2403.03511v1"
+        }
+      ]
+    },
+    {
+      "id": "R24",
+      "title": "Con-CDVAE: A method for the conditional generation of crystal structures",
+      "aliases": [
+        "Con-CDVAE"
+      ],
+      "themes": [
+        "条件与知识"
+      ],
+      "first_public_date": "2024-03-19",
+      "venue_date_status": {
+        "venue": "Computational Materials Today 1, 100003",
+        "year": 2024,
+        "online_date": null,
+        "status": "published journal article"
+      },
+      "date_notes": [],
+      "authors": [
+        "Cai-Yuan Ye",
+        "Hong-Ming Weng",
+        "Quan-Sheng Wu"
+      ],
+      "doi": "10.1016/j.commt.2024.100003",
+      "arxiv_id": "2403.12478",
+      "primary_url": "https://arxiv.org/html/2403.12478v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2403.12478v1",
+        "https://doi.org/10.1016/j.commt.2024.100003"
+      ],
+      "tasks": [],
+      "challenge_before": "潜空间性质优化之外，按用户条件直接提出结构及缺项补全仍不充分。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "条件property embedding、VAE+性质joint loss、条件DDPM latent prior，两阶段训练与default/full/less策略。",
+      "remaining_gap": "多字段条件和缺项补全已展示作用；精确对称、困难数值对和统一终态联合资格还待扩大验证。",
+      "challenges": [
+        "C1",
+        "C2"
+      ],
+      "directions": [
+        "A",
+        "B"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "depth": "deep_selected_methods_results",
+            "version": "v1",
+            "sections": [
+              "§2.2–2.3",
+              "§3.1–3.4",
+              "Tables2–3",
+              "DFT validation"
+            ]
+          },
+          "result_evidence": {
+            "claim": "形成能、带隙、晶系及形成能+带隙联合标签控制；135个形成能样本DFT验证，8个弛豫失败。",
+            "stage": "CGCNN property plus selected DFT",
+            "definition": "每任务20,000 latent proposals筛选至200再解码；联合结果主要为代理评价",
+            "locator": "§2.3; §3; Tables2–3; Fig6"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_extension",
+            "relation": "模型名/正文明确扩展CDVAE；同名近似Cond-CDVAE压力CSP工作属于另一论文",
+            "locator": "§2; title; introduction"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Con-CDVAE: A method for the conditional generation of crystal structures",
+          "venue": {
+            "venue": "Computational Materials Today 1, 100003",
+            "year": 2024,
+            "online_date": null,
+            "status": "published journal article"
+          },
+          "source": "https://arxiv.org/html/2403.12478v1"
+        }
+      ]
+    },
+    {
+      "id": "R25",
+      "title": "Space group informed transformer for crystalline materials generation",
+      "aliases": [
+        "crystalformer"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2024-03-23",
+      "venue_date_status": {
+        "venue": "Science Bulletin 70, 3522–3533",
+        "status": "published journal article",
+        "year": 2025,
+        "issue_date": "2025-11",
+        "online_date": null,
+        "date_note": "arXiv v3于2025-09-12；DOI创建于2025-09-25，不代作在线出版日；当前仓库中的CrystalFormer-CSP后继与原论文分开。"
+      },
+      "date_notes": [],
+      "authors": [
+        "Zhendong Cao",
+        "Xiaoshan Luo",
+        "Jian Lv",
+        "Lei Wang"
+      ],
+      "doi": "10.1016/j.scib.2025.09.035",
+      "arxiv_id": "2403.15734",
+      "primary_url": "https://arxiv.org/abs/2403.15734",
+      "primary_urls": [
+        "https://arxiv.org/abs/2403.15734",
+        "https://doi.org/10.1016/j.scib.2025.09.035",
+        "https://github.com/deepmodeling/CrystalFormer"
+      ],
+      "tasks": [
+        "space-group-controlled DNG",
+        "symmetric initialization",
+        "element substitution",
+        "property-guided MCMC"
+      ],
+      "challenge_before": "全原子坐标生成反复预测对称冗余，固定模板又难提出新轨道组合；离散Wyckoff选择应与连续自由坐标同样进入概率模型。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "空间群条件自回归预测Wyckoff位点、元素和自由分数坐标，以von-Mises混合处理周期坐标，并预测独立晶格参数；对数似然可用于MCMC。",
+      "remaining_gap": "自回归顺序在部分信息下固定离散决策；给定空间群的表达能力依赖训练数据，高对称优势不能外推到所有畸变或低对称未知晶体。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Representation/model objective",
+              "Table 2",
+              "Figure 7",
+              "Discussion"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "七个空间群的结构初始化",
+              "protocol": "各群100个候选，与相同组成/空间群PyXtal初始化做DFT；阈值E_hull<0.1eV/atom。",
+              "finding": "高对称群中生成结构更接近DFT终点；报告MP-20外候选34个对PyXtal12个。低对称群并非每项优于PyXtal。",
+              "locator": "Table 2; Figure 7; Appendix C"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "conceptual_link_only",
+              "predecessor": "diffcsppp",
+              "evidence": "二者把群约束变成可执行表示；前者AR、后者扩散。时间接近，仅凭共同Wyckoff思路不宣称单向继承。"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "Space group informed transformer for crystalline materials generation",
+          "venue": {
+            "venue": "Science Bulletin 70, 3522–3533",
+            "status": "published journal article",
+            "year": 2025,
+            "issue_date": "2025-11",
+            "online_date": null,
+            "date_note": "arXiv v3于2025-09-12；DOI创建于2025-09-25，不代作在线出版日；当前仓库中的CrystalFormer-CSP后继与原论文分开。"
+          },
+          "source": "https://arxiv.org/abs/2403.15734"
+        }
+      ]
+    },
+    {
+      "id": "R26",
+      "title": "FlowMM: Generating Materials with Riemannian Flow Matching",
+      "aliases": [
+        "flowmm"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2024-06-07",
+      "venue_date_status": {
+        "venue": "ICML 2024, PMLR 235",
+        "status": "published conference paper",
+        "year": 2024
+      },
+      "date_notes": [],
+      "authors": [
+        "Miller, Benjamin Kurt",
+        "Chen, Ricky T. Q.",
+        "Sriram, Anuroop",
+        "Wood, Brandon M"
+      ],
+      "doi": null,
+      "arxiv_id": "2406.04713",
+      "primary_url": "https://proceedings.mlr.press/v235/miller24a.html",
+      "primary_urls": [
+        "https://proceedings.mlr.press/v235/miller24a.html",
+        "https://arxiv.org/abs/2406.04713",
+        "https://github.com/facebookresearch/flowmm"
+      ],
+      "tasks": [
+        "CSP",
+        "DNG"
+      ],
+      "challenge_before": "正确周期空间中的扩散仍需大量采样步，固定简单先验与数据之间的路径未必利于学习和采样。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "在晶格、周期坐标及元素状态的乘积空间进行Riemannian flow matching，回归条件运输向量场，并设计晶格初始分布与采样速度调节。",
+      "remaining_gap": "运输路径拟合数据分布而非真实力场；步数效率不包含所有训练/物理计算费用，局部score或速度改进未自动给出新低能模式。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C4",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Sections 2–4",
+              "Tables 1–2",
+              "Figure 2",
+              "Appendix A"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20 CSP",
+              "protocol": "与DiffCSP使用相同底层网络；无DFT弛豫的参考匹配。",
+              "finding": "top-1匹配61.39%，约50步达到高匹配性能，原DiffCSP使用1,000步。",
+              "locator": "Table 1; Figure 2"
+            },
+            {
+              "task": "DNG",
+              "protocol": "250步、10,000样本，CHGNet预弛豫→DFT；MP2023凸包，E_hull<0且元素种数≥2。",
+              "finding": "SUN为2.38%，属于严格阈值下的物理验证指标。",
+              "locator": "Table 2; Appendix A"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "explicit_architecture_reuse",
+              "predecessor": "diffcsp",
+              "evidence": "Section 4.1声明两者使用完全相同网络，直接隔离生成路径及采样机制的贡献。",
+              "locator": "Section 4.1"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "FlowMM: Generating Materials with Riemannian Flow Matching",
+          "venue": {
+            "venue": "ICML 2024, PMLR 235",
+            "status": "published conference paper",
+            "year": 2024
+          },
+          "source": "https://proceedings.mlr.press/v235/miller24a.html"
+        }
+      ]
+    },
+    {
+      "id": "R27",
+      "title": "Structural constraint integration in a generative model for the discovery of quantum materials",
+      "aliases": [
+        "SCIGEN"
+      ],
+      "themes": [
+        "条件与知识"
+      ],
+      "first_public_date": "2024-07-05",
+      "venue_date_status": {
+        "venue": "Nature Materials 25, 223–230",
+        "year": 2026,
+        "online_date": "2025-09-22",
+        "issue_date": "2026-02",
+        "status": "published journal article; online/issue years separately retained"
+      },
+      "date_notes": [],
+      "authors": [
+        "Ryotaro Okabe",
+        "Mouyang Cheng",
+        "Abhijatmedhi Chotrattanapituk",
+        "Manasi Mandal",
+        "Kiran Mak",
+        "Denisse Córdova Carrizales",
+        "Nguyen Tuan Hung",
+        "Xiang Fu",
+        "Bowen Han",
+        "Yao Wang",
+        "Weiwei Xie",
+        "Robert J. Cava",
+        "Tommi S. Jaakkola",
+        "Yongqiang Cheng",
+        "Mingda Li"
+      ],
+      "doi": "10.1038/s41563-025-02355-y",
+      "arxiv_id": "2407.04557",
+      "primary_url": "https://www.nature.com/articles/s41563-025-02355-y",
+      "primary_urls": [
+        "https://www.nature.com/articles/s41563-025-02355-y",
+        "https://arxiv.org/abs/2407.04557",
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41563-025-02355-y/MediaObjects/41563_2025_2355_MOESM1_ESM.pdf"
+      ],
+      "tasks": [],
+      "challenge_before": "蜂窝、kagome等几何模式与量子材料机制相关，普通随机生成缺少明确几何约束接口。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "把前向加噪约束结构按掩码并入每步去噪，生成自由部分来完成共同结构；以DiffCSP作实例，可复用已有diffusion。",
+      "remaining_gap": "几何引导和实验发现价值已经确立；多个共享motif的兼容、弛豫后机制保持及实验无序/占位仍是扩展目标。",
+      "challenges": [
+        "C1",
+        "C3",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "depth": "deep v1 algorithm plus final abstract/data and final supplement §§10.1/12/Table3",
+            "version": "final journal supplement; v1 methods only for lineage",
+            "sections": [
+              "Algorithms1/2",
+              "final abstract/Data availability",
+              "supplement §10.1",
+              "supplement §12",
+              "Supplementary Table3"
+            ]
+          },
+          "result_evidence": {
+            "claim": "最终版Data声明10.06M生成/1.01M预筛；26,000 DFT尝试、24,743 DFT-relaxed。13,880个Fmax合格结构（53.38%），二例提案指导实验合成。",
+            "stage": "four-stage prescreen→DFT→residual force/distortion→novelty/dedup; selected synthesis",
+            "definition": ">95%对应24,743/26,000=95.17%的DFT弛豫输出；53%对应Fmax<0.01eV/Å，不是凸包稳定。Table3另要求dlatt/dxyz按AL为(1.0Å,0.5Å)/(2.0Å,1.0Å)/(3.0Å,1.5Å)，小畸变合格5,931，最终新颖去重3,018。",
+            "synthesis": "提案TiPdBi、TiPdSb指导获得TiPd0.22Bi0.88、Ti0.5Pd1.5Sb；实验计量和空间群均改变，分别顺磁/抗磁。",
+            "locator": "final abstract/Data availability; supplement §12/Table3 and §10.1"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_backbone_and_inpainting",
+            "relation": "v1 Algorithms1/2直接包装DiffCSP；最终supp把生成、筛选、弛豫、畸变和合成分级",
+            "locator": "v1 Methods; final supplement §12"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Structural constraint integration in a generative model for the discovery of quantum materials",
+          "venue": {
+            "venue": "Nature Materials 25, 223–230",
+            "year": 2026,
+            "online_date": "2025-09-22",
+            "issue_date": "2026-02",
+            "status": "published journal article; online/issue years separately retained"
+          },
+          "source": "https://www.nature.com/articles/s41563-025-02355-y"
+        }
+      ]
+    },
+    {
+      "id": "R28",
+      "title": "Generative Hierarchical Materials Search",
+      "aliases": [
+        "GenMS"
+      ],
+      "themes": [
+        "条件与知识"
+      ],
+      "first_public_date": "2024-09-10",
+      "venue_date_status": {
+        "venue": "NeurIPS 2024",
+        "year": 2024,
+        "online_date": null,
+        "status": "published main-conference paper"
+      },
+      "date_notes": [],
+      "authors": [
+        "Sherry Yang",
+        "Simon Batzner",
+        "Ruiqi Gao",
+        "Muratahan Aykol",
+        "Alexander L. Gaunt",
+        "Brendan McMorrow",
+        "Danilo J. Rezende",
+        "Dale Schuurmans",
+        "Igor Mordatch",
+        "Ekin D. Cubuk"
+      ],
+      "doi": null,
+      "arxiv_id": "2409.06762",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/447d012bd95b6767a4bfdebf96cdfcc9-Paper-Conference.pdf",
+      "primary_urls": [
+        "https://proceedings.neurips.cc/paper_files/paper/2024/file/447d012bd95b6767a4bfdebf96cdfcc9-Paper-Conference.pdf",
+        "https://arxiv.org/abs/2409.06762"
+      ],
+      "tasks": [],
+      "challenge_before": "用户往往能说功能/材料家族，却难预先确定可行化学式；缺少语言到完整结构的配对数据。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "LLM把请求转为公式，composition-conditioned diffusion生成几何，GNN性质评价与请求符合共同驱动forward tree search。",
+      "remaining_gap": "跨公式/几何搜索已让自然语言参与发现；部分生成状态中的关系修订和新混合条件仍可进一步联合学习。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C4"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "depth": "deep_selected_formulation_search_results",
+            "version": "NeurIPS final",
+            "sections": [
+              "§1–3",
+              "Algorithm1",
+              "language-to-structure task/results"
+            ]
+          },
+          "result_evidence": {
+            "claim": "三类主要家族请求符合率>80%，相比直接zero-shot LLM生成有显著改善；DFT支持选定低能结构。",
+            "stage": "request compliance+predicted energy search, selected DFT",
+            "definition": "请求家族及低形成能任务；不是统一未见条件strictSUN交集",
+            "locator": "§2/Algorithm1; §3 and Introduction results summary"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_hierarchical_factorization",
+            "relation": "作者从语言→公式知识与公式→结构数据库分解数据缺口，并比较直接文本LLM生成",
+            "locator": "§1–2/Fig1"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Generative Hierarchical Materials Search",
+          "venue": {
+            "venue": "NeurIPS 2024",
+            "year": 2024,
+            "online_date": null,
+            "status": "published main-conference paper"
+          },
+          "source": "https://proceedings.neurips.cc/paper_files/paper/2024/file/447d012bd95b6767a4bfdebf96cdfcc9-Paper-Conference.pdf"
+        }
+      ]
+    },
+    {
+      "id": "R29",
+      "title": "FlowLLM: Flow Matching for Material Generation with Large Language Models as Base Distributions",
+      "aliases": [
+        "flowllm",
+        "FlowLLM"
+      ],
+      "themes": [
+        "表示与生成",
+        "条件与知识"
+      ],
+      "first_public_date": "2024-10-30",
+      "venue_date_status": {
+        "venue": "NeurIPS 2024",
+        "year": 2024,
+        "online_date": null,
+        "status": "published main-conference paper; official proceedings verified"
+      },
+      "date_notes": [],
+      "authors": [
+        "Anuroop Sriram",
+        "Benjamin Kurt Miller",
+        "Ricky T. Q. Chen",
+        "Brandon M. Wood"
+      ],
+      "doi": "10.52202/079017-1464",
+      "arxiv_id": "2410.23405",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/51d317df78eded9eb3c9d3fb1091c279-Abstract-Conference.html",
+      "primary_urls": [
+        "https://arxiv.org/abs/2410.23405",
+        "https://proceedings.neurips.cc/paper_files/paper/2024/hash/51d317df78eded9eb3c9d3fb1091c279-Abstract-Conference.html"
+      ],
+      "tasks": [
+        "DNG via LLM initialization and composition-conditioned continuous transport"
+      ],
+      "challenge_before": "LLM提供较好化学提案但几何精度有限；随机基分布flow需要较长运输。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "微调LLM形成化学/粗几何基分布，以同组成LLM样本—终态配对训练Riemannian flow；精修期间类型固定。",
+      "remaining_gap": "学习化学/几何先验已显著提高发现效率；连续修订期间如何反馈组成、对称和其它离散决定仍可研究。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Sections 4–5",
+              "Tables 1–2",
+              "Section 4.3 symmetry discussion"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20 DNG",
+              "protocol": "70B LLM、250流步，10,000候选，CHGNet→DFT；MP2023凸包、E_hull<0、元素种数≥2。",
+              "finding": "温度0.7/nucleus0.9时稳定17.82%、SUN4.92%；types-only版本稳定约8.8–9.0%，支持初始几何也贡献收益。",
+              "locator": "Table 1"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "explicit_combination",
+              "predecessors": [
+                "crystal_llm",
+                "flowmm"
+              ],
+              "evidence": "方法明确采用Gruver等文本LLM与FlowMM训练目标，把LLM用作base distribution。",
+              "locator": "Section 4; Algorithm 1"
+            }
+          ]
+        },
+        {
+          "read_depth": {
+            "depth": "deep_selected_training_path_and_physical_results",
+            "version": "NeurIPS 2024 final",
+            "sections": [
+              "§3–5",
+              "Algorithm1",
+              "Tables1–2",
+              "equivariance/base analysis"
+            ]
+          },
+          "result_evidence": {
+            "claim": "10,000例：DFT stable17.82%、SUN4.92%；CHGNet后弛豫步数约37.97，FlowMM约191.98。",
+            "stage": "CHGNet pre-relax→DFT relaxation",
+            "definition": "Ehull<0、arity≥2、MP2023 hull；主要证据DNG，性质自然语言接口在§3为hypothetical",
+            "locator": "§4–5/Tables1–2; §3 Training"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_model_combination",
+            "relation": "fine-tuned crystal LLM + FlowMM RFM objective，重新针对LLM基分布训练而非直接套任意flow",
+            "locator": "§3/Algorithm1"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "FlowLLM: Flow Matching for Material Generation with Large Language Models as Base Distributions",
+          "venue": {
+            "venue": "NeurIPS 2024",
+            "status": "published conference paper",
+            "year": 2024
+          },
+          "source": "https://arxiv.org/abs/2410.23405"
+        },
+        {
+          "title": "FlowLLM: Flow Matching for Material Generation with Large Language Models as Base Distributions",
+          "venue": {
+            "venue": "NeurIPS 2024",
+            "year": 2024,
+            "online_date": null,
+            "status": "published main-conference paper; official proceedings verified"
+          },
+          "source": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/51d317df78eded9eb3c9d3fb1091c279-Abstract-Conference.html"
+        }
+      ]
+    },
+    {
+      "id": "R30",
+      "title": "Efficient Symmetry-Aware Materials Generation via Hierarchical Generative Flow Networks",
+      "aliases": [
+        "shaft"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2024-11-06",
+      "venue_date_status": {
+        "venue": "Digital Discovery",
+        "year": 2026,
+        "published_online": "2025-10-02",
+        "status": "published",
+        "volume": "5",
+        "pages": "686–697",
+        "read_version": "2024 arXiv v1方法与mode定义；RSC正式身份另核"
+      },
+      "date_notes": [],
+      "authors": [
+        "Nguyen, Tri Minh",
+        "Tawfik, Sherif Abdulkader",
+        "Tran, Truyen",
+        "Gupta, Sunil",
+        "Rana, Santu",
+        "Venkatesh, Svetha"
+      ],
+      "doi": "10.1039/D4DD00392F",
+      "arxiv_id": "2411.04323",
+      "primary_url": "https://arxiv.org/html/2411.04323v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2411.04323v1"
+      ],
+      "tasks": [],
+      "challenge_before": "如何在巨大化学与周期几何动作空间中既高效探索又保持多种候选？",
+      "why_important": "材料发现需要多个符合要求的结构，空间群层级可组织搜索。",
+      "why_difficult": "单体策略需同时学习空间群、晶格、元素和坐标的耦合，昂贵hull反馈难直接逐步使用。",
+      "method": "层级GFlowNet先选空间群，再在相应晶格/原子子空间探索；终端reward结合形成能、键长、密度与组成有效性。",
+      "remaining_gap": "层级探索已有能力；开放合格终态身份、相竞争稳定及结果分布的持续形成需要更具体目标。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C4",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "§3–5；reward与hierarchical policy；§10.7 unique mode；RSC正式发表记录。",
+          "result_evidence": [
+            {
+              "locator": "§5 Modes exploration；§10.7",
+              "finding": "层级策略在作者设置中提高模式发现效率；mode需有效、满足最短距离、负形成能及组成与已有mode不同。",
+              "quantitative_claim": null,
+              "protocol": "v1 mode不是共同松弛后strict SUN；Table1–3还使用reward-ranked top-K，不能移植成无筛选独立DNG分母。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "Bengio et al. 2021 GFlowNet",
+                "locator": "§3.2 and References",
+                "type": "theory"
+              },
+              {
+                "target": "Lahlou et al. 2023 continuous GFlowNet",
+                "locator": "§5 Baselines",
+                "type": "continuous action method"
+              },
+              {
+                "target": "Malkin et al. 2022 trajectory balance",
+                "locator": "References and training objective",
+                "type": "training"
+              }
+            ],
+            "review_conceptual_relation": "将其视作C5分布探索的晶体先行，未声称其完成未知strict SUN结果类学习。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Efficient Symmetry-Aware Materials Generation via Hierarchical Generative Flow Networks",
+          "venue": {
+            "venue": "Digital Discovery",
+            "year": 2026,
+            "published_online": "2025-10-02",
+            "status": "published",
+            "volume": "5",
+            "pages": "686–697",
+            "read_version": "2024 arXiv v1方法与mode定义；RSC正式身份另核"
+          },
+          "source": "https://arxiv.org/html/2411.04323v1"
+        }
+      ]
+    },
+    {
+      "id": "R31",
+      "title": "Establishing baselines for generative discovery of inorganic crystals",
+      "aliases": [
+        "baselines"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2025-01-04",
+      "venue_date_status": {
+        "venue": "Materials Horizons",
+        "year": 2025,
+        "published_online": "2025-07-04",
+        "status": "published",
+        "volume": "12",
+        "pages": "8000–8011",
+        "read_version": "arXiv v2 full PDF与RSC正式文段"
+      },
+      "date_notes": [],
+      "authors": [
+        "Nathan J. Szymanski",
+        "Christopher J. Bartel"
+      ],
+      "doi": "10.1039/D5MH00010F",
+      "arxiv_id": "2501.02144",
+      "primary_url": "https://pubs.rsc.org/en/content/articlehtml/2025/mh/d5mh00010f",
+      "primary_urls": [
+        "https://pubs.rsc.org/en/content/articlehtml/2025/mh/d5mh00010f"
+      ],
+      "tasks": [],
+      "challenge_before": "生成模型相对化学/原型方案究竟新增哪些发现能力？",
+      "why_important": "相同物理筛选也能改善简单方法，模型能力需要强竞争基线。",
+      "why_difficult": "数据来源、提出数、novelty过滤和筛选成本不同，简单合成排名会混入管线差异。",
+      "method": "电荷平衡原型随机枚举与数据挖掘离子替换，比较四种生成器，并加入共同MLIP/性质预筛与DFT验证。",
+      "remaining_gap": "特定共同管线的结果不提供所有模型/预算排名；需要解释化学访问、条件实现与筛选分别贡献了什么。",
+      "challenges": [
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "directions": [
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "Methods、stability/novelty、Table1、性质目标与post-screening；正式元数据。",
+          "result_evidence": [
+            {
+              "locator": "Table1/Results stability and novelty",
+              "finding": "MP-20重训MatterGen之外，离子替换在作者的MP新颖候选集合稳定率更高；模型能提出部分AFLOW未映射原型。",
+              "quantitative_claim": {
+                "stable_percent": {
+                  "random_enumeration": 1.4,
+                  "ion_exchange": 9.2,
+                  "mattergen_mp20": 3
+                }
+              },
+              "denominator": "每方法500个未匹配MP的候选进入DFT；获得这些候选的原始提出数因方法不同。",
+              "protocol": "DFT decomposition energy≤0，MP竞争相；MatterGen common-data主比较为MP-20重训，不是Nature大数据checkpoint。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "MatterGen/CrystaLLM/CDVAE/FTCP",
+                "locator": "Methods Generative modeling",
+                "type": "implemented benchmark"
+              },
+              {
+                "target": "Data-mined substitution prediction",
+                "locator": "Methods Data-driven ion exchange",
+                "type": "baseline method"
+              }
+            ],
+            "review_conceptual_relation": "该篇建立反事实基线标准，支持把D的结果发现与C的物理知识贡献分开。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Establishing baselines for generative discovery of inorganic crystals",
+          "venue": {
+            "venue": "Materials Horizons",
+            "year": 2025,
+            "published_online": "2025-07-04",
+            "status": "published",
+            "volume": "12",
+            "pages": "8000–8011",
+            "read_version": "arXiv v2 full PDF与RSC正式文段"
+          },
+          "source": "https://pubs.rsc.org/en/content/articlehtml/2025/mh/d5mh00010f"
+        }
+      ]
+    },
+    {
+      "id": "R32",
+      "title": "A generative material transformer using Wyckoff representation",
+      "aliases": [
+        "matra_genoa",
+        "Matra-Genoa"
+      ],
+      "themes": [
+        "表示与生成",
+        "条件与知识"
+      ],
+      "first_public_date": "2025-01-27",
+      "venue_date_status": {
+        "venue": "npj Computational Materials 12, 60",
+        "year": 2026,
+        "online_date": "2026-01-23",
+        "version_of_record_date": "2026-01-29",
+        "status": "published journal article"
+      },
+      "date_notes": [],
+      "authors": [
+        "Pierre-Paul De Breuck",
+        "Hashim A. Piracha",
+        "Gian-Marco Rignanese",
+        "Miguel A. L. Marques"
+      ],
+      "doi": "10.1038/s41524-025-01940-8",
+      "arxiv_id": "2501.16051",
+      "primary_url": "https://www.nature.com/articles/s41524-025-01940-8",
+      "primary_urls": [
+        "https://www.nature.com/articles/s41524-025-01940-8",
+        "https://arxiv.org/abs/2501.16051",
+        "https://github.com/ppdebreuck/matra-genoa"
+      ],
+      "tasks": [
+        "DNG",
+        "E_hull-conditioned generation"
+      ],
+      "challenge_before": "稳定、对称与生成效率难兼顾；仅离散模板还缺连续自由参数。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "invertible Wyckoff token序列、离散/连续双head；稳定LOW/HIGH标签阈值0.075eV/atom，条件包括元素、空间群和Wyckoff。",
+      "remaining_gap": "对称和稳定条件已能有效组织探索；任意功能目标及新的局部/全局关系组合还需独立实证。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "selected_methods_results",
+            "locators": [
+              "Representation and hybrid action modeling",
+              "large-scale generation and DFT selection",
+              "Table I"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "规模化DNG后筛选",
+              "protocol": "报告三百万独特结构，使用MLIP/代理筛选后选取候选做DFT，凸包参照为Alexandria。",
+              "finding": "发布包含4,000个经DFT验证距凸包≤0.001eV/atom候选的数据；这是筛选后结果，不是四千/三百万作为原始SUN率。",
+              "locator": "arXiv v2 large-scale generation; DFT section"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "conceptual_link_only",
+              "predecessor": "crystalformer",
+              "evidence": "同属Wyckoff+自由坐标的AR分支；不同论文机制相关，未以共同主题推断直接架构继承。"
+            }
+          ]
+        },
+        {
+          "read_depth": {
+            "depth": "deep_selected_final_representation_conditions_results",
+            "version": "final journal + author v2",
+            "sections": [
+              "Representation",
+              "Sampling",
+              "Conditioning",
+              "Al–Ca–Cu",
+              "3M release"
+            ]
+          },
+          "result_evidence": {
+            "claim": "稳定富集约8倍charge-compensated PyXtal；300万unique候选发布，4,000结构DFT距离凸包<0.001eV/atom；Al–Ca–Cu指定化学空间2,000提案恢复11/15 WBM稳定结构。",
+            "stage": "model→geometry→MLIP and selected DFT",
+            "definition": "3M是生成数据，4k为选择/验证流水线结果；训练标签0.075与DFT资格0.001分开",
+            "locator": "final Conditioning; Training/Results; Fig3; Data availability"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_representation_extension",
+            "relation": "原文比较CIF、diffusion和Wyckoff模型，结合对称离散项与连续自由参数",
+            "locator": "Introduction/Representation"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "A generative material transformer using Wyckoff representation",
+          "venue": {
+            "venue": "npj Computational Materials 12, 60",
+            "status": "published journal article",
+            "online_date": "2026-01-23",
+            "date_note": "DOI含2025，实际在线出版2026；读取2025 arXiv v2，不把后续仓库数据当原始实验。"
+          },
+          "source": "https://www.nature.com/articles/s41524-025-01940-8"
+        },
+        {
+          "title": "A generative material transformer using Wyckoff representation",
+          "venue": {
+            "venue": "npj Computational Materials 12, 60",
+            "year": 2026,
+            "online_date": "2026-01-23",
+            "version_of_record_date": "2026-01-29",
+            "status": "published journal article"
+          },
+          "source": "https://www.nature.com/articles/s41524-025-01940-8"
+        }
+      ]
+    },
+    {
+      "id": "R33",
+      "title": "A Periodic Bayesian Flow for Material Generation",
+      "aliases": [
+        "crysbfn"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2025-02-04",
+      "venue_date_status": {
+        "venue": "ICLR 2025",
+        "status": "published conference paper",
+        "year": 2025
+      },
+      "date_notes": [],
+      "authors": [
+        "Wu, Hanlin",
+        "Song, Yuxuan",
+        "Gong, Jingjing",
+        "Cao, Ziyao",
+        "Ouyang, Yawen",
+        "Zhang, Jianbing",
+        "Zhou, Hao",
+        "Ma, Wei-Ying",
+        "Liu, Jingjing"
+      ],
+      "doi": null,
+      "arxiv_id": "2502.02016",
+      "primary_url": "https://arxiv.org/abs/2502.02016",
+      "primary_urls": [
+        "https://arxiv.org/abs/2502.02016",
+        "https://proceedings.iclr.cc/paper_files/paper/2025/hash/1f09e1ee5035a4c3fe38a5681cae5815-Abstract-Conference.html",
+        "https://github.com/wu-han-lin/CrysBFN"
+      ],
+      "tasks": [
+        "CSP",
+        "DNG"
+      ],
+      "challenge_before": "欧氏BFN的Gaussian精度累积不直接适用周期坐标；圆周后验可能出现非单调熵变化，统一时间条件不足以说明当前信息量。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "对周期坐标建立基于von-Mises分布的Bayesian flow，训练网络读取均值和熵状态，配合近似线性熵sender accuracy schedule及快速模拟。",
+      "remaining_gap": "圆周精度不可简单相加，日程仍依赖近似/数值设计；优越的参考匹配或少步采样未测真实物理反馈或新稳定终点覆盖。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C4"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Sections 4–5",
+              "Tables 1–3",
+              "sampling efficiency"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20 CSP",
+              "protocol": "原基准参考匹配，未开展DFT发现评估。",
+              "finding": "匹配64.35%；去除熵条件变52.16%、去除torus BFN变6.17%，直接支持信息状态与周期建模的重要性。",
+              "locator": "Tables 2–3"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "cited_comparison",
+              "predecessors": [
+                "diffcsp",
+                "flowmm"
+              ],
+              "evidence": "在同CSP/DNG基准中比较其周期BFN；直接理论起点是原BFN，而非将FlowMM重命名。",
+              "locator": "Sections 3–5; Tables 1–2"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "A Periodic Bayesian Flow for Material Generation",
+          "venue": {
+            "venue": "ICLR 2025",
+            "status": "published conference paper",
+            "year": 2025
+          },
+          "source": "https://arxiv.org/abs/2502.02016"
+        }
+      ]
+    },
+    {
+      "id": "R34",
+      "title": "Open Materials Generation with Stochastic Interpolants",
+      "aliases": [
+        "omatg"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2025-02-04",
+      "venue_date_status": {
+        "venue": "ICML 2025, PMLR 267",
+        "status": "published conference paper",
+        "year": 2025
+      },
+      "date_notes": [],
+      "authors": [
+        "Hoellmer, Philipp",
+        "Egg, Thomas",
+        "Martirossyan, Maya M.",
+        "Fuemmeler, Eric",
+        "Shui, Zeren",
+        "Gupta, Amit",
+        "Prakash, Pawan",
+        "Roitberg, Adrian",
+        "Liu, Mingjie",
+        "Karypis, George",
+        "Transtrum, Mark",
+        "Hennig, Richard G.",
+        "Tadmor, Ellad B.",
+        "Martiniani, Stefano"
+      ],
+      "doi": null,
+      "arxiv_id": "2502.02582",
+      "primary_url": "https://proceedings.mlr.press/v267/hollmer25a.html",
+      "primary_urls": [
+        "https://proceedings.mlr.press/v267/hollmer25a.html",
+        "https://arxiv.org/abs/2502.02582",
+        "https://github.com/FERMat-ML/OMatG"
+      ],
+      "tasks": [
+        "CSP",
+        "DNG joint model",
+        "DNG formula-model plus CSP"
+      ],
+      "challenge_before": "diffusion和flow各自使用固定噪声/路径，难分离路径、随机性、采样器与表示的贡献；元素与几何需要不同动态但彼此协调。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "将stochastic interpolants推广到周期坐标与多变量联合分布，配合元素离散CTMC、ODE/SDE采样和线性/三角/encoder-decoder路径；另训练CFP→CSP分阶段模型。",
+      "remaining_gap": "SI路径连接训练终态与先验，不是实际形成/弛豫轨迹；稳定、独特、新颖的权衡和在线物理反馈仍待学习，0.1阈值结果不能与严格SUN跨论文倍数比较。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Sections 3–5",
+              "Tables 1–3",
+              "Appendix D.4"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20 DNG",
+              "protocol": "1,000弛豫结构，MatterSim→DFT，Alex-MP参照，E_hull≤0.1eV/atom。",
+              "finding": "线性SDE+γ的SUN22.48%；encoder-decoder ODE+γ稳定60.04%、SUN18.77%；CFP+CSP SUN20.17%。最优路径随目标变化，分阶段路线仍有竞争力。",
+              "locator": "Table 3"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "explicit_architecture_and_framework_extension",
+              "predecessors": [
+                "diffcsp",
+                "flowmm"
+              ],
+              "evidence": "采用DiffCSP网络；SI以flow/diffusion为特例，并原文系统比较路径和采样器。",
+              "locator": "Sections 2–4.2"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "Open Materials Generation with Stochastic Interpolants",
+          "venue": {
+            "venue": "ICML 2025, PMLR 267",
+            "status": "published conference paper",
+            "year": 2025
+          },
+          "source": "https://proceedings.mlr.press/v267/hollmer25a.html"
+        }
+      ]
+    },
+    {
+      "id": "R35",
+      "title": "SymmCD: Symmetry-Preserving Crystal Generation with Diffusion Models",
+      "aliases": [
+        "symmcd"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2025-02-05",
+      "venue_date_status": {
+        "venue": "ICLR 2025",
+        "status": "published conference paper",
+        "year": 2025
+      },
+      "date_notes": [],
+      "authors": [
+        "Levy, Daniel",
+        "Panigrahi, Siba Smarak",
+        "Kaba, Sékou-Oumar",
+        "Zhu, Qiang",
+        "Lee, Kin Long Kelvin",
+        "Galkin, Mikhail",
+        "Miret, Santiago",
+        "Ravanbakhsh, Siamak"
+      ],
+      "doi": null,
+      "arxiv_id": "2502.03638",
+      "primary_url": "https://arxiv.org/abs/2502.03638",
+      "primary_urls": [
+        "https://arxiv.org/abs/2502.03638",
+        "https://openreview.net/pdf?id=1ne8lalwRN"
+      ],
+      "tasks": [
+        "DNG over sampled space groups",
+        "symmetry-controlled generation"
+      ],
+      "challenge_before": "固定已有Wyckoff模板可保持对称但限制新模板；直接Wyckoff字母在群之间不共享信息，稀有群数据碎片化。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "采样空间群G及轨道数M，联合扩散非等价原子的元素、坐标、晶格和位点对称二进制矩阵；投影到兼容位点并按群操作展开全晶体。",
+      "remaining_gap": "空间群先采样后固定；压缩空间难直接看到展开原子距离，结构无效率上升，位点组合新颖还需全局物理兼容。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Sections 4.1–4.3",
+              "Tables 1–3",
+              "Section 5.3 DFT validation"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20模板多样性",
+              "protocol": "各模型10,000原始候选，模板为群+占据Wyckoff多重集。",
+              "finding": "新模板1,654个，DiffCSP++为110；CHGNet稳定/SUN总体与基线相当，主要收益为对称分布与模板能力。",
+              "locator": "Tables 1–2"
+            },
+            {
+              "task": "DFT可优化性",
+              "protocol": "每模型100结构做CP2K晶格/坐标弛豫。",
+              "finding": "报告较低优化后最大力；收敛率无显著差异，不能将此换成DFT SUN增益。",
+              "locator": "Section 5.3; Appendix F.6"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "explicit_limitation_response",
+              "predecessor": "diffcsppp",
+              "evidence": "Related Work/Section 5.1明确针对预定义模板限制，学习模板的对称信息而非只在模板中采样。",
+              "locator": "Related Work; Section 5.1"
+            },
+            {
+              "type": "cited_concurrent_work",
+              "predecessor": "crystalformer",
+              "evidence": "原文称并行工作；共同Wyckoff思路不写为前后继承。",
+              "locator": "Related Work"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "SymmCD: Symmetry-Preserving Crystal Generation with Diffusion Models",
+          "venue": {
+            "venue": "ICLR 2025",
+            "status": "published conference paper",
+            "year": 2025
+          },
+          "source": "https://arxiv.org/abs/2502.03638"
+        }
+      ]
+    },
+    {
+      "id": "R36",
+      "title": "WyckoffDiff – A Generative Diffusion Model for Crystal Symmetry",
+      "aliases": [
+        "wyckoffdiff"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2025-02-10",
+      "venue_date_status": {
+        "venue": "ICML 2025, PMLR 267",
+        "status": "published conference paper",
+        "year": 2025
+      },
+      "date_notes": [],
+      "authors": [
+        "Kelvinius, Filip Ekström",
+        "Andersson, Oskar B.",
+        "Parackal, Abhijith S.",
+        "Qian, Dong",
+        "Armiento, Rickard",
+        "Lindsten, Fredrik"
+      ],
+      "doi": null,
+      "arxiv_id": "2502.06485",
+      "primary_url": "https://proceedings.mlr.press/v267/ekstrom-kelvinius25a.html",
+      "primary_urls": [
+        "https://proceedings.mlr.press/v267/ekstrom-kelvinius25a.html",
+        "https://arxiv.org/abs/2502.06485",
+        "https://github.com/httk/wyckoffdiff"
+      ],
+      "tasks": [
+        "DNG protostructure generation",
+        "geometry realization plus materials discovery proof of concept"
+      ],
+      "challenge_before": "全原子生成在对称冗余中学习；需要在纯离散、带化学身份的原型层建模新组合。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "把空间群中固定及自由Wyckoff位置的占据/计数编码为离散状态，以D3PM/DiGress式扩散生成protostructure，采用全连接消息传递共享整体信息。",
+      "remaining_gap": "输出省略晶格与自由坐标，同一protostructure的几何实现需要独立搜索；局部位点占据合适仍可能无法形成整体低能晶体。",
+      "challenges": [
+        "C1",
+        "C3",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Sections 2–5",
+              "Tables 1–2",
+              "Figure 3; Appendix G"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "protostructure分布与发现",
+              "protocol": "10,000样本评FWD/新原型；20,000新protostructure经元素过滤后12,650个，反复PyXtal→MACE后挑200低形成能者做VASP。",
+              "finding": "原文展示三类低于参考凸包新材料；证据属于选择后发现流程，FWD不是几何或DFT稳定率。",
+              "locator": "Tables 1–2; Section 5; Appendix G"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "explicit_method_adaptation",
+              "predecessor": "D3PM/DiGress",
+              "evidence": "Section 3直接采用离散扩散框架与交叉熵目标；对CDVAE/DiffCSP++/SymmCD为基线比较而非代码继承。",
+              "locator": "Section 3; Table 1"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "WyckoffDiff – A Generative Diffusion Model for Crystal Symmetry",
+          "venue": {
+            "venue": "ICML 2025, PMLR 267",
+            "status": "published conference paper",
+            "year": 2025
+          },
+          "source": "https://proceedings.mlr.press/v267/ekstrom-kelvinius25a.html"
+        }
+      ]
+    },
+    {
+      "id": "R37",
+      "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
+      "aliases": [
+        "TGDMat"
+      ],
+      "themes": [
+        "条件与知识"
+      ],
+      "first_public_date": "2025-03-01",
+      "venue_date_status": {
+        "venue": "ICLR 2025",
+        "year": 2025,
+        "online_date": null,
+        "status": "published main-conference paper"
+      },
+      "date_notes": [],
+      "authors": [
+        "Kishalay Das",
+        "Subhojyoti Khastagir",
+        "Pawan Goyal",
+        "Seung-Cheol Lee",
+        "Satadeep Bhattacharjee",
+        "Niloy Ganguly"
+      ],
+      "doi": null,
+      "arxiv_id": "2503.00522",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/24e4e3234178a836b70e0aa48827e0ff-Abstract-Conference.html",
+      "primary_urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2025/hash/24e4e3234178a836b70e0aa48827e0ff-Abstract-Conference.html",
+        "https://arxiv.org/abs/2503.00522"
+      ],
+      "tasks": [],
+      "challenge_before": "生成时缺少用户所知的全局/局部晶体描述，端到端A/X/L联合建模仍需更强条件。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "Robocrystallographer长描述/较短模板经MatSciBERT嵌入，注入周期等变joint denoising。",
+      "remaining_gap": "文本结构知识有效；稀疏意图和新条件组合能否保持终态全部目标，需要按信息来源/实际请求另测。",
+      "challenges": [
+        "C1",
+        "C3"
+      ],
+      "directions": [
+        "A",
+        "B"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "depth": "deep_selected_prompt_construction_and_ablations",
+            "version": "ICLR 2025 final",
+            "sections": [
+              "§4.2–4.4",
+              "§5",
+              "F.4–F.5/Tables8–9"
+            ]
+          },
+          "result_evidence": {
+            "claim": "长描述帮助CSP和DNG；MP-20单候选match55.15%；文本属性符合及更短prompt分别测试，信息减少时下降。",
+            "stage": "benchmark reference/validity/distribution and attribute matching",
+            "definition": "长文本来自目标结构，含配位/键长/矿物/对称；极简请求是独立F.5设置",
+            "locator": "§4.2; main results; F.4/F.5"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_text_joint_diffusion",
+            "relation": "在periodic diffusion中引入语料提供的global/local结构知识；TFMat引用其long/short对照",
+            "locator": "TGDMat §4; TFMat Table1/Introduction"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
+          "venue": {
+            "venue": "ICLR 2025",
+            "year": 2025,
+            "online_date": null,
+            "status": "published main-conference paper"
+          },
+          "source": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/24e4e3234178a836b70e0aa48827e0ff-Abstract-Conference.html"
+        }
+      ]
+    },
+    {
+      "id": "R38",
+      "title": "Wyckoff Transformer: Generation of Symmetric Crystals",
+      "aliases": [
+        "wyckoff_transformer"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2025-03-04",
+      "venue_date_status": {
+        "venue": "ICML 2025, PMLR 267, 29495–29526",
+        "status": "published conference paper",
+        "year": 2025
+      },
+      "date_notes": [],
+      "authors": [
+        "Kazeev, Nikita",
+        "Nong, Wei",
+        "Romanov, Ignat",
+        "Zhu, Ruiming",
+        "Ustyuzhanin, Andrey",
+        "Yamazaki, Shuya",
+        "Hippalgaonkar, Kedar"
+      ],
+      "doi": null,
+      "arxiv_id": "2503.02407",
+      "primary_url": "https://arxiv.org/abs/2503.02407",
+      "primary_urls": [
+        "https://arxiv.org/abs/2503.02407",
+        "https://proceedings.mlr.press/v267/kazeev25a.html"
+      ],
+      "tasks": [
+        "DNG discrete Wyckoff representation",
+        "property prediction from coordinate-free representation"
+      ],
+      "challenge_before": "Wyckoff字母不便跨群共享，原子序列又有顺序冗余；能否把大部分结构资格压缩成无坐标离散知识是核心假设。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "空间群+元素+位点对称+enumeration token，Transformer无位置编码读取已知集合，以mask/cascade训练AR；用PyXtal/CHGNet或DiffCSP++实现几何。",
+      "remaining_gap": "无位置编码保证输入集合的置换性质；原文明确AR过程及等价Wyckoff表示靠增强。数据库中98%表示唯一是经验观察，不能推出未知多晶型唯一或稳定性充分性。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Sections 2.1–2.4",
+              "Tables 1–2",
+              "Appendix H/J"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20 DNG",
+              "protocol": "1,000弛豫结构测模板；105新结构DFT阈值80meV/atom；另10,000样本DFT严格阈值。",
+              "finding": "1,000样本产生180/186新独特模板（两解码器）；10,000样本DiffCSP++解码严格SUN3.83%，小105样本中若干方法稳定差异未显著。",
+              "locator": "Table 1; Section 3.1.4"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "explicit_decoder_reuse",
+              "predecessor": "diffcsppp",
+              "evidence": "WyFormerDiffCSP++直接采用其几何解码，并与CHGNet实现比较。",
+              "locator": "Section 2.4; Table 1"
+            },
+            {
+              "type": "cited_concurrent_work",
+              "predecessor": "symmcd",
+              "evidence": "Section 3.1.4称SymmCD并行工作，二者位点对称思想相近；不写成单向继承。"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "Wyckoff Transformer: Generation of Symmetric Crystals",
+          "venue": {
+            "venue": "ICML 2025, PMLR 267, 29495–29526",
+            "status": "published conference paper",
+            "year": 2025
+          },
+          "source": "https://arxiv.org/abs/2503.02407"
+        }
+      ]
+    },
+    {
+      "id": "R39",
+      "title": "Exploration of crystal chemical space using text-guided generative artificial intelligence",
+      "aliases": [
+        "Chemeleon"
+      ],
+      "themes": [
+        "条件与知识"
+      ],
+      "first_public_date": "2025-05-12",
+      "venue_date_status": {
+        "venue": "Nature Communications 16, 4379",
+        "year": 2025,
+        "online_date": "2025-05-12",
+        "status": "published journal article"
+      },
+      "date_notes": [],
+      "authors": [
+        "Hyunsoo Park",
+        "Anthony Onwuli",
+        "Aron Walsh"
+      ],
+      "doi": "10.1038/s41467-025-59636-y",
+      "arxiv_id": null,
+      "primary_url": "https://www.nature.com/articles/s41467-025-59636-y",
+      "primary_urls": [
+        "https://www.nature.com/articles/s41467-025-59636-y",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12069578/"
+      ],
+      "tasks": [],
+      "challenge_before": "晶体文字与几何嵌入缺少对齐，语言难有效选择有意义化学空间。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "cross-modal Crystal CLIP contrastive alignment + classifier-free A/X/L diffusion；单独指定atom count。",
+      "remaining_gap": "文本已经能导向有价值化学空间；精确计量和数值目标、多条件终态交集仍需更强物理落地。",
+      "challenges": [
+        "C1",
+        "C2"
+      ],
+      "directions": [
+        "A",
+        "B"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "depth": "deep_selected_final_methods_conditions_case_studies",
+            "version": "final journal",
+            "sections": [
+              "Crystal CLIP",
+              "Table1",
+              "Fig3",
+              "chemical-space examples",
+              "limitations"
+            ]
+          },
+          "result_evidence": {
+            "claim": "Crystal CLIP相对BERT composition matching约3倍；Zn–Ti–O与Li–P–S–Cl空间探索及选定DFT/声子案例。",
+            "stage": "soft text compliance; raw energy diagnostics; selected DFT case studies",
+            "definition": "Table1 metastability为同组成未弛豫MACE能量距参考0.1eV/atom内；Fig3计量遵循随原子数增加而下降",
+            "locator": "Table1/Fig3; chemical-space Results; limitations"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_successor",
+            "relation": "Chemeleon2在不同latent架构中发展目标驱动RL，TFMat引用text-conditioned先例",
+            "locator": "Chemeleon2 main comparison; TFMat Introduction"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Exploration of crystal chemical space using text-guided generative artificial intelligence",
+          "venue": {
+            "venue": "Nature Communications 16, 4379",
+            "year": 2025,
+            "online_date": "2025-05-12",
+            "status": "published journal article"
+          },
+          "source": "https://www.nature.com/articles/s41467-025-59636-y"
+        }
+      ]
+    },
+    {
+      "id": "R40",
+      "title": "PLaID++: A Preference Aligned Language Model for Targeted Inorganic Materials Design",
+      "aliases": [
+        "PLaID++",
+        "plaid"
+      ],
+      "themes": [
+        "条件与知识",
+        "物理与发现"
+      ],
+      "first_public_date": "2025-09-08",
+      "venue_date_status": {
+        "venue": "ICML",
+        "year": 2026,
+        "status": "published",
+        "conference_dates": "2026-07-06/2026-07-11",
+        "proceedings_published": "2026-09-29",
+        "volume": "PMLR 306",
+        "read_version": "arXiv v4 2026-06-11；正式PMLR身份"
+      },
+      "date_notes": [],
+      "authors": [
+        "Xu, Andy",
+        "Desai, Rohan",
+        "Wang, Larry",
+        "Ritz, Ethan",
+        "Hope, Gabriel"
+      ],
+      "doi": null,
+      "arxiv_id": "2509.07150",
+      "primary_url": "https://arxiv.org/html/2509.07150v4",
+      "primary_urls": [
+        "https://proceedings.mlr.press/v306/xu26l.html",
+        "https://arxiv.org/html/2509.07150v4"
+      ],
+      "tasks": [],
+      "challenge_before": "科学生成需要多个满足物理约束的结果，偏好优化为何在坐标表示上集中到少数成功？",
+      "why_important": "稳定率上升只有在更多不同成功出现时才改善发现。",
+      "why_difficult": "表示冗余、组级唯一性难写成单对偏好，稳定奖励易集中概率。",
+      "method": "Qwen2.5-7B的Wyckoff文本、SFT→迭代DPO，eqV2稳定/新颖/空间群偏好，以及逐轮温度调节；条件/无条件联合训练。",
+      "remaining_gap": "表示与探索的作用已有证据；物理可辨识关系、未见组合的实现机制和持久开放发现分布仍需区分。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "depth": "deep_selected_primary_method_results_appendix",
+            "version": "arXiv v4, 2026-06-11; ICML official status",
+            "sections": [
+              "§4–5",
+              "representation/DPO",
+              "property extensions",
+              "Appendix7.2/Table4",
+              "evaluator comparison"
+            ]
+          },
+          "result_evidence": {
+            "claim": "相对此前方法SUN提升约/超过50%；每1000例高模量SUN联合目标40vs单模量28；高gap SUN3vs基线0。",
+            "stage": "eqV2偏好/eSEN final与BM/MEGNet gap，另1000例unconditional DFT",
+            "definition": "物性扩展主要MLIP/代理；unconditional DFT不能替代属性扩展DFT资格",
+            "locator": "§4–5; Appendix7.2/Table4; unconditional DFT/results"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_representation_posttraining",
+            "relation": "从crystal text LLM到physically ranked preferences；与Matra-Genoa共享Wyckoff几何表征主题但不推定单一路径",
+            "locator": "Introduction/§4/Discussion"
+          }
+        },
+        {
+          "read_depth": "§4.1–4.3, §5.1–5.4, Table1/3，温度及joint training对照。",
+          "result_evidence": [
+            {
+              "locator": "Table3",
+              "finding": "坐标表示三轮偏好优化稳定提高而SUN下降。",
+              "quantitative_claim": {
+                "SUN_percent": [
+                  2.93,
+                  2.23,
+                  1.69
+                ],
+                "stable_percent": [
+                  10.35,
+                  13.47,
+                  15.94
+                ]
+              },
+              "denominator": "§5.1每个无条件模型10000个可解析CIF；解析失败重采。",
+              "protocol": "eSEN最终松弛/评价、稳定hull≤0；eqV2构造偏好。Table1与Table3保留各自表值，未拼接成同一trajectory。"
+            },
+            {
+              "locator": "§5.4 Figure3/4 discussion",
+              "finding": "Wyckoff表示、动态温度与统一训练改善作者任务，且有未直接强化空间群的迁移观察。",
+              "quantitative_claim": null,
+              "protocol": "空间群任务用宽松亚稳SSUN；不混为unconditional strict SUN。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "Fine-tuned language models generate stable inorganic materials as text",
+                "locator": "§4.1, §5.1",
+                "type": "SFT/template procedure"
+              },
+              {
+                "target": "Direct Preference Optimization",
+                "locator": "§3.2/§4.2",
+                "type": "algorithm"
+              }
+            ],
+            "review_conceptual_relation": "支持C5的质量与概率集中区别，并提供C6已完成部分。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "PLaID++: A Preference Aligned Language Model for Targeted Inorganic Materials Design",
+          "venue": {
+            "venue": "ICML 2026, PMLR306:140903–140922",
+            "year": 2026,
+            "conference_dates": "2026-07-06/2026-07-11",
+            "status": "published main-conference paper"
+          },
+          "source": "https://proceedings.mlr.press/v306/xu26l.html"
+        },
+        {
+          "title": "PLaID++: A Preference Aligned Language Model for Targeted Inorganic Materials Design",
+          "venue": {
+            "venue": "ICML",
+            "year": 2026,
+            "status": "published",
+            "conference_dates": "2026-07-06/2026-07-11",
+            "proceedings_published": "2026-09-29",
+            "volume": "PMLR 306",
+            "read_version": "arXiv v4 2026-06-11；正式PMLR身份"
+          },
+          "source": "https://arxiv.org/html/2509.07150v4"
+        }
+      ]
+    },
+    {
+      "id": "R41",
+      "title": "OpenCSP: A Deep Learning Framework for Crystal Structure Prediction from Ambient to High Pressure",
+      "aliases": [
+        "opencsp"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2025-09-12",
+      "venue_date_status": {
+        "venue": "arXiv",
+        "year": 2025,
+        "status": "preprint; final venue not confirmed here",
+        "read_version": "v1 2025-09-12"
+      },
+      "date_notes": [],
+      "authors": [
+        "Wang, Yinan",
+        "Wang, Xiaoyang",
+        "Wang, Zhenyu",
+        "Wu, Jing",
+        "Lv, Jian",
+        "Wang, Han"
+      ],
+      "doi": null,
+      "arxiv_id": "2509.10293",
+      "primary_url": "https://arxiv.org/html/2509.10293v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2509.10293v1"
+      ],
+      "tasks": [],
+      "challenge_before": "近常压平衡数据训练的物理模型怎样在高压力CSP中获得可信stress与enthalpy？",
+      "why_important": "压力改变配位和组成可行性，当前PES缺口会直接误导结构搜索。",
+      "why_difficult": "高压环境少、压力/体积共同影响焓排序，热扰动数据不能充分替代压缩数据。",
+      "method": "CALYPSO随机初态与压力约束松弛，pressure-aware DP-GEN并发学习，按force/enthalpy不确定性选择路径与极小值DFT标签。",
+      "remaining_gap": "已显示PES校准可跨以后的搜索复用；哪些观测揭示可迁移生成决策关系仍需进一步定义。",
+      "challenges": [
+        "C4",
+        "C6"
+      ],
+      "directions": [
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "Introduction、dataset与concurrent-learning Methods、pressure/enthalpy目标；不报告全部模型排名量化。",
+          "result_evidence": [
+            {
+              "locator": "Introduction、dataset and Methods concurrent learning",
+              "finding": "有针对性物理数据采集改善作者压力CSP所需的energy/force/virial和排序能力。",
+              "quantitative_claim": null,
+              "protocol": "高压enthalpy与其DFT约定，非零压独立DNG strict SUN；不直接拼接不同PES或functional的能量标签。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "CALYPSO and DP-GEN",
+                "locator": "Introduction and concurrent-learning Methods",
+                "type": "implemented search/data acquisition"
+              },
+              {
+                "target": "GNoME and MatterGen",
+                "locator": "Introduction",
+                "type": "explicit materials discovery context"
+              }
+            ],
+            "review_conceptual_relation": "提供C6信息采集/PES学习先例，与新的可行动关系知识范围分开。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "OpenCSP: A Deep Learning Framework for Crystal Structure Prediction from Ambient to High Pressure",
+          "venue": {
+            "venue": "arXiv",
+            "year": 2025,
+            "status": "preprint; final venue not confirmed here",
+            "read_version": "v1 2025-09-12"
+          },
+          "source": "https://arxiv.org/html/2509.10293v1"
+        }
+      ]
+    },
+    {
+      "id": "R42",
+      "title": "All that structure matches does not glitter",
+      "aliases": [
+        "glitter"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2025-09-15",
+      "venue_date_status": {
+        "venue": "NeurIPS Datasets and Benchmarks",
+        "year": 2025,
+        "status": "published",
+        "read_version": "arXiv v2 2025-12-03；正式NeurIPS PDF身份已核",
+        "venue_date_precision": "year; exact proceedings release date not separately asserted"
+      },
+      "date_notes": [],
+      "authors": [
+        "Martirossyan, Maya M.",
+        "Egg, Thomas",
+        "Hoellmer, Philipp",
+        "Karypis, George",
+        "Transtrum, Mark",
+        "Roitberg, Adrian",
+        "Liu, Mingjie",
+        "Hennig, Richard G.",
+        "Tadmor, Ellad B.",
+        "Martiniani, Stefano"
+      ],
+      "doi": null,
+      "arxiv_id": "2509.12178",
+      "primary_url": "https://arxiv.org/html/2509.12178v2",
+      "primary_urls": [
+        "https://arxiv.org/html/2509.12178v2"
+      ],
+      "tasks": [],
+      "challenge_before": "有多个可接受多晶型时，单参考匹配和随机划分是否仍能度量CSP能力？",
+      "why_important": "评价对象会决定哪种能力得到训练与被当作进步。",
+      "why_difficult": "重复晶胞表示、同组成多晶型跨split、匹配容差及任意一一配对均影响结果。",
+      "method": "去重与polymorph-aware splits；METRe匹配生成集合与全部相关参考；cRMSE加入不匹配惩罚。",
+      "remaining_gap": "已知参考集合仍不完备；最终物理资格、终态身份及未观测结果需要额外证据。",
+      "challenges": [
+        "C2",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "§3数据去重/多晶型划分、§4 METRe与cRMSE、§5–6结果和讨论；附录容差选读。",
+          "result_evidence": [
+            {
+              "locator": "§3–6；Tables2–3",
+              "finding": "展示去重与多晶型评价改变恢复结果，发布数据与新的集合匹配/误差工具。",
+              "quantitative_claim": null,
+              "protocol": "CSP参考集合恢复；METRe不是开放DNG新颖发现率，数据库未记载的物理结果不由该指标确认。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "OMatG, DiffCSP and other CSP models",
+                "locator": "§2.4 and §5",
+                "type": "benchmark"
+              }
+            ],
+            "review_conceptual_relation": "OMatG-IRL §4/§5.2与flash §4.1实际使用其split/metrics，属于可核评价继承。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "All that structure matches does not glitter",
+          "venue": {
+            "venue": "NeurIPS Datasets and Benchmarks",
+            "year": 2025,
+            "status": "published",
+            "read_version": "arXiv v2 2025-12-03；正式NeurIPS PDF身份已核",
+            "venue_date_precision": "year; exact proceedings release date not separately asserted"
+          },
+          "source": "https://arxiv.org/html/2509.12178v2"
+        }
+      ]
+    },
+    {
+      "id": "R43",
+      "title": "LLM Meets Diffusion: A Hybrid Framework for Crystal Material Generation",
+      "aliases": [
+        "crysllmgen",
+        "CrysLLMGen"
+      ],
+      "themes": [
+        "表示与生成",
+        "条件与知识"
+      ],
+      "first_public_date": "2025-10-27",
+      "venue_date_status": {
+        "venue": "NeurIPS 2025",
+        "year": 2025,
+        "online_date": null,
+        "status": "published main-conference paper; official proceedings verified"
+      },
+      "date_notes": [],
+      "authors": [
+        "Subhojyoti Khastagir",
+        "Kishalay Das",
+        "Pawan Goyal",
+        "Seung-Cheol Lee",
+        "Satadeep Bhattacharjee",
+        "Niloy Ganguly"
+      ],
+      "doi": "10.52202/085713-5635",
+      "arxiv_id": "2510.23040",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/f789a628fca473e922c806657512a20f-Abstract-Conference.html",
+      "primary_urls": [
+        "https://arxiv.org/abs/2510.23040",
+        "https://proceedings.neurips.cc/paper_files/paper/2025/hash/f789a628fca473e922c806657512a20f-Abstract-Conference.html",
+        "https://github.com/kdmsit/crysllmgen"
+      ],
+      "tasks": [
+        "DNG hybrid initialization/refinement",
+        "text-conditional formula/space group generation"
+      ],
+      "challenge_before": "语言模型化学组成较强、精确几何较弱；等变denoising连续几何较强，需要互补利用。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "独立训练LLaMA crystal text与DiffCSP扩展diffusion；LLM粗结构经中间噪声处理，固定原子类型精修晶格与坐标。",
+      "remaining_gap": "组合化学先验与几何精修已成功；§7明确没有模块相互反馈，给出共同形成/修订的下一步空间。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Key Differences with FlowLLM",
+              "Sections 4.2–4.5",
+              "Tables 2–3"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20 DNG",
+              "protocol": "10,000候选，CHGNet弛豫/估能与MP凸包比较；没有Table 3生成候选DFT验证。",
+              "finding": "MLIP估计稳定16.79%、SUN9.21%；结果支持其组成—几何分工的实证价值。",
+              "locator": "Table 3; Section 5.2"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "explicit_comparison_and_interface_change",
+              "predecessors": [
+                "flowllm",
+                "diffcsp",
+                "crystal_llm"
+              ],
+              "evidence": "原文明确比较FlowLLM训练/集成策略，采用DiffCSP分数坐标扩散与Gruver等prompt/增强。",
+              "locator": "Related Work Key Differences; Sections 4.3–4.4"
+            }
+          ]
+        },
+        {
+          "read_depth": {
+            "depth": "deep_selected_mechanism_results_limitations",
+            "version": "NeurIPS 2025 / v1",
+            "sections": [
+              "§4",
+              "§5.2/Table3",
+              "§5.3/Fig2",
+              "§7"
+            ]
+          },
+          "result_evidence": {
+            "claim": "10000例CHGNet：stable16.79%、SUN9.21%（LLaMA SUN4.84%）；组成保持，空间群命中相对LLM改善42%。",
+            "stage": "CHGNet relaxation and hull; text composition/SG matching",
+            "definition": "stable Ehull<0、metastable<0.1；SUN表为CHGNet能量，非FlowLLM的DFT；SG symprec0.2Å",
+            "locator": "§5.2/Table3; §5.3/Fig2"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_model_combination",
+            "relation": "复用Crystal-LLM prompt与DiffCSP式continuous model；§3讨论FlowLLM的另一混合机制",
+            "locator": "§3/§4/§7"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "LLM Meets Diffusion: A Hybrid Framework for Crystal Material Generation",
+          "venue": {
+            "venue": "NeurIPS 2025",
+            "status": "published conference paper",
+            "year": 2025
+          },
+          "source": "https://arxiv.org/abs/2510.23040"
+        },
+        {
+          "title": "LLM Meets Diffusion: A Hybrid Framework for Crystal Material Generation",
+          "venue": {
+            "venue": "NeurIPS 2025",
+            "year": 2025,
+            "online_date": null,
+            "status": "published main-conference paper; official proceedings verified"
+          },
+          "source": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/f789a628fca473e922c806657512a20f-Abstract-Conference.html"
+        }
+      ]
+    },
+    {
+      "id": "R44",
+      "title": "Accelerating inverse materials design using generative diffusion models with reinforcement learning",
+      "aliases": [
+        "matinvent"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2025-11-05",
+      "venue_date_status": {
+        "venue": "arXiv",
+        "year": 2025,
+        "status": "preprint; final venue not confirmed here",
+        "read_version": "v1"
+      },
+      "date_notes": [],
+      "authors": [
+        "Chen, Junwu",
+        "Guo, Jeff",
+        "Fako, Edvin",
+        "Schwaller, Philippe"
+      ],
+      "doi": null,
+      "arxiv_id": "2511.03112",
+      "primary_url": "https://arxiv.org/html/2511.03112v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2511.03112v1"
+      ],
+      "tasks": [],
+      "challenge_before": "性质条件微调依赖大标注集，怎样以少量目标评价适应单目标和冲突多目标？",
+      "why_important": "昂贵性质验证的预算限制实际逆向设计，生成分布需要对最终目标适应。",
+      "why_difficult": "likelihood与目标错位，奖励集中可能降低多样性，代理性质精度随目标区域变化。",
+      "method": "扩散MDP的policy optimization、reward-weighted KL、几何松弛与SUN预筛、经验重放和历史重复diversity filter。",
+      "remaining_gap": "已展示目标对齐与重放价值；能力增量的可迁移物理关系、同总费用的开放合格覆盖仍需独立研究。",
+      "challenges": [
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "§2.1–2.3, Methods RL与replay/diversity filter，SupplementC/E/F相关协议；不复核所有性质oracle。",
+          "result_evidence": [
+            {
+              "locator": "§2.1–2.3 and SupplementC",
+              "finding": "在作者单/多性质任务中改变目标分布，提供物理/预测/经验oracle，并显示replay与多样过滤的作用。",
+              "quantitative_claim": null,
+              "protocol": "default MatterGen；SUN先筛要求hull<0.1 eV/atom；性质调用数量不包含全部候选产生、MLIP松弛/筛选成本。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "MatterGen",
+                "locator": "§2.1: default model unless otherwise specified",
+                "type": "implemented backbone"
+              },
+              {
+                "target": "Diffusion policy optimization and molecular-design replay",
+                "locator": "§1 and Methods",
+                "type": "algorithm foundation"
+              }
+            ],
+            "review_conceptual_relation": "这是物理/目标计算进入生成权重的直接先例，C6须超出仅加RL。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Accelerating inverse materials design using generative diffusion models with reinforcement learning",
+          "venue": {
+            "venue": "arXiv",
+            "year": 2025,
+            "status": "preprint; final venue not confirmed here",
+            "read_version": "v1"
+          },
+          "source": "https://arxiv.org/html/2511.03112v1"
+        }
+      ]
+    },
+    {
+      "id": "R45",
+      "title": "Guiding Generative Models to Uncover Diverse and Novel Crystals via Reinforcement Learning",
+      "aliases": [
+        "Chemeleon2",
+        "chemeleon2"
+      ],
+      "themes": [
+        "条件与知识",
+        "物理与发现"
+      ],
+      "first_public_date": "2025-11-10",
+      "venue_date_status": {
+        "venue": "Nature Machine Intelligence",
+        "year": 2026,
+        "published_online": "2026-07-06",
+        "status": "published",
+        "volume": "8",
+        "pages": "1087–1099",
+        "read_version": "formal publisher text；preprint v1仅作first date"
+      },
+      "date_notes": [],
+      "authors": [
+        "Hyunsoo Park",
+        "Aron Walsh"
+      ],
+      "doi": "10.1038/s42256-026-01262-4",
+      "arxiv_id": "2511.07158",
+      "primary_url": "https://www.nature.com/articles/s42256-026-01262-4",
+      "primary_urls": [
+        "https://www.nature.com/articles/s42256-026-01262-4",
+        "https://arxiv.org/abs/2511.07158"
+      ],
+      "tasks": [],
+      "challenge_before": "似然分布偏向已知区域，怎样兼顾欠探索化学、新颖性与热力学可行性？",
+      "why_important": "科学发现需要稳定又少见的材料，单一高密度区域的采样不能充分服务该目标。",
+      "why_difficult": "latent解码对罕见区域误差敏感；奖励容易推向熟悉原型或稀疏相图的复杂组成；批次多样性依赖评价规模。",
+      "method": "latent denoising diffusion与GRPO；AMD连续creativity、MLFF hull资格、结构多样性及KL/熵regularization。",
+      "remaining_gap": "多目标分布改变已有支持；最终物理结果上的未知类发现、原型创新与跨请求知识需进一步识别。",
+      "challenges": [
+        "C1",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "depth": "deep_selected_final_property_RL_and_evaluation",
+            "version": "final journal",
+            "sections": [
+              "property-guided design/Fig6",
+              "GRPO methods",
+              "VASP methods",
+              "Supplementary19–20 discussion"
+            ]
+          },
+          "result_evidence": {
+            "claim": "3eV任务512例中82同时mSUN且2.7–3.3eV，raw mSUN45.3%；另DFT弛豫后mSUN60.8%、metastability85.5%，目标仍集中。",
+            "stage": "initial as-generated static DFT gap; separately DFT-relaxed",
+            "definition": "mSUN采用Ehull<0.1eV/atom；82/512为raw目标交集，不能与60.8%拼成relaxed目标交集",
+            "locator": "Fig6/property-guided Results; Methods; Supplementary19–20 references"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_successor_and_compared_mechanism",
+            "relation": "作者Chemeleon语言生成路线发展为latent RL；CFG/LoRA/RL对照定位后训练作用",
+            "locator": "main comparison; property-guided Results"
+          }
+        },
+        {
+          "read_depth": "正式Main目标与latent机制、RL、多奖励、as-generated DNG评价、novelty/stability dilemma、局限与Methods；preprint PDF补查。",
+          "result_evidence": [
+            {
+              "locator": "Main Benchmarking、novelty–stability dilemma与Methods",
+              "finding": "在作者任务中RL提高metastable/unique/novel交集并支持性质目标，仍报告重复、原型迁移与相图稀疏奖励风险。",
+              "quantitative_claim": null,
+              "denominator": "10000样本每模型无条件DNG；主要 as-generated，不进行geometry optimization。",
+              "protocol": "主指标mSUN，hull<0.1 eV/atom的MLFF代理；不能用该值作为共同松弛strict SUN。本文不取Fig.3主值作为原表定量。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "Chemeleon text-guided diffusion",
+                "locator": "Main model comparison and Methods",
+                "type": "model background"
+              },
+              {
+                "target": "GRPO/PPO",
+                "locator": "Methods RL",
+                "type": "policy algorithm"
+              },
+              {
+                "target": "MatInvent",
+                "locator": "References and Main recent RL",
+                "type": "related primary work"
+              }
+            ],
+            "review_conceptual_relation": "已有novelty–stability目标对齐，不能将D定义为首次稳定/多样加权奖励。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Guiding generative models to uncover diverse and novel crystals via reinforcement learning",
+          "venue": {
+            "venue": "Nature Machine Intelligence 8, 1087–1099",
+            "year": 2026,
+            "online_date": "2026-07-06",
+            "status": "published journal article"
+          },
+          "source": "https://www.nature.com/articles/s42256-026-01262-4"
+        },
+        {
+          "title": "Guiding Generative Models to Uncover Diverse and Novel Crystals via Reinforcement Learning",
+          "venue": {
+            "venue": "Nature Machine Intelligence",
+            "year": 2026,
+            "published_online": "2026-07-06",
+            "status": "published",
+            "volume": "8",
+            "pages": "1087–1099",
+            "read_version": "formal publisher text；preprint v1仅作first date"
+          },
+          "source": "https://www.nature.com/articles/s42256-026-01262-4"
+        }
+      ]
+    },
+    {
+      "id": "R46",
+      "title": "LeMat-GenBench: A Unified Evaluation Framework for Crystal Generative Models",
+      "aliases": [
+        "lemat"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2025-12-04",
+      "venue_date_status": {
+        "venue": "arXiv and public benchmark",
+        "year": 2025,
+        "status": "preprint; formal main-conference venue not confirmed",
+        "read_version": "v2 2026-01-14；AI4Mat workshop precursor独立"
+      },
+      "date_notes": [],
+      "authors": [
+        "Betala, Siddharth",
+        "Gleason, Samuel P.",
+        "Ramlaoui, Ali",
+        "Xu, Andy",
+        "Channing, Georgia",
+        "Levy, Daniel",
+        "Fourrier, Clémentine",
+        "Kazeev, Nikita",
+        "Joshi, Chaitanya K.",
+        "Kaba, Sékou-Oumar",
+        "Therrien, Félix",
+        "Hernandez-Garcia, Alex",
+        "Mercado, Rocío",
+        "Krishnan, N. M. Anoop",
+        "Duval, Alexandre"
+      ],
+      "doi": null,
+      "arxiv_id": "2512.04562",
+      "primary_url": "https://arxiv.org/html/2512.04562v2",
+      "primary_urls": [
+        "https://arxiv.org/html/2512.04562v2"
+      ],
+      "tasks": [],
+      "challenge_before": "不同稳定、新颖、有效性与物理处理口径下，怎样判断生成进步？",
+      "why_important": "统一标准能揭示综合交集与多个能力轴之间的变化，并使费用可核。",
+      "why_difficult": "候选/参考能量混用不同方法、各提交管线的松弛不同、novelty库与分母不同。",
+      "method": "LeMat-Bulk参考；候选与各MLIP自己重算的hull配对；有效性→U/N/S序贯；分布/多样/效率及额外松弛附表。",
+      "remaining_gap": "统一评价降低口径差异；跨模型历史训练费用和物理外推仍不同，条件任务比较尚为后续工作。",
+      "challenges": [
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "v1/v2 §3–5、self-consistent hull、pre/post-relaxation、AppendixC；v2重复抽样数据库基线定义。",
+          "result_evidence": [
+            {
+              "locator": "§3.1/3.2, §4.2, §5.2/5.3/5.4, AppendixC",
+              "finding": "实现无条件模型的统一多轴比较，报告平均稳定—新颖/多样权衡，并分开自带松弛提交与其它模型。",
+              "quantitative_claim": null,
+              "denominator": "2500提交结构，CrystalFormer例外1000；U/N/S百分比按全提交集并只计通过有效性者。",
+              "protocol": "主榜不再追加松弛，但部分提交pipeline已含松弛；统一额外松弛另报；SUN on-hull，亚稳交集另列。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "MatterGen SUN framework and adapted StructureMatcher",
+                "locator": "§3.2",
+                "type": "evaluation method"
+              }
+            ],
+            "review_conceptual_relation": "为C4–6提供一致观测对象，不从横截面权衡推出任何范式的内在定理。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "LeMat-GenBench: A Unified Evaluation Framework for Crystal Generative Models",
+          "venue": {
+            "venue": "arXiv and public benchmark",
+            "year": 2025,
+            "status": "preprint; formal main-conference venue not confirmed",
+            "read_version": "v2 2026-01-14；AI4Mat workshop precursor独立"
+          },
+          "source": "https://arxiv.org/html/2512.04562v2"
+        }
+      ]
+    },
+    {
+      "id": "R47",
+      "title": "Periodic Bayesian Flow Networks with Additive Accuracy",
+      "aliases": [
+        "periodicbfn"
+      ],
+      "themes": [
+        "表示与生成"
+      ],
+      "first_public_date": "2026",
+      "venue_date_status": {
+        "venue": "ICML 2026, PMLR 306, 75161–75176",
+        "status": "published conference paper",
+        "conference_dates": "2026-07-06/2026-07-11",
+        "date_note": "原始OpenReview提交PDF可检索，确切首次公开时刻未核；本索引保留2026年份而不伪造首稿日。"
+      },
+      "date_notes": [],
+      "authors": [
+        "Peijia Lin",
+        "Zihan Zhang",
+        "Zhangrui Zhao",
+        "Shaohao Rui",
+        "Junyi An",
+        "Yun-Fei Shi",
+        "Fenglei Cao",
+        "Weijie Ma",
+        "Yutong Lu"
+      ],
+      "doi": null,
+      "arxiv_id": null,
+      "primary_url": "https://proceedings.mlr.press/v306/lin26ar.html",
+      "primary_urls": [
+        "https://proceedings.mlr.press/v306/lin26ar.html",
+        "https://openreview.net/forum?id=N7hieduZYV",
+        "https://github.com/EmperorJia/PeriodicBFN"
+      ],
+      "tasks": [
+        "CSP",
+        "periodic phase synthesis adjacent task"
+      ],
+      "challenge_before": "圆周von-Mises后验的集中度依赖观测相对角度，不存在独立于观测的标量精度可加律，导致训练与采样日程敏感。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "周期标量嵌入二维(cos,sin)平面，执行Gaussian Bayes更新以恢复严格可加精度；Rao–Blackwell化解析边缘化整体周期平移，降低监督噪声。",
+      "remaining_gap": "形式保证针对嵌入后的信息精度与特定平移目标，未保证真实物理稳定；理论状态信息与化学/几何可执行选择的关系仍可拓展。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C4",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "level": "methods_results",
+            "locators": [
+              "Sections 3.3–4",
+              "Table 1",
+              "Tables 4, 6–8",
+              "Appendix C"
+            ]
+          },
+          "result_evidence": [
+            {
+              "task": "MP-20 CSP",
+              "protocol": "沿用CrysBFN等变网络、12.3M参数，并对齐网络前向次数；500 forwards。",
+              "finding": "匹配率70.06%，CrysBFN主基准64.35%；采样步数变化时保持更稳定。此结果不是DNG发现率。",
+              "locator": "Tables 1, 4, 7–8"
+            }
+          ],
+          "lineage_evidence": [
+            {
+              "type": "explicit_theoretical_correction_and_architecture_reuse",
+              "predecessor": "crysbfn",
+              "evidence": "直接分析圆周不可加精度并复用CrysBFN网络，为其日程困难提出新表示。",
+              "locator": "Sections 3.3–4; Implementation"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        {
+          "title": "Periodic Bayesian Flow Networks with Additive Accuracy",
+          "venue": {
+            "venue": "ICML 2026, PMLR 306, 75161–75176",
+            "status": "published conference paper",
+            "conference_dates": "2026-07-06/2026-07-11",
+            "date_note": "原始OpenReview提交PDF可检索，确切首次公开时刻未核；本索引保留2026年份而不伪造首稿日。"
+          },
+          "source": "https://proceedings.mlr.press/v306/lin26ar.html"
+        }
+      ]
+    },
+    {
+      "id": "R48",
+      "title": "Open Materials Generation with Inference-Time Reinforcement Learning",
+      "aliases": [
+        "irl"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2026-01-31",
+      "venue_date_status": {
+        "venue": "ICML",
+        "year": 2026,
+        "status": "published",
+        "conference_dates": "2026-07-06/2026-07-11",
+        "proceedings_published": "2026-09-29",
+        "volume": "PMLR 306",
+        "read_version": "arXiv v2 2026-06-09；formal record checked"
+      },
+      "date_notes": [],
+      "authors": [
+        "Hoellmer, Philipp",
+        "Martiniani, Stefano"
+      ],
+      "doi": null,
+      "arxiv_id": "2602.00424",
+      "primary_url": "https://arxiv.org/html/2602.00424v2",
+      "primary_urls": [
+        "https://arxiv.org/html/2602.00424v2"
+      ],
+      "tasks": [],
+      "challenge_before": "只有速度场、没有显式score的生成器怎样利用物理reward学习有效策略？",
+      "why_important": "SI/flow已有高效候选先验，反馈接口应覆盖不同连续动态。",
+      "why_difficult": "确定性ODE缺少policy比率，探索噪声、离散积分与annealing共同影响原模型行为。",
+      "method": "给ODE增加小随机扰动定义可估计policy ratios/KL的代理SDE，在速度场上GRPO；另学习时间退火。DNG hybrid保持物种通道训练不变，只强化坐标。",
+      "remaining_gap": "已完成conditional physics→DNG能力影响；真正剩余是新条件实现关系的内容、有效行动窗口和未见组合上的物理成功增量。",
+      "challenges": [
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "§3–5、noise/integration/annealing对照、AppendixI、K.1/Table5–6与K.2。",
+          "result_evidence": [
+            {
+              "locator": "AppendixK.1/Table6",
+              "finding": "在训练组成固定的CSP式坐标后训练后恢复全mask DNG，已有自主部署效应。",
+              "quantitative_claim": {
+                "baseline": {
+                  "stable_percent": 10.6,
+                  "SUN_percent": 0.4,
+                  "MSUN_percent": 16.9,
+                  "sampling_steps": 840
+                },
+                "CSP_style_RL": {
+                  "stable_percent": 7.5,
+                  "SUN_percent": 0.7,
+                  "MSUN_percent": 18.1,
+                  "sampling_steps": 50
+                }
+              },
+              "denominator": "每模型1000独立DNG样本。",
+              "protocol": "共同MACE-MPA-0松弛，LeMat-Bulk self-consistent MACE hull；hull≤0为S；作者称SUN收益主要来自U/N；采样预算不同。"
+            },
+            {
+              "locator": "§5.1–5.2, AppendixI",
+              "finding": "CSP速度场能量强化与学到的退火有效，post-relaxation已知CSP表现接近但需要更少松弛步。",
+              "quantitative_claim": null,
+              "protocol": "CSP matching/relative energy与独立DNG发现分别保存。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "Open Materials Generation with Stochastic Interpolants",
+                "locator": "§2 and §3",
+                "type": "implemented backbone/framework"
+              },
+              {
+                "target": "MatInvent and Chemeleon2",
+                "locator": "§1.1",
+                "type": "explicit related DNG RL"
+              },
+              {
+                "target": "Flow-GRPO",
+                "locator": "§1.1 and AppendixB",
+                "type": "technical comparison"
+              },
+              {
+                "target": "Structure Matches metrics and LeMat-GenBench",
+                "locator": "§4 and AppendixK",
+                "type": "evaluation"
+              }
+            ],
+            "review_conceptual_relation": "C4/C6为后继残余对象；作者first RL to CSP的文字不得覆盖2023 basin-hopping RL-CSP。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Open Materials Generation with Inference-Time Reinforcement Learning",
+          "venue": {
+            "venue": "ICML",
+            "year": 2026,
+            "status": "published",
+            "conference_dates": "2026-07-06/2026-07-11",
+            "proceedings_published": "2026-09-29",
+            "volume": "PMLR 306",
+            "read_version": "arXiv v2 2026-06-09；formal record checked"
+          },
+          "source": "https://arxiv.org/html/2602.00424v2"
+        }
+      ]
+    },
+    {
+      "id": "R49",
+      "title": "Multimodal Crystal Flow: Any-to-Any Modality Generation for Unified Crystal Modeling",
+      "aliases": [
+        "MCFlow"
+      ],
+      "themes": [
+        "条件与知识"
+      ],
+      "first_public_date": "2026-02-23",
+      "venue_date_status": {
+        "venue": "ICML2026, PMLR306:109105–109131",
+        "year": 2026,
+        "conference_dates": "2026-07-06/2026-07-11",
+        "status": "published main-conference paper"
+      },
+      "date_notes": [],
+      "authors": [
+        "Kiyoung Seong",
+        "Sungsoo Ahn",
+        "Sehui Han",
+        "Changyoung Park"
+      ],
+      "doi": null,
+      "arxiv_id": "2602.20210",
+      "primary_url": "https://proceedings.mlr.press/v306/seong26a.html",
+      "primary_urls": [
+        "https://proceedings.mlr.press/v306/seong26a.html",
+        "https://arxiv.org/abs/2602.20210"
+      ],
+      "tasks": [],
+      "challenge_before": "CSP、DNG和结构条件元素生成通常使用任务专属模型，难共享条件表征。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "A与(X,L)独立flow时间轴；DiT内电负性/Wyckoff排序与分层排列增强，不用外部显式模板。",
+      "remaining_gap": "变量通道互条件已统一；新增混合功能约束和多个共享局部关系的兼容泛化仍是独立能力。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "directions": [
+        "A",
+        "B"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "depth": "deep_selected_final_formulation_tasks_evaluation",
+            "version": "ICML2026 final; arXiv latest v3 2026-05-25",
+            "sections": [
+              "§3 independent modality times",
+              "§4/Tables1–4",
+              "AppendixF evaluator"
+            ]
+          },
+          "result_evidence": {
+            "claim": "同一模型在MP-20/MPTS-52上支持CSP、DNG、geometry-conditioned atom type，及固定其它位点的元素替换。",
+            "stage": "reference recovery; LeMat-GenBench multi-MLIP DNG; composition generation",
+            "definition": "any-to-any是原子类型与几何互条件，不是光谱/自然语言任意模态；DNG以三MLIP平均及LeMat-Bulk一致hull评价",
+            "locator": "§3; Tables1–4; AppendixF"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_task_unification",
+            "relation": "原文对照task-specific crystal generators，独立时间轴把多个推断路径统一",
+            "locator": "§1–3/Fig1"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Multimodal Crystal Flow: Any-to-Any Modality Generation for Unified Crystal Modeling",
+          "venue": {
+            "venue": "ICML2026, PMLR306:109105–109131",
+            "year": 2026,
+            "conference_dates": "2026-07-06/2026-07-11",
+            "status": "published main-conference paper"
+          },
+          "source": "https://proceedings.mlr.press/v306/seong26a.html"
+        }
+      ]
+    },
+    {
+      "id": "R50",
+      "title": "Generative structure search for efficient and diverse discovery of molecular and crystal structures",
+      "aliases": [
+        "gss"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2026-04-30",
+      "venue_date_status": {
+        "venue": "arXiv",
+        "year": 2026,
+        "status": "preprint",
+        "read_version": "v1完整方法/协议；v2 2026-05-23核固定schedule与新增理论边界"
+      },
+      "date_notes": [],
+      "authors": [
+        "Qin, Yifang",
+        "Shi, Yu",
+        "Tan, Junfu",
+        "Liu, Chang",
+        "Zhang, Ming",
+        "Lu, Ziheng"
+      ],
+      "doi": null,
+      "arxiv_id": "2604.27636",
+      "primary_url": "https://arxiv.org/html/2604.27636v2",
+      "primary_urls": [
+        "https://arxiv.org/html/2604.27636v2"
+      ],
+      "tasks": [],
+      "challenge_before": "数据驱动生成访问少量训练模式，RSS覆盖多但低能效率低，怎样共同探索多个相关极小值？",
+      "why_important": "CSP需要多晶型和欠探索组成，生成先验与物理地形有互补作用。",
+      "why_difficult": "物理力在高噪声结构上难代表终点资格；数据先验对欠覆盖盆地有偏，昂贵调用限制探索。",
+      "method": "把generative score和physical force放入共同更新，用预设sigmoid从先验引导过渡到物理主导。",
+      "remaining_gap": "固定schedule尚不能按科学状态识别反馈行动窗口；当前搜索的物理经验也未明确学入后续生成器。",
+      "challenges": [
+        "C4",
+        "C5"
+      ],
+      "directions": [
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "§1–4、共同score/force更新、reference coverage定义、成本归一、§3 future adaptive schedule；未逐行审新增全部理论证明。",
+          "result_evidence": [
+            {
+              "locator": "§2 coverage/efficiency；§3 Discussion",
+              "finding": "作者系统的参考低能极小值覆盖与能量效率同时改善，并明确将runtime diagnostics自适应schedule列为未来方向。",
+              "quantitative_claim": null,
+              "denominator": "coverage分母为充分RSS得到的参考低能结构集合；budget cost为尝试数除以该系统参考集大小。",
+              "protocol": "给定组成CSP与另列分子构象；潜在参考不完备及PES模型边界保留，不转写为独立无机DNG strict SUN。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "Pickard and Needs 2006/2011 random structure search",
+                "locator": "§1",
+                "type": "explicit physical-search ancestor"
+              },
+              {
+                "target": "Diffusion generative sampling",
+                "locator": "§2.1/§4.1",
+                "type": "score sampler component"
+              }
+            ],
+            "review_conceptual_relation": "提供prior/search关系和C4状态自适应缺口的直接原文支持。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Generative structure search for efficient and diverse discovery of molecular and crystal structures",
+          "venue": {
+            "venue": "arXiv",
+            "year": 2026,
+            "status": "preprint",
+            "read_version": "v1完整方法/协议；v2 2026-05-23核固定schedule与新增理论边界"
+          },
+          "source": "https://arxiv.org/html/2604.27636v2"
+        }
+      ]
+    },
+    {
+      "id": "R51",
+      "title": "Composable Crystals: Controllable Materials Discovery via Concept Learning",
+      "aliases": [
+        "Composable Crystals"
+      ],
+      "themes": [
+        "条件与知识"
+      ],
+      "first_public_date": "2026-05-14",
+      "venue_date_status": {
+        "venue": "arXiv preprint",
+        "year": 2026,
+        "online_date": null,
+        "status": "preprint; no formal venue inferred"
+      },
+      "date_notes": [],
+      "authors": [
+        "Nian Liu",
+        "Yuwei Zeng",
+        "Ryoji Kubo",
+        "Nikita Kazeev",
+        "Stephen Gregory Dale",
+        "Artem Maevskiy",
+        "Pengru Huang",
+        "Thomas Laurent",
+        "Kostya S. Novoselov",
+        "Xavier Bresson"
+      ],
+      "doi": null,
+      "arxiv_id": "2605.14769",
+      "primary_url": "https://arxiv.org/html/2605.14769v2",
+      "primary_urls": [
+        "https://arxiv.org/html/2605.14769v2",
+        "https://arxiv.org/abs/2605.14769"
+      ],
+      "tasks": [],
+      "challenge_before": "随机生成缺少可复用构件和主动组合接口，难控制训练外探索。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "局部邻域VQ-VAE提取10,000概念；concept-set DDPM与合格样本self-refinement，再条件化原子DDPM。",
+      "remaining_gap": "可复用概念已确立，需解释局部化学、全局晶格及模板统计的各自贡献，及新共享局部关系组合的整体可行性。",
+      "challenges": [
+        "C3",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "depth": "deep_selected_representation_concept_mechanism_results",
+            "version": "v2, 2026-05-25",
+            "sections": [
+              "§2.1",
+              "§3.1–3.3",
+              "§4",
+              "AppendixC.3/C.4"
+            ]
+          },
+          "result_evidence": {
+            "claim": "MP-20/Alex-MP-20分别最高53.2%/51.7% VSUN相对增益，主要来自novelty；concept组合可预测spacegroup/family。",
+            "stage": "surrogate and selected DFT; local/global interpretability",
+            "definition": "AppendixC.3稳定定义Ehull≤epsilon，未在该段明确统一数字；组合训练使用training-reference资格，不能代为设置strict阈值。atom vector含3坐标+100元素+6整胞lattice。",
+            "locator": "§2.1 Eq2; §3; §4; C.3/C.4"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_concept_composition",
+            "relation": "直接先例为VQ邻域概念→组合生成→晶体条件DDPM；不把有用概念限定为纯局部化学",
+            "locator": "§2.1/§3/§4"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Composable Crystals: Controllable Materials Discovery via Concept Learning",
+          "venue": {
+            "venue": "arXiv preprint",
+            "year": 2026,
+            "online_date": null,
+            "status": "preprint; no formal venue inferred"
+          },
+          "source": "https://arxiv.org/html/2605.14769v2"
+        }
+      ]
+    },
+    {
+      "id": "R52",
+      "title": "Substitution-Based Analysis of Structural Novelty for Generative Models of Materials",
+      "aliases": [
+        "novelty"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2026-06-22",
+      "venue_date_status": {
+        "venue": "arXiv",
+        "year": 2026,
+        "status": "preprint",
+        "read_version": "v1 2026-06-22"
+      },
+      "date_notes": [],
+      "authors": [
+        "Negishi, Masahiro",
+        "Walsh, Aron"
+      ],
+      "doi": null,
+      "arxiv_id": "2606.23166",
+      "primary_url": "https://arxiv.org/html/2606.23166v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2606.23166v1"
+      ],
+      "tasks": [],
+      "challenge_before": "普通数据库新颖性中的哪些结构可由已知结构元素替换加松弛实现？",
+      "why_important": "新化学组合与新结构机制都可能有价值，但支持不同科学主张。",
+      "why_difficult": "元素身份、原型、畸变与松弛需要共同匹配，未匹配也可能由检索不完备造成。",
+      "method": "训练重复判定；按晶格/site与Wyckoff寻找候选，化学相似度排序，元素替换后一次MACE-MPA-0松弛，再比对。",
+      "remaining_gap": "输出分类揭示可替换性，不直接识别训练的因果机制；新化学组合的价值也不能由原型复用否定。",
+      "challenges": [
+        "C3",
+        "C5"
+      ],
+      "directions": [
+        "B",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "§2.1分类workflow、Table2、按晶系分析、原型覆盖和讨论。",
+          "result_evidence": [
+            {
+              "locator": "Table2",
+              "finding": "在作者所评合格子集，多数数据库新颖结构可被替换路径重现。",
+              "quantitative_claim": {
+                "mattergen_duplicate_percent": 20.5,
+                "mattergen_substituted_percent": 60.6,
+                "mattergen_unmatched_percent": 18.9
+              },
+              "denominator": "10000独立生成后，SMACT化学有效性、MACE-MPA-0松弛及MP-hull≤0.1 eV/atom筛选留下的各模型集合；Table2只报比例未逐行列子集N。",
+              "protocol": "MP-20训练模型；k=3每种结构检索路径top-k，共top-2k候选；Substituted含一次松弛。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "Szymanski and Bartel baselines",
+                "locator": "§1 and References",
+                "type": "motivation"
+              },
+              {
+                "target": "MatterGen, DiffCSP++, WyckoffTransformer, Crystalite, Chemeleon2",
+                "locator": "Table2 and §2.1",
+                "type": "evaluated primary models"
+              }
+            ],
+            "review_conceptual_relation": "用于校准开放发现的不同新颖性含义，不将所有unmatched称作新连接机制。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Substitution-Based Analysis of Structural Novelty for Generative Models of Materials",
+          "venue": {
+            "venue": "arXiv",
+            "year": 2026,
+            "status": "preprint",
+            "read_version": "v1 2026-06-22"
+          },
+          "source": "https://arxiv.org/html/2606.23166v1"
+        }
+      ]
+    },
+    {
+      "id": "R53",
+      "title": "Text-guided flow matching enables sample-efficient crystal structure generation",
+      "aliases": [
+        "TFMat"
+      ],
+      "themes": [
+        "条件与知识"
+      ],
+      "first_public_date": "2026-09-01",
+      "venue_date_status": {
+        "venue": "arXiv preprint",
+        "year": 2026,
+        "online_date": null,
+        "status": "preprint; no formal venue inferred"
+      },
+      "date_notes": [],
+      "authors": [
+        "Wentao Li"
+      ],
+      "doi": null,
+      "arxiv_id": "2609.01076",
+      "primary_url": "https://arxiv.org/html/2609.01076v2",
+      "primary_urls": [
+        "https://arxiv.org/html/2609.01076v2",
+        "https://arxiv.org/abs/2609.01076"
+      ],
+      "tasks": [],
+      "challenge_before": "组成/对称/原型/性质混合描述难共享为可检查的continuous flow条件。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "冻结MatSciBERT、mean pooling和投影条件化CrystalFlow；database-derived结构化metadata，无原子坐标/晶格矢量。",
+      "remaining_gap": "结构化语言能帮助选择参考盆地；新意图语义泛化、精确DNG多字段遵循与物理终态联合目标仍可深化。",
+      "challenges": [
+        "C1",
+        "C2"
+      ],
+      "directions": [
+        "A",
+        "B"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "depth": "deep_selected_prompt_task_results_diagnostics",
+            "version": "v2, 2026-09-06",
+            "sections": [
+              "Results",
+              "Tables1–2",
+              "Methods: text conditions",
+              "Supplementary consistency/diagnostic runs"
+            ]
+          },
+          "result_evidence": {
+            "claim": "MP-20单候选match67.65→77.80%，20候选92.04%；DNG元素数/密度分布改善。组成筛选1994例形成能符号1913/1994=95.94%。",
+            "stage": "reference recovery; distribution metrics; CGCNN selected-subset diagnostic",
+            "definition": "性质诊断不是全DNG人口；另1000例diagnostic run formula2.10%/SG2.30%/crystal-system0%，作者未取为主DNG结果。",
+            "locator": "Results Tables1–2; property consistency; Discussion; Supplementary diagnostic paragraph"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_backbone_and_text_predecessors",
+            "relation": "CrystalFlow+frozen materials-language prior；Introduction引用TGDMat/Chemeleon/FlowLLM，Table1比较long/short",
+            "locator": "Introduction/Methods/Tables1–2"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Text-guided flow matching enables sample-efficient crystal structure generation",
+          "venue": {
+            "venue": "arXiv preprint",
+            "year": 2026,
+            "online_date": null,
+            "status": "preprint; no formal venue inferred"
+          },
+          "source": "https://arxiv.org/html/2609.01076v2"
+        }
+      ]
+    },
+    {
+      "id": "R54",
+      "title": "OMatG-flash: An All-Atom Flow Map with Reinforce Adjoint Matching for Scalable Materials Discovery",
+      "aliases": [
+        "flash"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2026-09-22",
+      "venue_date_status": {
+        "venue": "arXiv",
+        "year": 2026,
+        "status": "preprint",
+        "read_version": "v1 2026-09-22"
+      },
+      "date_notes": [],
+      "authors": [
+        "Egg, Thomas",
+        "Sullivan, Harry Winston",
+        "Tadmor, Ellad B.",
+        "Martiniani, Stefano"
+      ],
+      "doi": null,
+      "arxiv_id": "2609.26402",
+      "primary_url": "https://arxiv.org/html/2609.26402v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2609.26402v1"
+      ],
+      "tasks": [],
+      "challenge_before": "怎样在高候选吞吐量下保持结构质量，并把reward学习扩展到有限时间flow map？",
+      "why_important": "候选生成速度影响同预算可探索材料数，后训练不能牺牲few-step优势。",
+      "why_difficult": "flow map无直接随机policy接口，有限时间运输需保持一致性，物种/周期几何的表示各不同。",
+      "method": "all-atom transformer flow map直接从数据self-distillation训练；RAM以奖励加权clean-state条件信息更新切向场并保留consistency。",
+      "remaining_gap": "高吞吐与CSP对齐已有能力；结果类别的保持、DNG新化学组合迁移和物理响应知识仍需独立证据。",
+      "challenges": [
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "§3.1 flow map、§3.2 RAM Eq13–17、§4/§5 CSP-DNG范围与附录奖励。",
+          "result_evidence": [
+            {
+              "locator": "§3.2, §4, §5.1; Tables1–2",
+              "finding": "few-step base同时用于CSP/DNG，RAM在CSP改善matching/energy与精度。",
+              "quantitative_claim": null,
+              "protocol": "RAM只实施CSP；MACE-MPA-0 reward先50步松弛，结构MR/RMSE为raw；跨论文结果按作者文献值，不当共同预算试验。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "OMatG-IRL",
+                "locator": "§2/§3.2/§5.1 and reference32",
+                "type": "explicit policy-gradient comparison"
+              },
+              {
+                "target": "Reinforce Adjoint Matching",
+                "locator": "§3.2 reference8",
+                "type": "adopted post-training algorithm"
+              },
+              {
+                "target": "Structure Matches",
+                "locator": "§4.1",
+                "type": "polymorph-aware metrics"
+              }
+            ],
+            "review_conceptual_relation": "把物理反馈学习扩展到few-step界面；本综述不将RAM称作记录了有限物理干预关系的证据。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "OMatG-flash: An All-Atom Flow Map with Reinforce Adjoint Matching for Scalable Materials Discovery",
+          "venue": {
+            "venue": "arXiv",
+            "year": 2026,
+            "status": "preprint",
+            "read_version": "v1 2026-09-22"
+          },
+          "source": "https://arxiv.org/html/2609.26402v1"
+        }
+      ]
+    },
+    {
+      "id": "R55",
+      "title": "Topology-Stratified Materials Discovery with A Flow-Based Generative Model",
+      "aliases": [
+        "UFO-MGen"
+      ],
+      "themes": [
+        "条件与知识"
+      ],
+      "first_public_date": "2026-09-22",
+      "venue_date_status": {
+        "venue": "arXiv preprint",
+        "year": 2026,
+        "online_date": null,
+        "status": "preprint; no formal venue inferred"
+      },
+      "date_notes": [],
+      "authors": [
+        "Jingyi Zhou",
+        "Oyshee Chowdhury",
+        "Noah Oyeniran",
+        "Chongze Hu"
+      ],
+      "doi": null,
+      "arxiv_id": "2609.26547",
+      "primary_url": "https://arxiv.org/html/2609.26547v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2609.26547v1",
+        "https://arxiv.org/abs/2609.26547"
+      ],
+      "tasks": [],
+      "challenge_before": "复杂对称拓扑与化学占位使生成/外推困难；单一能量指标遗漏动力学和温度资格。",
+      "why_important": null,
+      "why_difficult": null,
+      "method": "StageI scaffold→StageII occupancy→StageIII continuous Wyckoff fiber flow；物性fine-tuning；MSE评估引入能量/声子/MD。",
+      "remaining_gap": "条件拓扑外推及多类物理验证是明确进步；自主形成未见scaffold、多个局部关系兼容和共同严格凸包资格仍有独立研究空间。",
+      "challenges": [
+        "C1",
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": {
+            "depth": "deep_selected_main_mechanism_results_and_metrics_appendix",
+            "version": "v1",
+            "sections": [
+              "§2.1–2.6",
+              "S3.3",
+              "S4",
+              "S5.1.2"
+            ]
+          },
+          "result_evidence": {
+            "claim": "绕过StageI给未见scaffold，33,439条件实现中5,921 MSE合格，覆盖107个训练外SG；50k常规生成MSE依MLIP25.5/45.5/44.1%；selected DFT/phonon/AIMD支持物理可靠性。",
+            "stage": "CHGNet/MACE/MatterSim MSE; selected DFT; separately public SUN",
+            "definition": "MSE: formation energy<0、负声子DOS积分<0.05 phonon mode、300K/10ps NVT形态保持。另SUN31.2%使用Ehull≤0.1，S5.1.2说明baseline由发表结果取值而非统一重算。",
+            "locator": "§2.3–2.5; S4; S5.1.2 Eq40"
+          },
+          "lineage_evidence": {
+            "kind": "explicit_discrete_continuous_factorization",
+            "relation": "Wyckoff topological scaffold与continuous fiber构成分层先例；同任务主文比较MatterGen等生成器",
+            "locator": "§2.1/Fig1; §2.5"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Topology-Stratified Materials Discovery with A Flow-Based Generative Model",
+          "venue": {
+            "venue": "arXiv preprint",
+            "year": 2026,
+            "online_date": null,
+            "status": "preprint; no formal venue inferred"
+          },
+          "source": "https://arxiv.org/html/2609.26547v1"
+        }
+      ]
+    },
+    {
+      "id": "R56",
+      "title": "Let CSP Be Your ANCHOR: Adaptive Crystal Search over Frozen Structure Priors",
+      "aliases": [
+        "anchor"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2026-09-27",
+      "venue_date_status": {
+        "venue": "arXiv",
+        "year": 2026,
+        "status": "preprint",
+        "read_version": "v2 2026-09-30"
+      },
+      "date_notes": [],
+      "authors": [
+        "Hovmand, Emma Lei",
+        "Elsborg, Jonas",
+        "Kandemir, Melih",
+        "Bhowmik, Arghya"
+      ],
+      "doi": null,
+      "arxiv_id": "2609.33407",
+      "primary_url": "https://arxiv.org/html/2609.33407v2",
+      "primary_urls": [
+        "https://arxiv.org/html/2609.33407v2"
+      ],
+      "tasks": [],
+      "challenge_before": "发现reward主要该改变化学访问还是条件结构先验，搜索历史novelty怎样影响二者？",
+      "why_important": "一个晶体reward可同时改变组成与结构，分开两者能识别瓶颈与付费计算的学习价值。",
+      "why_difficult": "novelty随历史变化而物理结构不变；终点反馈很难给不同离散/连续决定正确credit。",
+      "method": "GRPO组成策略查询冻结CSP；CAN同时参照固定库与搜索历史；组成/实现互换实验，访问组成重放语料用于likelihood学习。",
+      "remaining_gap": "组成为主的访问缺口已可诊断；新化学关系下条件能力缺口、何时应更新结构及跨请求可复用内容仍需研究。",
+      "challenges": [
+        "C2",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "§2–4因子分解/交换对照、AppendixE物理口径、F.5/F.6语料与Table23；search保存内容已核。",
+          "result_evidence": [
+            {
+              "locator": "AppendixF.6/Table23",
+              "finding": "same-composition corpus的实现来源改变KLDM学习收益。",
+              "quantitative_claim": {
+                "KLDM_control_SUN_percent": 17.1,
+                "KLDM_plus_anchor_SUN_percent": 16.5,
+                "KLDM_crystalite_rendered_SUN_percent": 18.9,
+                "KLDM_unrelaxed_SUN_percent": 16.7,
+                "Crystalite_control_SUN_percent": 14.4,
+                "Crystalite_plus_anchor_SUN_percent": 24.5
+              },
+              "denominator": "同1000个held-out组成请求，seed0；百分比分母沿用MatterGen实际计分N，Table23未逐行列N；Table12 released KLDM N=993。",
+              "protocol": "MatterGen自带MatterSim/FIRE-cell松弛、Alex-MP reference_MP2020correction hull及matcher；同基座优化步数/曝光匹配，不跨基座费用等同。"
+            },
+            {
+              "locator": "AppendixF.6 corpus definition",
+              "finding": "训练语料不是搜索时保存的成功端点。",
+              "quantitative_claim": {
+                "corpus_structures": 27136
+              },
+              "denominator": "从日志候选经validity/duplicate gate后抽样，组成重放生成结构。",
+              "protocol": "只保存composition和scores，不保存当时geometry；整个搜索时段均匀抽样，无稳定或新颖阈值；默认KLDM实现，诊断臂改Crystalite。"
+            },
+            {
+              "locator": "§4 reciprocal controls",
+              "finding": "其模型/评价下改变组成来源的收益显著大于在DNG组成下更换结构实现，反馈进结构的收益依更新方式与基座变化。",
+              "quantitative_claim": null,
+              "protocol": "不同potential/gate/reference管线分别报告；不形成全部CSP优于DNG或始终冻结最优的结论。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "KLDM/Crystalite CSP",
+                "locator": "Methods and AppendixE/F",
+                "type": "implemented frozen priors"
+              },
+              {
+                "target": "MatInvent and Chemeleon2",
+                "locator": "§1/§2 reward-guided generation",
+                "type": "explicit related approaches"
+              },
+              {
+                "target": "MatterGen and LeMat",
+                "locator": "AppendixE",
+                "type": "evaluation"
+              }
+            ],
+            "review_conceptual_relation": "为A/C/D提供化学访问与结构实现的竞争解释，未来关系学习贡献需在其基线上具体化。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Let CSP Be Your ANCHOR: Adaptive Crystal Search over Frozen Structure Priors",
+          "venue": {
+            "venue": "arXiv",
+            "year": 2026,
+            "status": "preprint",
+            "read_version": "v2 2026-09-30"
+          },
+          "source": "https://arxiv.org/html/2609.33407v2"
+        }
+      ]
+    },
+    {
+      "id": "R57",
+      "title": "Where Should Physics Enter a Molecular Crystal Generator?",
+      "aliases": [
+        "crystaf"
+      ],
+      "themes": [
+        "物理与发现"
+      ],
+      "first_public_date": "2026-09-28",
+      "venue_date_status": {
+        "venue": "arXiv",
+        "year": 2026,
+        "status": "preprint",
+        "read_version": "v1 2026-09-28"
+      },
+      "date_notes": [],
+      "authors": [
+        "Tang, Haocheng",
+        "Wang, Junmei",
+        "Jin, Wengong"
+      ],
+      "doi": null,
+      "arxiv_id": "2609.36398",
+      "primary_url": "https://arxiv.org/html/2609.36398v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2609.36398v1"
+      ],
+      "tasks": [],
+      "challenge_before": "相同物理信号通过训练目标、后训练reward或部署修复进入分子晶体生成，分别改变什么？",
+      "why_important": "每次部署付费与一次性学入权重有不同价值，需要解释哪种约束可学、哪种由表示决定。",
+      "why_difficult": "packing、局部clash与stereochemistry依赖不同自由度，模型表示未必可表达全部约束。",
+      "method": "Clari蒸馏all-atom flow map；共同UMA下MeanFlowNFT后训练、relax-and-distill、force guidance/固定胞松弛与经典修复比较。",
+      "remaining_gap": "不同反馈入口的作用已有控制证据；有限作用不否定全部distillation，跨新组成物理关系及开放无机多解仍是另一任务。",
+      "challenges": [
+        "C1",
+        "C4",
+        "C6"
+      ],
+      "directions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "evidence": [
+        {
+          "read_depth": "§1, §3.1–3.5, §4.1/Table1, §4.2/Table2；shared signal与fixed-cell选择。",
+          "result_evidence": [
+            {
+              "locator": "Table1/§4.1",
+              "finding": "post-training提高packing，固定胞松弛主要修局部clash；普通relaxed-target回归收益有限。",
+              "quantitative_claim": null,
+              "denominator": "200 validation families×20 samples，matched arms同epoch4，32NFE，mean±SE；released epoch6另行展示。",
+              "protocol": "分子晶体PB/clash、volume/PDD/packing recovery，shared UMA；不能外推无机strict SUN。"
+            }
+          ],
+          "lineage_evidence": {
+            "verified_citations": [
+              {
+                "target": "Clari",
+                "locator": "§1/§3",
+                "type": "distilled teacher"
+              },
+              {
+                "target": "DiffusionNFT",
+                "locator": "§3.3",
+                "type": "post-training algorithm"
+              },
+              {
+                "target": "PackFlow",
+                "locator": "§1",
+                "type": "molecular physics-RL related work"
+              }
+            ],
+            "review_conceptual_relation": "邻近领域的机制比较，仅作为物理入口与表示问题的支持，不用PB作无机发现率。"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "title": "Where Should Physics Enter a Molecular Crystal Generator?",
+          "venue": {
+            "venue": "arXiv",
+            "year": 2026,
+            "status": "preprint",
+            "read_version": "v1 2026-09-28"
+          },
+          "source": "https://arxiv.org/html/2609.36398v1"
+        }
+      ]
+    },
+    {
+      "id": "T01",
+      "title": "Semantics Lead the Way: Harmonizing Semantic and Texture Modeling with Asynchronous Latent Diffusion",
+      "authors": [
+        "Yueming Pan",
+        "Ruoyu Feng",
+        "Qi Dai",
+        "Yuqi Wang",
+        "Wenfeng Lin",
+        "Mingyu Guo",
+        "Chong Luo",
+        "Nanning Zheng"
+      ],
+      "venue_date_status": "CVPR 2026",
+      "primary_url": "https://arxiv.org/abs/2512.04926",
+      "task": "ImageNet类别条件生成",
+      "evidence_role": "A的方法启发：相关变量的信息进度",
+      "scope": "主实验为类别条件图像，不是晶体任务或自由文本生成。"
+    },
+    {
+      "id": "T02",
+      "title": "NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale",
+      "authors": [
+        "NextStep Team"
+      ],
+      "venue_date_status": "ICLR 2026",
+      "primary_url": "https://arxiv.org/abs/2508.10711",
+      "task": "文生图与图像编辑",
+      "evidence_role": "A的方法基础：AR上下文与连续flow输出",
+      "scope": "证明图文与连续token可以协同建模，晶体的周期实现需另行建立。"
+    },
+    {
+      "id": "T03",
+      "title": "Local Mechanisms of Compositional Generalization in Conditional Diffusion",
+      "authors": [
+        "Arwen Bradley"
+      ],
+      "venue_date_status": "ICML 2026, PMLR 306:9531–9565",
+      "primary_url": "https://proceedings.mlr.press/v306/bradley26a.html",
+      "task": "受控CLEVR对象数量泛化及特征组合",
+      "evidence_role": "B的方法依据：局部条件依赖与组合泛化",
+      "scope": "理论有特定组合结构条件，晶体的共享原子与晶胞需新的建模。"
+    },
+    {
+      "id": "T04",
+      "title": "Flow-GRPO: Training Flow Matching Models via Online RL",
+      "authors": [
+        "Jie Liu",
+        "Gongye Liu",
+        "Jiajun Liang",
+        "Yangguang Li",
+        "Jiaheng Liu",
+        "Xintao Wang",
+        "Pengfei Wan",
+        "Di Zhang",
+        "Wanli Ouyang"
+      ],
+      "venue_date_status": "NeurIPS 2025",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/3a10c46572628d58cb44fb705f25cbbf-Abstract-Conference.html",
+      "task": "文生图组合、文字渲染与偏好优化",
+      "evidence_role": "C的方法基础：flow的在线强化学习",
+      "scope": "反馈优化已有可实施方法，物理响应信息的跨材料迁移是另一个研究问题。"
+    },
+    {
+      "id": "T05",
+      "title": "Reinforce Adjoint Matching: Scaling RL Post-Training of Diffusion and Flow-Matching Models",
+      "authors": [
+        "Andreas Bergmeister",
+        "Stefanie Jegelka",
+        "Nikolas Nüsken",
+        "Carles Domingo-Enrich",
+        "Jakiw Pidstrigach"
+      ],
+      "venue_date_status": "arXiv 2605.10759v2 (2026)",
+      "primary_url": "https://arxiv.org/abs/2605.10759",
+      "task": "图像生成的奖励后训练",
+      "evidence_role": "C的算法基础，OMatG-flash直接采用RAM",
+      "scope": "终点奖励修正回归目标，不把RAM当作已保留真实有限结构响应的证据。"
+    },
+    {
+      "id": "T06",
+      "title": "Multi-Axis Max@K Reinforcement Learning for Representative Diversity in Text-to-Image Generation",
+      "authors": [
+        "Ku Onoda",
+        "Paavo Parmas",
+        "Hiroki Furuta",
+        "Soichiro Nishimori",
+        "Yuta Oshima",
+        "Shohei Taniguchi",
+        "Yutaka Matsuo"
+      ],
+      "venue_date_status": "arXiv 2607.14962v2 (2026)，原文注记WACV 2027接收",
+      "primary_url": "https://arxiv.org/abs/2607.14962",
+      "task": "预定义语义模式的文生图集合覆盖",
+      "evidence_role": "D的方法参照：样本对集合覆盖的贡献",
+      "scope": "目标模式预先给定。晶体合格类别经物理评价识别，研究需处理未知身份与资格。"
+    },
+    {
+      "id": "T07",
+      "title": "DynFusion: Rethinking Condition Fusion for Adaptive Multi-Conditional Text-to-Image Generation",
+      "authors": [
+        "Zheng Fang",
+        "Lichuan Xiang",
+        "Xu Cai",
+        "Bing Wang",
+        "Bo Yang",
+        "Hongkai Wen"
+      ],
+      "venue_date_status": "CVPR 2026, 29103–29113",
+      "primary_url": "https://wrap.warwick.ac.uk/id/eprint/197869/8/WRAP-DynFusion-rethinking-condition-fusion-multi-conditional-text-to-image-generation-26.pdf",
+      "task": "文本与多个视觉条件的图像生成",
+      "evidence_role": "B的方法依据：按生成状态组织条件融合",
+      "scope": "原文§3.2与§4.1的多视觉条件融合，晶体共享关系需要重新建模。"
+    },
+    {
+      "id": "T08",
+      "title": "Stochastic Interpolants: A Unifying Framework for Flows and Diffusions",
+      "authors": [
+        "Michael Albergo",
+        "Nicholas M. Boffi",
+        "Eric Vanden-Eijnden"
+      ],
+      "venue_date_status": "JMLR 26(209):1–80 (2025)，首稿2023",
+      "primary_url": "https://jmlr.org/papers/v26/23-1605.html",
+      "task": "连接给定概率分布的连续生成模型",
+      "evidence_role": "A/C的理论与生成基座",
+      "scope": "为分布路径及随机/确定生成提供框架，物理响应关系的晶体迁移仍需专门建立。"
+    },
+    {
+      "id": "IUCR",
+      "title": "How to read (and understand) Volume A of International Tables for Crystallography: an introduction for nonspecialists",
+      "authors": [],
+      "venue_date_status": 2010,
+      "primary_url": "https://journals.iucr.org/j/issues/2010/05/02/kk5061/index.html",
+      "locators": [
+        "crystal lattice / unit-cell discussion",
+        "general positions and symmetry-equivalent fractional coordinates"
+      ]
+    },
+    {
+      "id": "ALEX",
+      "title": "Alexandria official dataset releases",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://alexandria.icams.rub.de/datasets.html",
+      "locators": [
+        "Geometries optimized with PBE",
+        "Complete database2025.07.02",
+        "Geometry optimization paths2025.07.02",
+        "PBEsol / SCAN / previous datasets"
+      ]
+    },
+    {
+      "id": "OQMD",
+      "title": "OQMD official structure sources and API documentation",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://oqmd.org/documentation/structures",
+      "locators": [
+        "Structure Sources / ICSD / Prototype Structures",
+        "API:delta_e/stability/unit_cell/calculation_label fields"
+      ]
+    },
+    {
+      "id": "ICSD",
+      "title": "ICSD official data curation and theoretical data categories",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://icsd.products.fiz-karlsruhe.de/en/about/data-curation",
+      "locators": [
+        "Minimal content of a data set",
+        "Data curation",
+        "Theoretical crystal structure data"
+      ]
+    },
+    {
+      "id": "COD",
+      "title": "Crystallography Open Database (COD): an open-access collection of crystal structures and platform for world-wide collaboration",
+      "authors": [],
+      "venue_date_status": 2012,
+      "primary_url": "https://academic.oup.com/nar/article/40/D1/D420/2903497",
+      "locators": [
+        "Abstract / database scope and CIF distribution"
+      ]
+    },
+    {
+      "id": "CDVAE_CFG",
+      "title": "CDVAE official MP-20 configuration and build_crystal preprocessing",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://github.com/txie-93/cdvae/blob/main/conf/data/mp_20.yaml",
+      "locators": [
+        "mp_20.yaml:niggli/primitive/max_atoms",
+        "data_utils.py:build_crystal"
+      ]
+    },
+    {
+      "id": "MACE",
+      "title": "A foundation model for atomistic materials chemistry",
+      "authors": [],
+      "venue_date_status": 2025,
+      "primary_url": "https://arxiv.org/html/2401.00096v3",
+      "locators": [
+        "Training data",
+        "MACE-MP-0b3 model description"
+      ]
+    },
+    {
+      "id": "MATTERSIM",
+      "title": "MatterSim: A Deep Learning Atomistic Model Across Elements, Temperatures and Pressures",
+      "authors": [],
+      "venue_date_status": 2024,
+      "primary_url": "https://arxiv.org/html/2405.04967v2",
+      "locators": [
+        "SI S2 Data generation",
+        "SI S3 Data distribution"
+      ]
+    },
+    {
+      "id": "MATTERSIM_CARD",
+      "title": "MatterSim official model card: v1.0.0-1M and v1.0.0-5M",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://github.com/microsoft/mattersim/blob/main/MODEL_CARD.md",
+      "locators": [
+        "Model type",
+        "Available Models",
+        "Uses / Testing Data"
+      ]
+    },
+    {
+      "id": "SMACT",
+      "title": "SMACT screening module",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://smact.readthedocs.io/en/latest/smact.screening.html",
+      "locators": []
+    },
+    {
+      "id": "SCIPY_JS",
+      "title": "scipy.spatial.distance.jensenshannon",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.jensenshannon.html",
+      "locators": []
+    },
+    {
+      "id": "SCIPY_W",
+      "title": "scipy.stats.wasserstein_distance",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.wasserstein_distance.html",
+      "locators": []
+    },
+    {
+      "id": "PYM_HULL",
+      "title": "pymatgen.analysis.phase_diagram.PhaseDiagram",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://pymatgen.org/pymatgen.analysis.html#pymatgen.analysis.phase_diagram.PhaseDiagram.get_decomp_and_e_above_hull",
+      "locators": []
+    },
+    {
+      "id": "MP_COMPAT",
+      "title": "Materials Project: Anion and GGA/GGA+U Mixing",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://docs.materialsproject.org/methodology/materials-methodology/thermodynamic-stability/thermodynamic-stability/anion-and-gga-gga+u-mixing",
+      "locators": []
+    },
+    {
+      "id": "ASE_OPT",
+      "title": "ASE: Structure optimization",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://docs.ase-lib.org/ase/optimize.html",
+      "locators": []
+    },
+    {
+      "id": "ASE_FILTER",
+      "title": "ASE: Filters",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://docs.ase-lib.org/ase/filters.html",
+      "locators": []
+    },
+    {
+      "id": "ASE_MD",
+      "title": "ASE: Molecular dynamics",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://docs.ase-lib.org/ase/md.html",
+      "locators": []
+    },
+    {
+      "id": "ASE_NEB",
+      "title": "ASE: Nudged elastic band",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://docs.ase-lib.org/ase/neb.html",
+      "locators": []
+    },
+    {
+      "id": "PHONOPY",
+      "title": "Phonopy: Formulations",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://phonopy.github.io/phonopy/formulation.html",
+      "locators": []
+    },
+    {
+      "id": "MP_DFT",
+      "title": "Materials Project: Parameters and Convergence",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://docs.materialsproject.org/methodology/materials-methodology/calculation-details/gga+u-calculations/parameters-and-convergence",
+      "locators": []
+    },
+    {
+      "id": "MP_ELECTRONIC",
+      "title": "Materials Project: Electronic Structure",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://docs.materialsproject.org/methodology/materials-methodology/electronic-structure",
+      "locators": []
+    },
+    {
+      "id": "MP_ELASTIC",
+      "title": "Materials Project: Elastic Constants",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://docs.materialsproject.org/methodology/materials-methodology/elasticity",
+      "locators": []
+    },
+    {
+      "id": "CHGNET_DOC",
+      "title": "CHGNet official project documentation",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://chgnet.lbl.gov/",
+      "locators": []
+    },
+    {
+      "id": "MG_REPO",
+      "title": "Microsoft MatterGen official README and data-release descriptions",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://github.com/microsoft/mattergen",
+      "locators": [
+        "README:Data release / Training datasets / Reference dataset",
+        "README:Crystal structure prediction",
+        "data-release/alex-mp/README"
+      ]
+    },
+    {
+      "id": "MG_SI",
+      "title": "MatterGen Supplementary Information, Sections A–D",
+      "authors": [
+        "Claudio Zeni et al."
+      ],
+      "venue_date_status": "Nature (2025)",
+      "primary_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-025-08628-5/MediaObjects/41586_2025_8628_MOESM1_ESM.pdf"
+    },
+    {
+      "id": "MG_DATA",
+      "title": "MatterGen official Alex-MP data release",
+      "authors": [],
+      "venue_date_status": "Official data documentation",
+      "primary_url": "https://github.com/microsoft/mattergen/blob/main/data-release/alex-mp/README.md"
+    },
+    {
+      "id": "PHASE",
+      "title": "Materials Project: Phase diagrams and thermodynamic stability",
+      "authors": [],
+      "venue_date_status": "Official documentation",
+      "primary_url": "https://docs.materialsproject.org/methodology/materials-methodology/thermodynamic-stability/phase-diagrams-pds"
+    },
+    {
+      "id": "MATCHER",
+      "title": "pymatgen StructureMatcher",
+      "authors": [],
+      "venue_date_status": "Official API documentation",
+      "primary_url": "https://pymatgen.org/pymatgen.analysis.html#pymatgen.analysis.structure_matcher.StructureMatcher"
+    },
+    {
+      "id": "MG_REANALYSIS",
+      "title": "Continued challenges in high-throughput materials predictions: MatterGen predicts compounds from the training dataset",
+      "authors": [
+        "Mikkel Juelsholt"
+      ],
+      "venue_date_status": "Materials Horizons 13, 5672–5679 (2026)",
+      "primary_url": "https://pubs.rsc.org/en/content/articlehtml/2026/mh/d6mh00268d"
+    }
+  ]
+}
